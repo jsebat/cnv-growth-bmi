@@ -27,6 +27,19 @@ res <- rbindlist(lapply(PH, function(ph) rbindlist(lapply(names(GROUPS), functio
   x <- X[pheno == ph & locus %in% GROUPS[[g]]]; if (sum(x$asd == 1L) < 5 || sum(x$asd == 0L) < 5) return(NULL)
   cbind(data.table(pheno = ph, group = g, n_noasd = sum(x$asd == 0L), n_asd = sum(x$asd == 1L), mean_noasd = x[asd == 0L, mean(y)], se_noasd = x[asd == 0L, sd(y) / sqrt(.N)], mean_asd = x[asd == 1L, mean(y)], se_asd = x[asd == 1L, sd(y) / sqrt(.N)],
                    age_med_noasd = x[asd == 0L, median(age)], age_med_asd = x[asd == 1L, median(age)]), fit(x)) }))))
+# interaction: does the ASD effect in a carrier group differ from the ASD effect in SSC non-carriers? Carrier group pooled with the
+# non-carriers; y ~ asd + locus + asd:is_cnv + s(age, by = group) + sex [+ cohort] [+ covs]; the asd:is_cnv coefficient is reported.
+NCG <- "Non-carriers (SSC)"
+fit_int <- function(x, covs = character(0)) tryCatch({
+  x <- copy(x)[, `:=`(sex = factor(sex), cohort = factor(cohort), locus = factor(locus), is_cnv = as.integer(locus != NCG))][, cnvf := factor(is_cnv)]
+  cov <- paste(c(if (nlevels(x$cohort) > 1) "+ cohort", if (length(covs)) paste("+", covs)), collapse = " ")
+  m <- gam(as.formula(paste("y ~ asd + locus + asd:is_cnv + s(age, k = 8, by = cnvf) + sex", cov)), data = x, method = "REML"); co <- summary(m)$p.table["asd:is_cnv", ]
+  data.table(int_delta = unname(co[1]), int_se = unname(co[2]), int_p = unname(co[4])) }, error = function(e) data.table(int_delta = NA_real_, int_se = NA_real_, int_p = NA_real_))
+int_tab <- function(D, covs = character(0)) rbindlist(lapply(PH, function(ph) rbindlist(lapply(setdiff(names(GROUPS), NCG), function(g) {
+  x <- D[pheno == ph & locus %in% c(GROUPS[[g]], NCG)]; xc <- x[locus != NCG]; if (sum(xc$asd == 1L) < 5 || sum(xc$asd == 0L) < 5) return(NULL)
+  cbind(data.table(pheno = ph, group = g), fit_int(x, covs)) }))))
+res <- merge(res, int_tab(X), by = c("pheno", "group"), all.x = TRUE, sort = FALSE)
+cat("== ASD x CNV interaction vs SSC non-carriers (difference in ASD effect, SD)\n"); print(res[!is.na(int_delta), .(pheno, group, int_delta = round(int_delta, 2), int_se = round(int_se, 2), int_p = signif(int_p, 2))], nrows = 60)
 fwrite(res, file.path(HERE, "supp_asd_by_cnv_tests.csv"))
 cat("== ASD vs no ASD, age- and sex-adjusted (SD)\n"); print(res[, .(pheno, group, n_noasd, n_asd, delta = round(delta, 2), se = round(se, 2), p = signif(p, 2))], nrows = 60)
 # ---------------------------------------------------------------- figure
@@ -74,6 +87,9 @@ MODELS <- c(list("age + sex (same individuals)" = character(0)), setNames(as.lis
 sens <- rbindlist(lapply(PH, function(ph) rbindlist(lapply(names(GROUPS), function(g) {
   x <- XS[pheno == ph & locus %in% GROUPS[[g]]]; if (sum(x$asd == 1L) < 5 || sum(x$asd == 0L) < 5) return(NULL)
   rbindlist(lapply(names(MODELS), function(mn) cbind(data.table(pheno = ph, group = g, model = mn, n_noasd = sum(x$asd == 0L), n_asd = sum(x$asd == 1L)), fit_adj(x, MODELS[[mn]])))) }))))
+ints_s <- rbindlist(lapply(names(MODELS), function(mn) int_tab(XS, MODELS[[mn]])[, model := mn]))
+sens <- merge(sens, ints_s, by = c("pheno", "group", "model"), all.x = TRUE, sort = FALSE)
+cat("\n== interaction vs non-carriers, PGS-complete subset, age + sex vs all four PGS\n"); print(sens[!is.na(int_delta) & model %in% c("age + sex (same individuals)", "+ all four PGS"), .(pheno, group, model, int_delta = round(int_delta, 2), int_se = round(int_se, 2), int_p = signif(int_p, 2))], nrows = 60)
 fwrite(sens, file.path(HERE, "supp_asd_by_cnv_sensitivity.csv"))
 cat("\n== sensitivity: ASD effect with PGS covariates (PGS-complete subset)\n"); print(sens[group %in% c("Overgrowth CNVs", "Undergrowth CNVs", "Non-carriers (SSC)", "16p11.2 del") & model %in% c("age + sex (same individuals)", "+ all four PGS"), .(pheno, group, model, n_noasd, n_asd, delta = round(delta, 2), se = round(se, 2), p = signif(p, 2))], nrows = 60)
 sn <- function(ph, g, mn, col) sens[pheno == ph & group == g & model == mn][[col]]
@@ -88,6 +104,36 @@ leg <- c("Supplementary Figure. Height, head circumference and BMI by autism dia
           nn("Head circumference", "Overgrowth CNVs", "delta"), pfx(nn("Head circumference", "Overgrowth CNVs", "p")), nn("Head circumference", "Overgrowth CNVs", "n_noasd"), nn("Head circumference", "Overgrowth CNVs", "n_asd"),
           nn("Head circumference", "Undergrowth CNVs", "delta"), pfx(nn("Head circumference", "Undergrowth CNVs", "p")), nn("Head circumference", "Non-carriers (SSC)", "delta"), pfx(nn("Head circumference", "Non-carriers (SSC)", "p")),
           nn("BMI", "Overgrowth CNVs", "delta"), pfx(nn("BMI", "Overgrowth CNVs", "p")), nn("BMI", "Undergrowth CNVs", "delta"), pfx(nn("BMI", "Undergrowth CNVs", "p")), nn("BMI", "Non-carriers (SSC)", "delta"), pfx(nn("BMI", "Non-carriers (SSC)", "p"))))
-leg <- c(leg, sens_txt)
+ni <- function(ph, g, col) res[pheno == ph & group == g][[col]]
+int_txt <- sprintf("Interaction with carrier status (Table S7, columns int_*): the ASD effect in each carrier group was tested against the ASD effect in SSC non-carriers (carrier group pooled with non-carriers; y ~ ASD + locus + ASD x carrier + s(age, by carrier) + sex + cohort). Head circumference: overgrowth CNVs %+.2f (SE %.2f, p = %s), 16p11.2 deletion %+.2f (p = %s), undergrowth CNVs %+.2f (p = %s). BMI: overgrowth %+.2f (p = %s), undergrowth %+.2f (p = %s). Height: overgrowth %+.2f (p = %s), undergrowth %+.2f (p = %s). The same interaction with the PGS covariates is in Table S8.",
+  ni("Head circumference", "Overgrowth CNVs", "int_delta"), ni("Head circumference", "Overgrowth CNVs", "int_se"), pfx(ni("Head circumference", "Overgrowth CNVs", "int_p")), ni("Head circumference", "16p11.2 del", "int_delta"), pfx(ni("Head circumference", "16p11.2 del", "int_p")), ni("Head circumference", "Undergrowth CNVs", "int_delta"), pfx(ni("Head circumference", "Undergrowth CNVs", "int_p")),
+  ni("BMI", "Overgrowth CNVs", "int_delta"), pfx(ni("BMI", "Overgrowth CNVs", "int_p")), ni("BMI", "Undergrowth CNVs", "int_delta"), pfx(ni("BMI", "Undergrowth CNVs", "int_p")),
+  ni("Height", "Overgrowth CNVs", "int_delta"), pfx(ni("Height", "Overgrowth CNVs", "int_p")), ni("Height", "Undergrowth CNVs", "int_delta"), pfx(ni("Height", "Undergrowth CNVs", "int_p")))
+leg <- c(leg, int_txt, sens_txt)
 writeLines(leg, file.path(HERE, "fig_supp_asd_by_cnv_legend.txt"))
+# ---------------------------------------------------------------- Tables S7 / S8: CSV copies, workbook sheets, markdown section
+fwrite(res, file.path(HERE, "supp_table_S7_asd_by_cnv.csv")); fwrite(sens, file.path(HERE, "supp_table_S8_asd_by_cnv_pgs_adjusted.csv"))
+suppressPackageStartupMessages(library(openxlsx))
+XL <- file.path(HERE, "supp_tables_bmi_effects.xlsx")
+if (file.exists(XL)) { wb <- loadWorkbook(XL)
+  for (s in c("S7 ASD by CNV", "S8 ASD by CNV PGS adj")) if (s %in% names(wb)) removeWorksheet(wb, s)
+  addWorksheet(wb, "S7 ASD by CNV"); writeData(wb, "S7 ASD by CNV", res); addWorksheet(wb, "S8 ASD by CNV PGS adj"); writeData(wb, "S8 ASD by CNV PGS adj", sens)
+  if ("notes" %in% names(wb)) { nt <- readWorkbook(wb, "notes"); keep <- !grepl("^S7 ASD by CNV$|^S8 ASD by CNV PGS adj$", nt[[1]]); nt <- nt[keep, , drop = FALSE]
+    add <- data.frame(matrix(NA, 2, ncol(nt))); names(add) <- names(nt); add[[1]] <- c("S7 ASD by CNV", "S8 ASD by CNV PGS adj")
+    add[[2]] <- c("ASD effect (delta, SD; se; p) on height, head circumference and BMI Z within each CNV group, pooled groups and SSC probands vs siblings; GAM y ~ ASD + s(age) + sex [+ cohort + locus]; n_noasd / n_asd; int_delta/int_se/int_p = ASD x carrier interaction vs SSC non-carriers (difference in ASD effect); 32_supp_asd_by_cnv.R",
+                  "Same contrasts and interactions in individuals with all four PGS (G2MH carriers, SSC non-carriers); model = covariates added to age + sex; same individuals in every row of a group; 32_supp_asd_by_cnv.R")
+    removeWorksheet(wb, "notes"); addWorksheet(wb, "notes"); writeData(wb, "notes", rbind(nt, add)) }
+  saveWorkbook(wb, XL, overwrite = TRUE) }
+pf <- function(p) ifelse(is.na(p), "", ifelse(p < 0.001, formatC(p, format = "e", digits = 1), as.character(signif(p, 2))))
+md <- function(x) c(paste0("| ", paste(names(x), collapse = " | "), " |"), paste0("|", paste(rep("---", ncol(x)), collapse = "|"), "|"), apply(x, 1, function(r) paste0("| ", paste(r, collapse = " | "), " |")))
+fi <- function(d, s, p) ifelse(is.na(d), "", sprintf("%+.2f (%.2f), p = %s", d, s, pf(p)))
+a <- res[, .(Trait = pheno, Group = group, `n no ASD` = n_noasd, `n ASD` = n_asd, `mean (SE) no ASD` = sprintf("%+.2f (%.2f)", mean_noasd, se_noasd), `mean (SE) ASD` = sprintf("%+.2f (%.2f)", mean_asd, se_asd), `median age no ASD / ASD` = sprintf("%.1f / %.1f", age_med_noasd, age_med_asd), `ASD effect (SD)` = sprintf("%+.2f", delta), SE = sprintf("%.2f", se), p = pf(p), `ASD x carrier vs non-carriers (SE), p` = fi(int_delta, int_se, int_p))]
+b <- sens[, .(Trait = pheno, Group = group, Model = model, `n no ASD` = n_noasd, `n ASD` = n_asd, `ASD effect (SD)` = sprintf("%+.2f", delta), SE = sprintf("%.2f", se), p = pf(p), `ASD x carrier vs non-carriers (SE), p` = fi(int_delta, int_se, int_p))]
+mdtxt <- c("", "## Table S7. Height, head circumference and BMI by autism diagnosis within CNV group", "",
+ "ASD effect = coefficient of ASD in GAM y ~ ASD + s(age, k = 8) + sex (+ cohort; + locus in pooled groups); y = height Z (WHO), head-circumference Z (UK90), BMI Z (WHO child / adult centile mapped to Z). Latest visit with the outcome and BMI, ages 2-65, plausibility QC applied. Non-carriers (SSC) = SSC probands (ASD) vs designated siblings. Means are unadjusted group means (SE). Last column: ASD x carrier interaction, i.e. the difference between the ASD effect in that carrier group and in SSC non-carriers (carrier group pooled with non-carriers; y ~ ASD + locus + ASD x carrier + s(age, by carrier) + sex + cohort). Source: 32_supp_asd_by_cnv.R, supp_table_S7_asd_by_cnv.csv (sheet 'S7 ASD by CNV').", "", md(a), "",
+ "## Table S8. Table S7 contrasts with polygenic scores as covariates (sensitivity)", "",
+ "Individuals with all four polygenic scores (G2MH WGS carriers; SSC non-carriers; childhood obesity, adult BMI, height and autism-2026 PGS, residualised on 10 PCs, z-scored within cohort). Model = covariates added to the age + sex model of Table S7 (and to the interaction model); the same individuals are used in every row of a group, so the first row of each group is the age + sex estimate on that subset. Groups with fewer than 5 scored individuals in either ASD class are omitted. Source: 32_supp_asd_by_cnv.R, supp_table_S8_asd_by_cnv_pgs_adjusted.csv (sheet 'S8 ASD by CNV PGS adj').", "", md(b), "")
+writeLines(mdtxt, file.path(HERE, "supp_tables_S7_S8_asd_by_cnv.md"))
+MD <- file.path(HERE, "supp_tables_bmi_effects.md")
+if (file.exists(MD)) { L <- readLines(MD); i <- grep("^## Table S7\\.", L); if (length(i)) L <- L[seq_len(i[1] - 1)]; while (length(L) && L[length(L)] == "") L <- L[-length(L)]; writeLines(c(L, mdtxt), MD) }
 cat("done\n")
