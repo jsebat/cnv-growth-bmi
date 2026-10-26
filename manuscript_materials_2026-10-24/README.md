@@ -15,7 +15,7 @@ Source scripts and live outputs are one level up (CNV_growth_trajectories); copi
                           supp_table_S1-S8 CSVs (scripts 28, 29, 30, 32); medication_sensitivity_results.md (methods, results, table for height, HC, SRS, SCQ, CNB; scripts 27 + medication_table.R)
 - data_qc/                implausible_height_weight_corrections.csv (fill action / corrected_* to add records back),
                           implausible_height_weight.{csv,md} (flagged records), 00_qc_growth.R (rules)
-- Analysis_report_2026-10-26.docx   full report: methods, results, legends, table index, sample sizes, Dropbox and Expanse paths, PMID references (31_make_report.R)
+- Analysis_report_2026-10-26.docx / .pdf   final report: summary of findings, methods, results, embedded figures and legends, table index (S1-S8, medication, QC), sample sizes, Dropbox and Expanse paths, PMID references (31_make_report.R, then data_qc/finish_report.ps1 for heading numbers, table layout and the PDF export via Word)
 - HANDOFF_2026-10-26.md   current handoff (incl. the ASD-by-CNV supplementary figure and Tables S7-S8 added later that day) (pipeline, run order, caveats, Expanse resources, next steps); HANDOFF_2026-10-24.md kept for history
 - reports/                HANDOFF_2026-10-24.md (pipeline, run order, caveats, next steps), unaffected_controls_report.md (full analysis report)
 - figure_legends.md        all figure legends in one file (main figure, every supplementary figure, table notes); each figure folder also holds its own *_legend.txt
