@@ -1,14 +1,14 @@
-# Medication sensitivity analysis: BMI effects on SRS, SCQ and Penn CNB in CNV carriers
+# Medication sensitivity analysis: BMI effects on height, head circumference, SRS, SCQ and Penn CNB in CNV carriers
 
-(Updated 2026-10-24 after plausibility QC of height, weight and head circumference; see the QC note at the end. Pre-QC outputs are kept in `preQC_20261024/`.)
+(Updated 2026-10-24 after plausibility QC of height, weight and head circumference; see the QC note at the end. Pre-QC outputs are kept in `preQC_20261024/`. Height and head circumference, the growth traits of the main figure, were added on 2026-10-26 using the same G2MH carriers and visits as the main figure.)
 
 ## Methods
 
-Height, weight and head circumference were screened for implausible values before scoring (heights recorded in metres corrected; heights outside 60-230 cm, BMI outside 10-70 kg/m2, height or child-BMI Z beyond +/-5, and head circumference outside 30-70 cm or Z beyond +/-5 set to missing; `00_qc_growth.R`, flagged records in `implausible_height_weight.csv`). Current medication use was taken from the G2MH medications release (February 2026). ATC codes were not populated, so drugs were classed by name as antipsychotics, ADHD medication (stimulants, atomoxetine), ADHD alpha-agonists, antidepressants, antiepileptics/mood stabilisers, and anxiolytics; "any psychotropic" is their union. Status was known for 87-92% of carriers with SRS, SCQ or CNB; carriers absent from the medications file were excluded from adjusted models. For each trait and CNV group the age-adjusted BMI slope (GAM, trait ~ s(age) + BMI; locus as a covariate when pooled) was refit in this subset unadjusted, with medication-class indicators, in carriers on no psychotropic, and with medication classes plus ASD diagnosis. Associations of each class with BMI and with the trait were tested in the same models. Slopes are SD of trait per SD of BMI.
+Height, weight and head circumference were screened for implausible values before scoring (heights recorded in metres corrected; heights outside 60-230 cm, BMI outside 10-70 kg/m2, height or child-BMI Z beyond +/-5, and head circumference outside 30-70 cm or Z beyond +/-5 set to missing; `00_qc_growth.R`, flagged records in `implausible_height_weight.csv`). Current medication use was taken from the G2MH medications release (February 2026). ATC codes were not populated, so drugs were classed by name as antipsychotics, ADHD medication (stimulants, atomoxetine), ADHD alpha-agonists, antidepressants, antiepileptics/mood stabilisers, and anxiolytics; "any psychotropic" is their union. Status was known for 85-92% of carriers with height, head circumference, SRS, SCQ or CNB; carriers absent from the medications file were excluded from adjusted models. For height and head circumference the rows are the G2MH carriers of the main figure (latest visit with the outcome and BMI, ages 2-65, QC applied; SVIP, Searchlight and Cardiff carriers have no medication data), so the slopes are the within-carrier BMI slopes of panels K-O rather than the CNV x BMI contrasts against controls, which cannot be medication-adjusted because the controls have no medication file. For each trait and CNV group the age-adjusted BMI slope (GAM, trait ~ s(age) + BMI; locus as a covariate when pooled) was refit in this subset unadjusted, with medication-class indicators, in carriers on no psychotropic, and with medication classes plus ASD diagnosis. Associations of each class with BMI and with the trait were tested in the same models. Slopes are SD of trait per SD of BMI.
 
 ## Results
 
-Psychotropic use was common (29-33% of carriers; antipsychotics 5-7%, 9% in 22q11.2 deletion) and strongly associated with the traits (antipsychotic users: SRS +2.3 SD, SCQ +3.5 SD, CNB accuracy -0.6 SD; all p < 1e-4), but no class was associated with BMI (antipsychotics -0.2 SD, p = 0.5; weight-gain-associated drugs -0.1, p = 0.7; any psychotropic +0.3, p = 0.09), leaving little scope for confounding. The BMI slopes were unchanged by adjustment or by excluding medicated carriers (Table): across all carriers SRS +0.22, +0.19 and +0.23; SCQ +0.35, +0.37 and +0.38; CNB accuracy 0.00 throughout. The 22q11.2 deletion SRS and SCQ slopes persisted in unmedicated carriers. The negative BMI slope on CNB accuracy in 16p11.2 duplication carriers, -0.15 (p = 0.015) before QC, fell to -0.14 (p = 0.07) once one carrier with a recorded BMI of 9.2 kg/m2 was removed, and to -0.05 to -0.10 under medication adjustment or in unmedicated carriers; it should be regarded as suggestive. ASD diagnosis, not medication, remained the only covariate that attenuated the SRS slope (+0.09), while SCQ was robust to all adjustments (+0.32, p = 0.008). Medication therefore does not account for the BMI effects on social-communication measures.
+Psychotropic use was common (29-33% of carriers; antipsychotics 5-7%, 9% in 22q11.2 deletion) and strongly associated with the traits (antipsychotic users: SRS +2.3 SD, SCQ +3.5 SD, CNB accuracy -0.6 SD; all p < 1e-4), but no class was associated with BMI (antipsychotics -0.2 SD, p = 0.5; weight-gain-associated drugs -0.1, p = 0.7; any psychotropic +0.3, p = 0.09), leaving little scope for confounding. The BMI slopes were unchanged by adjustment or by excluding medicated carriers (Table): across all carriers SRS +0.22, +0.19 and +0.23; SCQ +0.35, +0.37 and +0.38; CNB accuracy 0.00 throughout. The growth traits behave the same way. Head circumference: 16p11.2 deletion +0.47 (unadjusted, carriers with medication information), +0.48 with medication classes, +0.50 in carriers on no psychotropic (n = 52), +0.48 with classes plus ASD; all CNVs +0.37, +0.36, +0.33, +0.33; 22q11.2 deletion +0.34, +0.33, +0.30; 22q11.2 duplication +0.43, +0.39, +0.32 (p = 0.06 in the 45 unmedicated carriers). Height: 16p11.2 deletion +0.31, +0.32, +0.27, +0.32; all CNVs +0.12, +0.11, +0.09, +0.12. No medication class was associated with head circumference; among carriers with height data, weight-loss-associated drugs (mostly stimulants) were associated with higher, not lower, BMI (+0.37 SD, p = 0.045), which would work against, not produce, a positive BMI slope, and no class was associated with height. The 22q11.2 deletion SRS and SCQ slopes persisted in unmedicated carriers. The negative BMI slope on CNB accuracy in 16p11.2 duplication carriers, -0.15 (p = 0.015) before QC, fell to -0.14 (p = 0.07) once one carrier with a recorded BMI of 9.2 kg/m2 was removed, and to -0.05 to -0.10 under medication adjustment or in unmedicated carriers; it should be regarded as suggestive. ASD diagnosis, not medication, remained the only covariate that attenuated the SRS slope (+0.09), while SCQ was robust to all adjustments (+0.32, p = 0.008). Medication therefore does not account for the BMI effects on social-communication measures.
 
 ## Table. Age-adjusted BMI slope (SD of trait per SD of BMI; estimate (SE), p) by model, after QC
 
@@ -16,25 +16,35 @@ n = carriers with medication information; % psychotropic / % antipsychotic = cur
 
 | Trait | Group | n | % psychotropic | % antipsychotic | Unadjusted | + medication classes | No psychotropic (n) | + classes + ASD |
 |---|---|---|---|---|---|---|---|---|
-| SRS | 16p11.2 del | 69 | 22 | 3 | +0.09 (0.22), p = 0.68 | +0.09 (0.23), p = 0.69 | +0.05 (0.28), p = 0.85 (54) | -0.01 (0.17), p = 0.96 |
-| SRS | 16p11.2 dup | 30 | 40 | 17 | +0.40 (0.32), p = 0.22 | +0.28 (0.34), p = 0.41 | n/a | +0.22 (0.27), p = 0.41 |
-| SRS | 22q11.2 del | 184 | 37 | 9 | +0.26 (0.11), p = 0.01 | +0.23 (0.10), p = 0.03 | +0.29 (0.13), p = 0.02 (116) | +0.12 (0.10), p = 0.23 |
-| SRS | 22q11.2 dup | 61 | 30 | 2 | +0.08 (0.24), p = 0.73 | +0.10 (0.27), p = 0.71 | +0.05 (0.34), p = 0.88 (43) | -0.01 (0.21), p = 0.97 |
-| SRS | All CNVs | 344 | 33 | 7 | +0.22 (0.09), p = 0.01 | +0.19 (0.09), p = 0.03 | +0.23 (0.11), p = 0.04 (231) | +0.09 (0.08), p = 0.23 |
-| SCQ | 16p11.2 del | 52 | 15 | 2 | +0.45 (0.35), p = 0.21 | +0.26 (0.35), p = 0.45 | +0.13 (0.36), p = 0.73 (44) | +0.32 (0.26), p = 0.23 |
-| SCQ | 22q11.2 del | 147 | 38 | 9 | +0.38 (0.17), p = 0.02 | +0.37 (0.16), p = 0.02 | +0.42 (0.19), p = 0.03 (91) | +0.25 (0.15), p = 0.09 |
-| SCQ | 22q11.2 dup | 45 | 36 | 0 | +0.37 (0.37), p = 0.33 | +0.54 (0.43), p = 0.22 | +0.82 (0.55), p = 0.15 (29) | +0.66 (0.38), p = 0.09 |
-| SCQ | All CNVs | 262 | 32 | 7 | +0.35 (0.14), p = 0.01 | +0.37 (0.14), p = 0.008 | +0.38 (0.17), p = 0.02 (177) | +0.32 (0.12), p = 0.008 |
-| CNB accuracy | 16p11.2 del | 133 | 20 | 2 | +0.03 (0.04), p = 0.43 | +0.04 (0.04), p = 0.36 | +0.04 (0.05), p = 0.41 (107) | +0.01 (0.04), p = 0.74 |
-| CNB accuracy | 16p11.2 dup | 51 | 16 | 0 | -0.05 (0.08), p = 0.51 | -0.05 (0.08), p = 0.57 | -0.06 (0.09), p = 0.50 (43) | -0.10 (0.08), p = 0.24 |
-| CNB accuracy | 22q11.2 del | 318 | 36 | 9 | -0.02 (0.03), p = 0.53 | -0.02 (0.03), p = 0.51 | +0.03 (0.04), p = 0.39 (205) | -0.01 (0.03), p = 0.74 |
-| CNB accuracy | 22q11.2 dup | 130 | 28 | 2 | +0.07 (0.06), p = 0.20 | +0.09 (0.06), p = 0.11 | +0.04 (0.07), p = 0.53 (94) | +0.08 (0.06), p = 0.17 |
-| CNB accuracy | All CNVs | 632 | 29 | 5 | +0.00 (0.02), p = 0.85 | +0.01 (0.02), p = 0.78 | +0.03 (0.03), p = 0.33 (449) | -0.00 (0.02), p = 0.93 |
-| CNB speed | 16p11.2 del | 135 | 20 | 2 | -0.02 (0.05), p = 0.73 | -0.01 (0.05), p = 0.84 | +0.01 (0.05), p = 0.83 (108) | +0.01 (0.05), p = 0.83 |
-| CNB speed | 16p11.2 dup | 51 | 16 | 0 | +0.01 (0.11), p = 0.96 | -0.01 (0.11), p = 0.96 | -0.03 (0.12), p = 0.83 (43) | -0.02 (0.12), p = 0.84 |
-| CNB speed | 22q11.2 del | 324 | 35 | 9 | -0.00 (0.03), p = 0.98 | -0.01 (0.03), p = 0.78 | -0.01 (0.04), p = 0.87 (210) | -0.00 (0.04), p = 0.96 |
-| CNB speed | 22q11.2 dup | 130 | 28 | 2 | +0.05 (0.09), p = 0.57 | +0.06 (0.09), p = 0.51 | +0.10 (0.08), p = 0.19 (94) | +0.05 (0.09), p = 0.60 |
-| CNB speed | All CNVs | 640 | 29 | 5 | +0.00 (0.03), p = 0.97 | -0.00 (0.03), p = 0.98 | +0.00 (0.03), p = 0.87 (455) | -0.00 (0.03), p = 0.99 |
+| Height | 16p11.2 del |  89 | 19 |  2 | +0.31 (0.11), p = 0.0048 | +0.32 (0.11), p = 0.0043 | +0.27 (0.12), p = 0.027 (72) | +0.32 (0.11), p = 0.0044 |
+| Height | 16p11.2 dup |  49 | 33 | 14 | +0.07 (0.12), p = 0.6 | +0.05 (0.13), p = 0.69 | +0.05 (0.15), p = 0.75 (33) | +0.16 (0.14), p = 0.27 |
+| Height | 22q11.2 del | 252 | 35 |  7 | +0.05 (0.05), p = 0.34 | +0.05 (0.05), p = 0.4 | +0.04 (0.06), p = 0.53 (163) | +0.03 (0.06), p = 0.63 |
+| Height | 22q11.2 dup |  90 | 26 |  1 | +0.12 (0.09), p = 0.2 | +0.04 (0.10), p = 0.65 | +0.01 (0.11), p = 0.93 (67) | +0.03 (0.10), p = 0.76 |
+| Height | All CNVs | 480 | 30 |  6 | +0.12 (0.04), p = 0.006 | +0.11 (0.04), p = 0.0092 | +0.09 (0.05), p = 0.059 (335) | +0.11 (0.04), p = 0.011 |
+| Head circumference | 16p11.2 del |  67 | 22 |  3 | +0.47 (0.09), p = 5.6e-06 | +0.48 (0.09), p = 2.3e-06 | +0.50 (0.11), p = 3.9e-05 (52) | +0.48 (0.09), p = 3.3e-06 |
+| Head circumference | 16p11.2 dup |  36 | 28 | 14 | +0.07 (0.16), p = 0.69 | +0.07 (0.17), p = 0.67 | +0.02 (0.19), p = 0.92 (26) | +0.03 (0.16), p = 0.85 |
+| Head circumference | 22q11.2 del | 142 | 31 |  3 | +0.34 (0.08), p = 1.6e-05 | +0.33 (0.08), p = 4.7e-05 | +0.30 (0.10), p = 0.0031 (98) | +0.30 (0.08), p = 4.8e-04 |
+| Head circumference | 22q11.2 dup |  65 | 31 |  2 | +0.43 (0.12), p = 8.4e-04 | +0.39 (0.14), p = 0.0063 | +0.32 (0.16), p = 0.06 (45) | +0.31 (0.14), p = 0.029 |
+| Head circumference | All CNVs | 310 | 29 |  4 | +0.37 (0.05), p = 4.8e-12 | +0.36 (0.05), p = 1.9e-11 | +0.33 (0.06), p = 6.5e-07 (221) | +0.33 (0.05), p = 1.7e-09 |
+| SRS | 16p11.2 del |  69 | 22 |  3 | +0.09 (0.22), p = 0.69 | +0.09 (0.23), p = 0.7 | +0.05 (0.28), p = 0.87 (54) | -0.01 (0.17), p = 0.95 |
+| SRS | 16p11.2 dup |  30 | 40 | 17 | +0.41 (0.32), p = 0.22 | +0.30 (0.34), p = 0.39 | n/a | +0.22 (0.27), p = 0.42 |
+| SRS | 22q11.2 del | 183 | 37 |  9 | +0.27 (0.11), p = 0.013 | +0.23 (0.10), p = 0.027 | +0.29 (0.13), p = 0.026 (115) | +0.12 (0.10), p = 0.23 |
+| SRS | 22q11.2 dup |  60 | 30 |  2 | +0.09 (0.24), p = 0.71 | +0.10 (0.27), p = 0.7 | +0.06 (0.34), p = 0.86 (42) | -0.00 (0.21), p = 1 |
+| SRS | All CNVs | 342 | 33 |  7 | +0.23 (0.09), p = 0.011 | +0.19 (0.09), p = 0.03 | +0.22 (0.11), p = 0.044 (229) | +0.09 (0.08), p = 0.24 |
+| SCQ | 16p11.2 del |  52 | 15 |  2 | +0.45 (0.35), p = 0.21 | +0.26 (0.35), p = 0.45 | +0.13 (0.36), p = 0.73 (44) | +0.32 (0.26), p = 0.23 |
+| SCQ | 22q11.2 del | 146 | 38 |  9 | +0.37 (0.16), p = 0.025 | +0.37 (0.16), p = 0.024 | +0.41 (0.19), p = 0.04 (90) | +0.25 (0.15), p = 0.093 |
+| SCQ | 22q11.2 dup |  45 | 36 |  0 | +0.38 (0.37), p = 0.32 | +0.55 (0.43), p = 0.21 | +0.82 (0.55), p = 0.15 (29) | +0.67 (0.38), p = 0.084 |
+| SCQ | All CNVs | 261 | 33 |  7 | +0.35 (0.14), p = 0.011 | +0.37 (0.14), p = 0.0068 | +0.38 (0.17), p = 0.023 (176) | +0.32 (0.12), p = 0.0074 |
+| CNB accuracy | 16p11.2 del | 133 | 20 |  2 | +0.03 (0.04), p = 0.4 | +0.04 (0.04), p = 0.34 | +0.04 (0.05), p = 0.38 (107) | +0.02 (0.04), p = 0.71 |
+| CNB accuracy | 16p11.2 dup |  50 | 14 |  0 | -0.06 (0.08), p = 0.47 | -0.05 (0.08), p = 0.53 | -0.06 (0.09), p = 0.48 (43) | -0.10 (0.08), p = 0.23 |
+| CNB accuracy | 22q11.2 del | 315 | 36 |  9 | -0.02 (0.03), p = 0.57 | -0.02 (0.03), p = 0.54 | +0.03 (0.04), p = 0.43 (203) | -0.01 (0.03), p = 0.8 |
+| CNB accuracy | 22q11.2 dup | 125 | 29 |  2 | +0.06 (0.06), p = 0.32 | +0.07 (0.06), p = 0.21 | +0.01 (0.07), p = 0.84 (89) | +0.06 (0.06), p = 0.31 |
+| CNB accuracy | All CNVs | 623 | 29 |  5 | +0.00 (0.02), p = 0.88 | +0.01 (0.02), p = 0.82 | +0.02 (0.03), p = 0.39 (442) | -0.00 (0.02), p = 0.89 |
+| CNB speed | 16p11.2 del | 135 | 20 |  2 | -0.01 (0.05), p = 0.75 | -0.01 (0.05), p = 0.86 | +0.01 (0.05), p = 0.81 (108) | +0.01 (0.05), p = 0.81 |
+| CNB speed | 16p11.2 dup |  50 | 14 |  0 | +0.00 (0.11), p = 0.99 | -0.01 (0.11), p = 0.94 | -0.03 (0.12), p = 0.82 (43) | -0.03 (0.12), p = 0.8 |
+| CNB speed | 22q11.2 del | 321 | 35 |  9 | -0.01 (0.03), p = 0.87 | -0.01 (0.03), p = 0.68 | -0.01 (0.04), p = 0.85 (208) | -0.01 (0.04), p = 0.87 |
+| CNB speed | 22q11.2 dup | 125 | 29 |  2 | +0.04 (0.09), p = 0.65 | +0.05 (0.09), p = 0.6 | +0.08 (0.08), p = 0.32 (89) | +0.04 (0.10), p = 0.68 |
+| CNB speed | All CNVs | 631 | 29 |  5 | -0.00 (0.03), p = 0.91 | -0.00 (0.03), p = 0.87 | +0.00 (0.03), p = 0.94 (448) | -0.01 (0.03), p = 0.87 |
 
 ## Addendum: the 16p11.2 duplication CNB accuracy slope and the plausibility QC
 

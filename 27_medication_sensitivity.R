@@ -7,10 +7,11 @@
 # row in the medications file (an empty row = asked, no medication); others are unknown and excluded from adjusted models.
 # For each trait x group: medication prevalence; age-adjusted association of medication class with BMI and with the trait;
 # BMI slope unadjusted (same subset), adjusted for classes, adjusted for classes + ASD, and in carriers on no psychotropic.
-# Output: medication_sensitivity.csv, medication_prevalence.csv; summary appended to unaffected_controls_report.md by hand.
-Sys.setenv(PHENO_RUN_TESTS = "FALSE", PHENO_DRAW_FIG = "FALSE")
+# Height and head circumference (G2MH carriers, same rows as the main figure) were added on 2026-10-26.
+# Output: medication_sensitivity.csv, medication_prevalence.csv; table and write-up in medication_sensitivity_results.md (table rebuilt by medication_table.R).
+Sys.setenv(PHENO_RUN_TESTS = "FALSE", PHENO_DRAW_FIG = "FALSE", UNAFF_DRAW_FIG = "FALSE")
 HERE <- "C:/Users/Jonathan Sebat/sebatlab Dropbox/Manuscripts/PGC_joint_submission/Molly/CNV_ASD_growth_analysis/CNV_growth_trajectories"
-sink(tempfile()); source(file.path(HERE, "21_pheno_bmi_gam.R")); sink()     # D (SRS/SCQ with asd), cnb (CNB with BMI), rel (release), DB
+sink(tempfile()); source(file.path(HERE, "23_unaffected_controls.R")); sink()     # via 21: D (SRS/SCQ with asd), cnb (CNB with BMI), rel (release), DB; from 23: A (growth rows, height / HC Z with BMI Z), gmc (GUIDs)
 suppressPackageStartupMessages(library(mgcv))
 LOC <- c("16p11.2 del", "16p11.2 dup", "22q11.2 del", "22q11.2 dup")
 
@@ -43,6 +44,9 @@ cat("individuals with medication information:", nrow(M), "\n")
 X <- rbind(D[locus %in% LOC & pheno %in% c("SRS", "SCQ") & !is.na(BMI) & !is.na(y), .(id, locus, age, BMI, y, asd, pheno)],
            cnb[locus %in% LOC & !is.na(BMI) & !is.na(accuracy) & cnb_age >= 4 & cnb_age <= 65, .(id = GUID, locus, age = cnb_age, BMI, y = accuracy, asd = NA_integer_, pheno = "CNB accuracy")],
            cnb[locus %in% LOC & !is.na(BMI) & !is.na(speed) & cnb_age >= 4 & cnb_age <= 65, .(id = GUID, locus, age = cnb_age, BMI, y = speed, asd = NA_integer_, pheno = "CNB speed")])
+gid <- unique(gmc[cohort == "G2MH" & !is.na(GUID) & GUID != "", .(id, GUID)])   # growth rows are keyed by genomatrix id; medications by GUID
+GRW <- merge(A[cohort == "G2MH" & locus %in% LOC & pheno %in% c("Height", "Head circumference"), .(id, locus, age, BMI, y, asd, pheno)], gid, by = "id")[, .(id = GUID, locus, age, BMI, y, asd, pheno)]
+X <- rbind(X, GRW)
 X <- merge(X, M[, -"rarecnv_id"], by.x = "id", by.y = "GUID", all.x = TRUE)
 X[is.na(known), known := FALSE]
 X[, locus := factor(locus)]
