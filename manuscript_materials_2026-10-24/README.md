@@ -10,11 +10,12 @@ Source scripts and live outputs are one level up (CNV_growth_trajectories); copi
                           fig_cognition_bmi_slopes        SRS/SCQ vs BMI with SSC ASD probands and a forest plot of slopes (script 24)
                           fig_supp_cnb_accuracy_total_bmi CNB accuracy total by CNV group (+ legend with heterogeneity test; script 26)
                           fig_supp_cnb_accuracy_bmi / fig_supp_cnb_speed_bmi   all CNB subtests (+ legend; script 26)
-- supplementary_tables/   supp_tables_bmi_effects.xlsx (sheets S1 growth, S2 cognition, S3 prospective, S4 sex and PGS strata, S5 PGS adjusted, S6 interaction power, raw, notes) and .md;
-                          supp_table_S1-S6 CSVs (scripts 28, 29, 30); medication_sensitivity_results.md (methods, results, table; script 27)
+                          fig_supp_asd_by_cnv             height / HC / BMI by autism diagnosis within CNV group, SSC probands vs siblings (+ legend with PGS sensitivity; script 32)
+- supplementary_tables/   supp_tables_bmi_effects.xlsx (sheets S1 growth, S2 cognition, S3 prospective, S4 sex and PGS strata, S5 PGS adjusted, S6 interaction power, S7 ASD by CNV, S8 ASD by CNV PGS adj, raw, notes) and .md;
+                          supp_table_S1-S8 CSVs (scripts 28, 29, 30, 32); medication_sensitivity_results.md (methods, results, table; script 27)
 - data_qc/                implausible_height_weight_corrections.csv (fill action / corrected_* to add records back),
                           implausible_height_weight.{csv,md} (flagged records), 00_qc_growth.R (rules)
 - Analysis_report_2026-10-26.docx   full report: methods, results, legends, table index, sample sizes, Dropbox and Expanse paths, PMID references (31_make_report.R)
-- HANDOFF_2026-10-26.md   current handoff (pipeline, run order, caveats, Expanse resources, next steps); HANDOFF_2026-10-24.md kept for history
+- HANDOFF_2026-10-26.md   current handoff (incl. the ASD-by-CNV supplementary figure and Tables S7-S8 added later that day) (pipeline, run order, caveats, Expanse resources, next steps); HANDOFF_2026-10-24.md kept for history
 - reports/                HANDOFF_2026-10-24.md (pipeline, run order, caveats, next steps), unaffected_controls_report.md (full analysis report)
 - figure_legends.md        all figure legends in one file (main figure, every supplementary figure, table notes); each figure folder also holds its own *_legend.txt

@@ -9,7 +9,7 @@ Jonathan Sebat (UCSD), analyses carried out with Claude, October 2026. Companion
 
 ## Layout
 - `00_*` to `31_*.R`: analysis scripts, numbered in run order (longitudinal chain 01 -> 05 -> 07 -> 11 -> 29; cross-sectional chain 21/23 -> 25 -> 26 -> 27 -> 28 -> 30; 31 builds the report).
-- `manuscript_materials_2026-10-24/`: frozen main figure, supplementary figures, Tables S1-S6 (`supp_tables_bmi_effects.xlsx` with a notes sheet), legends, QC rules, reports.
+- `manuscript_materials_2026-10-24/`: frozen main figure, supplementary figures (incl. `fig_supp_asd_by_cnv`: height, head circumference and BMI by autism diagnosis within CNV group, with a PGS sensitivity analysis), Tables S1-S8 (`supp_tables_bmi_effects.xlsx` with a notes sheet), legends, QC rules, reports.
 - Top-level `fig_*.png/.pdf`, `*.csv`, `*.md`: live outputs and write-ups (`unaffected_controls_report.md` is the running analysis log).
 - `Molly/`, `aou/`, `ukbb_bodysize/`: side analyses (head-circumference figures, All of Us and UK Biobank anchors, UKBB body size at 10 vs adult).
 - `resources/`: copy of the lab GWAS summary-statistics sheet.
