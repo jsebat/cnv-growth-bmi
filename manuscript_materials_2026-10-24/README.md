@@ -8,6 +8,7 @@ Source scripts and live outputs are one level up (CNV_growth_trajectories); copi
                           (Height, HC, SRS, SCQ x unaffected controls / 16p11.2 del / 16p11.2 dup / 22q11.2 del / 22q11.2 dup; script 25)
 - supplementary_figures/  fig_supp_prospective            longitudinal: BMI at a visit -> change in height / HC Z (script 11)
                           fig_cognition_bmi_slopes        SRS/SCQ vs BMI with SSC ASD probands and a forest plot of slopes (script 24)
+                          fig_cognition_bmi_forest        the two forest plots alone (script 24b, from cognition_bmi_slopes.csv; not used in the manuscript, whose Supplementary Table 10 carries these slopes)
                           fig_supp_cnb_accuracy_total_bmi CNB accuracy total by CNV group (+ legend with heterogeneity test; script 26)
                           fig_supp_cnb_accuracy_bmi / fig_supp_cnb_speed_bmi   all CNB subtests (+ legend; script 26)
                           fig_supp_asd_by_cnv             height / HC / BMI by autism diagnosis within CNV group, SSC probands vs siblings (+ legend with PGS sensitivity; script 32)

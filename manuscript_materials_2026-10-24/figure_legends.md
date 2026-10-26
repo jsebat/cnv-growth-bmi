@@ -68,3 +68,7 @@ Sensitivity (supp_asd_by_cnv_sensitivity.csv; G2MH carriers and SSC non-carriers
 
 - Table S7 (supp_table_S7_asd_by_cnv.csv; sheet 'S7 ASD by CNV'): every statistic printed in fig_supp_asd_by_cnv (group means and SE, n, median ages, age- and sex-adjusted ASD effect, SE, p) for height, head circumference and BMI in each CNV group, the pooled groups and SSC probands vs siblings, plus the ASD x carrier interaction (int_delta, int_se, int_p): the difference between the ASD effect in that carrier group and in SSC non-carriers.
 - Table S8 (supp_table_S8_asd_by_cnv_pgs_adjusted.csv; sheet 'S8 ASD by CNV PGS adj'): the same contrasts and interactions on the subset with all four polygenic scores, with the age + sex model and models adding each PGS and all four; same individuals within a group. Shows that neither sex (covariate throughout) nor PGS explains the ASD effects on head circumference or the null ASD effects on BMI.
+
+## Supplementary figure: BMI slope on SRS and SCQ by group, forest plots only (fig_cognition_bmi_forest; manuscript Supplementary Fig. 2)
+
+The two forest panels of fig_cognition_bmi_slopes on their own (24b_cognition_forest_only.R, from cognition_bmi_slopes.csv): age-adjusted BMI slope with 95% CI on SRS (A) and SCQ (B) in SSC siblings, SSC parents (SRS), SSC ASD probands, each CNV and all CNVs, for all carriers, non-ASD carriers and with ASD diagnosis as a covariate; asterisks mark slopes differing from unaffected relatives at p < 0.05. Used in the manuscript because the scatter rows of the full figure duplicate main-figure panels K-T.
