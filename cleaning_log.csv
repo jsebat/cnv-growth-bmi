@@ -1,0 +1,11 @@
+outcome,cohort,why,N
+HEADCIRCUM,Cardiff,d_jump_gt_2.5SD,6
+HEIGHT,Cardiff,b_carried_forward,3
+HEIGHT,Cardiff,c_impossible_change,3
+HEIGHT,Cardiff,d_jump_gt_2.5SD,6
+HEIGHT,SVIP,a_duplicate_visit,555
+HEIGHT,SVIP,b_carried_forward,57
+HEIGHT,SVIP,c_impossible_change,39
+HEIGHT,SVIP,d_jump_gt_2.5SD,24
+HEIGHT,Searchlight,b_carried_forward,6
+HEIGHT,Searchlight,c_impossible_change,9

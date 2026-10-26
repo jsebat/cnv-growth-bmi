@@ -1,0 +1,8 @@
+# participant-level or identifier-bearing files never go in the repo
+*.rds
+implausible_height_weight*
+tbx1_subjects_zscores*
+*.bak
+*.log
+preQC_*/
+scratch/

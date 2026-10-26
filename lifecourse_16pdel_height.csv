@@ -1,0 +1,21 @@
+stratum,period,est,se,p,n_carriers,change_vs_child,p_change,source
+All BMI,Child 2-12 y,-0.133087664728316,0.0825239062236635,0.106896503290235,221,,,Clinical cohorts (carriers vs controls)
+All BMI,Adolescent 13-17 y,-0.588271407601115,0.125331343340529,2.78577436610279e-06,109,-0.455183742872799,0.00223331473838287,Clinical cohorts (carriers vs controls)
+All BMI,Adult 18-40 y,-0.771533952965033,0.175545901838763,1.14040921185131e-05,44,-0.638446288236718,0.00100610844056839,Clinical cohorts (carriers vs controls)
+BMI ≥ 70th centile,Child 2-12 y,-0.0748428896917362,0.111970106185573,0.503963029447933,139,,,Clinical cohorts (carriers vs controls)
+BMI ≥ 70th centile,Adolescent 13-17 y,-0.714981744473487,0.153814576874707,3.62127969103997e-06,88,-0.640138854781751,0.000668722064258506,Clinical cohorts (carriers vs controls)
+BMI ≥ 70th centile,Adult 18-40 y,-0.611945971457696,0.262778279517826,0.0199962629282157,23,-0.53710308176596,0.059152766833807,Clinical cohorts (carriers vs controls)
+BMI ≤ 30th centile,Child 2-12 y,-0.340046458297431,0.185532836072084,0.0672060610913075,40,,,Clinical cohorts (carriers vs controls)
+BMI ≤ 30th centile,Adolescent 13-17 y,-0.285953193112484,0.471394858591542,0.544283096063561,6,0.0540932651849462,0.914893290100433,Clinical cohorts (carriers vs controls)
+BMI ≤ 30th centile,Adult 18-40 y,-0.677848921640713,0.423029161047216,0.109472706339117,7,-0.337802463343283,0.466360472105898,Clinical cohorts (carriers vs controls)
+UKBB.EUR,Adult biobanks,-1.15593450579701,0.091712911612407,2.05187257085095e-36,118,,,"Biobanks, adults (Sacks et al.)"
+AoU.EUR,Adult biobanks,-1.19290084529187,0.112582543191401,3.1663022380825e-26,77,,,"Biobanks, adults (Sacks et al.)"
+AoU.AAM,Adult biobanks,-0.682896309933661,0.108818124361002,3.50211137828983e-10,84,,,"Biobanks, adults (Sacks et al.)"
+AoU.LATNAT,Adult biobanks,-0.419678226588448,0.203440363334813,0.0391273749644635,21,,,"Biobanks, adults (Sacks et al.)"
+MyCode.EUR,Adult biobanks,-1.04072615579471,0.139080564860052,7.32561579564122e-14,51,,,"Biobanks, adults (Sacks et al.)"
+EstBB,Adult biobanks,-0.413926804906509,0.17408062535277,0.0174197965405769,32,,,"Biobanks, adults (Sacks et al.)"
+MVP.EUR,Adult biobanks,-0.90641123908202,0.0636967888807841,6.10871866606369e-46,228,,,"Biobanks, adults (Sacks et al.)"
+MVP.AFR,Adult biobanks,-0.939114298010324,0.23621118998807,7.02062648140389e-05,19,,,"Biobanks, adults (Sacks et al.)"
+MVP.LATNAT,Adult biobanks,-1.52008379542556,0.252001572736599,1.62862096099225e-09,14,,,"Biobanks, adults (Sacks et al.)"
+ClinicalAdults,Adult biobanks,-0.771143201157258,0.160820703291335,1.68106289603654e-06,38,,,"Biobanks, adults (Sacks et al.)"
+Meta-analysis,Adult biobanks,-0.93817137040513,0.0373793539476386,5.14483256106595e-139,687,,,"Biobanks, adults (Sacks et al.)"

@@ -1,0 +1,173 @@
+outcome,subset,model,locus,est,se,p,n_persons,n_rows,unit,model_label
+Height,all,W,Pooled,-0.137667642829378,0.0360221312970792,0.000152367685605975,248,671,visits,Within-person: BMI above own mean → outcome Z
+Height,all,W,16p11.2 del,-0.231247313242774,0.0506264603984196,6.47569890538828e-06,116,340,visits,Within-person: BMI above own mean → outcome Z
+Height,all,W,16p11.2 dup,-0.0672986110316432,0.0760770437800284,0.376875620185704,48,133,visits,Within-person: BMI above own mean → outcome Z
+Height,all,W,22q11.2 del,-0.0214776223359051,0.0706284917403405,0.761208771455512,73,175,visits,Within-person: BMI above own mean → outcome Z
+Height,all,W,22q11.2 dup,-0.0402707781361246,0.240539052924552,0.867121715988297,11,23,visits,Within-person: BMI above own mean → outcome Z
+Height,all,P,Pooled,0.0285670114379254,0.0260542929251955,0.273959674781608,248,422,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,all,P,16p11.2 del,0.0718283125981702,0.0372010642440974,0.054795454346086,116,224,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,all,P,16p11.2 dup,0.0262423899689742,0.059248061652706,0.658277481703731,48,84,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,all,P,22q11.2 del,-0.0556530707930438,0.049982273130567,0.26642806428354,73,102,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,all,P,22q11.2 dup,0.0759870908079237,0.121885995754181,0.533374521143588,11,12,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,all,R,Pooled,0.101932292639278,0.0396995645545364,0.0117600538262601,248,422,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,all,R,16p11.2 del,0.140013673296225,0.0539662902023281,0.0110690550588395,116,224,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,all,R,16p11.2 dup,0.182313611601034,0.085420946804713,0.0365163191100394,48,84,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,all,R,22q11.2 del,-0.0518642958876575,0.0829154106291651,0.532512844019849,73,102,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,all,R,22q11.2 dup,0.19435579783212,0.224226437249101,0.387106877971191,11,12,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,all,C,Pooled,-0.124370250602636,0.0352086809747898,0.00045928139990138,248,422,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,all,C,16p11.2 del,-0.266933254959717,0.0499321059506476,1.53850729826725e-07,116,224,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,all,C,16p11.2 dup,-0.0214691263617552,0.0684071076968808,0.753804270214241,48,84,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,all,C,22q11.2 del,0.0157129501347365,0.0644427834665722,0.807488543670213,73,102,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,all,C,22q11.2 dup,0.055099442337631,0.205095173309336,0.788339950821594,11,12,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,uncleaned,W,Pooled,-0.295488445917398,0.035093352943427,3.31625854646022e-16,273,818,visits,Within-person: BMI above own mean → outcome Z
+Height,uncleaned,W,16p11.2 del,-0.442137318813776,0.0448038908045426,2.98567853501477e-21,134,449,visits,Within-person: BMI above own mean → outcome Z
+Height,uncleaned,W,16p11.2 dup,-0.128761110313971,0.0750627771931544,0.0868501647154434,52,165,visits,Within-person: BMI above own mean → outcome Z
+Height,uncleaned,W,22q11.2 del,-0.0147102508377522,0.0809078164899101,0.855796210407802,75,179,visits,Within-person: BMI above own mean → outcome Z
+Height,uncleaned,W,22q11.2 dup,-0.224682851626819,0.257275153276504,0.382879075096628,12,25,visits,Within-person: BMI above own mean → outcome Z
+Height,uncleaned,P,Pooled,0.0714258379566069,0.0322038927523977,0.0272865594630239,261,460,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,uncleaned,P,16p11.2 del,0.124914885030961,0.0455730633371415,0.00643913614533022,124,252,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,uncleaned,P,16p11.2 dup,0.0767974901479862,0.0700926780942436,0.27432024367434,50,91,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,uncleaned,P,22q11.2 del,-0.0465793614652422,0.0668121943402519,0.486206896231854,75,104,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,uncleaned,P,22q11.2 dup,0.0670476423779998,0.157798669687403,0.671206843711075,12,13,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,uncleaned,R,Pooled,0.139953965904271,0.0351207833440375,7.88859231640892e-05,261,460,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,uncleaned,R,16p11.2 del,0.172803862614945,0.0441351289866098,0.000104567072755447,124,252,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,uncleaned,R,16p11.2 dup,0.175891146454667,0.0763646365908534,0.0217260356752546,50,91,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,uncleaned,R,22q11.2 del,-0.0204175311410424,0.0813365371747562,0.801911444072295,75,104,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,uncleaned,R,22q11.2 dup,0.180326607857129,0.231225227498304,0.435883223350636,12,13,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,uncleaned,C,Pooled,-0.237389753847249,0.0381439967212027,1.17177830046257e-09,261,460,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,uncleaned,C,16p11.2 del,-0.411100276023008,0.0488526786088221,7.52894789873576e-16,124,252,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,uncleaned,C,16p11.2 dup,-0.11978408820129,0.0661122553424159,0.071291875602494,50,91,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,uncleaned,C,22q11.2 del,0.0530524153769425,0.077307008378878,0.492913270440017,75,104,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,uncleaned,C,22q11.2 dup,-0.0858425856275244,0.235873252806176,0.716145462687866,12,13,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,exact_age,W,Pooled,-0.181698250620138,0.0480761315274922,0.000194105716693308,123,390,visits,Within-person: BMI above own mean → outcome Z
+Height,exact_age,W,16p11.2 del,-0.225800774074318,0.0584279302759525,0.000139696937831116,87,281,visits,Within-person: BMI above own mean → outcome Z
+Height,exact_age,W,16p11.2 dup,-0.0881405913474392,0.0853966919704248,0.302966445090207,36,109,visits,Within-person: BMI above own mean → outcome Z
+Height,exact_age,P,Pooled,0.0469986412157602,0.0349597382490677,0.181275636975831,123,266,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,exact_age,P,16p11.2 del,0.0612021654457643,0.0422277995026591,0.14971897225188,87,194,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,exact_age,P,16p11.2 dup,0.0141932106407204,0.0660544386271106,0.830236808396987,36,72,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,exact_age,R,Pooled,0.100558996890581,0.0451823354587329,0.0334219198048577,123,266,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,exact_age,R,16p11.2 del,0.104110489658971,0.0527459116783839,0.0565438470476443,87,194,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,exact_age,R,16p11.2 dup,0.108717374486278,0.0859049230655624,0.220516373489523,36,72,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,exact_age,C,Pooled,-0.202832033085699,0.0461405641051958,1.62710873794378e-05,123,266,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,exact_age,C,16p11.2 del,-0.271416632972475,0.0562484778404008,2.46150048052022e-06,87,194,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,exact_age,C,16p11.2 dup,-0.0754674480525285,0.0751805166591669,0.316436938590039,36,72,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,Cardiff,W,Pooled,-0.0426534010129005,0.0526564693319424,0.41919185719373,125,281,visits,Within-person: BMI above own mean → outcome Z
+Height,Cardiff,W,16p11.2 del,-0.273458226172343,0.109379801908986,0.0135010228902507,29,59,visits,Within-person: BMI above own mean → outcome Z
+Height,Cardiff,W,16p11.2 dup,0.106182820272933,0.181743944842526,0.559944068044217,12,24,visits,Within-person: BMI above own mean → outcome Z
+Height,Cardiff,W,22q11.2 del,0.0129167695689292,0.0645130930118554,0.841584069163081,73,175,visits,Within-person: BMI above own mean → outcome Z
+Height,Cardiff,W,22q11.2 dup,0.0873363922114616,0.221097704128683,0.693403158179884,11,23,visits,Within-person: BMI above own mean → outcome Z
+Height,Cardiff,P,Pooled,0.00638274562924159,0.0404774312527422,0.874927822902323,125,156,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,Cardiff,P,16p11.2 del,0.154465129324882,0.107608631046906,0.153409790544212,29,30,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,Cardiff,P,16p11.2 dup,0.119527028481865,0.181897066295777,0.512194465340554,12,12,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,Cardiff,P,22q11.2 del,-0.0418910579267665,0.0475388303048998,0.379732556800061,73,102,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,Cardiff,P,22q11.2 dup,0.0898164214439113,0.118144311153454,0.448406841562788,11,12,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,Cardiff,R,Pooled,0.0676402855826156,0.0705227407478231,0.339748051845853,125,156,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,Cardiff,R,16p11.2 del,0.110298292029843,0.177592557497419,0.535791249430746,29,30,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,Cardiff,R,16p11.2 dup,0.513630009579749,0.219036010466138,0.0204805664351925,12,12,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,Cardiff,R,22q11.2 del,-0.0235537352166851,0.0850729800912391,0.78253805374578,73,102,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,Cardiff,R,22q11.2 dup,0.154956502862705,0.229237959797878,0.50064377743145,11,12,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,Cardiff,C,Pooled,-0.026067814185177,0.0569294149223085,0.647731230169998,125,156,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,Cardiff,C,16p11.2 del,-0.292160912312311,0.11908529935569,0.015398863147165,29,30,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,Cardiff,C,16p11.2 dup,0.322715109382765,0.187253042183461,0.0870528125313775,12,12,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,Cardiff,C,22q11.2 del,0.00865107989082765,0.0677674597013854,0.898605214078898,73,102,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,Cardiff,C,22q11.2 dup,0.0843139136375242,0.210660176632965,0.689601142092722,11,12,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,no_meds,W,Pooled,-0.143557309203417,0.0364684285405134,9.70274872847163e-05,240,653,visits,Within-person: BMI above own mean → outcome Z
+Height,no_meds,W,16p11.2 del,-0.23270003208966,0.0511764323441474,7.16384834464396e-06,116,339,visits,Within-person: BMI above own mean → outcome Z
+Height,no_meds,W,16p11.2 dup,-0.104157005648812,0.0789503098930439,0.1878200964909,43,123,visits,Within-person: BMI above own mean → outcome Z
+Height,no_meds,W,22q11.2 del,-0.0229146817208564,0.070067185995088,0.743806739707493,72,172,visits,Within-person: BMI above own mean → outcome Z
+Height,no_meds,W,22q11.2 dup,0.0983818950986311,0.258433075121212,0.703635162574658,9,19,visits,Within-person: BMI above own mean → outcome Z
+Height,no_meds,P,Pooled,0.0271127246724341,0.0258914384419913,0.296087125877769,240,412,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,no_meds,P,16p11.2 del,0.0617275123438734,0.0370218436912843,0.0969599178291972,116,223,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,no_meds,P,16p11.2 dup,0.0275497910404162,0.0587258928502021,0.63949789363861,43,79,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,no_meds,P,22q11.2 del,-0.0454180415094133,0.049785256226153,0.362376303352629,72,100,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,no_meds,P,22q11.2 dup,0.0948189408732629,0.124455531792309,0.446611046458622,9,10,intervals,Prospective: BMI Z at visit → change in outcome Z
+Height,no_meds,R,Pooled,0.0947899728671983,0.0399359132308157,0.0199552940983245,240,412,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,no_meds,R,16p11.2 del,0.134119812799406,0.0529791911633312,0.013420611905492,116,223,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,no_meds,R,16p11.2 dup,0.150545511711477,0.0846936171086382,0.0811804965198802,43,79,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,no_meds,R,22q11.2 del,-0.0551384679395127,0.0879696151866266,0.531876828736288,72,100,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,no_meds,R,22q11.2 dup,0.10482096838991,0.23396968478773,0.654704940944747,9,10,intervals,Reverse: outcome Z at visit → change in BMI Z
+Height,no_meds,C,Pooled,-0.140404074118987,0.0355006161321863,9.07192575313872e-05,240,412,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,no_meds,C,16p11.2 del,-0.272649161150721,0.0499523301119517,8.69476859131388e-08,116,223,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,no_meds,C,16p11.2 dup,-0.0755875019881289,0.0706933500497648,0.285634024041186,43,79,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,no_meds,C,22q11.2 del,0.00701656283242473,0.0641378456672146,0.91294294040913,72,100,intervals,Concurrent: change in BMI Z → change in outcome Z
+Height,no_meds,C,22q11.2 dup,0.156880426153125,0.219678285129825,0.475578663505958,9,10,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,all,W,Pooled,0.021553306439303,0.0998538914806092,0.829621307099284,84,175,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,all,W,16p11.2 del,-0.0738859845597701,0.168192932538403,0.661597380213259,22,44,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,all,W,16p11.2 dup,0.627756930297323,0.359350578491468,0.0842981435725865,6,12,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,all,W,22q11.2 del,-0.0273886974739744,0.141977697550868,0.847508663488086,50,106,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,all,W,22q11.2 dup,0.164975035368325,0.384509724015035,0.669013363756925,6,13,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,all,P,Pooled,0.111830759356032,0.0897471395576903,0.216518476174612,84,91,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,all,P,16p11.2 del,0.00709162637181794,0.182060153500664,0.969033470081861,22,22,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,all,P,16p11.2 dup,-0.240835228989116,0.306546697706288,0.434587003087889,6,6,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,all,P,22q11.2 del,0.181364959521352,0.111299008126403,0.107450927339927,50,56,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,all,P,22q11.2 dup,0.274573085669621,0.373737926777775,0.464863831747042,6,7,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,all,R,Pooled,0.016010552049064,0.092309043728701,0.862757385107938,84,91,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,all,R,16p11.2 del,0.247636048265772,0.174132725916473,0.159320629839769,22,22,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,all,R,16p11.2 dup,0.213451072498095,0.262302868474516,0.418487256951068,6,6,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,all,R,22q11.2 del,-0.121573882035966,0.128356398141046,0.34664071680896,50,56,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,all,R,22q11.2 dup,-0.174494300350736,0.322430060749983,0.590935778775126,6,7,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,all,C,Pooled,-0.00994443321622567,0.11232440919191,0.929685821025335,84,91,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,all,C,16p11.2 del,0.0100140212102836,0.196699739903803,0.959537172446128,22,22,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,all,C,16p11.2 dup,0.65053475839199,0.614109159274748,0.29296141772693,6,6,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,all,C,22q11.2 del,-0.0569335070724847,0.149561370401806,0.704553779641777,50,56,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,all,C,22q11.2 dup,-0.055394880501928,0.407902751034224,0.892353340605068,6,7,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,uncleaned,W,Pooled,0.0115912106577558,0.106912569933869,0.913916252563861,86,179,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,uncleaned,W,16p11.2 del,-0.082792714675969,0.178996443823115,0.644900252907432,24,48,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,uncleaned,W,16p11.2 dup,0.629706393173847,0.387598283665904,0.107920075170923,6,12,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,uncleaned,W,22q11.2 del,-0.0337659647504276,0.153291747654024,0.826200552478491,50,106,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,uncleaned,W,22q11.2 dup,0.115683224499723,0.415098011545552,0.781178839391918,6,13,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,uncleaned,P,Pooled,0.156266292310865,0.0904513671212641,0.0883757715134458,86,93,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,uncleaned,P,16p11.2 del,0.175125799924333,0.174800881816891,0.319593856261033,24,24,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,uncleaned,P,16p11.2 dup,-0.198113275359117,0.314199052847126,0.53023866137113,6,6,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,uncleaned,P,22q11.2 del,0.179275066829462,0.114985674138226,0.124184962433406,50,56,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,uncleaned,P,22q11.2 dup,0.357174072282283,0.384948322087587,0.356440942219634,6,7,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,uncleaned,R,Pooled,0.0300144333472213,0.0920924581100767,0.745349425698237,86,93,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,uncleaned,R,16p11.2 del,0.252980932156243,0.154298858514558,0.105355754372844,24,24,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,uncleaned,R,16p11.2 dup,0.198355569297478,0.271875588757108,0.467980549739408,6,6,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,uncleaned,R,22q11.2 del,-0.134974969681503,0.132754383501423,0.31250919035056,50,56,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,uncleaned,R,22q11.2 dup,-0.21000700601163,0.331052479394155,0.529098996157798,6,7,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,uncleaned,C,Pooled,0.0306135825011363,0.110599008885603,0.782668399476219,86,93,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,uncleaned,C,16p11.2 del,0.115121328237398,0.191269345319649,0.549082286121153,24,24,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,uncleaned,C,16p11.2 dup,0.690211233421698,0.627620200514147,0.274985508184643,6,6,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,uncleaned,C,22q11.2 del,-0.0620605202174373,0.152072244964094,0.684363876424378,50,56,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,uncleaned,C,22q11.2 dup,-0.0264603708415467,0.414776785825468,0.949305625120119,6,7,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,Cardiff,W,Pooled,0.021553306439303,0.0998538914806092,0.829621307099284,84,175,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,Cardiff,W,16p11.2 del,-0.0738859845597701,0.168192932538403,0.661597380213259,22,44,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,Cardiff,W,16p11.2 dup,0.627756930297323,0.359350578491468,0.0842981435725865,6,12,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,Cardiff,W,22q11.2 del,-0.0273886974739744,0.141977697550868,0.847508663488086,50,106,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,Cardiff,W,22q11.2 dup,0.164975035368325,0.384509724015035,0.669013363756925,6,13,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,Cardiff,P,Pooled,0.111830759356032,0.0897471395576903,0.216518476174612,84,91,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,Cardiff,P,16p11.2 del,0.00709162637181794,0.182060153500664,0.969033470081861,22,22,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,Cardiff,P,16p11.2 dup,-0.240835228989116,0.306546697706288,0.434587003087889,6,6,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,Cardiff,P,22q11.2 del,0.181364959521352,0.111299008126403,0.107450927339927,50,56,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,Cardiff,P,22q11.2 dup,0.274573085669621,0.373737926777775,0.464863831747042,6,7,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,Cardiff,R,Pooled,0.016010552049064,0.092309043728701,0.862757385107938,84,91,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,Cardiff,R,16p11.2 del,0.247636048265772,0.174132725916473,0.159320629839769,22,22,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,Cardiff,R,16p11.2 dup,0.213451072498095,0.262302868474516,0.418487256951068,6,6,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,Cardiff,R,22q11.2 del,-0.121573882035966,0.128356398141046,0.34664071680896,50,56,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,Cardiff,R,22q11.2 dup,-0.174494300350736,0.322430060749983,0.590935778775126,6,7,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,Cardiff,C,Pooled,-0.00994443321622567,0.11232440919191,0.929685821025335,84,91,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,Cardiff,C,16p11.2 del,0.0100140212102836,0.196699739903803,0.959537172446128,22,22,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,Cardiff,C,16p11.2 dup,0.65053475839199,0.614109159274748,0.29296141772693,6,6,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,Cardiff,C,22q11.2 del,-0.0569335070724847,0.149561370401806,0.704553779641777,50,56,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,Cardiff,C,22q11.2 dup,-0.055394880501928,0.407902751034224,0.892353340605068,6,7,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,no_meds,W,Pooled,-0.008314005420592,0.107505945635423,0.938552378929981,79,165,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,no_meds,W,16p11.2 del,-0.05058450968166,0.189273228289025,0.789985839006335,21,42,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,no_meds,W,16p11.2 dup,0.516778156701225,0.634131112387511,0.417624305319618,4,8,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,no_meds,W,22q11.2 del,-0.018180092648922,0.147638796741493,0.902320134771216,49,104,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,no_meds,W,22q11.2 dup,0.0213127331906679,0.432057910797872,0.960786442534998,5,11,visits,Within-person: BMI above own mean → outcome Z
+Head circumference,no_meds,P,Pooled,0.0890277537133133,0.0955510745471562,0.354590153964137,79,86,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,no_meds,P,16p11.2 del,-0.112621614865302,0.210394207244952,0.594171408822061,21,21,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,no_meds,P,16p11.2 dup,-0.377681033431071,0.347262891603709,0.280558914698116,4,4,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,no_meds,P,22q11.2 del,0.189721060220848,0.113592866604228,0.0994135437903463,49,55,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,no_meds,P,22q11.2 dup,0.105758280764684,0.451669561656935,0.815562155459808,5,6,intervals,Prospective: BMI Z at visit → change in outcome Z
+Head circumference,no_meds,R,Pooled,0.019482517406811,0.0914659671540043,0.831928125045622,79,86,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,no_meds,R,16p11.2 del,0.299611161680683,0.172836746417565,0.0874993712211853,21,21,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,no_meds,R,16p11.2 dup,0.257458284616993,0.261634622834462,0.328663764492975,4,4,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,no_meds,R,22q11.2 del,-0.132788845984845,0.126947088570495,0.299206316329517,49,55,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,no_meds,R,22q11.2 dup,-0.368794598942628,0.321756094946817,0.258506775251101,5,6,intervals,Reverse: outcome Z at visit → change in BMI Z
+Head circumference,no_meds,C,Pooled,-0.0201170063302205,0.117262362172049,0.86427499422574,79,86,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,no_meds,C,16p11.2 del,0.0487089393996513,0.216894531211854,0.822983902805011,21,21,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,no_meds,C,16p11.2 dup,0.733099699275581,1.08229100824233,0.500476211459288,4,4,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,no_meds,C,22q11.2 del,-0.0635366635189073,0.155429227923963,0.683984250182561,49,55,intervals,Concurrent: change in BMI Z → change in outcome Z
+Head circumference,no_meds,C,22q11.2 dup,-0.224653161123807,0.457105126157551,0.624677174092286,5,6,intervals,Concurrent: change in BMI Z → change in outcome Z

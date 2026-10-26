@@ -1,0 +1,728 @@
+pheno,locus,sex_stratum,pgs_cobes_stratum,pgs_bmi_stratum,pgs_ht_stratum,pgs_asd_stratum,N
+Height,22q11.2 del,female,,,,,36
+Head circumference,22q11.2 del,female,,,,,27
+Height,22q11.2 del,male,,,,,51
+Head circumference,22q11.2 del,male,,,,,44
+Height,16p11.2 del,male,,,,,135
+Head circumference,16p11.2 del,male,,,,,61
+Height,22q11.2 dup,male,,,,,13
+Head circumference,22q11.2 dup,male,,,,,13
+Height,16p11.2 del,female,,,,,105
+Head circumference,16p11.2 del,female,,,,,52
+Height,16p11.2 dup,female,,,,,61
+Head circumference,16p11.2 dup,female,,,,,33
+Height,16p11.2 dup,male,,,,,69
+Head circumference,16p11.2 dup,male,,,,,36
+Height,22q11.2 dup,female,above median,above median,below median,below median,9
+SRS,22q11.2 dup,female,above median,above median,below median,below median,7
+CNB accuracy,22q11.2 dup,female,above median,above median,below median,below median,9
+CNB speed,22q11.2 dup,female,above median,above median,below median,below median,9
+Height,22q11.2 del,male,below median,below median,above median,below median,13
+Head circumference,22q11.2 del,male,below median,below median,above median,below median,7
+SRS,22q11.2 del,male,below median,below median,above median,below median,9
+SCQ,22q11.2 del,male,below median,below median,above median,below median,6
+CNB accuracy,22q11.2 del,male,below median,below median,above median,below median,15
+CNB speed,22q11.2 del,male,below median,below median,above median,below median,15
+Height,22q11.2 dup,male,above median,below median,above median,above median,1
+SRS,22q11.2 dup,male,above median,below median,above median,above median,1
+SCQ,22q11.2 dup,male,above median,below median,above median,above median,1
+CNB accuracy,22q11.2 dup,male,above median,below median,above median,above median,3
+CNB speed,22q11.2 dup,male,above median,below median,above median,above median,3
+Height,22q11.2 del,female,below median,above median,above median,above median,9
+Head circumference,22q11.2 del,female,below median,above median,above median,above median,6
+SCQ,22q11.2 del,female,below median,above median,above median,above median,7
+CNB accuracy,22q11.2 del,female,below median,above median,above median,above median,14
+CNB speed,22q11.2 del,female,below median,above median,above median,above median,14
+Head circumference,22q11.2 dup,female,above median,above median,below median,below median,6
+SCQ,22q11.2 dup,female,above median,above median,below median,below median,5
+Height,22q11.2 del,female,above median,above median,below median,above median,9
+Head circumference,22q11.2 del,female,above median,above median,below median,above median,6
+SRS,22q11.2 del,female,above median,above median,below median,above median,8
+SCQ,22q11.2 del,female,above median,above median,below median,above median,6
+CNB accuracy,22q11.2 del,female,above median,above median,below median,above median,10
+CNB speed,22q11.2 del,female,above median,above median,below median,above median,10
+Height,16p11.2 dup,male,above median,below median,above median,above median,3
+Head circumference,16p11.2 dup,male,above median,below median,above median,above median,2
+CNB accuracy,22q11.2 del,male,,,,,31
+CNB speed,22q11.2 del,male,,,,,32
+Height,22q11.2 del,male,above median,below median,below median,above median,5
+SRS,22q11.2 del,male,above median,below median,below median,above median,5
+CNB accuracy,16p11.2 del,male,above median,below median,above median,below median,5
+CNB speed,16p11.2 del,male,above median,below median,above median,below median,5
+Height,22q11.2 del,male,below median,below median,below median,above median,5
+Head circumference,22q11.2 del,male,below median,below median,below median,above median,3
+SRS,22q11.2 del,male,below median,below median,below median,above median,4
+CNB accuracy,22q11.2 del,male,below median,below median,below median,above median,6
+CNB speed,22q11.2 del,male,below median,below median,below median,above median,7
+Height,22q11.2 del,female,above median,below median,above median,above median,8
+Head circumference,22q11.2 del,female,above median,below median,above median,above median,7
+SRS,22q11.2 del,female,above median,below median,above median,above median,6
+SCQ,22q11.2 del,female,above median,below median,above median,above median,5
+CNB accuracy,22q11.2 del,female,above median,below median,above median,above median,11
+CNB speed,22q11.2 del,female,above median,below median,above median,above median,11
+CNB accuracy,16p11.2 del,male,,,,,20
+CNB speed,16p11.2 del,male,,,,,20
+CNB accuracy,22q11.2 del,male,above median,below median,above median,below median,10
+CNB speed,22q11.2 del,male,above median,below median,above median,below median,10
+CNB accuracy,22q11.2 del,male,below median,below median,above median,above median,13
+CNB speed,22q11.2 del,male,below median,below median,above median,above median,13
+Height,22q11.2 del,female,above median,above median,below median,below median,14
+CNB accuracy,22q11.2 del,female,above median,above median,below median,below median,16
+CNB speed,22q11.2 del,female,above median,above median,below median,below median,16
+Height,22q11.2 del,female,above median,above median,above median,above median,7
+SRS,22q11.2 del,female,above median,above median,above median,above median,5
+Height,22q11.2 del,female,below median,below median,below median,above median,7
+Head circumference,22q11.2 del,female,below median,below median,below median,above median,5
+SRS,22q11.2 del,female,below median,below median,below median,above median,3
+SCQ,22q11.2 del,female,below median,below median,below median,above median,3
+Height,22q11.2 dup,female,below median,below median,below median,above median,5
+Head circumference,22q11.2 dup,female,below median,below median,below median,above median,5
+SCQ,22q11.2 dup,female,below median,below median,below median,above median,3
+CNB accuracy,22q11.2 dup,female,below median,below median,below median,above median,3
+CNB speed,22q11.2 dup,female,below median,below median,below median,above median,3
+Height,22q11.2 dup,male,below median,below median,below median,above median,5
+Head circumference,22q11.2 dup,male,below median,below median,below median,above median,4
+SRS,22q11.2 dup,male,below median,below median,below median,above median,3
+CNB accuracy,22q11.2 dup,male,below median,below median,below median,above median,4
+CNB speed,22q11.2 dup,male,below median,below median,below median,above median,4
+SRS,22q11.2 del,female,,,,,12
+SCQ,22q11.2 del,female,,,,,10
+CNB accuracy,22q11.2 del,female,,,,,31
+CNB speed,22q11.2 del,female,,,,,31
+Height,22q11.2 del,male,above median,below median,above median,below median,8
+Head circumference,22q11.2 del,male,above median,below median,above median,below median,5
+SRS,22q11.2 del,male,above median,below median,above median,below median,4
+Height,22q11.2 del,male,above median,above median,above median,below median,11
+SRS,22q11.2 del,male,above median,above median,above median,below median,6
+SCQ,22q11.2 del,male,above median,above median,above median,below median,6
+CNB accuracy,22q11.2 del,male,above median,above median,above median,below median,10
+CNB speed,22q11.2 del,male,above median,above median,above median,below median,10
+CNB accuracy,22q11.2 del,female,below median,below median,below median,above median,7
+CNB speed,22q11.2 del,female,below median,below median,below median,above median,7
+Height,22q11.2 del,female,below median,above median,below median,below median,9
+Head circumference,22q11.2 del,female,below median,above median,below median,below median,5
+SRS,22q11.2 del,female,below median,above median,below median,below median,6
+CNB accuracy,22q11.2 del,female,below median,above median,below median,below median,8
+CNB speed,22q11.2 del,female,below median,above median,below median,below median,8
+CNB accuracy,22q11.2 del,female,below median,below median,below median,below median,11
+CNB speed,22q11.2 del,female,below median,below median,below median,below median,11
+Height,16p11.2 del,female,above median,above median,above median,above median,4
+Head circumference,16p11.2 del,female,above median,above median,above median,above median,3
+SRS,16p11.2 del,female,above median,above median,above median,above median,2
+CNB accuracy,16p11.2 del,female,above median,above median,above median,above median,4
+CNB speed,16p11.2 del,female,above median,above median,above median,above median,4
+Height,16p11.2 del,female,above median,above median,below median,above median,9
+Head circumference,16p11.2 del,female,above median,above median,below median,above median,8
+CNB accuracy,16p11.2 del,female,above median,above median,below median,above median,8
+CNB speed,16p11.2 del,female,above median,above median,below median,above median,8
+Height,22q11.2 del,male,below median,below median,below median,below median,5
+Head circumference,22q11.2 del,male,below median,below median,below median,below median,3
+CNB accuracy,22q11.2 del,male,below median,below median,below median,below median,7
+CNB speed,22q11.2 del,male,below median,below median,below median,below median,7
+Height,22q11.2 dup,male,above median,above median,above median,above median,5
+Head circumference,22q11.2 dup,male,above median,above median,above median,above median,5
+CNB accuracy,22q11.2 dup,male,above median,above median,above median,above median,8
+CNB speed,22q11.2 dup,male,above median,above median,above median,above median,8
+Height,16p11.2 del,female,above median,below median,above median,below median,2
+Head circumference,16p11.2 del,female,above median,below median,above median,below median,2
+SRS,16p11.2 del,female,above median,below median,above median,below median,2
+SCQ,16p11.2 del,female,above median,below median,above median,below median,2
+CNB accuracy,16p11.2 del,female,above median,below median,above median,below median,1
+CNB speed,16p11.2 del,female,above median,below median,above median,below median,1
+Height,22q11.2 del,male,above median,above median,below median,above median,7
+SRS,22q11.2 del,male,above median,above median,below median,above median,5
+SCQ,22q11.2 del,male,above median,above median,below median,above median,4
+CNB accuracy,22q11.2 del,male,above median,above median,below median,above median,5
+CNB speed,22q11.2 del,male,above median,above median,below median,above median,6
+Height,16p11.2 del,male,below median,below median,below median,below median,11
+Head circumference,16p11.2 del,male,below median,below median,below median,below median,9
+Height,22q11.2 del,male,below median,above median,below median,below median,9
+Head circumference,22q11.2 del,male,below median,above median,below median,below median,7
+SRS,22q11.2 del,male,below median,above median,below median,below median,8
+SCQ,22q11.2 del,male,below median,above median,below median,below median,6
+CNB accuracy,22q11.2 del,male,below median,above median,below median,below median,8
+CNB speed,22q11.2 del,male,below median,above median,below median,below median,8
+Height,22q11.2 del,female,below median,above median,below median,above median,14
+Head circumference,22q11.2 del,female,below median,above median,below median,above median,10
+SRS,22q11.2 del,female,below median,above median,below median,above median,8
+SCQ,22q11.2 del,female,below median,above median,below median,above median,5
+CNB speed,22q11.2 del,female,below median,above median,below median,above median,10
+Height,22q11.2 dup,male,above median,above median,below median,above median,5
+Head circumference,22q11.2 dup,male,above median,above median,below median,above median,4
+SRS,22q11.2 dup,male,above median,above median,below median,above median,5
+CNB accuracy,22q11.2 dup,male,above median,above median,below median,above median,4
+CNB speed,22q11.2 dup,male,above median,above median,below median,above median,4
+CNB accuracy,16p11.2 del,female,,,,,19
+CNB speed,16p11.2 del,female,,,,,19
+Height,16p11.2 dup,male,below median,below median,above median,above median,3
+Head circumference,16p11.2 dup,male,below median,below median,above median,above median,3
+CNB accuracy,16p11.2 dup,male,below median,below median,above median,above median,2
+CNB speed,16p11.2 dup,male,below median,below median,above median,above median,2
+CNB accuracy,22q11.2 del,female,below median,below median,above median,above median,12
+CNB speed,22q11.2 del,female,below median,below median,above median,above median,12
+Height,16p11.2 del,male,above median,above median,above median,below median,4
+SRS,16p11.2 del,male,above median,above median,above median,below median,2
+SCQ,16p11.2 del,male,above median,above median,above median,below median,2
+CNB accuracy,16p11.2 del,male,above median,above median,above median,below median,3
+CNB speed,16p11.2 del,male,above median,above median,above median,below median,3
+SRS,22q11.2 dup,male,above median,above median,above median,above median,3
+CNB accuracy,22q11.2 dup,male,above median,below median,above median,below median,3
+CNB speed,22q11.2 dup,male,above median,below median,above median,below median,3
+CNB accuracy,22q11.2 del,female,below median,below median,above median,below median,17
+CNB speed,22q11.2 del,female,below median,below median,above median,below median,17
+SRS,22q11.2 del,female,below median,above median,above median,above median,5
+Head circumference,22q11.2 del,male,above median,above median,above median,below median,8
+CNB accuracy,16p11.2 del,male,below median,below median,below median,below median,5
+CNB speed,16p11.2 del,male,below median,below median,below median,below median,6
+Height,16p11.2 dup,male,above median,below median,above median,below median,2
+Head circumference,16p11.2 dup,male,above median,below median,above median,below median,2
+SRS,16p11.2 dup,male,above median,below median,above median,below median,1
+CNB accuracy,16p11.2 dup,male,above median,below median,above median,below median,2
+CNB speed,16p11.2 dup,male,above median,below median,above median,below median,2
+Height,22q11.2 del,female,above median,above median,above median,below median,8
+Head circumference,22q11.2 del,female,above median,above median,above median,below median,7
+SRS,22q11.2 del,female,above median,above median,above median,below median,6
+SCQ,22q11.2 del,female,above median,above median,above median,below median,5
+CNB accuracy,22q11.2 del,female,below median,above median,below median,above median,9
+Height,16p11.2 del,male,below median,below median,above median,above median,3
+Head circumference,16p11.2 del,male,below median,below median,above median,above median,3
+SCQ,22q11.2 del,female,above median,above median,above median,above median,4
+CNB accuracy,22q11.2 del,female,above median,above median,above median,above median,6
+CNB speed,22q11.2 del,female,above median,above median,above median,above median,6
+CNB accuracy,22q11.2 dup,male,below median,above median,above median,below median,4
+CNB speed,22q11.2 dup,male,below median,above median,above median,below median,4
+Height,22q11.2 del,female,below median,below median,below median,below median,10
+Head circumference,22q11.2 del,female,below median,below median,below median,below median,6
+Height,16p11.2 del,female,above median,below median,below median,above median,3
+SRS,16p11.2 del,female,above median,below median,below median,above median,2
+SCQ,16p11.2 del,female,above median,below median,below median,above median,2
+Height,16p11.2 del,male,above median,above median,above median,above median,5
+Head circumference,16p11.2 del,male,above median,above median,above median,above median,3
+Height,16p11.2 dup,female,above median,above median,below median,above median,1
+Head circumference,16p11.2 dup,female,above median,above median,below median,above median,1
+SRS,16p11.2 dup,female,above median,above median,below median,above median,1
+CNB accuracy,16p11.2 dup,female,above median,above median,below median,above median,1
+CNB speed,16p11.2 dup,female,above median,above median,below median,above median,1
+CNB accuracy,16p11.2 dup,male,,,,,7
+CNB speed,16p11.2 dup,male,,,,,7
+Height,22q11.2 del,male,below median,above median,above median,above median,1
+Head circumference,22q11.2 del,male,below median,above median,above median,above median,1
+SRS,22q11.2 del,male,below median,above median,above median,above median,1
+SCQ,22q11.2 del,male,below median,above median,above median,above median,1
+CNB accuracy,22q11.2 del,male,below median,above median,above median,above median,6
+CNB speed,22q11.2 del,male,below median,above median,above median,above median,7
+Height,22q11.2 del,male,above median,below median,above median,above median,13
+SRS,22q11.2 del,male,above median,below median,above median,above median,9
+Head circumference,22q11.2 del,male,above median,below median,above median,above median,8
+SCQ,22q11.2 del,male,above median,below median,above median,above median,7
+Height,22q11.2 del,female,below median,above median,above median,below median,4
+SRS,22q11.2 del,female,below median,above median,above median,below median,3
+SCQ,22q11.2 del,female,below median,above median,above median,below median,2
+CNB accuracy,22q11.2 del,female,below median,above median,above median,below median,6
+CNB speed,22q11.2 del,female,below median,above median,above median,below median,6
+Height,22q11.2 dup,female,,,,,6
+Head circumference,22q11.2 dup,female,,,,,6
+Head circumference,22q11.2 del,female,above median,above median,below median,below median,9
+SRS,22q11.2 del,female,above median,above median,below median,below median,6
+SCQ,22q11.2 del,female,above median,above median,below median,below median,6
+Height,22q11.2 del,male,below median,below median,above median,above median,14
+Head circumference,22q11.2 del,male,below median,below median,above median,above median,8
+SRS,22q11.2 del,male,below median,below median,above median,above median,9
+SCQ,22q11.2 del,male,below median,below median,above median,above median,9
+Height,16p11.2 dup,male,above median,above median,below median,above median,6
+Head circumference,16p11.2 dup,male,above median,above median,below median,above median,4
+SRS,16p11.2 dup,male,above median,above median,below median,above median,3
+SCQ,16p11.2 dup,male,above median,above median,below median,above median,2
+CNB accuracy,16p11.2 dup,male,above median,above median,below median,above median,3
+CNB speed,16p11.2 dup,male,above median,above median,below median,above median,3
+Height,16p11.2 del,female,below median,above median,above median,below median,3
+Head circumference,16p11.2 del,female,below median,above median,above median,below median,3
+SRS,16p11.2 del,female,below median,above median,above median,below median,3
+SCQ,16p11.2 del,female,below median,above median,above median,below median,2
+CNB accuracy,16p11.2 del,female,below median,above median,above median,below median,3
+CNB speed,16p11.2 del,female,below median,above median,above median,below median,3
+SRS,16p11.2 del,male,,,,,4
+SCQ,16p11.2 del,male,,,,,3
+SCQ,22q11.2 del,male,below median,below median,below median,above median,4
+Height,16p11.2 del,male,below median,above median,above median,below median,4
+SRS,16p11.2 del,male,below median,above median,above median,below median,3
+SCQ,16p11.2 del,male,below median,above median,above median,below median,3
+CNB accuracy,16p11.2 del,male,below median,above median,above median,below median,3
+CNB speed,16p11.2 del,male,below median,above median,above median,below median,3
+SCQ,22q11.2 del,female,below median,above median,below median,below median,5
+Height,16p11.2 dup,male,below median,above median,above median,below median,3
+Head circumference,16p11.2 dup,male,below median,above median,above median,below median,3
+CNB accuracy,16p11.2 dup,male,below median,above median,above median,below median,1
+CNB speed,16p11.2 dup,male,below median,above median,above median,below median,1
+Height,16p11.2 del,male,below median,below median,below median,above median,4
+Head circumference,16p11.2 del,male,below median,below median,below median,above median,4
+SRS,16p11.2 del,male,below median,below median,below median,above median,2
+CNB accuracy,16p11.2 del,male,below median,below median,below median,above median,4
+CNB speed,16p11.2 del,male,below median,below median,below median,above median,4
+CNB accuracy,22q11.2 del,male,above median,below median,above median,above median,9
+CNB speed,22q11.2 del,male,above median,below median,above median,above median,9
+Height,22q11.2 dup,female,below median,below median,above median,below median,4
+Head circumference,22q11.2 dup,female,below median,below median,above median,below median,3
+SRS,22q11.2 dup,female,below median,below median,above median,below median,2
+Height,16p11.2 del,male,below median,above median,below median,below median,2
+Head circumference,16p11.2 del,male,below median,above median,below median,below median,2
+SRS,16p11.2 del,male,below median,above median,below median,below median,2
+SCQ,16p11.2 del,male,below median,above median,below median,below median,2
+CNB accuracy,16p11.2 del,male,below median,above median,below median,below median,3
+CNB speed,16p11.2 del,male,below median,above median,below median,below median,3
+Height,22q11.2 dup,female,above median,above median,below median,above median,5
+SCQ,22q11.2 dup,female,above median,above median,below median,above median,2
+CNB accuracy,22q11.2 dup,female,above median,above median,below median,above median,7
+CNB speed,22q11.2 dup,female,above median,above median,below median,above median,7
+CNB accuracy,16p11.2 del,female,below median,below median,below median,above median,5
+CNB speed,16p11.2 del,female,below median,below median,below median,above median,5
+Height,22q11.2 dup,female,above median,below median,below median,above median,3
+Head circumference,22q11.2 dup,female,above median,below median,below median,above median,2
+Height,16p11.2 dup,male,above median,above median,above median,above median,3
+Head circumference,16p11.2 dup,male,above median,above median,above median,above median,2
+Height,22q11.2 dup,male,above median,below median,above median,below median,2
+Head circumference,22q11.2 dup,male,above median,below median,above median,below median,2
+Height,22q11.2 del,male,above median,above median,above median,above median,6
+Head circumference,22q11.2 del,male,above median,above median,above median,above median,5
+Height,22q11.2 dup,female,below median,below median,below median,below median,4
+SRS,22q11.2 dup,female,below median,below median,below median,below median,2
+SCQ,22q11.2 dup,female,below median,below median,below median,below median,2
+CNB accuracy,22q11.2 dup,female,below median,below median,below median,below median,5
+CNB speed,22q11.2 dup,female,below median,below median,below median,below median,5
+CNB accuracy,22q11.2 dup,female,above median,above median,above median,above median,1
+CNB speed,22q11.2 dup,female,above median,above median,above median,above median,1
+CNB accuracy,22q11.2 dup,female,above median,above median,above median,below median,5
+CNB speed,22q11.2 dup,female,above median,above median,above median,below median,5
+CNB accuracy,22q11.2 dup,female,,,,,10
+CNB speed,22q11.2 dup,female,,,,,10
+Height,16p11.2 del,male,above median,below median,above median,below median,3
+Head circumference,16p11.2 del,male,above median,below median,above median,below median,3
+SRS,16p11.2 del,male,above median,below median,above median,below median,2
+Height,16p11.2 dup,male,below median,below median,below median,above median,3
+Head circumference,16p11.2 dup,male,below median,below median,below median,above median,3
+CNB accuracy,16p11.2 dup,male,below median,below median,below median,above median,2
+CNB speed,16p11.2 dup,male,below median,below median,below median,above median,2
+Height,22q11.2 del,male,above median,below median,below median,below median,7
+SRS,22q11.2 del,male,above median,below median,below median,below median,6
+SCQ,22q11.2 del,male,above median,below median,below median,below median,6
+CNB accuracy,22q11.2 del,male,above median,below median,below median,below median,7
+CNB speed,22q11.2 del,male,above median,below median,below median,below median,7
+Height,16p11.2 del,female,below median,above median,below median,below median,2
+Head circumference,16p11.2 del,female,below median,above median,below median,below median,2
+SRS,16p11.2 del,female,below median,above median,below median,below median,2
+SCQ,16p11.2 del,female,below median,above median,below median,below median,1
+CNB accuracy,16p11.2 del,female,below median,above median,below median,below median,2
+CNB speed,16p11.2 del,female,below median,above median,below median,below median,2
+SRS,16p11.2 del,male,above median,above median,above median,above median,4
+SCQ,16p11.2 del,male,above median,above median,above median,above median,4
+CNB accuracy,16p11.2 del,male,above median,above median,above median,above median,4
+CNB speed,16p11.2 del,male,above median,above median,above median,above median,4
+CNB accuracy,22q11.2 del,female,above median,above median,above median,below median,8
+CNB speed,22q11.2 del,female,above median,above median,above median,below median,8
+Height,16p11.2 dup,female,above median,above median,above median,above median,4
+Head circumference,16p11.2 dup,female,above median,above median,above median,above median,3
+Height,22q11.2 dup,female,above median,above median,above median,below median,2
+SRS,22q11.2 dup,female,above median,above median,above median,below median,2
+SCQ,22q11.2 dup,female,above median,above median,above median,below median,2
+Height,22q11.2 dup,female,above median,below median,above median,above median,1
+Head circumference,22q11.2 dup,female,above median,below median,above median,above median,1
+SRS,22q11.2 dup,female,above median,below median,above median,above median,1
+SCQ,22q11.2 dup,female,above median,below median,above median,above median,1
+CNB accuracy,22q11.2 dup,female,above median,below median,above median,above median,2
+CNB speed,22q11.2 dup,female,above median,below median,above median,above median,2
+Height,22q11.2 del,female,below median,below median,above median,below median,13
+Head circumference,22q11.2 del,female,below median,below median,above median,below median,9
+SRS,22q11.2 del,female,below median,below median,above median,below median,12
+SCQ,22q11.2 del,female,below median,below median,above median,below median,9
+CNB accuracy,22q11.2 del,male,above median,above median,below median,below median,7
+CNB speed,22q11.2 del,male,above median,above median,below median,below median,8
+CNB accuracy,16p11.2 del,female,above median,above median,above median,below median,7
+CNB speed,16p11.2 del,female,above median,above median,above median,below median,7
+SCQ,22q11.2 dup,male,above median,above median,below median,above median,3
+SRS,22q11.2 del,male,,,,,9
+Head circumference,16p11.2 del,male,below median,above median,above median,below median,3
+Height,16p11.2 dup,male,below median,above median,below median,below median,2
+Head circumference,16p11.2 dup,male,below median,above median,below median,below median,2
+SRS,16p11.2 dup,male,below median,above median,below median,below median,1
+CNB accuracy,16p11.2 dup,male,below median,above median,below median,below median,1
+CNB speed,16p11.2 dup,male,below median,above median,below median,below median,1
+CNB accuracy,16p11.2 dup,female,,,,,9
+CNB speed,16p11.2 dup,female,,,,,9
+Height,16p11.2 dup,male,below median,below median,below median,below median,4
+Head circumference,16p11.2 dup,male,below median,below median,below median,below median,4
+SRS,16p11.2 dup,male,below median,below median,below median,below median,2
+SCQ,16p11.2 dup,male,below median,below median,below median,below median,2
+CNB accuracy,16p11.2 dup,male,below median,below median,below median,below median,2
+CNB speed,16p11.2 dup,male,below median,below median,below median,below median,2
+CNB accuracy,22q11.2 dup,female,below median,below median,above median,below median,3
+CNB speed,22q11.2 dup,female,below median,below median,above median,below median,3
+Head circumference,16p11.2 del,male,above median,above median,above median,below median,3
+SCQ,22q11.2 dup,female,below median,below median,above median,below median,1
+Height,22q11.2 del,male,below median,above median,above median,below median,5
+Head circumference,22q11.2 del,male,below median,above median,above median,below median,5
+Head circumference,22q11.2 del,female,below median,above median,above median,below median,2
+Head circumference,22q11.2 del,female,above median,above median,above median,above median,5
+Height,22q11.2 del,male,below median,above median,below median,above median,7
+Head circumference,22q11.2 del,male,below median,above median,below median,above median,6
+SRS,22q11.2 del,male,below median,above median,below median,above median,7
+SCQ,22q11.2 del,male,below median,above median,below median,above median,5
+Head circumference,22q11.2 dup,female,above median,above median,below median,above median,3
+Height,16p11.2 dup,female,below median,above median,above median,below median,2
+Head circumference,16p11.2 dup,female,below median,above median,above median,below median,2
+SRS,16p11.2 dup,female,below median,above median,above median,below median,2
+SCQ,16p11.2 dup,female,below median,above median,above median,below median,2
+CNB accuracy,16p11.2 dup,female,below median,above median,above median,below median,2
+CNB speed,16p11.2 dup,female,below median,above median,above median,below median,2
+CNB accuracy,22q11.2 del,male,above median,below median,below median,above median,4
+CNB speed,22q11.2 del,male,above median,below median,below median,above median,4
+Height,22q11.2 dup,male,below median,above median,below median,below median,3
+Head circumference,22q11.2 dup,male,below median,above median,below median,below median,1
+CNB accuracy,22q11.2 dup,male,below median,above median,below median,below median,2
+CNB speed,22q11.2 dup,male,below median,above median,below median,below median,2
+Height,16p11.2 dup,female,above median,below median,above median,below median,1
+Head circumference,16p11.2 dup,female,above median,below median,above median,below median,1
+SRS,16p11.2 dup,female,above median,below median,above median,below median,1
+CNB accuracy,16p11.2 dup,female,above median,below median,above median,below median,1
+CNB speed,16p11.2 dup,female,above median,below median,above median,below median,1
+Height,22q11.2 dup,female,above median,below median,below median,below median,3
+SRS,22q11.2 dup,female,above median,below median,below median,below median,3
+CNB accuracy,22q11.2 dup,female,above median,below median,below median,below median,3
+CNB speed,22q11.2 dup,female,above median,below median,below median,below median,3
+Height,16p11.2 del,male,above median,above median,below median,above median,8
+Head circumference,16p11.2 del,male,above median,above median,below median,above median,8
+SRS,16p11.2 del,male,above median,above median,below median,above median,5
+SCQ,16p11.2 del,male,above median,above median,below median,above median,5
+CNB accuracy,16p11.2 del,male,above median,above median,below median,above median,4
+CNB speed,16p11.2 del,male,above median,above median,below median,above median,4
+Height,22q11.2 del,female,above median,below median,below median,above median,10
+Head circumference,22q11.2 del,female,above median,below median,below median,above median,5
+SRS,22q11.2 del,female,above median,below median,below median,above median,7
+SCQ,22q11.2 del,female,above median,below median,below median,above median,7
+CNB accuracy,22q11.2 del,female,above median,below median,below median,above median,8
+CNB speed,22q11.2 del,female,above median,below median,below median,above median,8
+Height,16p11.2 dup,female,below median,below median,above median,below median,2
+Head circumference,16p11.2 dup,female,below median,below median,above median,below median,1
+SRS,16p11.2 dup,female,below median,below median,above median,below median,2
+SCQ,16p11.2 dup,female,below median,below median,above median,below median,2
+Height,22q11.2 del,male,above median,above median,below median,below median,8
+SRS,22q11.2 del,male,above median,above median,below median,below median,8
+SCQ,22q11.2 del,male,above median,above median,below median,below median,6
+CNB accuracy,22q11.2 dup,male,,,,,16
+CNB speed,22q11.2 dup,male,,,,,16
+Height,16p11.2 dup,female,below median,below median,below median,above median,2
+Head circumference,16p11.2 dup,female,below median,below median,below median,above median,2
+Height,22q11.2 del,female,above median,below median,above median,below median,7
+SRS,22q11.2 del,female,above median,below median,above median,below median,6
+SCQ,22q11.2 del,female,above median,below median,above median,below median,3
+CNB accuracy,22q11.2 del,female,above median,below median,above median,below median,9
+CNB speed,22q11.2 del,female,above median,below median,above median,below median,9
+Height,16p11.2 del,female,below median,below median,above median,above median,4
+SRS,16p11.2 del,female,below median,below median,above median,above median,1
+SCQ,16p11.2 del,female,below median,below median,above median,above median,1
+CNB accuracy,16p11.2 del,female,below median,below median,above median,above median,2
+CNB speed,16p11.2 del,female,below median,below median,above median,above median,2
+Height,16p11.2 dup,female,above median,below median,above median,above median,3
+Head circumference,16p11.2 dup,female,above median,below median,above median,above median,3
+SRS,16p11.2 dup,female,above median,below median,above median,above median,3
+CNB accuracy,16p11.2 dup,female,above median,below median,above median,above median,3
+CNB speed,16p11.2 dup,female,above median,below median,above median,above median,3
+CNB accuracy,22q11.2 dup,male,above median,above median,below median,below median,6
+CNB speed,22q11.2 dup,male,above median,above median,below median,below median,6
+CNB accuracy,22q11.2 dup,female,below median,above median,above median,above median,1
+CNB speed,22q11.2 dup,female,below median,above median,above median,above median,1
+Height,16p11.2 del,female,below median,below median,above median,below median,5
+Head circumference,16p11.2 del,female,below median,below median,above median,below median,5
+SRS,16p11.2 del,female,below median,below median,above median,below median,3
+CNB accuracy,16p11.2 del,female,below median,below median,above median,below median,4
+CNB speed,16p11.2 del,female,below median,below median,above median,below median,4
+Height,22q11.2 del,female,below median,below median,above median,above median,9
+Head circumference,22q11.2 del,female,below median,below median,above median,above median,4
+SRS,22q11.2 del,female,below median,below median,above median,above median,5
+Height,16p11.2 del,male,above median,above median,below median,below median,3
+Head circumference,16p11.2 del,male,above median,above median,below median,below median,3
+Head circumference,22q11.2 del,male,above median,below median,below median,below median,4
+Height,22q11.2 dup,male,above median,above median,above median,below median,3
+Head circumference,22q11.2 dup,male,above median,above median,above median,below median,2
+SRS,22q11.2 dup,male,above median,above median,above median,below median,2
+SCQ,22q11.2 dup,male,above median,above median,above median,below median,2
+CNB accuracy,22q11.2 dup,male,above median,above median,above median,below median,4
+CNB speed,22q11.2 dup,male,above median,above median,above median,below median,4
+SRS,16p11.2 del,male,above median,above median,below median,below median,1
+SCQ,16p11.2 del,male,above median,above median,below median,below median,1
+CNB accuracy,16p11.2 del,male,above median,above median,below median,below median,5
+CNB speed,16p11.2 del,male,above median,above median,below median,below median,5
+Height,16p11.2 del,female,above median,above median,above median,below median,6
+Head circumference,16p11.2 del,female,above median,above median,above median,below median,6
+SRS,16p11.2 del,female,above median,above median,above median,below median,4
+SRS,16p11.2 dup,female,above median,above median,above median,above median,1
+SCQ,16p11.2 dup,female,above median,above median,above median,above median,1
+CNB accuracy,16p11.2 dup,female,above median,above median,above median,above median,2
+CNB speed,16p11.2 dup,female,above median,above median,above median,above median,2
+Height,16p11.2 del,female,below median,below median,below median,below median,5
+Head circumference,16p11.2 del,female,below median,below median,below median,below median,5
+SCQ,22q11.2 del,male,,,,,8
+Height,16p11.2 dup,male,below median,below median,above median,below median,2
+Head circumference,16p11.2 dup,male,below median,below median,above median,below median,2
+SRS,16p11.2 dup,male,below median,below median,above median,below median,2
+CNB accuracy,16p11.2 dup,male,below median,below median,above median,below median,1
+CNB speed,16p11.2 dup,male,below median,below median,above median,below median,1
+Head circumference,22q11.2 dup,female,above median,below median,below median,below median,2
+SRS,16p11.2 dup,female,,,,,2
+SCQ,16p11.2 dup,female,,,,,2
+Height,16p11.2 dup,male,above median,above median,above median,below median,1
+Head circumference,16p11.2 dup,male,above median,above median,above median,below median,1
+CNB accuracy,16p11.2 dup,male,above median,above median,above median,below median,1
+CNB speed,16p11.2 dup,male,above median,above median,above median,below median,1
+Height,16p11.2 dup,female,below median,below median,above median,above median,3
+Height,22q11.2 dup,male,above median,below median,below median,above median,3
+Head circumference,22q11.2 dup,male,above median,below median,below median,above median,3
+SRS,22q11.2 dup,male,above median,below median,below median,above median,2
+SCQ,22q11.2 dup,male,above median,below median,below median,above median,2
+CNB accuracy,22q11.2 dup,male,above median,below median,below median,above median,2
+CNB speed,22q11.2 dup,male,above median,below median,below median,above median,2
+CNB speed,16p11.2 del,female,below median,below median,below median,below median,4
+Height,16p11.2 del,male,below median,below median,above median,below median,5
+Head circumference,16p11.2 del,male,below median,below median,above median,below median,3
+SRS,22q11.2 dup,male,,,,,3
+SCQ,22q11.2 dup,male,,,,,3
+Height,16p11.2 del,male,below median,above median,below median,above median,5
+Head circumference,16p11.2 del,male,below median,above median,below median,above median,2
+SRS,16p11.2 del,male,below median,above median,below median,above median,5
+SCQ,16p11.2 del,male,below median,above median,below median,above median,4
+Height,22q11.2 dup,female,above median,below median,above median,below median,3
+Head circumference,22q11.2 dup,female,above median,below median,above median,below median,3
+SRS,22q11.2 dup,female,above median,below median,above median,below median,3
+CNB accuracy,22q11.2 dup,female,above median,below median,above median,below median,3
+CNB speed,22q11.2 dup,female,above median,below median,above median,below median,3
+Height,22q11.2 dup,female,above median,above median,above median,above median,2
+Head circumference,22q11.2 dup,female,above median,above median,above median,above median,2
+SRS,22q11.2 dup,female,above median,above median,above median,above median,2
+SCQ,22q11.2 dup,female,above median,above median,above median,above median,2
+CNB accuracy,22q11.2 dup,male,below median,below median,above median,below median,3
+CNB speed,22q11.2 dup,male,below median,below median,above median,below median,3
+SCQ,16p11.2 del,female,below median,below median,above median,below median,2
+Head circumference,16p11.2 del,female,below median,below median,above median,above median,2
+SRS,22q11.2 dup,female,above median,above median,below median,above median,1
+SCQ,16p11.2 dup,female,above median,below median,above median,above median,1
+CNB accuracy,22q11.2 del,male,below median,above median,below median,above median,6
+CNB speed,22q11.2 del,male,below median,above median,below median,above median,6
+SRS,16p11.2 del,female,above median,above median,below median,above median,6
+Height,22q11.2 del,female,above median,below median,below median,below median,6
+SRS,22q11.2 del,female,above median,below median,below median,below median,4
+SCQ,22q11.2 del,female,above median,below median,below median,below median,4
+CNB accuracy,22q11.2 del,female,above median,below median,below median,below median,7
+CNB speed,22q11.2 del,female,above median,below median,below median,below median,7
+Height,22q11.2 dup,male,above median,below median,below median,below median,2
+Head circumference,22q11.2 dup,male,above median,below median,below median,below median,2
+SRS,22q11.2 dup,male,above median,below median,below median,below median,2
+SCQ,22q11.2 dup,male,above median,below median,below median,below median,2
+CNB accuracy,22q11.2 dup,male,above median,below median,below median,below median,2
+CNB speed,22q11.2 dup,male,above median,below median,below median,below median,2
+Height,16p11.2 del,female,below median,below median,below median,above median,5
+Head circumference,16p11.2 del,female,below median,below median,below median,above median,5
+SRS,16p11.2 del,female,below median,below median,below median,above median,5
+SRS,22q11.2 dup,female,,,,,3
+SCQ,22q11.2 dup,female,,,,,3
+Height,22q11.2 dup,male,below median,above median,below median,above median,1
+Head circumference,22q11.2 dup,male,below median,above median,below median,above median,1
+SRS,22q11.2 dup,male,below median,above median,below median,above median,1
+CNB accuracy,22q11.2 dup,male,below median,above median,below median,above median,1
+CNB speed,22q11.2 dup,male,below median,above median,below median,above median,1
+CNB accuracy,22q11.2 dup,male,below median,below median,below median,below median,3
+CNB speed,22q11.2 dup,male,below median,below median,below median,below median,3
+Head circumference,22q11.2 dup,female,above median,above median,above median,below median,1
+Head circumference,22q11.2 del,female,above median,below median,above median,below median,3
+Height,16p11.2 dup,female,below median,above median,above median,above median,3
+Head circumference,22q11.2 del,female,above median,below median,below median,below median,3
+CNB accuracy,22q11.2 del,male,above median,above median,above median,above median,6
+CNB speed,22q11.2 del,male,above median,above median,above median,above median,6
+Height,22q11.2 dup,male,above median,above median,below median,below median,5
+Head circumference,22q11.2 dup,male,above median,above median,below median,below median,5
+SRS,16p11.2 dup,male,above median,below median,above median,above median,2
+SCQ,16p11.2 dup,male,above median,below median,above median,above median,1
+CNB accuracy,16p11.2 dup,male,above median,below median,above median,above median,1
+CNB speed,16p11.2 dup,male,above median,below median,above median,above median,1
+SCQ,16p11.2 del,female,above median,above median,above median,below median,3
+SCQ,16p11.2 del,female,above median,above median,below median,above median,3
+SCQ,22q11.2 del,female,below median,below median,above median,above median,4
+Head circumference,16p11.2 dup,female,below median,above median,above median,above median,1
+SRS,16p11.2 dup,female,below median,above median,above median,above median,1
+SCQ,16p11.2 dup,female,below median,above median,above median,above median,1
+CNB accuracy,16p11.2 dup,female,below median,above median,above median,above median,2
+CNB speed,16p11.2 dup,female,below median,above median,above median,above median,2
+SRS,22q11.2 del,male,below median,above median,above median,below median,4
+SCQ,22q11.2 del,male,below median,above median,above median,below median,3
+CNB accuracy,22q11.2 del,male,below median,above median,above median,below median,4
+CNB speed,22q11.2 del,male,below median,above median,above median,below median,4
+Height,16p11.2 dup,male,above median,below median,below median,above median,2
+Head circumference,16p11.2 dup,male,above median,below median,below median,above median,2
+SRS,16p11.2 del,male,below median,below median,below median,below median,4
+SCQ,16p11.2 del,male,below median,below median,below median,below median,2
+CNB accuracy,16p11.2 del,male,below median,above median,below median,above median,4
+CNB speed,16p11.2 del,male,below median,above median,below median,above median,4
+SCQ,16p11.2 del,male,above median,below median,above median,below median,1
+Head circumference,22q11.2 del,male,above median,above median,below median,below median,5
+CNB accuracy,16p11.2 del,male,below median,below median,above median,below median,4
+CNB speed,16p11.2 del,male,below median,below median,above median,below median,4
+SRS,22q11.2 del,female,below median,below median,below median,below median,7
+SCQ,22q11.2 del,female,below median,below median,below median,below median,6
+SCQ,16p11.2 del,female,below median,below median,below median,above median,3
+SRS,16p11.2 dup,male,below median,below median,above median,above median,1
+Height,16p11.2 del,female,below median,above median,below median,above median,2
+Head circumference,16p11.2 del,female,below median,above median,below median,above median,2
+SRS,16p11.2 del,female,below median,above median,below median,above median,2
+SCQ,16p11.2 del,female,below median,above median,below median,above median,2
+CNB accuracy,16p11.2 del,female,below median,above median,below median,above median,1
+CNB speed,16p11.2 del,female,below median,above median,below median,above median,1
+SRS,22q11.2 dup,female,above median,below median,below median,above median,2
+SCQ,22q11.2 dup,female,above median,below median,below median,above median,2
+CNB accuracy,22q11.2 dup,female,above median,below median,below median,above median,3
+CNB speed,22q11.2 dup,female,above median,below median,below median,above median,3
+SRS,22q11.2 del,male,below median,below median,below median,below median,2
+SCQ,22q11.2 del,male,below median,below median,below median,below median,1
+CNB accuracy,16p11.2 del,male,below median,above median,above median,above median,2
+CNB speed,16p11.2 del,male,below median,above median,above median,above median,2
+SRS,22q11.2 dup,male,above median,above median,below median,below median,3
+CNB accuracy,22q11.2 dup,male,below median,below median,above median,above median,3
+CNB speed,22q11.2 dup,male,below median,below median,above median,above median,3
+Height,16p11.2 dup,female,below median,below median,below median,below median,2
+SRS,16p11.2 dup,female,below median,below median,below median,below median,1
+SCQ,16p11.2 dup,female,below median,below median,below median,below median,1
+CNB accuracy,16p11.2 dup,female,below median,below median,below median,below median,2
+CNB speed,16p11.2 dup,female,below median,below median,below median,below median,2
+SCQ,22q11.2 dup,male,above median,above median,above median,above median,2
+Head circumference,16p11.2 dup,female,below median,below median,below median,below median,1
+Height,16p11.2 del,female,above median,below median,above median,above median,2
+SRS,16p11.2 del,female,above median,below median,above median,above median,1
+SCQ,16p11.2 del,female,above median,below median,above median,above median,1
+CNB accuracy,16p11.2 del,female,above median,below median,above median,above median,1
+CNB speed,16p11.2 del,female,above median,below median,above median,above median,1
+Height,16p11.2 dup,female,above median,below median,below median,above median,4
+Head circumference,16p11.2 dup,female,above median,below median,below median,above median,3
+SRS,16p11.2 dup,female,above median,below median,below median,above median,2
+CNB accuracy,16p11.2 dup,female,above median,below median,below median,above median,3
+CNB speed,16p11.2 dup,female,above median,below median,below median,above median,3
+CNB accuracy,22q11.2 dup,female,below median,above median,below median,below median,3
+CNB speed,22q11.2 dup,female,below median,above median,below median,below median,3
+SRS,16p11.2 dup,male,below median,below median,below median,above median,1
+CNB accuracy,16p11.2 del,male,above median,below median,above median,above median,2
+CNB speed,16p11.2 del,male,above median,below median,above median,above median,2
+Height,22q11.2 dup,male,below median,below median,below median,below median,3
+Height,22q11.2 dup,male,below median,below median,above median,above median,2
+Head circumference,22q11.2 dup,male,below median,below median,above median,above median,2
+SRS,22q11.2 dup,male,below median,below median,above median,above median,2
+Head circumference,16p11.2 dup,female,below median,below median,above median,above median,2
+SRS,16p11.2 dup,female,below median,below median,above median,above median,2
+SCQ,16p11.2 dup,female,below median,below median,above median,above median,2
+CNB accuracy,16p11.2 dup,female,below median,below median,above median,above median,3
+CNB speed,16p11.2 dup,female,below median,below median,above median,above median,3
+Height,16p11.2 del,male,above median,below median,below median,below median,2
+Head circumference,16p11.2 del,male,above median,below median,below median,below median,2
+CNB accuracy,16p11.2 del,male,above median,below median,below median,below median,1
+CNB speed,16p11.2 del,male,above median,below median,below median,below median,1
+SRS,22q11.2 dup,female,below median,below median,below median,above median,3
+Height,22q11.2 dup,male,below median,above median,above median,above median,4
+CNB accuracy,22q11.2 dup,male,below median,above median,above median,above median,4
+CNB speed,22q11.2 dup,male,below median,above median,above median,above median,4
+Height,16p11.2 del,male,above median,below median,above median,above median,1
+Head circumference,16p11.2 del,male,above median,below median,above median,above median,1
+SRS,16p11.2 del,male,above median,below median,above median,above median,1
+SCQ,22q11.2 del,male,above median,below median,below median,above median,3
+Height,16p11.2 del,male,below median,above median,above median,above median,1
+Head circumference,16p11.2 del,male,below median,above median,above median,above median,1
+SRS,16p11.2 del,male,below median,above median,above median,above median,1
+Height,22q11.2 dup,male,below median,above median,above median,below median,3
+Height,16p11.2 dup,female,above median,above median,below median,below median,2
+Head circumference,16p11.2 dup,female,above median,above median,below median,below median,2
+Height,22q11.2 dup,male,below median,below median,above median,below median,2
+Head circumference,22q11.2 dup,male,below median,below median,above median,below median,2
+Height,22q11.2 dup,female,below median,below median,above median,above median,3
+SRS,22q11.2 dup,female,below median,below median,above median,above median,2
+SCQ,22q11.2 dup,female,below median,below median,above median,above median,1
+CNB accuracy,22q11.2 dup,female,below median,below median,above median,above median,2
+CNB speed,22q11.2 dup,female,below median,below median,above median,above median,2
+SRS,16p11.2 del,male,below median,below median,above median,below median,3
+SCQ,16p11.2 del,male,below median,below median,above median,below median,2
+Height,16p11.2 del,female,below median,above median,above median,above median,2
+Head circumference,16p11.2 del,female,below median,above median,above median,above median,1
+SRS,16p11.2 del,female,below median,above median,above median,above median,2
+SCQ,16p11.2 del,female,below median,above median,above median,above median,2
+CNB accuracy,16p11.2 del,female,below median,above median,above median,above median,3
+CNB speed,16p11.2 del,female,below median,above median,above median,above median,3
+Height,16p11.2 del,female,above median,above median,below median,below median,1
+CNB accuracy,16p11.2 del,female,above median,above median,below median,below median,1
+CNB speed,16p11.2 del,female,above median,above median,below median,below median,1
+Head circumference,22q11.2 del,male,above median,above median,below median,above median,4
+SCQ,22q11.2 del,male,above median,below median,above median,below median,2
+SRS,16p11.2 del,female,,,,,1
+SCQ,16p11.2 del,female,,,,,1
+Head circumference,16p11.2 del,female,above median,below median,below median,above median,2
+CNB accuracy,16p11.2 del,female,above median,below median,below median,above median,2
+CNB speed,16p11.2 del,female,above median,below median,below median,above median,2
+SCQ,16p11.2 dup,female,above median,below median,below median,above median,1
+Head circumference,22q11.2 dup,male,below median,above median,above median,above median,3
+SRS,22q11.2 dup,male,below median,above median,above median,above median,3
+SCQ,22q11.2 dup,male,below median,above median,above median,above median,2
+CNB accuracy,16p11.2 dup,male,above median,below median,below median,above median,1
+CNB speed,16p11.2 dup,male,above median,below median,below median,above median,1
+SCQ,22q11.2 dup,female,above median,below median,above median,below median,1
+SRS,22q11.2 del,male,above median,above median,above median,above median,2
+SCQ,22q11.2 del,male,above median,above median,above median,above median,1
+SCQ,22q11.2 dup,male,above median,above median,below median,below median,2
+Height,16p11.2 dup,female,above median,above median,above median,below median,1
+Height,16p11.2 del,female,above median,below median,below median,below median,1
+Head circumference,16p11.2 del,female,above median,below median,below median,below median,1
+SRS,16p11.2 del,female,above median,below median,below median,below median,1
+SCQ,16p11.2 del,female,above median,below median,below median,below median,1
+CNB accuracy,16p11.2 del,female,above median,below median,below median,below median,2
+CNB speed,16p11.2 del,female,above median,below median,below median,below median,2
+Height,22q11.2 dup,female,below median,above median,below median,below median,1
+Head circumference,22q11.2 dup,female,below median,above median,below median,below median,1
+SRS,22q11.2 dup,female,below median,above median,below median,below median,1
+SCQ,22q11.2 dup,female,below median,above median,below median,below median,1
+Height,22q11.2 dup,female,below median,above median,below median,above median,1
+Head circumference,22q11.2 dup,female,below median,above median,below median,above median,1
+CNB accuracy,22q11.2 dup,female,below median,above median,below median,above median,2
+CNB speed,22q11.2 dup,female,below median,above median,below median,above median,2
+Height,22q11.2 dup,female,below median,above median,above median,below median,2
+Head circumference,22q11.2 dup,female,below median,above median,above median,below median,2
+CNB accuracy,22q11.2 dup,female,below median,above median,above median,below median,2
+CNB speed,22q11.2 dup,female,below median,above median,above median,below median,2
+CNB accuracy,16p11.2 dup,male,above median,below median,below median,below median,1
+CNB speed,16p11.2 dup,male,above median,below median,below median,below median,1
+Head circumference,22q11.2 dup,male,below median,below median,below median,below median,2
+SRS,22q11.2 dup,male,below median,below median,below median,below median,1
+SCQ,22q11.2 dup,male,below median,below median,below median,below median,1
+CNB accuracy,16p11.2 del,female,below median,below median,below median,below median,3
+Height,16p11.2 del,male,above median,below median,below median,above median,1
+Head circumference,16p11.2 del,male,above median,below median,below median,above median,1
+CNB accuracy,16p11.2 del,male,above median,below median,below median,above median,1
+CNB speed,16p11.2 del,male,above median,below median,below median,above median,1
+CNB accuracy,16p11.2 dup,female,below median,below median,below median,above median,1
+CNB speed,16p11.2 dup,female,below median,below median,below median,above median,1
+CNB accuracy,16p11.2 del,male,below median,below median,above median,above median,2
+CNB speed,16p11.2 del,male,below median,below median,above median,above median,2
+Head circumference,22q11.2 dup,female,below median,below median,below median,below median,1
+Height,16p11.2 dup,female,below median,above median,below median,above median,1
+Head circumference,16p11.2 dup,female,below median,above median,below median,above median,1
+Height,16p11.2 dup,female,below median,above median,below median,below median,2
+Head circumference,22q11.2 dup,male,below median,above median,above median,below median,1
+SCQ,22q11.2 dup,male,below median,above median,above median,below median,1
+Head circumference,16p11.2 dup,female,below median,above median,below median,below median,1
+SRS,16p11.2 del,female,below median,below median,below median,below median,1
+SCQ,16p11.2 del,female,below median,below median,below median,below median,1
+SCQ,16p11.2 dup,male,below median,below median,above median,below median,1
+SRS,16p11.2 dup,male,,,,,3
+SCQ,16p11.2 dup,male,,,,,2
+SCQ,16p11.2 del,female,above median,above median,above median,above median,1
+SCQ,16p11.2 del,male,below median,below median,below median,above median,1
+SRS,16p11.2 del,male,above median,below median,below median,below median,1
+SCQ,16p11.2 del,male,above median,below median,below median,below median,1
+SCQ,22q11.2 dup,female,below median,above median,above median,below median,1
+SRS,16p11.2 del,male,below median,below median,above median,above median,1
+SCQ,16p11.2 del,male,below median,below median,above median,above median,1
+SCQ,22q11.2 dup,male,below median,below median,below median,above median,1
+CNB accuracy,16p11.2 dup,female,above median,below median,below median,below median,1
+CNB speed,16p11.2 dup,female,above median,below median,below median,below median,1
+SRS,22q11.2 dup,male,below median,above median,below median,below median,1
+SCQ,22q11.2 dup,male,below median,above median,below median,below median,1

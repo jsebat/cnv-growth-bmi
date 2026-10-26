@@ -1,0 +1,68 @@
+Added?,Phenotype,Publication,DOI,Year,SBayesRC status,Ancestries in paper,Ancestry sumstats used,N (sumstats),Group,Meta-analysis,Description,Reference_panel,Filepath,Filename,Raw,URL
+TRUE,ADHD,"Genome-wide analyses of ADHD identify 27 risk loci, refine the genetic architecture and implicate several cognitive domains",10.1038/s41588-022-01285-8,2022,1,EUR,,225534,Psychiatric,1,,ukbEUR_HM3,,ADHD2022_iPSYCH_deCODE_PGC.meta.ma,,
+TRUE,Bipolar Disorder,Genomics yields biological and phenotypic insights into bipolar disorder,10.1038/s41586-024-08468-9,2024,1,EUR,,840309,Psychiatric,1,,ukbEUR_HM3,,bip2024_eur_no23andMe.ma,,
+TRUE,BMI,Meta-analysis of genome-wide association studies for height and body mass index in ∼700000 individuals of European ancestry,10.1093/hmg/ddy271,2018,1,EUR,,456426,Anthropometric,1,,ukbEUR_HM3,,Bmi.giant_ukbb.meta_analysis.combined.23May2018.HapMap2_only.ma,,
+TRUE,ASD,Identification of common genetic risk variants for autism spectrum disorder,10.1038/s41588-019-0344-8,2019,1,EUR,,42980,Psychiatric,1,,ukbEUR_HM3,,daner_PGCiPSYCH_loSSC_cleaned.ma,,
+TRUE,MDD,Trans-ancestry genome-wide study of depression identifies 697 associations implicating cell types and pharmacotherapies,10.1016/j.cell.2024.12.002,2025,1,TRANS,EUR,1706613,Psychiatric,1,,ukbEUR_HM3,,daner_pgc_mdd_no23andMe_eur_hg19_v3.49.24.11.neff.ma,,
+TRUE,EDU,Polygenic prediction of educational attainment within and between families from genome-wide association analyses in 3 million individuals,10.1038/s41588-022-01016-z,2022,1,EUR,,765283,Other,1,,ukbEUR_HM3,,EA4_additive_excl_23andMe.ma,,
+TRUE,PTSD (case/control),Genome-wide association analyses identify 95 risk loci and provide insights into the neurobiology of post-traumatic stress disorder,10.1038/s41588-024-01707-9,2021,1,TRANS,EUR,1190728,Psychiatric,1,,ukbEUR_HM3,,eur_ptsdcasecontrol_pcs_v4_aug3_2021.ma,,
+TRUE,PTSD,Genome-wide association analyses identify 95 risk loci and provide insights into the neurobiology of post-traumatic stress disorder,10.1038/s41588-024-01707-9,2021,1,TRANS,EUR,1222882,Psychiatric,1,,ukbEUR_HM3,,eur_ptsd_pcs_v4_aug3_2021.ma,,
+TRUE,Hair color,"Pan-UK Biobank GWAS improves discovery, analysis of genetic architecture, and resolution into ancestry-enriched effects",10.1101/2024.03.13.24303864,2025,1,TRANS,EUR,419469,Anthropometric,1,,ukbEUR_HM3,,GCST90691600.h.ma,,
+TRUE,Height,A saturated map of common genetic variants associated with human height,10.1038/s41586-022-05275-y,2022,1,TRANS,EUR,537968,Anthropometric,1,,ukbEUR_HM3,,GIANT_HEIGHT_YENGO_2022_GWAS_SUMMARY_STATS_EUR.ma,,
+TRUE,Schizophrenia,Mapping genomic loci implicates genes and synaptic biology in schizophrenia,10.1038/s41586-022-04434-5,2022,1,TRANS,EUR,130644,Psychiatric,1,,ukbEUR_HM3,,PGC3_SCZ_wave3.european.autosome.public.v3.ma,,
+TRUE,Intelligence,"Genome-wide association meta-analysis in 269,867 individuals identifies new genetic and functional links to intelligence",10.1038/s41588-018-0152-6,2018,1,EUR,,225955,Other,1,,ukbEUR_HM3,,SavageJansen_2018_intelligence_metaanalysis.ma,,
+TRUE,Age at first live birth,NA,NA,2018,1,EUR,,170498,Exposure,0,,ukbEUR_HM3,,ukb_b_12405.ma,,
+FALSE,Tobacco use disorder,Pan-UK Biobank genome-wide association analyses enhance discovery and resolution of ancestry-enriched effects,10.1038/s41588-025-02335-7,2025,0,TRANS,EUR,407034,Exposure,,,,,,,
+FALSE,Alcoholism,Efficiently controlling for case-control imbalance and sample relatedness in large-scale genetic association studies.,10.1038/s41588-018-0184-y,2018,0,EUR,,388323,Exposure,,,,,,,
+FALSE,Particulate matter air pollution (pm2.5),NA,NA,2018,0,EUR,,423796,Exposure,,,,,,,https://opengwas.io/datasets/ukb-b-10817
+FALSE,Nitrogen dioxide air pollution,NA,NA,2018,0,EUR,,456380,Exposure,,,,,,,https://opengwas.io/datasets/ukb-b-5620
+TRUE,age at walking,"Genome-wide association meta-analysis of age at onset of walking in over 70,000 infants of European ancestry",10.1038/s41562-025-02145-1,2025,1,EUR,,,Other,1,,,,,,10.6084/m9.figshare.28071566
+TRUE,P-factor from PGC-CDG,Mapping the genetic landscape across 14 psychiatric disorders,10.1038/s41586-025-09820-3,2025,1,EUR,,,Psychiatric,1,,,,,,10.6084/m9.figshare.30359017
+TRUE,Five factors from PGC-CDG,Mapping the genetic landscape across 14 psychiatric disorders,10.1038/s41586-025-09820-3,2025,1,EUR,,,Psychiatric,1,,,,,,10.6084/m9.figshare.30359017
+TRUE,Noncognitive component of educational attainment,Investigating the genetic architecture of noncognitive skills using GWAS-by-subtraction,10.1038/s41588-020-00754-2,2021,1,EUR,,,Other,1,,,,,,ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90011874
+FALSE,Chronotype,"Genome-wide association analyses of chronotype in 697,828 individuals provides insights into circadian rhythms",10.1038/s41467-018-08259-7,2019,,EUR,,,Other,1,,,,,,http://www.t2diabetesgenes.org/data/
+TRUE,Insomnia,"Genome-wide analysis of insomnia in 1,331,010 individuals identifies new risk loci and functional pathways",10.1038/s41588-018-0333-3,2019,1,EUR,,,Other,1,,,,,,https://ctg.cncr.nl/
+FALSE,Epilepsy,"GWAS meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture",10.1038/s41588-023-01485-w,2023,,TRANS,EUR,69995,Psychiatric,1,,,,,, https://www.epigad.org
+TRUE,Anorexia nervosa,Genome-wide association study identifies eight risk loci and implicates metabo-psychiatric origins for anorexia nervosa,10.1038/s41588-019-0439-2,2019,1,EUR,,,Psychiatric,1,,,,,,https://figshare.com/articles/dataset/an2019/14671980
+TRUE,Focal Epilepsy,"GWAS meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture",10.1038/s41588-023-01485-w,2023,,TRANS,EUR,49388,Psychiatric,1,,,,,,
+TRUE,Genetic Generalized Epilepsy,"GWAS meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture",10.1038/s41588-023-01485-w,2023,,TRANS,EUR,57375,Psychiatric,,,,,,,https://pmc.ncbi.nlm.nih.gov/articles/PMC10899618/#Sec18
+TRUE,Nightmares,"Genome-wide association analysis of composite sleep health scores in 413,904 individuals.",10.1038/s42003-025-07514-0,2025,,EUR,EUR,45255,Other,,,,,,,
+TRUE,Breakfast Skipping,Genome-wide association study of breakfast skipping links clock regulation with food timing,10.1093/ajcn/nqz076,2019,,EUR,,193860,Other,,,,,,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6669061/
+TRUE,Daytime Napping,Genetic determinants of daytime napping and effects on cardiometabolic health,10.1038/s41467-020-20585-3,2021,,EUR,,453964,Other,,,,,,,https://www.ncbi.nlm.nih.gov/pubmed/33568662
+TRUE,sleep duration (accelerometer-based),Genome-wide association study identifies genetic loci for self-reported habitual sleep duration supported by accelerometer-derived estimates,10.1038/s41467-019-08917-4,2019,,EUR,,446118,Other,,,,,,,https://pubmed.ncbi.nlm.nih.gov/30846698/
+TRUE,Dietary Intake (Nutrient Preference),Genetic analysis of dietary intake identifies new loci and functional links with metabolic traits,10.1038/s41562-021-01182-w,2022,,EUR,,191157,Other,,,,,,,https://pubmed.ncbi.nlm.nih.gov/34426670/
+TRUE,birth length,A novel common variant in DCST2 is associated with length in early life and height in adulthood,https://doi.org/10.1093/hmg/ddu510,2014,1,EUR,EUR,28459,pediatric,1,,,,,,
+TRUE,birth weight (fetal sumstats),Genome-wide associations for birth weight and correlations with adult disease.,doi:10.1038/nature19806,2016,1,TRANS,EUR,143677,pediatric,1,,,,,,
+TRUE,birth weight (maternal sumstats),"Genome-wide association study of offspring birth weight in 86,577 women identifies five novel loci and highlights maternal genetic effect that are independent of fetal genetics.",doi:10.1093/hmg/ddx429,2018,1,EUR,,86577,pediatric,1,,,,,,
+TRUE,childhood obesity,A Trans-ancestral Meta-Analysis of Genome-Wide Association Studies Reveals Loci Associated with Childhood Obesity.,https://doi.org/10.1093/hmg/ddz161,2019,1,TRANS,TRANS,13005,pediatric,1,,,,,,
+TRUE,early-preterm birth (fetal sumstats),Variants in the fetal genome near pro-inflammatory cytokine genes on 2q13 associate with gestational duration.,10.1038/s41467-019-11881-8,2019,1,EUR,,1139,pediatric,,,,,,,
+TRUE,gestational duration (fetal sumstats),Variants in the fetal genome near pro-inflammatory cytokine genes on 2q13 associate with gestational duration.,10.1038/s41467-019-11881-9,2019,1,EUR,,84689,pediatric,,,,,,,
+TRUE,postterm birth (fetal sumstats),Variants in the fetal genome near pro-inflammatory cytokine genes on 2q13 associate with gestational duration.,10.1038/s41467-019-11881-10,2019,1,EUR,,7888,pediatric,,,,,,,
+TRUE,preterm birth (fetal sumstats),Variants in the fetal genome near pro-inflammatory cytokine genes on 2q13 associate with gestational duration.,10.1038/s41467-019-11881-11,2019,1,EUR,,4775,pediatric,,,,,,,
+TRUE,childhood BMI,Novel loci for childhood body mass index and shared heritability with adult cardiometabolic traits.,10.1371/journal.pgen.1008718,2020,1,EUR,,61111,pediatric,1,,,,,,
+TRUE,head circumference at birth,"Genetics of early-life head circumference and genetic correlations with neurological, psychiatric and cognitive outcomes.",10.1186/s12920-022-01281-1,2022,1,EUR,,32084,pediatric,1,,,,,,
+TRUE,head circumference infancy (6mos-30mos),"Genetics of early-life head circumference and genetic correlations with neurological, psychiatric and cognitive outcomes.",10.1186/s12920-022-01281-1,2022,1,EUR,,22279,pedatric,1,,,,,,
+TRUE,gestational duration (maternal sumstats),Genetic effects on the timing of parturition and links to fetal birth weight.,,2023,1,EUR,,233290,pedatric,,,,,,,
+TRUE,postterm delivery gestational duration (maternal sumstats),Genetic effects on the timing of parturition and links to fetal birth weight.,,2023,1,EUR,,151987,pedatric,,,,,,,
+TRUE,preterm delivery gestational duration (maternal sumstats),Genetic effects on the timing of parturition and links to fetal birth weight.,,2023,1,EUR,,131279,pedatric,,,,,,,
+TRUE,late pubertal growth (14y-adult),Trans-ancestral genome-wide association study of longitudinal pubertal height growth and shared heritability with adult health outcomes.,https://doi.org/10.1186/s13059-023-03136-z,2024,1,TRANS,TRANS,56000,pedatric,1,,,,,,
+TRUE,height at pubertal growth takeoff,Trans-ancestral genome-wide association study of longitudinal pubertal height growth and shared heritability with adult health outcomes.,https://doi.org/10.1186/s13059-023-03136-z,2024,1,TRANS,TRANS,56000,pedatric,1,,,,,,
+TRUE,total pubertal growth (8y-adult),Trans-ancestral genome-wide association study of longitudinal pubertal height growth and shared heritability with adult health outcomes.,https://doi.org/10.1186/s13059-023-03136-z,2024,1,TRANS,TRANS,56000,pedatric,1,,,,,,
+TRUE,SITAR A (size shift of growth curve),Trans-ancestral genome-wide association study of longitudinal pubertal height growth and shared heritability with adult health outcomes.,https://doi.org/10.1186/s13059-023-03136-z,2024,1,TRANS,TRANS,56000,pedatric,1,,,,,,
+TRUE,SITAR B (timing/tempo of growth curve),Trans-ancestral genome-wide association study of longitudinal pubertal height growth and shared heritability with adult health outcomes.,https://doi.org/10.1186/s13059-023-03136-z,2024,1,TRANS,TRANS,56000,pedatric,1,,,,,,
+TRUE,SITAR C (intensity/velocity of growth curve),Trans-ancestral genome-wide association study of longitudinal pubertal height growth and shared heritability with adult health outcomes.,https://doi.org/10.1186/s13059-023-03136-z,2024,1,TRANS,TRANS,56000,pedatric,1,,,,,,
+FALSE,,,,,,,,,,,,,,,,
+FALSE,,,,,,,,,,,,,,,,
+FALSE,,,,,,,,,,,,,,,,
+FALSE,,,,,,,,,,,,,,,,
+,wishlist & to other to be added itens,,,,,,,,,,,,,,,
+,SCQ,SPARK GWAS (TBD by Anjali),,,,,,,,,,,,,,
+,RBS-R,SPARK GWAS (TBD by Anjali),,,,,,,,,,,,,,
+,DCDQ,SPARK GWAS (TBD by Anjali),,,,,,,,,,,,,,
+,Childhood traits: ,,,,,,,,,,,,,,,
+***,Childhood internalizing,Genome-wide Association Meta-analysis of Childhood and Adolescent Internalizing Symptoms,https://doi.org/10.1016/j.jaac.2021.11.035,2022,,EUR,Available on the GWAS Catalog (EFO_0020971),,,,,,,,,
+,Childhood externalizing,"Unfortunately, I don't think there is a well-powered GWAS specific to childhood",,,,,,,,,,,,,,
+,Childhood total psychiatric problems,A genome-wide association study of total child psychiatric problems scores,https://doi.org/10.1371/journal.pone.0273116,2022,,EUR,,,,,,,,,,
+***,Adolescent-onset depression,Genome-wide association study of adolescent-onset depression,https://doi.org/10.1016/j.euroneuro.2024.08.091,2024,,EUR,,,,,,,,,,
+,Childhood BMI,"GWAS on longitudinal growth traits reveals different genetic factors influencing infant, child, and adult BMI",DOI: 10.1126/sciadv.aaw3095,2019,"Important study, but there may be more recent GWAS sumstats, not sure. ",,,,,,,,,,,
+***,Childhood ADHD symptoms,Genome-wide association meta-analysis of childhood ADHD symptoms and diagnosis identifies new loci and potential effector genes,https://doi.org/10.1038/s41588-025-02295-y,2025,,,,,,,,,,,,

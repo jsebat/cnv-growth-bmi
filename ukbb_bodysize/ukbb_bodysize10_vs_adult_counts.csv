@@ -1,0 +1,29 @@
+group,measure,level,N
+16p11.2 DEL,Adult BMI group,High,80
+16p11.2 DEL,Adult BMI group,Low,10
+16p11.2 DEL,Adult BMI group,Middle,16
+16p11.2 DEL,Body size at age 10,About average,45
+16p11.2 DEL,Body size at age 10,Plumper,36
+16p11.2 DEL,Body size at age 10,Thinner,25
+16p11.2 DUP,Adult BMI group,High,25
+16p11.2 DUP,Adult BMI group,Low,51
+16p11.2 DUP,Adult BMI group,Middle,64
+16p11.2 DUP,Body size at age 10,About average,62
+16p11.2 DUP,Body size at age 10,Plumper,20
+16p11.2 DUP,Body size at age 10,Thinner,58
+22q11.2 DEL,Adult BMI group,High,4
+22q11.2 DEL,Adult BMI group,Middle,1
+22q11.2 DEL,Body size at age 10,Plumper,1
+22q11.2 DEL,Body size at age 10,Thinner,4
+22q11.2 DUP,Adult BMI group,High,121
+22q11.2 DUP,Adult BMI group,Low,51
+22q11.2 DUP,Adult BMI group,Middle,90
+22q11.2 DUP,Body size at age 10,About average,136
+22q11.2 DUP,Body size at age 10,Plumper,58
+22q11.2 DUP,Body size at age 10,Thinner,68
+No CNV,Adult BMI group,High,133380
+No CNV,Adult BMI group,Low,133497
+No CNV,Adult BMI group,Middle,177975
+No CNV,Body size at age 10,About average,227607
+No CNV,Body size at age 10,Plumper,70829
+No CNV,Body size at age 10,Thinner,146416

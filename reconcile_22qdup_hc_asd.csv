@@ -1,0 +1,8 @@
+variant,n_ASD,n_noASD,beta,p
+"1 Anjali exact (her asd_dx, dups kept, age <= 45)",26,61,0.801,0.0154
+2 + Cardiff/G2MH duplicates dropped,24,60,0.793,0.0218
+3 her spec but our ASD source (psy_asd),26,61,0.777,0.0197
+"4 her ASD, dups dropped, age 2-40",24,56,0.778,0.028
+5 = 4 + cohort + adult terms,24,56,0.731,0.0425
+"6 our ASD, dups dropped, age 2-40",24,55,0.761,0.0334
+7 = 6 + cohort + adult terms (ours),24,55,0.713,0.0499
