@@ -23,6 +23,7 @@ set.seed(1)
 WD <- getwd()
 LOCI <- c("16p11.2 del", "16p11.2 dup", "22q11.2 del", "22q11.2 dup"); GROUPS <- c("No CNV", LOCI)
 COLS <- c("BMI ≥ 70th centile" = "#F0645A", "BMI ≤ 30th centile" = "#00A5AD")
+K_AGE <- 10; K_BMI <- 6; K_TI <- c(6, 5); GAMMA <- 1.5   # JS 2026-10-27: smoother age x BMI surfaces (Jon: the UKBB prime panels were too wiggly at k = 15/10/c(10,10)); used by threeway_p and bmi_effect_by_age
 pfx <- function(p) ifelse(is.na(p), "n/a", ifelse(p < 1e-16, "< 1e-16", ifelse(p < 0.001, sprintf("%.1e", p), sprintf("%.2g", p))))
 tail_of <- function(z) factor(ifelse(z >= qnorm(.7), names(COLS)[1], ifelse(z <= qnorm(.3), names(COLS)[2], NA)), levels = names(COLS))
 
@@ -66,11 +67,11 @@ Hctl_test <- rbind(ch[locus == "No CNV"], if (nrow(ukn) > 50000) ukn[sample(.N, 
 Hctl_plot <- rbind(ch[locus == "No CNV"], if (nrow(ukn) > 3000) ukn[sample(.N, 3000)] else ukn)
 
 # ---------------------------------------------------------------- height statistics
-within_p <- function(x, meth) tryCatch(summary(gam(y ~ s(age, k = 10) + s(BMI, k = 6) + ti(age, BMI, k = c(6, 6)), data = x, method = meth))$s.table["ti(age,BMI)", "p-value"], error = function(e) NA_real_)
+within_p <- function(x, meth) tryCatch(summary(gam(y ~ s(age, k = 10) + s(BMI, k = 6) + ti(age, BMI, k = c(6, 6)), data = x, method = meth, gamma = GAMMA))$s.table["ti(age,BMI)", "p-value"], error = function(e) NA_real_)
 threeway_p <- function(x, meth) {
   x <- copy(x)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]
-  m <- bam(y ~ is_cnv + s(age, k = 15) + s(BMI, k = 10) + s(age, k = 15, by = is_cnv) + ti(age, BMI, k = c(10, 10)) +
-             ti(age, BMI, k = c(10, 10), by = is_cnv), data = x, method = meth)
+  m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) +
+             ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = meth, gamma = GAMMA)
   p <- summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]
   if (!is.finite(p) || p <= 0 || p > 1) NA_real_ else p   # guard against numerical failure
 }
@@ -200,6 +201,8 @@ fwrite(lc, file.path(WD, "main_with_ukbb_lifecourse.csv")); print(lc, digits = 3
 #   17_main_with_ukbb.R.bak_bars_20261023 (Jon's scratch) and main_with_ukbb_offset_by_age.csv.
 # Output: main_with_ukbb_bmi_effect_by_age.csv, fig_main_growth_ukbb_v2.{png,pdf}
 GRID <- seq(2.5, 60, by = 0.5)
+grid_of <- function(a) GRID[GRID >= quantile(a, 0.025) & GRID <= quantile(a, 0.975)]   # JS 2026-10-27: draw each curve only over the central 95% of that group's ages (the tails beyond the data support bent downward: smoother edge effect, Jon)
+support_of <- function(a_grid, ages, w = 3, nmin = 5) sapply(a_grid, function(a) sum(abs(ages - a) <= w) >= nmin)   # JS 2026-10-27: carrier curve drawn only where >= 5 carriers lie within 3 y (removes the dip across the 18-30 y gap of the clinical carriers)
 slope_rows <- function(m, grid, groups) {
   V <- vcov(m); B <- coef(m)
   rbindlist(lapply(groups, function(g) {
@@ -211,17 +214,17 @@ slope_rows <- function(m, grid, groups) {
 }
 bmi_effect_by_age <- function(xc, ctl) {
   if (is.null(xc)) {   # controls only: within-group age × BMI model
-    m <- bam(y ~ s(age, k = 15) + s(BMI, k = 10) + ti(age, BMI, k = c(10, 10)), data = ctl, method = "REML")
-    r <- slope_rows(m, GRID, list(NULL)); r[, p := summary(m)$s.table["ti(age,BMI)", "p-value"]]
+    m <- bam(y ~ s(age, k = K_AGE) + s(BMI, k = K_BMI) + ti(age, BMI, k = K_TI), data = ctl, method = "REML", gamma = GAMMA)
+    r <- slope_rows(m, grid_of(ctl$age), list(NULL)); r[, p := summary(m)$s.table["ti(age,BMI)", "p-value"]]
     # JS 2026-10-23: age-constant BMI effect (continuous BMI, 1 df): y ~ BMI + s(age)
     m0 <- bam(y ~ BMI + s(age, k = 15), data = ctl, method = "REML"); c0 <- summary(m0)$p.table["BMI", ]
     r[, `:=`(est_main = unname(c0[1]), se_main = unname(c0[2]), p_main = unname(c0[4]))]; return(r)
   }
   x <- rbind(ctl, xc)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]   # controls first: same row order as threeway_p, so the p matches the trajectory panel
-  m <- bam(y ~ is_cnv + s(age, k = 15) + s(BMI, k = 10) + s(age, k = 15, by = is_cnv) + ti(age, BMI, k = c(10, 10)) +
-             ti(age, BMI, k = c(10, 10), by = is_cnv), data = x, method = "REML")
+  m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) +
+             ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = "REML", gamma = GAMMA)
   pv <- summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]; if (!is.finite(pv) || pv <= 0 || pv > 1) pv <- NA_real_   # JS 2026-10-27: same guard as threeway_p (a negative p appeared for 22q11.2 del height)
-  r <- slope_rows(m, GRID, list("No CNV", "CNV")); r[, p := pv]
+  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r[, p := pv]; r[who == "Carriers" & !support_of(age, xc$age), `:=`(slope = NA_real_, se = NA_real_)]
   # JS 2026-10-23: age-constant CNV x BMI (continuous BMI, 1 df), AGE-ADJUSTED: the BMI slope is allowed to vary with age
   # in a way shared by both groups (varying-coefficient term s(age, by = BMI); a numeric by-smooth is not centred, so it
   # carries the BMI main effect) and cnvBMI = BMI x carrier tests a constant shift of the carriers' slope relative to the
@@ -280,6 +283,7 @@ traj2 <- function(x, G, ylab, title, lab, xmax, lpos, bold = FALSE) {
          subtitle = sprintf("%s (n = %d)", if (ctl) "Non-carrier controls" else G, nrow(x))) +
     base_theme + theme(legend.position.inside = lpos)
 }
+HCMAX <- ceiling(quantile(dh$age, 0.975))   # JS 2026-10-27: HC axes end where the HC data end (Jon)
 v2 <- list(); L1 <- LETTERS[1:6]; L2 <- LETTERS[7:12]
 for (i in seq_along(GROUPS)) {
   G <- GROUPS[i]; r <- ht[group == G]; ctl <- G == "No CNV"
@@ -290,8 +294,8 @@ for (i in seq_along(GROUPS)) {
   labc <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmc)), fixed = TRUE)
   v2[[paste("HEIGHT", G)]] <- traj2(if (ctl) Hctl_plot else H[locus == G], G, "Height (SD)", NULL, labh, 60, c(0.75, 0.93), bold = isTRUE(pmh < 0.05)) + labs(tag = L1[i])
   v2[[paste("EFF HEIGHT", G)]] <- eff_panel(bea[outcome == "Height" & group == G], if (ctl) NULL else H[locus == G], "Height per +1 SD BMI (SD)", ctl) + labs(tag = paste0(L1[i], "'"))
-  v2[[paste("HC", G)]] <- traj2(dh[locus == G], G, "Head circumference (SD)", NULL, labc, 60, c(0.75, 0.93), bold = isTRUE(pmc < 0.05)) + labs(tag = L2[i])
-  v2[[paste("EFF HC", G)]] <- eff_panel(bea[outcome == "Head circumference" & group == G], if (ctl) NULL else dh[locus == G], "Head circ. per +1 SD BMI (SD)", ctl) + labs(tag = paste0(L2[i], "'"))
+  v2[[paste("HC", G)]] <- traj2(dh[locus == G], G, "Head circumference (SD)", NULL, labc, HCMAX, c(0.75, 0.93), bold = isTRUE(pmc < 0.05)) + labs(tag = L2[i])
+  v2[[paste("EFF HC", G)]] <- eff_panel(bea[outcome == "Head circumference" & group == G], if (ctl) NULL else dh[locus == G], "Head circ. per +1 SD BMI (SD)", ctl, xmax = HCMAX) + labs(tag = paste0(L2[i], "'"))
 }
 v2[["ASD HEIGHT"]] <- plots[["ASD HEIGHT"]] + labs(tag = L1[6]); v2[["ASD HC"]] <- plots[["ASD HC"]] + labs(tag = L2[6])
 # JS 2026-10-23: column headers above the panel letters, each spanning the trajectory + effect columns

@@ -12,6 +12,7 @@ source(file.path(HERE, "23_unaffected_controls.R"))      # A, res, pick(), LOCI,
 source(file.path(HERE, "24_cognition_bmi_slopes.R"))     # X, R, panel_ctl(), panel_cnv()
 suppressPackageStartupMessages(library(mgcv))
 CTL <- "Unaffected controls"; GR1 <- c(CTL, LOCI)
+XMAX <- ceiling(quantile(A[pheno %in% c("Height", "Head circumference") & !is.na(age), age], 0.995))   # JS 2026-10-27: axis ends at the data (Jon: the 65-y axis wasted space)
 
 # ---------------------------------------------------------------- trajectory panel: as 23's panel(), with the CNV x BMI line only
 traj4 <- function(ph, Gn) {
@@ -22,8 +23,8 @@ traj4 <- function(ph, Gn) {
   ggplot(x, aes(age, y, colour = grp, fill = grp)) + geom_hline(yintercept = 0, linetype = 2, colour = "grey40") +
     geom_point(size = if (ctl) 0.5 else 1.2, alpha = if (ctl) 0.15 else 0.6) +
     geom_smooth(method = "gam", formula = y ~ s(log(x), k = 6), method.args = list(method = "REML"), linewidth = 0.9, alpha = 0.2) +
-    annotate("text", x = 65, y = yl[2], label = lab, hjust = 1, vjust = 1, size = 3, fontface = if (isTRUE(pv < 0.05)) "bold" else "plain") +
-    scale_colour_manual(values = COLS, breaks = names(COLS)) + scale_fill_manual(values = COLS, breaks = names(COLS)) + coord_cartesian(xlim = c(2, 65), ylim = yl) +
+    annotate("text", x = XMAX, y = yl[2], label = lab, hjust = 1, vjust = 1, size = 3, fontface = if (isTRUE(pv < 0.05)) "bold" else "plain") +
+    scale_colour_manual(values = COLS, breaks = names(COLS)) + scale_fill_manual(values = COLS, breaks = names(COLS)) + coord_cartesian(xlim = c(2, XMAX), ylim = yl) +
     labs(x = "Age (years)", y = YLAB[[ph]], colour = NULL, fill = NULL, subtitle = sprintf("%s (n = %d)", if (ctl) "Unaffected (SSC sibs/parents, SVIP)" else Gn, nrow(x))) +
     theme_classic(base_size = 13) + theme(legend.text = element_text(size = 7), legend.position = "inside", legend.position.inside = c(0.22, 0.1),
                                           legend.background = element_blank(), legend.key.height = unit(7, "pt"))
@@ -31,6 +32,9 @@ traj4 <- function(ph, Gn) {
 
 # ---------------------------------------------------------------- prime panel: BMI effect by age (from 17_main_with_ukbb.R v2)
 GRID <- seq(2.5, 60, by = 0.5)
+grid_of <- function(a) GRID[GRID >= quantile(a, 0.025) & GRID <= quantile(a, 0.975)]   # JS 2026-10-27: draw each curve only over the central 95% of that group's ages (the tails beyond the data support bent downward: smoother edge effect, Jon)
+support_of <- function(a_grid, ages, w = 3, nmin = 5) sapply(a_grid, function(a) sum(abs(ages - a) <= w) >= nmin)   # JS 2026-10-27: carrier curve drawn only where >= 5 carriers lie within 3 y (removes the dip across the 18-30 y gap of the clinical carriers)
+K_AGE <- 10; K_BMI <- 6; K_TI <- c(6, 5); GAMMA <- 1.5   # JS 2026-10-27: same smoother settings as 17_main_with_ukbb.R
 slope_rows <- function(m, grid, groups) {
   V <- vcov(m); B <- coef(m)
   rbindlist(lapply(groups, function(g) {
@@ -42,13 +46,13 @@ slope_rows <- function(m, grid, groups) {
 bmi_effect_by_age <- function(ph, Gn) {
   ctl <- A[pheno == ph & locus == CTL & !is.na(y) & !is.na(BMI) & !is.na(age), .(y, age, BMI, locus = "No CNV")]
   if (Gn == CTL) {
-    m <- bam(y ~ s(age, k = 15) + s(BMI, k = 10) + ti(age, BMI, k = c(10, 10)), data = ctl, method = "REML")
-    return(slope_rows(m, GRID, list(NULL)))
+    m <- bam(y ~ s(age, k = K_AGE) + s(BMI, k = K_BMI) + ti(age, BMI, k = K_TI), data = ctl, method = "REML", gamma = GAMMA)
+    return(slope_rows(m, grid_of(ctl$age), list(NULL)))
   }
   xc <- A[pheno == ph & locus == Gn & !is.na(y) & !is.na(BMI) & !is.na(age), .(y, age, BMI, locus = Gn)]
   x <- rbind(ctl, xc)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]
-  m <- bam(y ~ is_cnv + s(age, k = 15) + s(BMI, k = 10) + s(age, k = 15, by = is_cnv) + ti(age, BMI, k = c(10, 10)) + ti(age, BMI, k = c(10, 10), by = is_cnv), data = x, method = "REML")
-  slope_rows(m, GRID, list("No CNV", "CNV"))
+  m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) + ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = "REML", gamma = GAMMA)
+  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r[who == "Carriers" & !support_of(age, xc$age), `:=`(slope = NA_real_, se = NA_real_)]; r
 }
 BEACOLS <- c("Non-carriers" = "#8C9A9A", "Carriers" = "#4B6EA9")
 eff_panel <- function(ph, Gn, ylab, ylim = c(-1, 1.2)) {
@@ -59,9 +63,9 @@ eff_panel <- function(ph, Gn, ylab, ylim = c(-1, 1.2)) {
   g <- ggplot(r, aes(age, slope, colour = who, fill = who)) + geom_hline(yintercept = 0, linetype = 2, colour = "grey40") +
     geom_ribbon(aes(ymin = slope - 1.96 * se, ymax = slope + 1.96 * se), alpha = 0.18, colour = NA) + geom_line(linewidth = 0.9)
   if (!ctl) g <- g + geom_rug(data = carriers, aes(x = age), inherit.aes = FALSE, sides = "b", alpha = 0.35, length = unit(0.05, "npc"), colour = BEACOLS[["Carriers"]])
-  g + annotate("text", x = 65, y = ylim[2], label = lab, hjust = 1, vjust = 1, size = 3, fontface = if (isTRUE(pv < 0.05)) "bold" else "plain") +
+  g + annotate("text", x = XMAX, y = ylim[2], label = lab, hjust = 1, vjust = 1, size = 3, fontface = if (isTRUE(pv < 0.05)) "bold" else "plain") +
     scale_colour_manual(values = BEACOLS, breaks = if (ctl) "Non-carriers" else names(BEACOLS)) + scale_fill_manual(values = BEACOLS, breaks = if (ctl) "Non-carriers" else names(BEACOLS)) +
-    coord_cartesian(xlim = c(2, 65), ylim = ylim) +
+    coord_cartesian(xlim = c(2, XMAX), ylim = ylim) +
     labs(x = "Age (years)", y = ylab, colour = NULL, fill = NULL, subtitle = "BMI effect by age (95% CI)") +
     theme_classic(base_size = 13) + theme(legend.position = "inside", legend.position.inside = c(0.25, 0.14), legend.text = element_text(size = 7),
                                           legend.background = element_blank(), legend.key.height = unit(7, "pt"), plot.subtitle = element_text(size = 10))
