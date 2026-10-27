@@ -262,11 +262,11 @@ eff_panel <- function(r, carriers, ylab, ctl_only, xmax = 60, ylim = c(-1, 1.2))
     geom_ribbon(aes(ymin = slope - 1.96 * se, ymax = slope + 1.96 * se), alpha = 0.18, colour = NA) + geom_line(linewidth = 0.9)
   if (!ctl_only) g <- g + geom_rug(data = carriers, aes(x = age), inherit.aes = FALSE, sides = "b", alpha = 0.35,
                                    length = unit(0.05, "npc"), colour = BEACOLS[["Carriers"]])
-  g + annotate("text", x = xmax, y = ylim[2], label = lab2, hjust = 1, vjust = 1, size = 3.3, fontface = bold(pv)) +   # JS 2026-10-23: the age-constant test moved to the trajectory panel
+  g + annotate("text", x = xmax, y = ylim[1] + 0.1 * diff(ylim), label = lab2, hjust = 1, vjust = 0, size = 3.3, fontface = bold(pv)) +   # JS 2026-10-23: the age-constant test moved to the trajectory panel
     scale_colour_manual(values = BEACOLS, breaks = brk) + scale_fill_manual(values = BEACOLS, breaks = brk) +
     coord_cartesian(xlim = c(2, xmax), ylim = ylim) +
     labs(x = "Age (years)", y = ylab, colour = NULL, fill = NULL, subtitle = "BMI effect by age (95% CI)") +
-    base_theme + theme(legend.position.inside = c(0.2, 0.2), legend.text = element_text(size = 7.5), plot.subtitle = element_text(size = 11))   # key bottom-left, above the rug; p-value top-right
+    base_theme + theme(legend.position.inside = c(0.25, 0.9), legend.text = element_text(size = 7.5), plot.subtitle = element_text(size = 11))   # key bottom-left, above the rug; p-value top-right
 }
 # trajectory panel with slightly more prominent points (JS 2026-10-21, for v2)
 traj2 <- function(x, G, ylab, title, lab, xmax, lpos, bold = FALSE) {

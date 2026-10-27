@@ -8,7 +8,7 @@
 # Output (WD): fig_main_v5_ukbb.{png,pdf}
 source("17_main_with_ukbb.R")
 load(file.path(WD, "cog_panels.RData"))   # X, R, panel_ctl, panel_cnv, fitline, bins, ylim_of, ptxt, REFC, COLS3, XL, YL
-LOCI_C <- LOCI
+LOCI_C <- LOCI; LOC <- LOCI; BR <- c(-Inf, -1, 0, 1, 2, Inf)   # globals of 24 used by ylim_of() and bins() (not in cog_panels.RData)
 cog <- function(ph) c(list(panel_ctl(ph, probands = TRUE, show_title = FALSE)), lapply(LOCI_C, function(g) panel_cnv(ph, g)))
 # growth columns: trajectory + prime panels from 17 (v2 objects), in the v4 order; the UKBB trajectory panels keep their
 # own labels (CNV x BMI p from the age-adjusted model of 17; CNV x age x BMI p in the prime panel)
@@ -18,10 +18,10 @@ cols <- list(tr_h, ef_h, tr_c, ef_c, cog("SRS"), cog("SCQ"))
 tagsets <- list(LETTERS[1:5], paste0(LETTERS[1:5], "'"), LETTERS[6:10], paste0(LETTERS[6:10], "'"), LETTERS[11:15], LETTERS[16:20])
 plots <- unlist(lapply(seq_along(cols), function(j) Map(function(p, tg) p + labs(tag = tg), cols[[j]], tagsets[[j]])), recursive = FALSE)
 hdr5 <- function(txt) ggplot() + annotate("text", x = 0.5, y = 0.5, label = txt, size = 9, fontface = "bold") + theme_void() + theme(plot.margin = margin(0, 0, 0, 0))
-W <- c(2, 1.3, 2, 1.3, 1, 1)
+W <- c(2, 1.3, 2, 1.3, 1.3, 1.3)   # JS 2026-10-27: SRS/SCQ columns widened (labels were clipped at width 1)
 hdr_row5 <- (hdr5("Height") | hdr5("") | hdr5("Head circumference") | hdr5("") | hdr5("SRS") | hdr5("SCQ")) + plot_layout(widths = W)
 body5 <- wrap_plots(plots, ncol = 6, byrow = FALSE, widths = W) & theme(plot.tag = element_text(size = 18, face = "bold"))
 fig5 <- hdr_row5 / body5 + plot_layout(heights = c(0.04, 1))
-ggsave(file.path(WD, "fig_main_v5_ukbb.png"), fig5, width = 22, height = 20.5, dpi = 150)
-tryCatch(ggsave(file.path(WD, "fig_main_v5_ukbb.pdf"), fig5, width = 22, height = 20.5, device = cairo_pdf), error = function(e) ggsave(file.path(WD, "fig_main_v5_ukbb.pdf"), fig5, width = 22, height = 20.5))
+ggsave(file.path(WD, "fig_main_v5_ukbb.png"), fig5, width = 25, height = 20.5, dpi = 150)
+tryCatch(ggsave(file.path(WD, "fig_main_v5_ukbb.pdf"), fig5, width = 25, height = 20.5, device = cairo_pdf), error = function(e) ggsave(file.path(WD, "fig_main_v5_ukbb.pdf"), fig5, width = 25, height = 20.5))
 cat("fig_main_v5_ukbb written\n")
