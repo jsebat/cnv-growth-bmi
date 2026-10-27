@@ -202,7 +202,19 @@ fwrite(lc, file.path(WD, "main_with_ukbb_lifecourse.csv")); print(lc, digits = 3
 # Output: main_with_ukbb_bmi_effect_by_age.csv, fig_main_growth_ukbb_v2.{png,pdf}
 GRID <- seq(2.5, 60, by = 0.5)
 grid_of <- function(a) GRID[GRID >= quantile(a, 0.025) & GRID <= quantile(a, 0.975)]   # JS 2026-10-27: draw each curve only over the central 95% of that group's ages (the tails beyond the data support bent downward: smoother edge effect, Jon)
-support_of <- function(a_grid, ages, w = 3, nmin = 5) sapply(a_grid, function(a) sum(abs(ages - a) <= w) >= nmin)   # JS 2026-10-27: carrier curve drawn only where >= 5 carriers lie within 3 y (removes the dip across the 18-30 y gap of the clinical carriers)
+support_of <- function(a_grid, ages, w = 5, nmin = 5) sapply(a_grid, function(a) sum(abs(ages - a) <= w) >= nmin)   # JS 2026-10-27: carrier curve drawn only where >= 5 carriers lie within 3 y (removes the dip across the 18-30 y gap of the clinical carriers; window widened 3 -> 5 y on 2026-10-27 so that isolated holes in the HC rows close)
+support_range <- function(a_grid, ages, ...) { s <- support_of(a_grid, ages, ...); if (!any(s)) return(rep(FALSE, length(a_grid))); a_grid >= min(a_grid[s]) & a_grid <= max(a_grid[s]) }   # JS 2026-10-27 (Jon: no holes): contiguous range from the first to the last supported age
+bridge_gaps <- function(r, ages, ...) {   # JS 2026-10-27 (Jon: connect the dots): carrier curve drawn from the first to the last supported age;
+  # interior ages without support (< 5 carriers within 5 y) get a straight segment between the neighbouring supported ages (slope and se
+  # linearly interpolated) instead of the model's interpolation across the gap; nothing is drawn outside the supported range
+  i <- which(r$who == "Carriers"); if (!length(i)) return(r)
+  a <- r$age[i]; s <- support_of(a, ages, ...); sl <- r$slope[i]; se <- r$se[i]
+  if (!any(s)) { sl[] <- NA_real_; se[] <- NA_real_ } else {
+    inside <- a >= min(a[s]) & a <= max(a[s]); fix <- inside & !s
+    if (any(fix)) { sl[fix] <- approx(a[s], sl[s], a[fix])$y; se[fix] <- approx(a[s], se[s], a[fix])$y }
+    sl[!inside] <- NA_real_; se[!inside] <- NA_real_ }
+  r[i, `:=`(slope = sl, se = se)]; r
+}
 slope_rows <- function(m, grid, groups) {
   V <- vcov(m); B <- coef(m)
   rbindlist(lapply(groups, function(g) {
@@ -215,7 +227,7 @@ slope_rows <- function(m, grid, groups) {
 bmi_effect_by_age <- function(xc, ctl) {
   if (is.null(xc)) {   # controls only: within-group age × BMI model
     m <- bam(y ~ s(age, k = K_AGE) + s(BMI, k = K_BMI) + ti(age, BMI, k = K_TI), data = ctl, method = "REML", gamma = GAMMA)
-    r <- slope_rows(m, grid_of(ctl$age), list(NULL)); r[, p := summary(m)$s.table["ti(age,BMI)", "p-value"]]
+    r <- slope_rows(m, GRID[support_of(GRID, ctl$age, w = 3, nmin = 20)], list(NULL)); r[, p := summary(m)$s.table["ti(age,BMI)", "p-value"]]
     # JS 2026-10-23: age-constant BMI effect (continuous BMI, 1 df): y ~ BMI + s(age)
     m0 <- bam(y ~ BMI + s(age, k = 15), data = ctl, method = "REML"); c0 <- summary(m0)$p.table["BMI", ]
     r[, `:=`(est_main = unname(c0[1]), se_main = unname(c0[2]), p_main = unname(c0[4]))]; return(r)
@@ -224,7 +236,7 @@ bmi_effect_by_age <- function(xc, ctl) {
   m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) +
              ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = "REML", gamma = GAMMA)
   pv <- summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]; if (!is.finite(pv) || pv <= 0 || pv > 1) pv <- NA_real_   # JS 2026-10-27: same guard as threeway_p (a negative p appeared for 22q11.2 del height)
-  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r[, p := pv]; r[who == "Carriers" & !support_of(age, xc$age), `:=`(slope = NA_real_, se = NA_real_)]
+  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r[, p := pv]; r <- bridge_gaps(r, xc$age)
   # JS 2026-10-23: age-constant CNV x BMI (continuous BMI, 1 df), AGE-ADJUSTED: the BMI slope is allowed to vary with age
   # in a way shared by both groups (varying-coefficient term s(age, by = BMI); a numeric by-smooth is not centred, so it
   # carries the BMI main effect) and cnvBMI = BMI x carrier tests a constant shift of the carriers' slope relative to the

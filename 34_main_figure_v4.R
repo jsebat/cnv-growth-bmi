@@ -33,7 +33,19 @@ traj4 <- function(ph, Gn) {
 # ---------------------------------------------------------------- prime panel: BMI effect by age (from 17_main_with_ukbb.R v2)
 GRID <- seq(2.5, 60, by = 0.5)
 grid_of <- function(a) GRID[GRID >= quantile(a, 0.025) & GRID <= quantile(a, 0.975)]   # JS 2026-10-27: draw each curve only over the central 95% of that group's ages (the tails beyond the data support bent downward: smoother edge effect, Jon)
-support_of <- function(a_grid, ages, w = 3, nmin = 5) sapply(a_grid, function(a) sum(abs(ages - a) <= w) >= nmin)   # JS 2026-10-27: carrier curve drawn only where >= 5 carriers lie within 3 y (removes the dip across the 18-30 y gap of the clinical carriers)
+support_of <- function(a_grid, ages, w = 5, nmin = 5) sapply(a_grid, function(a) sum(abs(ages - a) <= w) >= nmin)   # JS 2026-10-27: carrier curve drawn only where >= 5 carriers lie within 3 y (removes the dip across the 18-30 y gap of the clinical carriers; window widened 3 -> 5 y on 2026-10-27 so that isolated holes in the HC rows close)
+support_range <- function(a_grid, ages, ...) { s <- support_of(a_grid, ages, ...); if (!any(s)) return(rep(FALSE, length(a_grid))); a_grid >= min(a_grid[s]) & a_grid <= max(a_grid[s]) }   # JS 2026-10-27 (Jon: no holes): contiguous range from the first to the last supported age
+bridge_gaps <- function(r, ages, ...) {   # JS 2026-10-27 (Jon: connect the dots): carrier curve drawn from the first to the last supported age;
+  # interior ages without support (< 5 carriers within 5 y) get a straight segment between the neighbouring supported ages (slope and se
+  # linearly interpolated) instead of the model's interpolation across the gap; nothing is drawn outside the supported range
+  i <- which(r$who == "Carriers"); if (!length(i)) return(r)
+  a <- r$age[i]; s <- support_of(a, ages, ...); sl <- r$slope[i]; se <- r$se[i]
+  if (!any(s)) { sl[] <- NA_real_; se[] <- NA_real_ } else {
+    inside <- a >= min(a[s]) & a <= max(a[s]); fix <- inside & !s
+    if (any(fix)) { sl[fix] <- approx(a[s], sl[s], a[fix])$y; se[fix] <- approx(a[s], se[s], a[fix])$y }
+    sl[!inside] <- NA_real_; se[!inside] <- NA_real_ }
+  r[i, `:=`(slope = sl, se = se)]; r
+}
 K_AGE <- 10; K_BMI <- 6; K_TI <- c(6, 5); GAMMA <- 1.5   # JS 2026-10-27: same smoother settings as 17_main_with_ukbb.R
 slope_rows <- function(m, grid, groups) {
   V <- vcov(m); B <- coef(m)
@@ -47,12 +59,12 @@ bmi_effect_by_age <- function(ph, Gn) {
   ctl <- A[pheno == ph & locus == CTL & !is.na(y) & !is.na(BMI) & !is.na(age), .(y, age, BMI, locus = "No CNV")]
   if (Gn == CTL) {
     m <- bam(y ~ s(age, k = K_AGE) + s(BMI, k = K_BMI) + ti(age, BMI, k = K_TI), data = ctl, method = "REML", gamma = GAMMA)
-    return(slope_rows(m, grid_of(ctl$age), list(NULL)))
+    return(slope_rows(m, GRID[support_of(GRID, ctl$age, w = 3, nmin = 20)], list(NULL)))
   }
   xc <- A[pheno == ph & locus == Gn & !is.na(y) & !is.na(BMI) & !is.na(age), .(y, age, BMI, locus = Gn)]
   x <- rbind(ctl, xc)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]
   m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) + ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = "REML", gamma = GAMMA)
-  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r[who == "Carriers" & !support_of(age, xc$age), `:=`(slope = NA_real_, se = NA_real_)]; r
+  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r <- bridge_gaps(r, xc$age); r
 }
 BEACOLS <- c("Non-carriers" = "#8C9A9A", "Carriers" = "#4B6EA9")
 eff_panel <- function(ph, Gn, ylab, ylim = c(-1, 1.2)) {
@@ -91,6 +103,6 @@ leg3 <- readLines(file.path(HERE, "fig_main_v3_legend.txt"), warn = FALSE)
 leg4 <- c(sub("^Figure\\.", "Figure (v4).", leg3[1]),
   "Columns: height (A-E) with the BMI effect on height by age (A'-E'), head circumference (F-J) with the BMI effect by age (F'-J'), SRS (K-O) and SCQ (P-T). Rows as in v3: unaffected non-carrier controls (top), then carriers of 16p11.2 deletion, 16p11.2 duplication, 22q11.2 deletion and 22q11.2 duplication.",
   leg3[-(1:2)],
-  "A'-E', F'-J': the effect of BMI on the outcome as a continuous function of age, half the difference in the predicted outcome between BMI = +1 SD and BMI = -1 SD at each age (SD of the outcome per SD of BMI), with 95% confidence bands, read from the fitted age x BMI surface of the model that compares carriers with unaffected controls (y ~ CNV + s(age) + s(BMI) + s(age, by CNV) + ti(age, BMI) + ti(age, BMI, by CNV), REML): carriers in blue, controls in grey; so each panel shows where in the age range the carriers' BMI effect departs from the controls'. The control row shows the within-group surface (y ~ s(age) + s(BMI) + ti(age, BMI)). Tick marks along the bottom mark the carriers' ages. Curves are drawn over the central 95% of each group's ages, and the carrier curve only at ages with at least five carriers within three years (gaps elsewhere); the tensor-product surfaces use basis sizes 10 (age), 6 (BMI) and 6 x 5 (age x BMI) with the smoothing penalty inflated by gamma = 1.5, after the k = 15/10/10 x 10 surfaces proved too wiggly and bent at the ends of the age range. The trajectory panels print the age-adjusted CNV x BMI p and the prime panels the CNV x age x BMI p, both from the tests reported in the text (23_unaffected_controls.R); the CNV x age x BMI term is sensitive to extreme observations and is reported as exploratory.")
+  "A'-E', F'-J': the effect of BMI on the outcome as a continuous function of age, half the difference in the predicted outcome between BMI = +1 SD and BMI = -1 SD at each age (SD of the outcome per SD of BMI), with 95% confidence bands, read from the fitted age x BMI surface of the model that compares carriers with unaffected controls (y ~ CNV + s(age) + s(BMI) + s(age, by CNV) + ti(age, BMI) + ti(age, BMI, by CNV), REML): carriers in blue, controls in grey; so each panel shows where in the age range the carriers' BMI effect departs from the controls'. The control row shows the within-group surface (y ~ s(age) + s(BMI) + ti(age, BMI)). Tick marks along the bottom mark the carriers' ages. Curves are drawn over the central 95% of each group's ages, and the carrier curve from the first to the last age with at least five carriers within five years, with any interior stretch lacking that support bridged by a straight segment between its neighbouring supported ages rather than by the model; the tensor-product surfaces use basis sizes 10 (age), 6 (BMI) and 6 x 5 (age x BMI) with the smoothing penalty inflated by gamma = 1.5, after the k = 15/10/10 x 10 surfaces proved too wiggly and bent at the ends of the age range. The trajectory panels print the age-adjusted CNV x BMI p and the prime panels the CNV x age x BMI p, both from the tests reported in the text (23_unaffected_controls.R); the CNV x age x BMI term is sensitive to extreme observations and is reported as exploratory.")
 writeLines(leg4, file.path(HERE, "fig_main_v4_legend.txt"))
 cat("fig_main_v4 written\n")
