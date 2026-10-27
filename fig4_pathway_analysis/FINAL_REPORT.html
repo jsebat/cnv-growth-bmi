@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Three-way convergence analysis — final report</title>
+<style>
+@page { size: letter; margin: 15mm 14mm; }
+body { font-family: "Segoe UI", Calibri, Helvetica, Arial, sans-serif; font-size: 10.5pt;
+       line-height: 1.5; color: #1a1a1a; max-width: 1000px; margin: 0 auto; }
+h1 { font-size: 19pt; margin: 0 0 3px 0; color: #12263f; }
+h2 { font-size: 13.5pt; margin: 22px 0 7px 0; color: #12263f;
+     border-bottom: 1.5px solid #c9d6e2; padding-bottom: 3px; }
+h3 { font-size: 11pt; margin: 15px 0 4px 0; color: #2c3e50; }
+.sub { color: #566; font-size: 10.5pt; margin: 0 0 4px 0; }
+.meta { color: #777; font-size: 8.5pt; margin-bottom: 16px; }
+table { border-collapse: collapse; width: 100%; margin: 9px 0 13px 0; font-size: 9.2pt; }
+th, td { border: 1px solid #d5dee6; padding: 5px 7px; text-align: left; vertical-align: top; }
+th { background: #eef3f8; font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+code { background: #f2f5f8; padding: 1px 4px; border-radius: 3px; font-size: 9pt; }
+pre { background: #f2f5f8; padding: 9px 11px; border-radius: 4px; font-size: 8.8pt;
+      white-space: pre-wrap; margin: 6px 0 12px 0; }
+.callout { background: #f4f8fb; border-left: 3px solid #2c7fb8; padding: 9px 13px; margin: 11px 0; }
+.warn { background: #fdf6ec; border-left: 3px solid #d08b00; padding: 9px 13px; margin: 11px 0; }
+.draft { background: #f7f7f4; border: 1px solid #ddd9cf; padding: 10px 13px; margin: 10px 0;
+         font-family: Georgia, "Times New Roman", serif; font-size: 10pt; line-height: 1.55; }
+figure { margin: 10px 0 14px 0; page-break-inside: avoid; }
+figure img { width: 100%; border: 1px solid #d5dee6; }
+figcaption { font-size: 8.8pt; color: #566; margin-top: 5px; line-height: 1.4; }
+.hit { color: #C0392B; font-weight: 600; }
+ul, ol { margin: 5px 0 11px 0; padding-left: 21px; }
+li { margin: 3px 0; }
+.pb { page-break-before: always; }
+.small { font-size: 9pt; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>Three-way convergence analysis — final report</h1>
+<p class="sub">Recurrent CNVs (Sacks et&nbsp;al.) &times; exome height genes (Kosmicki et&nbsp;al.)
+&times; height-decreasing effect bias</p>
+<p class="meta">PGC joint submission &middot; generated 2026-09-20 &middot; R 4.6.1 &middot; no pathway statistic recomputed</p>
+
+<h2>1. Summary</h2>
+
+<div class="callout">
+Across an analysis set of <strong>102 pathways</strong>,
+<span class="hit">GO:0008284 — Positive Regulation Of Cell Population Proliferation</span> is the
+<strong>only pathway significant in all three tests of the asymmetric analysis</strong>: enrichment in
+asymmetric-CNV genes (B), enrichment of the pathway within the 207 Kosmicki height genes (C), and bias toward
+height-decreasing effects in the pathway's Kosmicki genes relative to all 207 Kosmicki genes (D).
+<br><br>
+It is <strong>Bonferroni significant in test C</strong> (P&nbsp;=&nbsp;1.05&times;10<sup>&minus;4</sup> against
+0.05/102&nbsp;=&nbsp;4.9&times;10<sup>&minus;4</sup>; BH q&nbsp;=&nbsp;0.0045), and ranks
+<strong>first by P in both the asymmetric-CNV test and the effect-direction test</strong>.
+<br><br>
+The same analysis run with <strong>mirror CNVs</strong> yields <strong>no convergent pathway</strong>: none of
+the 102 is significant in all three of A, C and D.
+</div>
+
+<table>
+<tr><th>Test</th><th class="n">GO:0008284</th><th class="n">P</th><th class="n">q (BH)</th><th class="n">P&lt;0.05</th><th class="n">Bonferroni</th></tr>
+<tr><td><strong>A</strong> — Pathway enrichment in mirror CNVs</td><td class="n">3 genes, OR 0.44</td><td class="n">0.94</td><td class="n">1.00</td><td class="n">3</td><td class="n">0</td></tr>
+<tr><td><strong>B</strong> — Pathway enrichment in asymmetric CNVs</td><td class="n">9/10 universe genes, OR 7.04</td><td class="n">0.031</td><td class="n">1.00</td><td class="n">2</td><td class="n">0</td></tr>
+<tr><td><strong>C</strong> — Pathway enrichment in Kosmicki height genes</td><td class="n">17/176 genes, OR 3.11</td><td class="n"><strong>1.05&times;10<sup>&minus;4</sup></strong></td><td class="n"><strong>0.0045</strong></td><td class="n">22</td><td class="n">3</td></tr>
+<tr><td><strong>D</strong> — Negative-effect bias vs all 207 Kosmicki genes</td><td class="n">16 neg / 1 pos, OR 8.70</td><td class="n">0.0090</td><td class="n">0.70</td><td class="n">3</td><td class="n">0</td></tr>
+<tr style="background:#fbf3f2"><td><strong>Convergent (asymmetric: B, C and D)</strong></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n"><strong>1</strong></td><td class="n">—</td></tr>
+<tr style="background:#f7f9fb"><td><strong>Convergent (mirror: A, C and D)</strong></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n"><strong>0</strong></td><td class="n">—</td></tr>
+</table>
+
+<h2>2. Pathway set</h2>
+
+<h3>Pathways with statistics (5,712)</h3>
+<p>Two gene-set libraries were read as GMT files. Gene symbols were upper-cased and de-duplicated within each
+term, and a term was retained only if it contained between <strong>5 and 500</strong> unique symbols
+(<code>min_set_size = 5</code>, <code>max_set_size = 500</code> in
+<code>kosmicki_pathway_cnv_pipeline.R</code>, applied when the GMT is parsed).</p>
+
+<table>
+<tr><th>Library</th><th class="n">Terms in GMT</th><th class="n">Dropped (&lt;5 or &gt;500 genes)</th><th class="n">Retained</th><th class="n">Gene universe</th></tr>
+<tr><td>GO Biological Process 2023</td><td class="n">5,407</td><td class="n">14</td><td class="n">5,393</td><td class="n">14,212</td></tr>
+<tr><td>KEGG 2021 Human</td><td class="n">320</td><td class="n">1</td><td class="n">319</td><td class="n">8,077</td></tr>
+<tr style="background:#eef3f8"><td><strong>Total with statistics</strong></td><td class="n">5,727</td><td class="n">15</td><td class="n"><strong>5,712</strong></td><td class="n">—</td></tr>
+</table>
+<p class="small">Verified by re-parsing the original <code>GO_Biological_Process_2023.gmt</code> and
+<code>KEGG_2021_Human.gmt</code> and re-applying the size filter, which reproduces 5,393 and 319 exactly.</p>
+
+<h3>Analysis set (102)</h3>
+<p>The CNV gene universe is small — <strong>215 mapped genes for GO:BP</strong> (124 asymmetric, 104 mirror) and
+103 for KEGG (61 asymmetric, 49 mirror) — so a pathway with few genes in that universe cannot reach
+P&nbsp;&lt;&nbsp;0.05 in a CNV test however extreme its genes are. Pathways were therefore restricted to those
+carrying enough CNV genes for a CNV test to be capable of nominal significance. The threshold is
+<strong>derived, not chosen</strong>: for each pathway the best-case attainable P — all of its CNV-universe
+genes belonging to the target class — is computed from the hypergeometric distribution, and the pathway is
+admitted if that is below 0.05 for either CNV class.</p>
+
+<table>
+<tr><th>Genes in CNV universe</th><th class="n">1</th><th class="n">2</th><th class="n">3</th><th class="n">4</th><th class="n">5</th><th class="n">6</th><th class="n">7</th><th class="n">8</th><th class="n">10</th></tr>
+<tr><td>Best-case attainable P, asymmetric (GO:BP)</td><td class="n">0.58</td><td class="n">0.33</td><td class="n">0.19</td><td class="n">0.11</td><td class="n">0.062</td><td class="n"><strong>0.035</strong></td><td class="n">0.020</td><td class="n">0.011</td><td class="n">0.0035</td></tr>
+<tr><td>Best-case attainable P, mirror (GO:BP)</td><td class="n">0.48</td><td class="n">0.23</td><td class="n">0.11</td><td class="n"><strong>0.053</strong></td><td class="n">0.025</td><td class="n">0.012</td><td class="n">0.0056</td><td class="n">0.0026</td><td class="n">0.00056</td></tr>
+</table>
+
+<div class="callout">
+<strong>Analysis set = 102 pathways</strong> (68 GO:BP + 34 KEGG): the <strong>union</strong> of the 48 pathways
+attainable for the asymmetric test (≥&nbsp;6 CNV-universe genes) and the 102 attainable for the mirror test
+(≥&nbsp;4). The asymmetric set is a strict subset of the mirror set, so the union is the mirror set.
+<strong>This one set is used for all four tests</strong> and fixes the multiple-testing burden throughout:
+Bonferroni&nbsp;=&nbsp;0.05/102&nbsp;=&nbsp;4.9&times;10<sup>&minus;4</sup>, with BH FDR computed within it.
+Tests C and D do not involve CNVs, so they are computed once and shared by the two convergence analyses; only
+the CNV test differs between them.
+</div>
+
+<p class="small">GO:0008284 has 10 of its genes in the CNV universe, 9 of them asymmetric and 3 mirror.</p>
+
+<div class="pb"></div>
+<h2>3. Main figure</h2>
+<figure>
+<img src="results/Figure_1_three_way_convergence.png" alt="Figure 1: three-way convergence">
+<figcaption><strong>Figure 1.</strong> <strong>(A)</strong> pathway enrichment in mirror CNVs;
+<strong>(B)</strong> in asymmetric CNVs; <strong>(C)</strong> pathway enrichment in the 207 Kosmicki height
+genes; <strong>(D)</strong> negative-effect bias in the pathway's Kosmicki genes relative to all 207.
+Panels A&ndash;D plot the same 102 pathways. Colour there marks membership of the two CNV-enriched groups
+rather than significance in the panel being viewed: <span style="color:#2C7FB8;font-weight:600">blue</span>,
+the three pathways enriched in mirror CNVs (A); <span style="color:#D7191C;font-weight:600">red</span>, the two
+enriched in asymmetric CNVs (B); grey, all others. The two groups are disjoint, and those five pathways, and
+only those five, carry text labels in the same colours in every panel, so each can be followed across the
+tests. Significance within a panel is read off the threshold lines: dashed, OR&nbsp;=&nbsp;1 and
+P&nbsp;=&nbsp;0.05; dotted, the Bonferroni threshold (4.9&times;10<sup>&minus;4</sup>) where it falls within the
+plotted range. The black ring marks the one pathway significant in all three tests of the asymmetric analysis
+(B, C and D), GO:0008284.
+<strong>(E)</strong> The 9 asymmetric-CNV genes contributing the GO:0008284 overlap, grouped by recurrent
+locus &mdash; genes within one locus travel on the same CNV and are not independent, which is why the
+locus-block permutation (P&nbsp;=&nbsp;0.033) rather than the gene-level Fisher test is the statistic of record
+for the CNV layer. <strong>(F)</strong> Height effect of the 17 Kosmicki genes in GO:0008284, ascending: 16
+height-decreasing (grey), 1 height-increasing (<em>TGFB3</em>, +0.96 SD, orange), against a 64.8% background
+rate across all 207. Panels E and F are gene-level and use their own palettes, deliberately avoiding the
+blue/red of A&ndash;D.</figcaption>
+</figure>
+
+<h3>Pathways at each intersection</h3>
+<p>Pathways in each exclusive intersection of the three tests, per analysis. Regions not listed are empty.</p>
+
+<table>
+<tr><th>Analysis</th><th>Intersection</th><th class="n">Pathway number</th><th>Pathway</th><th>Database</th></tr>
+<tr><td rowspan="4">Asymmetric</td><td><strong>B|C|D</strong></td><td class="n">1</td><td><strong>Positive Regulation Of Cell Population Proliferation (GO:0008284)</strong></td><td>GO:BP</td></tr>
+<tr><td>B|C</td><td class="n">&mdash;</td><td><em>none</em></td><td>&mdash;</td></tr>
+<tr><td>C|D</td><td class="n">1</td><td>PI3K-Akt signaling pathway</td><td><strong>KEGG</strong></td></tr>
+<tr><td>C|D</td><td class="n">2</td><td>Positive Regulation Of MAPK Cascade (GO:0043410)</td><td>GO:BP</td></tr>
+<tr style="background:#f7f9fb"><td rowspan="5">Mirror</td><td><strong>A|C|D</strong></td><td class="n">&mdash;</td><td><em><strong>none</strong></em></td><td>&mdash;</td></tr>
+<tr style="background:#f7f9fb"><td>A|C</td><td class="n">1</td><td>Protein Ubiquitination (GO:0016567)</td><td>GO:BP</td></tr>
+<tr style="background:#f7f9fb"><td>C|D</td><td class="n">1</td><td>Positive Regulation Of Cell Population Proliferation (GO:0008284)</td><td>GO:BP</td></tr>
+<tr style="background:#f7f9fb"><td>C|D</td><td class="n">2</td><td>PI3K-Akt signaling pathway</td><td><strong>KEGG</strong></td></tr>
+<tr style="background:#f7f9fb"><td>C|D</td><td class="n">3</td><td>Positive Regulation Of MAPK Cascade (GO:0043410)</td><td>GO:BP</td></tr>
+</table>
+
+<p class="small">B|D and A|D are empty and omitted. C|D differs between the analyses (2 vs 3) because in the
+asymmetric analysis one of the three C&cap;D pathways also clears B and moves to the three-way intersection;
+C&cap;D is 3 in both.</p>
+
+<div class="callout">
+<strong>No gene in any of these pathways is both a Kosmicki height gene and a Sacks CNV gene.</strong> The
+overlap in every case is between two disjoint gene sets within the same pathway, so the three tests are not
+being driven by the same genes.
+</div>
+
+<h2>4. Rank of the convergent pathway</h2>
+<p>Where GO:0008284 sits within the 102-pathway analysis set in each test:</p>
+<table>
+<tr><th>Test</th><th class="n">P</th><th class="n">Rank by P</th><th class="n">OR</th><th class="n">Rank by OR</th></tr>
+<tr><td><strong>A</strong> — mirror-CNV enrichment</td><td class="n">0.94</td><td class="n">88 of 102</td><td class="n">0.44</td><td class="n">83 of 102</td></tr>
+<tr><td><strong>B</strong> — asymmetric-CNV enrichment</td><td class="n">0.031</td><td class="n"><strong>1 of 102</strong></td><td class="n">7.04</td><td class="n">3 of 102</td></tr>
+<tr><td><strong>C</strong> — Kosmicki enrichment</td><td class="n">1.05&times;10<sup>&minus;4</sup></td><td class="n">2 of 102</td><td class="n">3.11</td><td class="n">9 of 102</td></tr>
+<tr><td><strong>D</strong> — negative-effect bias</td><td class="n">0.0090</td><td class="n"><strong>1 of 102</strong></td><td class="n">8.70</td><td class="n">2 of 102</td></tr>
+</table>
+<p>GO:0008284 is the single most significant pathway in both the asymmetric-CNV test and the effect-direction
+test, second in the Kosmicki test, and sits in the lower half of the mirror-CNV test.</p>
+
+<div class="pb"></div>
+<h2>5. Suggested wording for the manuscript</h2>
+<div class="draft">
+We restricted the analysis to pathways carrying enough genes in the recurrent-CNV gene universe for a CNV test
+to be capable of nominal significance (≥&nbsp;6 of the 215 mapped genes for the asymmetric test, ≥&nbsp;4 for
+the mirror test; 102 pathways in union), and used this single set for all tests, so that the multiple-testing
+burden is set once (Bonferroni P&nbsp;&lt;&nbsp;4.9&times;10<sup>&minus;4</sup>).
+<br><br>
+Of these 102 pathways, Positive Regulation Of Cell Population Proliferation (GO:0008284) was the only one
+significant in all three tests of the asymmetric analysis: enrichment among genes in asymmetric CNVs
+(OR&nbsp;=&nbsp;7.04, P&nbsp;=&nbsp;0.031), enrichment within the 207 exome-wide significant height genes
+(17 of 176 mapped genes, OR&nbsp;=&nbsp;3.11, P&nbsp;=&nbsp;1.05&times;10<sup>&minus;4</sup>, Bonferroni
+significant, FDR&nbsp;=&nbsp;0.0045), and a bias toward height-decreasing effects among those genes relative to
+all 207 (16 of 17 negative, OR&nbsp;=&nbsp;8.70, P&nbsp;=&nbsp;0.009). It ranked first by P in both the
+asymmetric-CNV test and the effect-direction test.
+<br><br>
+The nine contributing genes fall in four recurrent loci (15q13, 22q11.21, 2q11.2, 7q11.23); a locus-block
+permutation preserving the correlation among genes on the same CNV confirmed the excess
+(P&nbsp;=&nbsp;0.033). The enrichment was unchanged after excluding the height genes themselves
+(OR&nbsp;=&nbsp;7.03, P&nbsp;=&nbsp;0.031), indicating that the CNV and exome signals are independent, and was
+absent in mirror CNVs (OR&nbsp;=&nbsp;0.44, P&nbsp;=&nbsp;0.94).
+<br><br>
+Repeating the analysis with mirror CNVs in place of asymmetric CNVs identified no pathway satisfying all three
+criteria. Neither CNV test showed an excess of enriched pathways in aggregate (2 asymmetric and 3 mirror
+pathways at P&nbsp;&lt;&nbsp;0.05), so we do not interpret either CNV screen as showing pathway enrichment
+across the CNV set; the evidence for GO:0008284 rests on its convergence across the three tests, on the
+Bonferroni-significant enrichment in the height gene set, and on the locus-block permutation.
+</div>
+
+<h2>6. Supporting and sensitivity analyses</h2>
+<table>
+<tr><th>Analysis</th><th class="n">Estimate</th><th class="n">P</th><th>Interpretation</th></tr>
+<tr><td>Asymmetric-CNV enrichment</td><td class="n">OR 7.04 (9 of 10 universe genes)</td><td class="n">0.031</td><td>Nominal</td></tr>
+<tr><td><strong>Locus-block permutation</strong></td><td class="n">&Delta;fraction 0.044 (null 0.003 ± 0.024)</td><td class="n"><strong>0.033</strong></td><td><strong>Statistic of record for the CNV layer</strong></td></tr>
+<tr><td>Mirror-CNV enrichment</td><td class="n">OR 0.44 (3 genes)</td><td class="n">0.94</td><td>Specific to asymmetric loci</td></tr>
+<tr><td>Asymmetric vs mirror, direct contrast</td><td class="n">OR 6.06</td><td class="n">0.059</td><td>Same direction, borderline</td></tr>
+<tr><td>Asymmetric enrichment excluding Kosmicki genes</td><td class="n">OR 7.03</td><td class="n">0.031</td><td>CNV and exome layers independent</td></tr>
+<tr><td><strong>Kosmicki enrichment</strong></td><td class="n">OR 3.11</td><td class="n"><strong>1.05&times;10<sup>&minus;4</sup></strong></td><td><strong>Bonferroni significant; q = 0.0045</strong></td></tr>
+<tr><td>Negative-effect bias, two-sided Fisher</td><td class="n">16/1</td><td class="n">0.013</td><td>Robust to test choice</td></tr>
+<tr><td>Negative-effect bias, Mann–Whitney</td><td class="n">—</td><td class="n">0.0090</td><td>Robust to test choice</td></tr>
+<tr><td>Independent-gene sensitivity</td><td class="n">16/1, OR 8.71</td><td class="n">0.0090</td><td>Unchanged</td></tr>
+<tr><td>Redundancy pruning</td><td class="n">cluster size 1</td><td class="n">retained</td><td>Not a duplicate of another GO term</td></tr>
+</table>
+
+<p>The <strong>17 Kosmicki genes</strong>, by effect size: <em>HMGA2</em>, <em>IGF1R</em>, <em>IGF1</em>,
+<em>IRS1</em>, <em>GHRH</em>, <em>CCAR1</em>, <em>FGF2</em>, <em>FGFR3</em>, <em>RNF187</em>, <em>DDR2</em>,
+<em>BMP6</em>, <em>CLEC11A</em>, <em>CDK6</em>, <em>FER</em>, <em>JAK2</em>, <em>LRP5</em> (all
+height-decreasing), and <em>TGFB3</em> (height-increasing). Dominated by the GH–IGF growth axis and FGF
+signalling. The <strong>9 asymmetric-CNV genes</strong>: <em>TJP1</em> (15q13.1–13.2), <em>CHRNA7</em>
+(15q13.2–13.3), <em>CLDN5</em>, <em>CRKL</em>, <em>TBX1</em> (22q11.21), <em>CIAO1</em> (2q11.2),
+<em>BCL7B</em>, <em>FZD9</em>, <em>MLXIPL</em> (7q11.23).</p>
+
+<h2>7. Caveats</h2>
+<div class="warn">
+<ul style="margin:0">
+<li>Neither CNV test shows an excess of enriched pathways in aggregate: 2 asymmetric and 3 mirror pathways at
+P&nbsp;&lt;&nbsp;0.05, and none survives correction in either. The CNV screens should not be presented as
+evidence of pathway enrichment in their own right.</li>
+<li>Only the Kosmicki enrichment (test C) is Bonferroni and FDR significant. Tests A, B and D are nominal.</li>
+<li>The contrast between the asymmetric and mirror analyses is a specificity check, not a formal test: one
+convergent pathway versus none is not by itself a significant difference, and the direct asymmetric-vs-mirror
+contrast for GO:0008284 is borderline (OR&nbsp;=&nbsp;6.06, one-sided P&nbsp;=&nbsp;0.059).</li>
+<li>Tests C and D are not independent: both are computed on the Kosmicki gene set.</li>
+<li><em>CHRNA7</em> appears in both an asymmetric (15q13.1–13.2) and a mirror (15q13.3) interval in the
+annotation table; it was not relabelled.</li>
+</ul>
+</div>
+
+<p class="small"><strong>Data-quality note.</strong> The <code>*_overlap_genes</code> string columns in the
+master results table are unreliable — 1,286 asymmetric and 967 mirror rows carry a gene string whose length
+disagrees with that row's own <code>overlap_n</code>, and many are blank. Gene-level results here are therefore
+reconstructed from the source GMT files plus the two annotated gene tables, and validated against the master
+<code>overlap_n</code> columns (0 mismatches across all 5,712 pathways for the Kosmicki, asymmetric and mirror
+sets). <code>make_intersection_table.R</code> re-runs that validation and stops on any mismatch.</p>
+
+<h2>8. Files and reproduction</h2>
+<p>From <code>Final/</code>, in order:</p>
+<pre>Rscript run_three_way_convergence.R      # analysis set, four tests, ranks, logs
+Rscript make_main_figure.R               # Figure 1
+Rscript make_intersection_table.R        # pathways at each intersection</pre>
+
+<table>
+<tr><th>File (in <code>results/</code>)</th><th>Contents</th></tr>
+<tr><td><code>00_analysis_log.txt</code></td><td>Full analysis log: set derivation, the four tests, convergence, ranks</td></tr>
+<tr><td><code>Figure_1_three_way_convergence.png/.pdf</code></td><td><strong>Figure 1</strong>, 6 panels (A-D pathway level, E-F gene level), 400 dpi</td></tr>
+<tr><td><code>analysis_set_102_pathways.csv</code></td><td>The 102 pathways: all four tests, q-values, Bonferroni and convergence flags</td></tr>
+<tr><td><code>analysis_summary.csv</code></td><td>Headline counts and thresholds</td></tr>
+<tr><td><code>analysis_set_attainability.csv</code></td><td>Best-case attainable P by genes-in-universe, for both CNV classes</td></tr>
+<tr><td><code>convergent_pathways.csv</code></td><td>Pathways significant in all three tests of either analysis</td></tr>
+<tr><td><code>convergent_pathway_ranks.csv</code></td><td>Rank of GO:0008284 by P and by OR in each test</td></tr>
+<tr><td><code>intersection_pathways.csv</code></td><td>Pathways at each intersection, with gene counts and shared genes</td></tr>
+<tr><td><code>testA_mirror / testB_asymmetric / testC_kosmicki / testD_bias_significant.csv</code></td><td>Pathways significant in each test</td></tr>
+</table>
+
+<p class="small">Inputs: <code>kosmicki_pathway_cnv_master_results.csv</code>,
+<code>kosmicki_207_genes_annotated.csv</code>, <code>cnv_genes_annotated.csv</code>, and the two GMT files in
+<code>../Old/original_pipeline_review/original_bundle/</code>.</p>
+
+</body>
+</html>

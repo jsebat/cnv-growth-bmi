@@ -1,0 +1,44 @@
+=============================================================
+THREE-WAY CONVERGENCE ANALYSIS
+No statistic recomputed; all values read from the master results table.
+=============================================================
+
+-- PATHWAY SET --
+  GMT terms retained at 5-500 unique gene symbols
+  (min_set_size=5, max_set_size=500 in kosmicki_pathway_cnv_pipeline.R):
+    GO Biological Process 2023 : 5407 terms -> 5393 retained
+    KEGG 2021 Human            :  320 terms -> 319 retained
+    Pathways with statistics   : 5712
+
+  ANALYSIS SET = union of the two CNV attainability sets.
+    asymmetric test attainable (>= 6 genes in the CNV universe) : 48
+    mirror test attainable     (>= 4 genes in the CNV universe) : 102
+    asymmetric set is a subset of the mirror set : TRUE
+    UNION = 102 pathways   (GO:BP 68, KEGG 34)
+
+  One set for all four tests. Bonferroni = 0.05/102 = 0.00049; BH FDR within the set.
+
+-- THE FOUR TESTS --
+                                           P<0.05   Bonferroni
+  A  mirror-CNV enrichment                      3            0
+  B  asymmetric-CNV enrichment                  2            0
+  C  Kosmicki height-gene enrichment           22            3
+  D  negative-effect bias                       3            0
+
+-- CONVERGENCE --
+  asymmetric (B & C & D) : 1
+  mirror     (A & C & D) : 0
+
+  Positive Regulation Of Cell Population Proliferation (GO:0008284)   [GO_Biological_Process_2023]
+    A  mirror CNV     : 3 genes, OR 0.44, P 0.937   (not significant)
+    B  asymmetric CNV : 9 of 10 universe genes, OR 7.04, P 0.0309, q 0.997
+       locus-block permutation P 0.0332   <-- statistic of record for the CNV layer
+    C  Kosmicki       : 17/176 genes, OR 3.11, P 0.000105, q 0.00451   *** BONFERRONI SIGNIFICANT ***
+    D  negative bias  : 16 neg / 1 pos, OR 8.7, P 0.00899, q 0.698
+
+-- RANK OF THE CONVERGENT PATHWAY WITHIN THE ANALYSIS SET --
+  A mirror-CNV             P 0.937     rank  88/102    OR   0.44  rank  83/102
+  B asymmetric-CNV         P 0.0309    rank   1/102    OR   7.04  rank   3/102
+  C Kosmicki               P 0.000105  rank   2/102    OR   3.11  rank   9/102
+  D negative-effect bias   P 0.00899   rank   1/102    OR   8.70  rank   2/102
+=============================================================

@@ -1,0 +1,12 @@
+analysis,intersection,pathway_number,pathway,database,kosmicki_genes,cnv_genes,shared_genes
+asymmetric,B|C|D,1,Positive Regulation Of Cell Population Proliferation (GO:0008284),GO:BP,17,9,none
+asymmetric,B|C,,(none),"",,,""
+asymmetric,B|D,,(none),"",,,""
+asymmetric,C|D,1,PI3K-Akt signaling pathway,KEGG,14,3,none
+asymmetric,C|D,2,Positive Regulation Of MAPK Cascade (GO:0043410),GO:BP,9,7,none
+mirror,A|C|D,,(none),"",,,""
+mirror,A|C,1,Protein Ubiquitination (GO:0016567),GO:BP,10,6,none
+mirror,A|D,,(none),"",,,""
+mirror,C|D,1,Positive Regulation Of Cell Population Proliferation (GO:0008284),GO:BP,17,3,none
+mirror,C|D,2,PI3K-Akt signaling pathway,KEGG,14,2,none
+mirror,C|D,3,Positive Regulation Of MAPK Cascade (GO:0043410),GO:BP,9,4,none

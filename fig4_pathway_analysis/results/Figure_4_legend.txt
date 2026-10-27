@@ -1,0 +1,11 @@
+Figure 4. Convergence of pathway enrichment in asymmetric CNVs and in single-gene associations with short stature.
+
+(A) Asymmetric versus mirror CNVs. For each GO Biological Process or KEGG pathway, its genes within the analysed recurrent CNV intervals (215 genes: 124 in CNVs with asymmetric dose effects on height, 104 in CNVs with mirror effects, 13 in both) were cross-classified as asymmetric-class or not; OR > 1 indicates over-representation in asymmetric CNVs, OR < 1 in mirror CNVs, with a two-sided Fisher exact P. Because the universe holds only the two classes, enrichment in one is depletion in the other, so one contrast replaces separate tests. The 102 pathways in A-C are those with at least four CNV-universe genes, the minimum at which a test can reach P < 0.05; Bonferroni = 0.05/102. Red, asymmetric-enriched at P < 0.05 (GO:0008284, Positive regulation of cell population proliferation: 9 of 10 CNV genes asymmetric, OR 7.0, P = 0.047; GO:1903506); blue, mirror-enriched (Regulation of actin cytoskeleton). Because genes in a recurrent CNV are not independent, the statistic of record is a locus-block permutation reassigning asymmetric and mirror labels among the 34 intervals (5,000 permutations; GO:0008284, P = 0.033).
+
+(B) Enrichment of the 207 Kosmicki et al. height genes (176 mapped) among each pathway's genes, one-sided hypergeometric test (GO:0008284: 17 of 176, OR 3.1, P = 1.1 x 10^-4, Bonferroni significant).
+
+(C) Among each pathway's Kosmicki genes, enrichment of height-decreasing associations relative to the 65% background, one-sided hypergeometric test (GO:0008284: 16 of 17 decreasing, OR 8.7, P = 0.009). The black ring marks the only pathway significant in A, B and C.
+
+(D) The nine asymmetric-CNV genes of GO:0008284 by recurrent locus. (E) Height effect (SD per allele) of its 17 Kosmicki genes, ascending; grey decreasing, orange increasing. Dashed lines: OR = 1 and P = 0.05; dotted line: Bonferroni threshold.
+
+Source: make_main_figure.R (pathway_analysis/Final); statistics from kosmicki_pathway_cnv_master_results.csv, except the two-sided P in A, computed by the figure script from the stored 2 x 2 counts (results/panelA_asym_vs_mirror_two_sided.csv).

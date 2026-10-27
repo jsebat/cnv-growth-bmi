@@ -1,0 +1,16 @@
+quantity,value
+pathways with statistics,5712
+asymmetric-attainable,48
+mirror-attainable,102
+ANALYSIS SET (union),102
+Bonferroni threshold,0.0004902
+A mirror P<0.05,3
+A Bonferroni,0
+B asymmetric P<0.05,2
+B Bonferroni,0
+C Kosmicki P<0.05,22
+C Bonferroni,3
+D bias P<0.05,3
+D Bonferroni,0
+convergent asymmetric (B&C&D),1
+convergent mirror (A&C&D),0
