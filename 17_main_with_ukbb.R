@@ -284,6 +284,8 @@ traj2 <- function(x, G, ylab, title, lab, xmax, lpos, bold = FALSE) {
     base_theme + theme(legend.position.inside = lpos)
 }
 HCMAX <- ceiling(quantile(dh$age, 0.975))   # JS 2026-10-27: HC axes end where the HC data end (Jon)
+yl_of <- function(b) { v <- b[!is.na(slope), c(slope - 1.96 * se, slope + 1.96 * se)]; r <- range(v); r + c(-0.12, 0.25) * diff(r) }   # JS 2026-10-27: prime-panel y axis from the curves of that column (Jon: the fixed -1..1.2 window wasted space); headroom for the p label
+YLH <- yl_of(bea[outcome == "Height"]); YLC <- yl_of(bea[outcome == "Head circumference"])
 v2 <- list(); L1 <- LETTERS[1:6]; L2 <- LETTERS[7:12]
 for (i in seq_along(GROUPS)) {
   G <- GROUPS[i]; r <- ht[group == G]; ctl <- G == "No CNV"
@@ -293,9 +295,9 @@ for (i in seq_along(GROUPS)) {
   labh <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmh)), fixed = TRUE)   # JS 2026-10-23: no p in the control trajectory panels (A, G): a within-control BMI effect is not the carrier-vs-control test shown in B-E
   labc <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmc)), fixed = TRUE)
   v2[[paste("HEIGHT", G)]] <- traj2(if (ctl) Hctl_plot else H[locus == G], G, "Height (SD)", NULL, labh, 60, c(0.75, 0.93), bold = isTRUE(pmh < 0.05)) + labs(tag = L1[i])
-  v2[[paste("EFF HEIGHT", G)]] <- eff_panel(bea[outcome == "Height" & group == G], if (ctl) NULL else H[locus == G], "Height per +1 SD BMI (SD)", ctl) + labs(tag = paste0(L1[i], "'"))
+  v2[[paste("EFF HEIGHT", G)]] <- eff_panel(bea[outcome == "Height" & group == G], if (ctl) NULL else H[locus == G], "Height per +1 SD BMI (SD)", ctl, ylim = YLH) + labs(tag = paste0(L1[i], "'"))
   v2[[paste("HC", G)]] <- traj2(dh[locus == G], G, "Head circumference (SD)", NULL, labc, HCMAX, c(0.75, 0.93), bold = isTRUE(pmc < 0.05)) + labs(tag = L2[i])
-  v2[[paste("EFF HC", G)]] <- eff_panel(bea[outcome == "Head circumference" & group == G], if (ctl) NULL else dh[locus == G], "Head circ. per +1 SD BMI (SD)", ctl, xmax = HCMAX) + labs(tag = paste0(L2[i], "'"))
+  v2[[paste("EFF HC", G)]] <- eff_panel(bea[outcome == "Head circumference" & group == G], if (ctl) NULL else dh[locus == G], "Head circ. per +1 SD BMI (SD)", ctl, xmax = HCMAX, ylim = YLC) + labs(tag = paste0(L2[i], "'"))
 }
 v2[["ASD HEIGHT"]] <- plots[["ASD HEIGHT"]] + labs(tag = L1[6]); v2[["ASD HC"]] <- plots[["ASD HC"]] + labs(tag = L2[6])
 # JS 2026-10-23: column headers above the panel letters, each spanning the trajectory + effect columns

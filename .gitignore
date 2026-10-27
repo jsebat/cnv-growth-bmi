@@ -6,3 +6,5 @@ tbx1_subjects_zscores*
 *.log
 preQC_*/
 scratch/
+*.RData
+cog_panels*
