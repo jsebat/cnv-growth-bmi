@@ -1,0 +1,9 @@
+Group,Exposure,n,Height change per step (SD),SE,P,"Mutually adjusted, per step (SD)",SE (adjusted),P (adjusted),P vs non-carriers
+16p11.2 DEL,Body size at age 10,106,-0.284,0.134,0.036,-0.284,0.135,0.038,0.1
+16p11.2 DEL,Adult BMI group,106,-0.029,0.16,0.85,-0.005,0.158,0.97,0.57
+No CNV,Body size at age 10,444852,-0.072,0.002,1.1e-233,-0.049,0.002,9e-106,
+No CNV,Adult BMI group,444852,-0.115,0.002,0,-0.107,0.002,0,
+16p11.2 DUP,Body size at age 10,140,-0.166,0.129,0.2,-0.126,0.127,0.32,0.44
+16p11.2 DUP,Adult BMI group,140,-0.353,0.123,0.0047,-0.339,0.124,0.007,0.043
+22q11.2 DUP,Body size at age 10,262,-0.179,0.08,0.027,-0.163,0.081,0.046,0.23
+22q11.2 DUP,Adult BMI group,262,-0.114,0.073,0.12,-0.09,0.074,0.22,1

@@ -1,0 +1,103 @@
+Library,Pathway,Set size,Genes in CNV universe,Asymmetric-class genes,Asymmetric OR,Asymmetric P (one-sided),Locus-block permutation P,Mirror-class genes,Mirror OR,Mirror P (one-sided),Kosmicki genes in set,Kosmicki OR,Kosmicki P,Kosmicki q (BH),Kosmicki Bonferroni,Height-decreasing / increasing,Direction OR,Direction P,Convergent (asymmetric),Convergent (mirror)
+GO_Biological_Process_2023,Positive Regulation Of Cell Population Proliferation (GO:0008284),483,10,9,7.04,0.031,0.033,3,0.44,0.94,17,3.11,0.00011,0.0045,TRUE,16 / 1,8.7,0.009,TRUE,FALSE
+GO_Biological_Process_2023,Regulation Of Nucleic Acid-Templated Transcription (GO:1903506),452,6,6,10.04,0.035,,1,0.21,0.98,5,0.89,0.66,0.98,FALSE,2 / 3,0.31,0.96,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Cell Migration (GO:0030335),272,9,8,6.21,0.05,,2,0.29,0.98,10,3.17,0.0021,0.043,FALSE,9 / 1,4.58,0.11,FALSE,FALSE
+GO_Biological_Process_2023,Negative Regulation Of Nucleic Acid-Templated Transcription (GO:1903507),456,5,5,8.42,0.062,,1,0.26,0.96,9,1.64,0.11,0.35,FALSE,2 / 7,0.12,1,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Cell Motility (GO:2000147),221,7,6,4.58,0.13,,1,0.17,0.99,6,2.27,0.057,0.25,FALSE,6 / 0,6.59,0.092,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Cell Migration (GO:0030334),434,10,8,3.07,0.13,,2,0.25,0.99,11,2.15,0.019,0.12,FALSE,9 / 2,2.25,0.25,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of MAPK Cascade (GO:0043410),310,9,7,2.66,0.19,,4,0.85,0.72,9,2.46,0.015,0.11,FALSE,9 / 0,9.89,0.027,FALSE,FALSE
+GO_Biological_Process_2023,Nervous System Development (GO:0007399),433,9,7,2.66,0.19,,2,0.29,0.98,6,1.12,0.45,0.84,FALSE,4 / 2,0.96,0.7,FALSE,FALSE
+KEGG_2021_Human,Pathways of neurodegeneration,475,9,7,2.59,0.21,,3,0.52,0.89,3,0.48,0.94,1,FALSE,3 / 0,4.02,0.27,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Cell Cycle (GO:0051726),298,5,4,3,0.3,,1,0.26,0.96,8,2.26,0.032,0.17,FALSE,5 / 3,0.79,0.76,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Cellular Response To Stress (GO:0080135),107,5,4,3,0.3,,1,0.26,0.96,4,3.15,0.044,0.2,FALSE,1 / 3,0.15,0.99,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of ERK1 And ERK2 Cascade (GO:0070374),179,5,4,3,0.3,,3,1.62,0.47,5,2.33,0.072,0.29,FALSE,5 / 0,5.52,0.14,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Angiogenesis (GO:0045765),205,5,4,3,0.3,,2,0.71,0.79,4,1.6,0.25,0.58,FALSE,3 / 1,1.45,0.61,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Anatomical Structure Morphogenesis (GO:0022603),127,5,4,3,0.3,,1,0.26,0.96,2,1.28,0.47,0.85,FALSE,2 / 0,2.45,0.46,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of GTPase Activity (GO:0043547),234,5,4,3,0.3,,1,0.26,0.96,1,0.34,0.95,1,FALSE,1 / 0,1.46,0.68,FALSE,FALSE
+KEGG_2021_Human,cGMP-PKG signaling pathway,167,5,4,2.88,0.32,,1,0.26,0.96,7,3.6,0.0051,0.074,FALSE,4 / 3,0.71,0.8,FALSE,FALSE
+KEGG_2021_Human,Yersinia infection,137,5,4,2.88,0.32,,2,0.72,0.79,1,0.57,0.83,1,FALSE,1 / 0,1.67,0.65,FALSE,FALSE
+KEGG_2021_Human,Hepatitis C,157,5,4,2.88,0.32,,1,0.26,0.96,1,0.5,0.87,1,FALSE,1 / 0,1.67,0.65,FALSE,FALSE
+KEGG_2021_Human,Huntington disease,306,5,4,2.88,0.32,,1,0.26,0.96,1,0.25,0.98,1,FALSE,1 / 0,1.67,0.65,FALSE,FALSE
+GO_Biological_Process_2023,Negative Regulation Of Apoptotic Process (GO:0043066),482,10,7,1.75,0.32,,3,0.44,0.94,5,0.83,0.72,0.98,FALSE,4 / 1,1.95,0.48,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Gene Expression (GO:0010628),480,7,5,1.87,0.37,,2,0.42,0.93,11,1.93,0.037,0.19,FALSE,6 / 5,0.55,0.9,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Protein Phosphorylation (GO:0001932),265,7,5,1.87,0.37,,4,1.44,0.46,4,1.23,0.42,0.81,FALSE,4 / 0,4.48,0.21,FALSE,FALSE
+GO_Biological_Process_2023,Negative Regulation Of Programmed Cell Death (GO:0043069),381,7,5,1.87,0.37,,2,0.42,0.93,5,1.06,0.51,0.86,FALSE,4 / 1,1.95,0.48,FALSE,FALSE
+GO_Biological_Process_2023,Apoptotic Process (GO:0006915),228,7,5,1.87,0.37,,2,0.42,0.93,3,1.06,0.54,0.89,FALSE,2 / 1,0.96,0.75,FALSE,FALSE
+GO_Biological_Process_2023,Chemical Synaptic Transmission (GO:0007268),273,7,5,1.87,0.37,,3,0.79,0.75,0,0.14,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+KEGG_2021_Human,Chemical carcinogenesis,239,4,3,2.12,0.46,,2,1.11,0.65,6,2.08,0.081,0.3,FALSE,5 / 1,2.87,0.31,FALSE,FALSE
+KEGG_2021_Human,Neurotrophin signaling pathway,119,4,3,2.12,0.46,,2,1.11,0.65,3,2.05,0.19,0.49,FALSE,2 / 1,1.09,0.72,FALSE,FALSE
+KEGG_2021_Human,Fc gamma R-mediated phagocytosis,97,4,3,2.12,0.46,,2,1.11,0.65,2,1.66,0.35,0.72,FALSE,2 / 0,2.83,0.42,FALSE,FALSE
+KEGG_2021_Human,Cholinergic synapse,113,4,3,2.12,0.46,,2,1.11,0.65,2,1.42,0.42,0.81,FALSE,2 / 0,2.83,0.42,FALSE,FALSE
+KEGG_2021_Human,Cytokine-cytokine receptor interaction,295,4,3,2.12,0.46,,1,0.35,0.93,4,1.08,0.51,0.86,FALSE,3 / 1,1.67,0.56,FALSE,FALSE
+KEGG_2021_Human,Chemokine signaling pathway,192,4,3,2.12,0.46,,2,1.11,0.65,2,0.82,0.7,0.98,FALSE,2 / 0,2.83,0.42,FALSE,FALSE
+KEGG_2021_Human,Cell adhesion molecules,148,4,3,2.12,0.46,,1,0.35,0.93,0,0.26,1,1,FALSE,0 / 0,0.55,1,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Macromolecule Metabolic Process (GO:0010604),364,6,4,1.48,0.5,,3,1.07,0.63,10,2.33,0.015,0.11,FALSE,7 / 3,1.12,0.59,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of ERK1 And ERK2 Cascade (GO:0070372),244,6,4,1.48,0.5,,4,2.18,0.31,5,1.69,0.19,0.49,FALSE,5 / 0,5.52,0.14,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Phosphorylation (GO:0042327),231,6,4,1.48,0.5,,4,2.18,0.31,4,1.41,0.32,0.7,FALSE,4 / 0,4.48,0.21,FALSE,FALSE
+GO_Biological_Process_2023,Negative Regulation Of Protein Phosphorylation (GO:0001933),149,6,4,1.48,0.5,,3,1.07,0.63,2,1.09,0.55,0.9,FALSE,1 / 1,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,DNA Metabolic Process (GO:0006259),288,6,4,1.48,0.5,,2,0.52,0.88,3,0.84,0.7,0.98,FALSE,1 / 2,0.23,0.97,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Protein Modification Process (GO:0031401),225,6,4,1.48,0.5,,4,2.18,0.31,1,0.35,0.94,1,FALSE,1 / 0,1.46,0.68,FALSE,FALSE
+GO_Biological_Process_2023,Apical Junction Assembly (GO:0043297),54,6,4,1.48,0.5,,2,0.52,0.88,0,0.73,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Bicellular Tight Junction Assembly (GO:0070830),47,6,4,1.48,0.5,,2,0.52,0.88,0,0.83,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Tight Junction Assembly (GO:0120192),53,6,4,1.48,0.5,,2,0.52,0.88,0,0.74,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Vesicle-Mediated Transport (GO:0016192),411,6,4,1.48,0.5,,3,1.07,0.63,0,0.09,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+KEGG_2021_Human,Alzheimer disease,369,6,4,1.4,0.53,,3,1.11,0.61,5,1.08,0.5,0.86,FALSE,4 / 1,2.26,0.42,FALSE,FALSE
+GO_Biological_Process_2023,Chromatin Remodeling (GO:0006338),228,8,5,1.23,0.54,,3,0.63,0.84,6,2.2,0.064,0.27,FALSE,0 / 6,0.03,1,FALSE,FALSE
+GO_Biological_Process_2023,Protein Transport (GO:0015031),313,8,5,1.23,0.54,,3,0.63,0.84,6,1.58,0.19,0.49,FALSE,4 / 2,0.96,0.7,FALSE,FALSE
+KEGG_2021_Human,Tight junction,169,8,5,1.16,0.58,,3,0.64,0.83,2,0.94,0.63,0.98,FALSE,2 / 0,2.83,0.42,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Translation (GO:0006417),202,5,3,1.1,0.64,,2,0.71,0.79,4,1.63,0.24,0.57,FALSE,2 / 2,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,DNA Repair (GO:0006281),291,5,3,1.1,0.64,,2,0.71,0.79,4,1.11,0.49,0.86,FALSE,2 / 2,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Cell Division (GO:0051302),83,5,3,1.1,0.64,,2,0.71,0.79,1,0.97,0.65,0.98,FALSE,0 / 1,0.16,1,FALSE,FALSE
+GO_Biological_Process_2023,Transcription By RNA Polymerase II (GO:0006366),192,5,3,1.1,0.64,,2,0.71,0.79,2,0.84,0.69,0.98,FALSE,1 / 1,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,Organelle Assembly (GO:0070925),322,5,3,1.1,0.64,,3,1.62,0.47,2,0.49,0.91,1,FALSE,1 / 1,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,Anterograde Trans-Synaptic Signaling (GO:0098916),199,5,3,1.1,0.64,,2,0.71,0.79,0,0.2,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Cell-Cell Junction Assembly (GO:0007043),71,5,3,1.1,0.64,,2,0.71,0.79,0,0.55,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Endocytosis (GO:0006897),189,5,3,1.1,0.64,,2,0.71,0.79,0,0.21,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Modulation Of Chemical Synaptic Transmission (GO:0050804),123,5,3,1.1,0.64,,3,1.62,0.47,0,0.32,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of MAPK Cascade (GO:0043408),204,7,4,0.98,0.67,,4,1.44,0.46,7,2.91,0.014,0.11,FALSE,6 / 1,2.97,0.28,FALSE,FALSE
+GO_Biological_Process_2023,Phosphorylation (GO:0016310),429,7,4,0.98,0.67,,4,1.44,0.46,9,1.75,0.086,0.3,FALSE,8 / 1,4.04,0.15,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of DNA Repair (GO:0006282),129,7,4,0.98,0.67,,3,0.79,0.75,2,1.26,0.48,0.85,FALSE,1 / 1,0.47,0.9,FALSE,FALSE
+KEGG_2021_Human,PI3K-Akt signaling pathway,354,5,3,1.03,0.67,0.15,2,0.72,0.79,14,3.57,0.00013,0.0045,TRUE,13 / 1,8.58,0.014,FALSE,FALSE
+KEGG_2021_Human,Insulin signaling pathway,137,5,3,1.03,0.67,,3,1.7,0.45,5,3.06,0.029,0.17,FALSE,3 / 2,0.81,0.76,FALSE,FALSE
+KEGG_2021_Human,Human immunodeficiency virus 1 infection,212,5,3,1.03,0.67,,3,1.7,0.45,2,0.74,0.75,1,FALSE,2 / 0,2.83,0.42,FALSE,FALSE
+KEGG_2021_Human,Non-alcoholic fatty liver disease,155,5,3,1.03,0.67,,2,0.72,0.79,1,0.5,0.86,1,FALSE,1 / 0,1.67,0.65,FALSE,FALSE
+GO_Biological_Process_2023,Chromatin Organization (GO:0006325),268,9,5,0.91,0.69,,4,0.85,0.72,5,1.53,0.24,0.57,FALSE,1 / 4,0.11,1,FALSE,FALSE
+KEGG_2021_Human,MAPK signaling pathway,294,7,4,0.91,0.7,,4,1.51,0.45,9,2.61,0.012,0.11,FALSE,6 / 3,1.1,0.6,FALSE,FALSE
+KEGG_2021_Human,Pathogenic Escherichia coli infection,197,9,5,0.85,0.73,,4,0.87,0.7,3,1.22,0.46,0.84,FALSE,2 / 1,1.09,0.72,FALSE,FALSE
+GO_Biological_Process_2023,Proteasome-Mediated Ubiquitin-Dependent Protein Catabolic Process (GO:0043161),319,6,3,0.73,0.79,,4,2.18,0.31,9,2.39,0.018,0.12,FALSE,7 / 2,1.72,0.4,FALSE,FALSE
+GO_Biological_Process_2023,Organic Substance Transport (GO:0071702),201,6,3,0.73,0.79,,4,2.18,0.31,4,1.63,0.24,0.57,FALSE,2 / 2,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,Glycerophospholipid Biosynthetic Process (GO:0046474),108,6,3,0.73,0.79,,4,2.18,0.31,1,0.74,0.74,0.99,FALSE,1 / 0,1.46,0.68,FALSE,FALSE
+GO_Biological_Process_2023,Positive Regulation Of Protein Phosphorylation (GO:0001934),377,8,4,0.72,0.79,,6,3.34,0.12,11,2.49,0.0073,0.094,FALSE,9 / 2,2.25,0.25,FALSE,FALSE
+KEGG_2021_Human,Progesterone-mediated oocyte maturation,100,4,2,0.68,0.82,0.58,2,1.11,0.65,6,5.24,0.0016,0.041,FALSE,4 / 2,1.1,0.64,FALSE,FALSE
+KEGG_2021_Human,FoxO signaling pathway,131,4,2,0.68,0.82,,2,1.11,0.65,5,3.21,0.025,0.15,FALSE,3 / 2,0.81,0.76,FALSE,FALSE
+KEGG_2021_Human,Ras signaling pathway,232,4,2,0.68,0.82,,2,1.11,0.65,6,2.14,0.073,0.29,FALSE,6 / 0,7.84,0.067,FALSE,FALSE
+KEGG_2021_Human,MicroRNAs in cancer,310,4,2,0.68,0.82,,3,3.46,0.27,7,1.87,0.097,0.33,FALSE,6 / 1,3.5,0.22,FALSE,FALSE
+KEGG_2021_Human,Human T-cell leukemia virus 1 infection,219,4,2,0.68,0.82,,2,1.11,0.65,5,1.87,0.14,0.41,FALSE,2 / 3,0.34,0.95,FALSE,FALSE
+KEGG_2021_Human,Viral carcinogenesis,203,4,2,0.68,0.82,,2,1.11,0.65,4,1.59,0.25,0.58,FALSE,1 / 3,0.17,0.99,FALSE,FALSE
+KEGG_2021_Human,ErbB signaling pathway,85,4,2,0.68,0.82,,3,3.46,0.27,1,0.93,0.66,0.98,FALSE,1 / 0,1.67,0.65,FALSE,FALSE
+KEGG_2021_Human,Axon guidance,182,4,2,0.68,0.82,,2,1.11,0.65,2,0.87,0.67,0.98,FALSE,2 / 0,2.83,0.42,FALSE,FALSE
+GO_Biological_Process_2023,Ubiquitin-Dependent Protein Catabolic Process (GO:0006511),367,9,4,0.57,0.88,,7,3.93,0.071,8,1.81,0.086,0.3,FALSE,7 / 1,3.5,0.2,FALSE,FALSE
+GO_Biological_Process_2023,DNA Damage Response (GO:0006974),384,9,4,0.57,0.88,,5,1.35,0.46,6,1.28,0.34,0.72,FALSE,2 / 4,0.23,0.99,FALSE,FALSE
+GO_Biological_Process_2023,Protein Phosphorylation (GO:0006468),500,7,3,0.54,0.88,,4,1.44,0.46,13,2.22,0.0094,0.11,FALSE,11 / 2,2.8,0.15,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Cytoskeleton Organization (GO:0051493),114,7,3,0.54,0.88,,4,1.44,0.46,2,1.43,0.41,0.81,FALSE,2 / 0,2.45,0.46,FALSE,FALSE
+GO_Biological_Process_2023,Plasma Membrane Bounded Cell Projection Assembly (GO:0120031),275,7,3,0.54,0.88,,5,2.75,0.2,3,0.88,0.67,0.98,FALSE,2 / 1,0.96,0.75,FALSE,FALSE
+GO_Biological_Process_2023,Actin Filament Organization (GO:0007015),144,5,2,0.48,0.9,,3,1.62,0.47,4,2.31,0.1,0.33,FALSE,3 / 1,1.45,0.61,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Cellular Component Organization (GO:0051128),153,5,2,0.48,0.9,,3,1.62,0.47,4,2.17,0.12,0.36,FALSE,4 / 0,4.48,0.21,FALSE,FALSE
+GO_Biological_Process_2023,Nitrogen Compound Transport (GO:0071705),163,5,2,0.48,0.9,,4,4.4,0.16,2,0.99,0.6,0.96,FALSE,1 / 1,0.47,0.9,FALSE,FALSE
+GO_Biological_Process_2023,Antigen Receptor-Mediated Signaling Pathway (GO:0050851),134,5,2,0.48,0.9,,3,1.62,0.47,1,0.6,0.81,1,FALSE,1 / 0,1.46,0.68,FALSE,FALSE
+GO_Biological_Process_2023,B Cell Receptor Signaling Pathway (GO:0050853),46,5,2,0.48,0.9,,3,1.62,0.47,0,0.85,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Glycerophospholipid Metabolic Process (GO:0006650),62,5,2,0.48,0.9,,3,1.62,0.47,0,0.63,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Organelle Organization (GO:0033043),100,5,2,0.48,0.9,,3,1.62,0.47,0,0.39,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+GO_Biological_Process_2023,Stress-Activated MAPK Cascade (GO:0051403),42,5,2,0.48,0.9,,4,4.4,0.16,0,0.93,1,1,FALSE,0 / 0,0.48,1,FALSE,FALSE
+KEGG_2021_Human,Focal adhesion,201,5,2,0.44,0.91,,4,4.71,0.15,7,2.96,0.013,0.11,FALSE,6 / 1,3.5,0.22,FALSE,FALSE
+KEGG_2021_Human,T cell receptor signaling pathway,104,5,2,0.44,0.91,,3,1.7,0.45,0,0.37,1,1,FALSE,0 / 0,0.55,1,FALSE,FALSE
+GO_Biological_Process_2023,Regulation Of Intracellular Signal Transduction (GO:1902531),297,10,4,0.47,0.93,,6,1.64,0.33,3,0.81,0.72,0.98,FALSE,2 / 1,0.96,0.75,FALSE,FALSE
+GO_Biological_Process_2023,Supramolecular Fiber Organization (GO:0097435),316,8,3,0.43,0.94,0.92,5,1.82,0.33,14,3.93,3.9e-05,0.004,TRUE,9 / 5,0.85,0.72,FALSE,FALSE
+GO_Biological_Process_2023,Protein Ubiquitination (GO:0016567),434,6,2,0.36,0.95,,6,14.72,0.012,10,1.93,0.044,0.2,FALSE,9 / 1,4.58,0.11,FALSE,FALSE
+GO_Biological_Process_2023,Protein Modification By Small Protein Conjugation (GO:0032446),364,9,3,0.35,0.97,,7,3.93,0.071,7,1.59,0.17,0.46,FALSE,6 / 1,2.97,0.28,FALSE,FALSE
+KEGG_2021_Human,Hypertrophic cardiomyopathy,90,4,1,0.22,0.97,,3,3.46,0.27,3,2.75,0.1,0.33,FALSE,2 / 1,1.09,0.72,FALSE,FALSE
+KEGG_2021_Human,Human papillomavirus infection,331,4,1,0.22,0.97,,3,3.46,0.27,7,1.74,0.12,0.36,FALSE,6 / 1,3.5,0.22,FALSE,FALSE
+KEGG_2021_Human,RNA transport,186,4,1,0.22,0.97,,3,3.46,0.27,0,0.2,1,1,FALSE,0 / 0,0.55,1,FALSE,FALSE
+GO_Biological_Process_2023,Protein Autophosphorylation (GO:0046777),162,5,1,0.18,0.99,,4,4.4,0.16,7,3.71,0.0041,0.069,FALSE,6 / 1,2.97,0.28,FALSE,FALSE
+GO_Biological_Process_2023,Phosphate-Containing Compound Metabolic Process (GO:0006796),184,5,1,0.18,0.99,,5,12.33,0.025,3,1.33,0.4,0.81,FALSE,2 / 1,0.96,0.75,FALSE,FALSE
+KEGG_2021_Human,Regulation of actin cytoskeleton,218,9,2,0.17,1,,8,10.34,0.011,4,1.48,0.3,0.66,FALSE,4 / 0,5.26,0.17,FALSE,FALSE

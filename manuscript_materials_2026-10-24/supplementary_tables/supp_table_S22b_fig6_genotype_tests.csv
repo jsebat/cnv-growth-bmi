@@ -1,0 +1,15 @@
+Outcome,Test,Statistic,df,P
+Height,Controls: BMI effect varies with age (age x BMI tensor interaction),,,0
+Head circumference,Controls: BMI effect varies with age (age x BMI tensor interaction),,,3.7e-06
+Height,"BMI slope differs among the four CNVs, carriers only (Wald)",2.9,3,0.034
+Head circumference,"BMI slope differs among the four CNVs, carriers only (Wald)",3.85,3,0.0094
+Height,BMI slope differs among the five genotype groups (age-adjusted; Wald),14.42,4,0.0061
+Height,"Same, within age band 2-9 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",6.02,4,8.3e-05
+Height,"Same, within age band 10-18 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",2.7,4,0.029
+Height,"Same, within age band 19-39 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",1.47,4,0.21
+Height,"Same, within age band 40-73 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",0.56,4,0.69
+Head circumference,BMI slope differs among the five genotype groups (age-adjusted; Wald),21.11,4,3e-04
+Head circumference,"Same, within age band 2-9 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",2.7,4,0.029
+Head circumference,"Same, within age band 10-18 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",1.66,4,0.16
+Head circumference,"Same, within age band 19-39 y (F; groups: 16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup)",0.87,4,0.48
+Head circumference,"Same, within age band 40-73 y (F; groups: 16p11.2 dup)",1.14,1,0.29
