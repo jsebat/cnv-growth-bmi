@@ -23,7 +23,7 @@ set.seed(1)
 WD <- getwd()
 LOCI <- c("16p11.2 del", "16p11.2 dup", "22q11.2 del", "22q11.2 dup"); GROUPS <- c("No CNV", LOCI)
 COLS <- c("BMI ≥ 70th centile" = "#F0645A", "BMI ≤ 30th centile" = "#00A5AD")
-K_AGE <- 10; K_BMI <- 6; K_TI <- c(6, 5); GAMMA <- 1.5   # JS 2026-10-27: smoother age x BMI surfaces (Jon: the UKBB prime panels were too wiggly at k = 15/10/c(10,10)); used by threeway_p and bmi_effect_by_age
+K_AGE <- 10; K_BMI <- 6; K_TI <- c(6, 5); GAMMA <- 1.5; K_VC <- 8   # K_VC: basis size of the varying-coefficient BMI slope used for the prime-panel curves (JS 2026-10-27, chosen in 40_test_bmi_curve_models.R)   # JS 2026-10-27: smoother age x BMI surfaces (Jon: the UKBB prime panels were too wiggly at k = 15/10/c(10,10)); used by threeway_p and bmi_effect_by_age
 pfx <- function(p) ifelse(is.na(p), "n/a", ifelse(p < 1e-16, "< 1e-16", ifelse(p < 0.001, sprintf("%.1e", p), sprintf("%.2g", p))))
 tail_of <- function(z) factor(ifelse(z >= qnorm(.7), names(COLS)[1], ifelse(z <= qnorm(.3), names(COLS)[2], NA)), levels = names(COLS))
 
@@ -69,10 +69,13 @@ Hctl_plot <- rbind(ch[locus == "No CNV"], if (nrow(ukn) > 3000) ukn[sample(.N, 3
 # ---------------------------------------------------------------- height statistics
 within_p <- function(x, meth) tryCatch(summary(gam(y ~ s(age, k = 10) + s(BMI, k = 6) + ti(age, BMI, k = c(6, 6)), data = x, method = meth, gamma = GAMMA))$s.table["ti(age,BMI)", "p-value"], error = function(e) NA_real_)
 threeway_p <- function(x, meth) {
-  x <- copy(x)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]
-  m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) +
-             ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = meth, gamma = GAMMA)
-  p <- summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]
+  # JS 2026-10-27 (Jon: C' wrong): the earlier model had no carrier-specific BMI term, so the carriers' BMI effect was
+  # forced to the controls' average and only an age x BMI deviation could differ. Now: ordered factor oc, so each by-oc
+  # term is the carrier-minus-control difference smooth, and s(BMI, by = oc) carries the carriers' own BMI effect.
+  x <- copy(x)[, oc := ordered(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]
+  m <- bam(y ~ oc + s(age, k = K_AGE) + s(age, k = K_AGE, by = oc) + s(BMI, k = K_BMI) + s(BMI, k = K_BMI, by = oc) +
+             ti(age, BMI, k = K_TI) + ti(age, BMI, k = K_TI, by = oc), data = x, method = meth, gamma = GAMMA)
+  p <- summary(m)$s.table["ti(age,BMI):ocCNV", "p-value"]
   if (!is.finite(p) || p <= 0 || p > 1) NA_real_ else p   # guard against numerical failure
 }
 offset <- function(x) {
@@ -224,19 +227,27 @@ slope_rows <- function(m, grid, groups) {
                slope = drop(X %*% B), se = sqrt(rowSums((X %*% V) * X)))
   }))
 }
+# JS 2026-10-27: prime-panel curve model = varying-coefficient GAM fitted within one group, y ~ s(age) + s(age, by = BMI):
+# linear in BMI with a slope that is a smooth function of age. Of the candidates in 40_test_bmi_curve_models.R it best
+# reproduced the raw within-age-band BMI slopes (mean |curve - raw| 0.08 vs 0.11 for the separate tensor surface; 16p11.2 dup
+# height 2-9 y: raw -0.37, VC -0.22, tensor +0.09). The tensor surface smoothed the carriers' childhood slope away.
+fit1 <- function(d) bam(y ~ s(age, k = K_AGE) + s(age, k = K_VC, by = BMI), data = d, method = "REML")
 bmi_effect_by_age <- function(xc, ctl) {
   if (is.null(xc)) {   # controls only: within-group age × BMI model
     m <- bam(y ~ s(age, k = K_AGE) + s(BMI, k = K_BMI) + ti(age, BMI, k = K_TI), data = ctl, method = "REML", gamma = GAMMA)
-    r <- slope_rows(m, GRID[support_of(GRID, ctl$age, w = 3, nmin = 20)], list(NULL)); r[, p := summary(m)$s.table["ti(age,BMI)", "p-value"]]
+    r <- slope_rows(fit1(ctl), GRID[support_of(GRID, ctl$age, w = 3, nmin = 20)], list(NULL)); r[, p := summary(m)$s.table["ti(age,BMI)", "p-value"]]
     # JS 2026-10-23: age-constant BMI effect (continuous BMI, 1 df): y ~ BMI + s(age)
     m0 <- bam(y ~ BMI + s(age, k = 15), data = ctl, method = "REML"); c0 <- summary(m0)$p.table["BMI", ]
     r[, `:=`(est_main = unname(c0[1]), se_main = unname(c0[2]), p_main = unname(c0[4]))]; return(r)
   }
   x <- rbind(ctl, xc)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]   # controls first: same row order as threeway_p, so the p matches the trajectory panel
-  m <- bam(y ~ is_cnv + s(age, k = K_AGE) + s(BMI, k = K_BMI) + s(age, k = K_AGE, by = is_cnv) + ti(age, BMI, k = K_TI) +
-             ti(age, BMI, k = K_TI, by = is_cnv), data = x, method = "REML", gamma = GAMMA)
-  pv <- summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]; if (!is.finite(pv) || pv <= 0 || pv > 1) pv <- NA_real_   # JS 2026-10-27: same guard as threeway_p (a negative p appeared for 22q11.2 del height)
-  r <- slope_rows(m, grid_of(xc$age), list("No CNV", "CNV")); r[, p := pv]; r <- bridge_gaps(r, xc$age)
+  # JS 2026-10-27 (Jon: the 16p11.2 dup C' curve contradicted panel C): carriers and controls are now fitted SEPARATELY,
+  # each with the varying-coefficient model fit1 (above). The joint model used before shared the BMI main effect between the groups,
+  # so the carrier curve was pulled onto the control curve (dominated by 50,000 UKBB adults). p = carrier-minus-control
+  # age x BMI difference smooth from threeway_p (descriptive; not shown in the figure).
+  gr <- grid_of(xc$age)
+  r <- rbind(slope_rows(fit1(ctl), gr, list(NULL))[, who := "Non-carriers"], slope_rows(fit1(xc), gr, list(NULL))[, who := "Carriers"])
+  pv <- threeway_p(x, "REML"); r[, p := pv]; r <- bridge_gaps(r, xc$age)
   # JS 2026-10-23: age-constant CNV x BMI (continuous BMI, 1 df), AGE-ADJUSTED: the BMI slope is allowed to vary with age
   # in a way shared by both groups (varying-coefficient term s(age, by = BMI); a numeric by-smooth is not centred, so it
   # carries the BMI main effect) and cnvBMI = BMI x carrier tests a constant shift of the carriers' slope relative to the
