@@ -48,3 +48,44 @@ score_bmi <- function(b, age, sex, ref_b, ref_age, ref_sex) {
   }
   z
 }
+
+# ---------------------------------------------------------------- JS 2026-10-27: adult scaling relative to the subject's own cohort
+# Jon's decision (2026-10-27, for the BMI-modifier figure with UK Biobank adults): children stay on the external growth
+# references above; every ADULT is scored relative to the NON-CARRIER ADULTS OF THEIR OWN COHORT with Molly's Box-Cox
+# scaling (biobank Methods, "Scaling of the response variable"): within cohort and sex, the Box-Cox lambda is chosen by
+# profile likelihood on the reference fit lm(y ~ age + age^2) (MASS::boxcox), y is transformed, and Z = residual from the
+# reference model on the transformed scale / the reference residual SD. Carriers are scored with the reference model, so
+# a cohort's non-carrier adults have mean 0 and SD 1 by construction and carriers are read relative to them.
+# "Cohort" is the reference population: all clinical cohorts form one cohort (its non-carrier adults are the SSC parents
+# and SVIP non-carrier family members, as in the Fig. 6 control group; G2MH, Cardiff and Searchlight have no measured
+# non-carrier adults), and UK Biobank is its own. A cohort x sex cell needs at least min_ref reference adults, else NA.
+# Returns Z with attr "info" (cohort, sex, n_ref, n_scored, lambda). Requires MASS.
+score_adult_bc <- function(y, age, sex, cohort, is_ref, min_age = 19, min_ref = 100, lambda_grid = seq(-3, 5, 0.05)) {   # grid widened 2026-10-27: clinical height/HC lambdas hit 2.0 on (-2, 2)
+  z <- rep(NA_real_, length(y)); info <- list()
+  ad <- !is.na(age) & age >= min_age & !is.na(y) & y > 0 & !is.na(sex) & !is.na(cohort)
+  for (co in unique(cohort[ad])) for (s in c("male", "female")) {
+    r <- which(ad & cohort == co & sex == s & is_ref %in% TRUE); i <- which(ad & cohort == co & sex == s)
+    if (length(r) < min_ref || !length(i)) next
+    d <- data.frame(y = y[r], age = age[r], age2 = age[r]^2)
+    b <- MASS::boxcox(y ~ age + age2, data = d, lambda = lambda_grid, plotit = FALSE); l <- b$x[which.max(b$y)]
+    tr <- function(v) if (abs(l) < 1e-8) log(v) else (v^l - 1) / l
+    d$yb <- tr(d$y); m <- lm(yb ~ age + age2, data = d); sdr <- sd(resid(m))
+    z[i] <- (tr(y[i]) - predict(m, newdata = data.frame(age = age[i], age2 = age[i]^2))) / sdr
+    info[[paste(co, s)]] <- data.frame(cohort = co, sex = s, n_ref = length(r), n_scored = length(i), lambda = l, sd_resid = sdr)
+  }
+  z[!is.na(z) & abs(z) > 10] <- NA
+  attr(z, "info") <- do.call(rbind, info); z
+}
+# Combined scorers: external reference for children, own-cohort Box-Cox for adults (height and BMI from 19 y, HC from 18 y).
+score_height_cohort <- function(h, age, sex, cohort, is_ref) {
+  z <- score_height(h, age, sex); zb <- score_adult_bc(h, age, sex, cohort, is_ref, min_age = 19)
+  ad <- !is.na(age) & age >= 19; z[ad] <- zb[ad]; attr(z, "info") <- attr(zb, "info"); z
+}
+score_bmi_cohort <- function(b, age, sex, cohort, is_ref) {
+  z <- score_bmi_child(b, age, sex); zb <- score_adult_bc(b, age, sex, cohort, is_ref, min_age = 19)
+  ad <- !is.na(age) & age >= 19; z[ad] <- zb[ad]; attr(z, "info") <- attr(zb, "info"); z
+}
+score_hc_cohort <- function(hc, age, sex, cohort, is_ref) {
+  z <- score_hc(hc, age, sex); zb <- score_adult_bc(hc, age, sex, cohort, is_ref, min_age = 18)
+  ad <- !is.na(age) & age >= 18; z[ad] <- zb[ad]; attr(z, "info") <- attr(zb, "info"); z
+}

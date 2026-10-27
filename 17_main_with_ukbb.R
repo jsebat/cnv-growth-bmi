@@ -28,33 +28,42 @@ tail_of <- function(z) factor(ifelse(z >= qnorm(.7), names(COLS)[1], ifelse(z <=
 
 # ---------------------------------------------------------------- data
 # JS 2026-10-13: every subject scored the same way from RAW measurements (00_scoring.R): external references for height,
-# HC and child BMI; adult BMI on the pooled non-carrier adult centile scale. Ages 2-73 for every cohort.
+# HC and child BMI. Ages 2-73 for every cohort.
+# JS 2026-10-27 (Jon's decision): children keep the external growth references; ADULTS are scored relative to the
+# non-carrier adults of their own cohort (clinical cohorts pooled = SSC parents + SVIP non-carriers; UK Biobank = its own
+# non-carriers), adjusted for sex, age and age^2 with Molly's Box-Cox scaling (score_*_cohort in 00_scoring.R). The
+# pooled cross-cohort adult BMI centile scale of 2026-10-13 is replaced. Non-carrier adults therefore have mean 0 in
+# every cohort by construction; the panels read carrier minus same-cohort non-carrier at each age.
 source(file.path(WD, "00_scoring.R"))
 cl <- readRDS(file.path(WD, "analysis_table.rds"))[!is.na(sex) & age >= 2 & age <= 73]
 latest <- function(raw) cl[!is.na(cl[[raw]]) & !is.na(BMI_raw)][order(id, -age)][, .SD[1], by = id]
 
-u <- fread("/expanse/projects/sebat1/msacks/UKBB/2024/genomatrix_UKBB_2025.csv",
-           select = c("f.eid", "sex_combined", "duplicate_drop", "withdrawn_consent", "ancestry", "locus_16p11.2_proximal", "locus_22q11.2_BP1_BP4_A_D", "Height", "BMI_raw", "age"))
-setnames(u, c("eid", "sex", "dup", "wd", "anc", "l16", "l22", "h", "bmi", "age"))
-u <- u[dup == "no" & wd == "no" & anc == "blue" & !is.na(h) & !is.na(bmi) & !is.na(age) & sex %in% c(1, 2)]
-u[, locus := fcase(l16 == 1, "16p11.2 del", l16 == 3, "16p11.2 dup", l22 == 1, "22q11.2 del", l22 == 3, "22q11.2 dup", l16 == 2 & l22 == 2, "No CNV", default = NA_character_)]
-u <- u[!is.na(locus)]
-u[, sex := ifelse(sex == 1, "male", "female")]
-# pooled non-carrier adult BMI reference (clinical SSC/SVIP parents + all UKBB non-carriers), one record per person
-cref <- cl[locus == "No CNV" & !is.na(BMI_raw) & age >= 19][order(id, -age)][, .SD[1], by = id]
-REF <- rbind(cref[, .(b = BMI_raw, age, sex = as.character(sex))], u[locus == "No CNV", .(b = bmi, age, sex)])
-cat("adult BMI reference n =", nrow(REF), "\n")
-sb_ <- function(b, age, sex) score_bmi(b, age, sex, REF$b, REF$age, REF$sex)
-ch <- latest("HEIGHT_raw")[, .(id, source = "Clinical", locus = as.character(locus), sex = as.character(sex), age,
-                               y = score_height(HEIGHT_raw, age, as.character(sex)), BMI = sb_(BMI_raw, age, as.character(sex)))][!is.na(y) & !is.na(BMI)]
-uk <- u[, .(id = paste0("UKBB:", eid), source = "UK Biobank", locus, sex, age, y = score_height(h, age, sex), BMI = sb_(bmi, age, sex))][!is.na(y) & !is.na(BMI)]
-cat("mean height Z (external WHO reference) by source x locus:\n"); print(rbind(ch, uk)[, .(n = .N, height_Z = round(mean(y), 2), BMI_Z = round(mean(BMI), 2)), by = .(source, locus)])
+UKF <- "/expanse/projects/sebat1/msacks/UKBB/2024/genomatrix_UKBB_2025.csv"   # JS 2026-10-27: optional, so the script also runs locally (clinical only) for checks
+if (file.exists(UKF)) {
+  u <- fread(UKF, select = c("f.eid", "sex_combined", "duplicate_drop", "withdrawn_consent", "ancestry", "locus_16p11.2_proximal", "locus_22q11.2_BP1_BP4_A_D", "Height", "BMI_raw", "age"))
+  setnames(u, c("eid", "sex", "dup", "wd", "anc", "l16", "l22", "h", "bmi", "age"))
+  u <- u[dup == "no" & wd == "no" & anc == "blue" & !is.na(h) & !is.na(bmi) & !is.na(age) & sex %in% c(1, 2)]
+  u[, locus := fcase(l16 == 1, "16p11.2 del", l16 == 3, "16p11.2 dup", l22 == 1, "22q11.2 del", l22 == 3, "22q11.2 dup", l16 == 2 & l22 == 2, "No CNV", default = NA_character_)]
+  u <- u[!is.na(locus)]
+  u[, sex := ifelse(sex == 1, "male", "female")]
+} else { cat("NOTE: UK Biobank genomatrix not found; running with the clinical cohorts only\n"); u <- data.table(eid = integer(), sex = character(), locus = character(), h = numeric(), bmi = numeric(), age = numeric()) }
+# one scoring table: clinical (latest visit with height and BMI) + UK Biobank, scored together so each cohort's non-carrier adults are its reference
+chr <- latest("HEIGHT_raw")[, .(id, source = "Clinical", locus = as.character(locus), sex = as.character(sex), age, h = HEIGHT_raw, bmi = BMI_raw)]
+ukr <- u[, .(id = paste0("UKBB:", eid), source = "UK Biobank", locus, sex, age, h, bmi)]
+A <- rbind(chr, ukr)[, is_ref := locus == "No CNV"]
+A[, y := score_height_cohort(h, age, sex, source, is_ref)]; cat("height adult scaling:\n"); print(attr(score_height_cohort(A$h, A$age, A$sex, A$source, A$is_ref), "info"))
+A[, BMI := score_bmi_cohort(bmi, age, sex, source, is_ref)];  cat("BMI adult scaling:\n");    print(attr(score_bmi_cohort(A$bmi, A$age, A$sex, A$source, A$is_ref), "info"))
+A <- A[!is.na(y) & !is.na(BMI)]
+ch <- A[source == "Clinical", .(id, source, locus, sex, age, y, BMI)]
+uk <- A[source == "UK Biobank", .(id, source, locus, sex, age, y, BMI)]
+cat("mean height Z and BMI Z (children: external reference; adults: own-cohort Box-Cox) by source x locus x age group:\n")
+print(A[, .(n = .N, height_Z = round(mean(y), 2), BMI_Z = round(mean(BMI), 2)), by = .(source, locus, adult = age >= 19)][order(source, locus, adult)])
 cat("UKBB:\n"); print(uk[, .N, by = locus])
 ukc <- uk[locus != "No CNV"]
 ukn <- uk[locus == "No CNV"]
 H <- rbind(ch, ukc)                                         # carriers + clinical controls
-Hctl_test <- rbind(ch[locus == "No CNV"], ukn[sample(.N, 50000)])
-Hctl_plot <- rbind(ch[locus == "No CNV"], ukn[sample(.N, 3000)])
+Hctl_test <- rbind(ch[locus == "No CNV"], if (nrow(ukn) > 50000) ukn[sample(.N, 50000)] else ukn)
+Hctl_plot <- rbind(ch[locus == "No CNV"], if (nrow(ukn) > 3000) ukn[sample(.N, 3000)] else ukn)
 
 # ---------------------------------------------------------------- height statistics
 within_p <- function(x, meth) tryCatch(summary(gam(y ~ s(age, k = 10) + s(BMI, k = 6) + ti(age, BMI, k = c(6, 6)), data = x, method = meth))$s.table["ti(age,BMI)", "p-value"], error = function(e) NA_real_)
@@ -118,8 +127,12 @@ for (G in GROUPS) {
   lab <- gsub("= < ", "< ", lab, fixed = TRUE)
   plots[[paste("HEIGHT", G)]] <- traj(if (G == "No CNV") Hctl_plot else H[locus == G], G, "Height (SD)", if (G == "No CNV") "Height" else NULL, lab, 60, c(0.75, 0.93))
 }
-dh <- latest("HEADCIRCUM_raw")[, .(id, source = "Clinical", locus = as.character(locus), sex = as.character(sex), age,
-                                   y = score_hc(HEADCIRCUM_raw, age, as.character(sex)), BMI = sb_(BMI_raw, age, as.character(sex)))][!is.na(y) & !is.na(BMI)]
+# JS 2026-10-27: HC adults (>= 18 y) scored relative to the clinical non-carrier adults (SSC parents, SVIP) with the Box-Cox
+# scaling, BMI as above (clinical only: UK Biobank has no head circumference)
+dh <- latest("HEADCIRCUM_raw")[, .(id, source = "Clinical", locus = as.character(locus), sex = as.character(sex), age, hc = HEADCIRCUM_raw, bmi = BMI_raw)][, is_ref := locus == "No CNV"]
+dh[, y := score_hc_cohort(hc, age, sex, source, is_ref)]; cat("HC adult scaling:\n"); print(attr(score_hc_cohort(dh$hc, dh$age, dh$sex, dh$source, dh$is_ref), "info"))
+dh[, BMI := score_bmi_cohort(bmi, age, sex, source, is_ref)]
+dh <- dh[!is.na(y) & !is.na(BMI), .(id, source, locus, sex, age, y, BMI)]
 hcw <- rbindlist(lapply(GROUPS, function(G) {
   x <- dh[locus == G]
   data.table(group = G, n = nrow(x), within_GCV = within_p(x, "GCV.Cp"), within_REML = within_p(x, "REML"),
@@ -207,7 +220,8 @@ bmi_effect_by_age <- function(xc, ctl) {
   x <- rbind(ctl, xc)[, is_cnv := factor(ifelse(locus == "No CNV", "No CNV", "CNV"), levels = c("No CNV", "CNV"))]   # controls first: same row order as threeway_p, so the p matches the trajectory panel
   m <- bam(y ~ is_cnv + s(age, k = 15) + s(BMI, k = 10) + s(age, k = 15, by = is_cnv) + ti(age, BMI, k = c(10, 10)) +
              ti(age, BMI, k = c(10, 10), by = is_cnv), data = x, method = "REML")
-  r <- slope_rows(m, GRID, list("No CNV", "CNV")); r[, p := summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]]
+  pv <- summary(m)$s.table["ti(age,BMI):is_cnvCNV", "p-value"]; if (!is.finite(pv) || pv <= 0 || pv > 1) pv <- NA_real_   # JS 2026-10-27: same guard as threeway_p (a negative p appeared for 22q11.2 del height)
+  r <- slope_rows(m, GRID, list("No CNV", "CNV")); r[, p := pv]
   # JS 2026-10-23: age-constant CNV x BMI (continuous BMI, 1 df), AGE-ADJUSTED: the BMI slope is allowed to vary with age
   # in a way shared by both groups (varying-coefficient term s(age, by = BMI); a numeric by-smooth is not centred, so it
   # carries the BMI main effect) and cnvBMI = BMI x carrier tests a constant shift of the carriers' slope relative to the
