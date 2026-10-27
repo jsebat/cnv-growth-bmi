@@ -267,7 +267,7 @@ eff_panel <- function(r, carriers, ylab, ctl_only, xmax = 60, ylim = c(-1, 1.2))
   pv <- unique(r$p)[1]; pm <- unique(r$p_main)[1]
   # two lines, top right: line 1 = age-constant (CNV x) BMI effect, line 2 = its age modification; each bold when P < 0.05
   lab1 <- gsub("= < ", "< ", if (ctl_only) sprintf("BMI p = %s", pfx(pm)) else sprintf("CNV × BMI p = %s", pfx(pm)), fixed = TRUE)
-  lab2 <- if (ctl_only) "" else gsub("= < ", "< ", sprintf("CNV × age × BMI p = %s", pfx(pv)), fixed = TRUE)   # JS 2026-10-23: control row carries no p-values (its tests go to main_with_ukbb_control_bmi_tests.csv)
+  lab2 <- ""   # JS 2026-10-27 (Jon): no P in the prime panels. The curves are descriptive; the CNV x age x BMI test proved unstable across smoothing and scaling choices (16p11.2 del height P 0.002-0.51), so age-specific differences are tested in age bands instead (36_check_bmi_effect_by_agebin.R, Supplementary Table 21). The tensor P stays in main_with_ukbb_bmi_effect_by_age.csv (column p).
   bold <- function(p) ifelse(is.finite(p) && p < 0.05, "bold", "plain")
   brk <- if (ctl_only) "Non-carriers" else names(BEACOLS)
   g <- ggplot(r, aes(age, slope, colour = who, fill = who)) + geom_hline(yintercept = 0, linetype = 2, colour = "grey40") +
