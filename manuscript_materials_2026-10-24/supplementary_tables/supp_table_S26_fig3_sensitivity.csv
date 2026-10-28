@@ -1,0 +1,41 @@
+section,quantity,all 33 loci,24-locus refit
+A. Loci,Loci analysed,33,24
+A. Loci,Mirror class,21,13
+A. Loci,Asymmetric class,12,11
+B. Mirror layer,Mirror slope rho,0.351140108243298,0.361366979944331
+B. Mirror layer,"Fraction of genes with an effect, p",0.528292906687208,0.816393068129004
+B. Mirror layer,"Per-gene effect scale, m",0.0527143518579274,0.0438271924733966
+B. Mirror layer,Duplication dispersion tau_DUP,0.0506733403744964,0.059444049686175
+C. Model comparison,Mirror alone: dAIC,77.2272523957428,72.6712047412488
+C. Model comparison,Mirror alone: dBIC,72.7377297113434,69.137043250205
+C. Model comparison,Mirror alone: dLOO,39.2336159903824,36.3198935218339
+C. Model comparison,Mirror + continuous: dAIC,2.5691526948437,1.89754160630729
+C. Model comparison,Mirror + continuous: dBIC,2.5691526948437,1.89754160630729
+C. Model comparison,Mirror + continuous: dLOO,1.23811618065468,0.128365137843939
+C. Model comparison,Mirror + single hit: dAIC,0,0
+C. Model comparison,Mirror + single hit: dBIC,0,0
+C. Model comparison,Mirror + single hit: dLOO,0.479330033778117,0
+D. Fitted directional parameters,Mirror + continuous: q,0.0763568678260983,0.093677462820939
+D. Fitted directional parameters,Mirror + continuous: shift DEL,-0.0419969872378362,-0.055259134504111
+D. Fitted directional parameters,Mirror + continuous: shift DUP,0.0733873157842407,0.0754408770270635
+D. Fitted directional parameters,Mirror + continuous: shift angle (deg),119.780992514663,126.222129908451
+D. Fitted directional parameters,Mirror + single hit: q,0.0190962018988156,0.025639887376687
+D. Fitted directional parameters,Mirror + single hit: shift DEL,-0.195441032874454,-0.261735665235906
+D. Fitted directional parameters,Mirror + single hit: shift DUP,0.348275282430194,0.372391726910067
+D. Fitted directional parameters,Mirror + single hit: shift angle (deg),119.299757216976,125.101480539146
+E. Predicted DUP burden (cm/Mb),Mirror alone,0.143967444379752,0.148160461777176
+E. Predicted DUP burden (cm/Mb),Mirror + continuous,-0.0874569444788344,-0.0850555974671036
+E. Predicted DUP burden (cm/Mb),Mirror + single hit,-0.074373546435599,-0.0860853632878958
+E. Predicted DUP burden (cm/Mb),Published (Mace et al. 2017),-0.0784,-0.0784
+"F. Bimodality, measurement-error-aware",Observed likelihood ratio,9.90857375919942,6.74362012105014
+"F. Bimodality, measurement-error-aware",p vs unimodal null,0.0157968406318736,0.0747850429914017
+"F. Bimodality, plain mixture",Observed likelihood ratio,13.1972884268954,7.70785697518456
+"F. Bimodality, plain mixture",p vs unimodal null,0.0277944411117776,0.0691861627674465
+G. Mirror vs asymmetric (Welch p),CNV length,0.00618803888107094,0.015736804406583
+G. Mirror vs asymmetric (Welch p),Gene count,0.0190651887861428,0.137451241618013
+G. Mirror vs asymmetric (Welch p),Deletion effect,0.650793420083609,0.419935763231128
+G. Mirror vs asymmetric (Welch p),Duplication effect,1.27182665872733e-06,2.56759481714271e-05
+H. Effect vs gene count (Spearman rho),"Deletion, mirror",-0.611834067375365,-0.708791208791209
+H. Effect vs gene count (Spearman rho),"Deletion, asymmetric",-0.118881118881119,-0.272727272727273
+H. Effect vs gene count (Spearman rho),"Duplication, mirror",0.511053748094619,0.675824175824176
+H. Effect vs gene count (Spearman rho),"Duplication, asymmetric",0.013986013986014,0.136363636363636

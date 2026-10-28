@@ -1,0 +1,26 @@
+Section,Test,Statistic,Value,P,Note
+A-B. Bimodality of the offset,"Mirror line, slope rho (fitted on the 21 mirror-class loci)",rho,0.351,,""
+A-B. Bimodality of the offset,Measurement-error-aware two- vs one-group mixture (equal variance; main analysis),likelihood ratio,9.91,0.016,"parametric bootstrap, 5000 replicates, each locus with its own SE"
+A-B. Bimodality of the offset,Displaced group: weight; mean offsets of the two groups (SD); latent SD,weight; means; tau,,,weight 0.34; means -0.272 and -0.029; tau 0.037; 32 of 33 loci assigned to their published class
+A-B. Bimodality of the offset,"Plain mixture, line fitted on full data, free variance",likelihood ratio,7.59,0.29,sensitivity; null A (no measurement error) P = 0.1958
+A-B. Bimodality of the offset,"Plain mixture, line fitted on full data, equal variance",likelihood ratio,5.22,0.16,sensitivity; null A (no measurement error) P = 0.1030
+A-B. Bimodality of the offset,"Plain mixture, line fitted on mirror-class loci, free variance",likelihood ratio,13.2,0.09,sensitivity; null A (no measurement error) P = 0.0238
+A-B. Bimodality of the offset,"Plain mixture, line fitted on mirror-class loci, equal variance",likelihood ratio,13.2,0.028,sensitivity; null A (no measurement error) P = 0.0034
+C-F. Asymmetric (n = 12) vs mirror (n = 21) loci,CNV length (Mb),"medians, asymmetric vs mirror",,0.029,medians 1.18 vs 0.449; means 1.06 vs 0.65; Welch t-test P (Mann-Whitney P = 0.0074)
+C-F. Asymmetric (n = 12) vs mirror (n = 21) loci,Gene count,"medians, asymmetric vs mirror",,0.092,medians 29.5 vs 19; means 31 vs 22; Welch t-test P (Mann-Whitney P = 0.049)
+C-F. Asymmetric (n = 12) vs mirror (n = 21) loci,Deletion effect (SD),"medians, asymmetric vs mirror",,0.65,medians -0.0721 vs -0.203; means -0.178 vs -0.24; Welch t-test P (Mann-Whitney P = 0.36)
+C-F. Asymmetric (n = 12) vs mirror (n = 21) loci,Duplication effect (SD),"medians, asymmetric vs mirror",,1.3e-06,medians -0.299 vs 0.0167; means -0.261 vs 0.0597; Welch t-test P (Mann-Whitney P = 5.7e-05)
+G-H. Effect size vs gene count,"Deletion effect, mirror loci (n = 21)",Spearman rho,-0.612,0.0032,""
+G-H. Effect size vs gene count,"Duplication effect, mirror loci (n = 21)",Spearman rho,0.511,0.018,""
+G-H. Effect size vs gene count,"Deletion effect, asymmetric loci (n = 12)",Spearman rho,-0.119,0.71,""
+G-H. Effect size vs gene count,"Duplication effect, asymmetric loci (n = 12)",Spearman rho,0.014,0.97,""
+I-K. Dose-response models fitted to the 33 loci,Mirror only,delta conditional AIC,77.23,,delta BIC 72.74; delta LOO 39.23
+I-K. Dose-response models fitted to the 33 loci,Mirror + continuous (generalized dysfunction),delta conditional AIC,2.57,,"delta BIC 2.57; delta LOO 1.24; fraction of genes q = 0.0764; shift DEL -0.042, DUP 0.073 SD at 119.8 degrees"
+I-K. Dose-response models fitted to the 33 loci,Mirror + sparse single hit,delta conditional AIC,0,,"delta BIC 0.00; delta LOO 0.48; fraction of genes q = 0.0191; shift DEL -0.195, DUP 0.348 SD at 119.3 degrees"
+"I-K. Simulated datasets (2,000 per model)",Mirror only: bimodality of the simulated offsets,median P vs unimodal null,0.4228,,median likelihood ratio 2.26; 4.8% of datasets with P < 0.05; 0.6% reach the observed ratio
+"I-K. Simulated datasets (2,000 per model)",Mirror only: predicted genome-wide burden effect on height,duplication burden (cm/Mb),0.144,,deletion burden -0.4100 cm/Mb
+"I-K. Simulated datasets (2,000 per model)",Mirror + continuous (generalized dysfunction): bimodality of the simulated offsets,median P vs unimodal null,0.3083,,median likelihood ratio 3.02; 14.7% of datasets with P < 0.05; 5.8% reach the observed ratio
+"I-K. Simulated datasets (2,000 per model)",Mirror + continuous (generalized dysfunction): predicted genome-wide burden effect on height,duplication burden (cm/Mb),-0.0875,,deletion burden -0.4100 cm/Mb
+"I-K. Simulated datasets (2,000 per model)",Mirror + sparse single hit: bimodality of the simulated offsets,median P vs unimodal null,0.0144,,median likelihood ratio 10.20; 73.4% of datasets with P < 0.05; 51.9% reach the observed ratio
+"I-K. Simulated datasets (2,000 per model)",Mirror + sparse single hit: predicted genome-wide burden effect on height,duplication burden (cm/Mb),-0.0744,,deletion burden -0.4100 cm/Mb
+"I-K. Simulated datasets (2,000 per model)",Published genome-wide burden (Mace et al. 2017),duplication burden (cm/Mb),-0.0784,0.006,deletion burden -0.413 cm/Mb (P = 2.5e-10)

@@ -34,7 +34,8 @@ python code/score_models_on_criteria.py --me --out-dir outputs/me/all_loci      
 python code/make_height_figure_v2.py --bimodality-dir me/all_loci --criteria-dir me/all_loci --name Figure_height_main_v2_me
 ```
 
-`make_supp_model_clouds.py` draws the supplementary model-cloud figure. `make_supp_table_sensitivity.py` writes the
+`make_supp_tables_fig3.R` (R, data.table + openxlsx) then writes Supplementary Tables 25 (loci and every Figure 3 test) and 26
+(sensitivity) to `tables/`. `make_supp_model_clouds.py` draws the supplementary model-cloud figure. `make_supp_table_sensitivity.py` writes the
 sensitivity table that excludes loci with no nominal deletion or duplication effect (`tables/`).
 
 ## Not included
