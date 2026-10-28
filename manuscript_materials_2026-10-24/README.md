@@ -4,8 +4,8 @@ Snapshot of 2026-10-24, after plausibility QC of height / weight / head circumfe
 All numbers are provisional: the next round adds subjects and manually corrected records (see HANDOFF_2026-10-24.md).
 Source scripts and live outputs are one level up (CNV_growth_trajectories); copies here are frozen.
 
-- main_figure/            fig_main_v3.{png,pdf}, fig_main_v3_legend.txt, main_v3_bmi_slope_heterogeneity.csv
-                          (Height, HC, SRS, SCQ x unaffected controls / 16p11.2 del / 16p11.2 dup / 22q11.2 del / 22q11.2 dup; script 25)
+- main_figure/            fig_main_v5_ukbb.{png,pdf} + fig_main_v5_ukbb_legend.txt (current Fig. 6: clinical cohorts + UK Biobank adults, age-band bar prime panels); older fig_main_v3 / v4 kept for reference
+                          (Height, Height prime, HC, HC prime, SRS, SCQ x controls / 16p11.2 del / 16p11.2 dup / 22q11.2 del / 22q11.2 dup; scripts 35 + 17 on Expanse)
 - supplementary_figures/  fig_supp_prospective            longitudinal: BMI at a visit -> change in height / HC Z (script 11)
                           fig_cognition_bmi_slopes        SRS/SCQ vs BMI with SSC ASD probands and a forest plot of slopes (script 24)
                           fig_cognition_bmi_forest        the two forest plots alone (script 24b, from cognition_bmi_slopes.csv; not used in the manuscript, whose Supplementary Table 10 carries these slopes)
