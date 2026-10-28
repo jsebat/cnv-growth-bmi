@@ -306,9 +306,69 @@ traj2 <- function(x, G, ylab, title, lab, xmax, lpos, bold = FALSE) {
          subtitle = sprintf("%s (n = %d)", if (ctl) "Non-carrier controls" else G, nrow(x))) +
     base_theme + theme(legend.position.inside = lpos)
 }
+
+# ---------------------------------------------------------------- prime panels as age-band bars (JS 2026-10-27, Jon)
+# Within each age band, one pooled least-squares model per CNV: y ~ cnv * BMI + sex + age (carriers + controls). Control bar =
+# BMI coefficient; carrier bar = BMI + cnv:BMI (SE from the covariance matrix); printed P = cnv:BMI. Bars and P therefore come
+# from the same model. Control row: y ~ BMI + sex + age in controls. Bands with < 15 carriers or < 30 controls are omitted.
+# Replaces the smooth BMI-by-age curves (descriptive, sensitive to smoothing). Output: main_with_ukbb_bmi_slope_by_band.csv,
+# which also feeds Supplementary Table 21 (37_supp_table_agebands.R).
+BANDS <- c(2, 10, 19, 40, 74); BLAB <- c("2-9", "10-18", "19-39", "40-73")
+band_slopes <- function(xc, ctl) rbindlist(lapply(seq_along(BLAB), function(b) {
+  k0 <- ctl[age >= BANDS[b] & age < BANDS[b + 1]]
+  if (is.null(xc)) { if (nrow(k0) < 30) return(NULL)
+    m <- lm(y ~ BMI + sex + age, data = k0); cf <- summary(m)$coefficients["BMI", ]
+    return(data.table(age_bin = BLAB[b], n_carriers = NA_integer_, n_controls = nrow(k0), slope_controls = cf[1], se_controls = cf[2],
+                      slope_carriers = NA_real_, se_carriers = NA_real_, diff = NA_real_, se_diff = NA_real_, p_diff = NA_real_, p_controls = cf[4])) }
+  c1 <- xc[age >= BANDS[b] & age < BANDS[b + 1]]; if (nrow(c1) < 15 || nrow(k0) < 30) return(NULL)
+  x <- rbind(c1[, .(y, BMI, sex, age, cnv = 1)], k0[, .(y, BMI, sex, age, cnv = 0)])
+  m <- lm(y ~ cnv * BMI + sex + age, data = x); B <- coef(m); V <- vcov(m); cf <- summary(m)$coefficients
+  w <- setNames(rep(0, length(B)), names(B)); w[c("BMI", "cnv:BMI")] <- 1
+  data.table(age_bin = BLAB[b], n_carriers = nrow(c1), n_controls = nrow(k0), slope_controls = B[["BMI"]], se_controls = sqrt(V["BMI", "BMI"]),
+             slope_carriers = sum(w * B), se_carriers = sqrt(drop(t(w) %*% V %*% w)), diff = B[["cnv:BMI"]], se_diff = cf["cnv:BMI", 2],
+             p_diff = cf["cnv:BMI", 4], p_controls = cf["BMI", 4])
+}))
+bsl <- rbindlist(lapply(GROUPS, function(G) rbind(
+  cbind(outcome = "Height", group = G, band_slopes(if (G == "No CNV") NULL else H[locus == G], Hctl_test)),
+  cbind(outcome = "Head circumference", group = G, band_slopes(if (G == "No CNV") NULL else dh[locus == G], dh[locus == "No CNV"])))))
+fwrite(bsl, file.path(WD, "main_with_ukbb_bmi_slope_by_band.csv"))
+cat("
+== BMI slope by age band, pooled model (control, carrier = control + CNV x BMI)
+")
+print(bsl[, .(outcome = substr(outcome, 1, 6), group, age_bin, n_c = n_carriers, ctl = round(slope_controls, 2), car = round(slope_carriers, 2), diff = round(diff, 2), p = signif(p_diff, 2))], nrows = 60)
+band_panel <- function(b, ylab, ctl_only, ylim, levels_x) {
+  long <- rbind(b[, .(age_bin, who = "Non-carriers", slope = slope_controls, se = se_controls)],
+                if (!ctl_only) b[, .(age_bin, who = "Carriers", slope = slope_carriers, se = se_carriers)])
+  long[, `:=`(who = factor(who, names(BEACOLS)), age_bin = factor(age_bin, levels_x))]
+  nlab <- setNames(sprintf("%s
+n = %s", levels_x, sapply(levels_x, function(l) { v <- if (ctl_only) b[age_bin == l, n_controls] else b[age_bin == l, n_carriers]; if (!length(v)) "-" else if (v >= 10000) sprintf("%.0fk", v / 1000) else format(v, big.mark = ",") })), levels_x)
+  dg <- position_dodge(width = 0.8)
+  g <- ggplot(long, aes(age_bin, slope, fill = who)) + geom_hline(yintercept = 0, colour = "grey40") +
+    geom_col(position = dg, width = 0.75) +
+    geom_errorbar(aes(ymin = slope - 1.96 * se, ymax = slope + 1.96 * se), position = dg, width = 0.25, linewidth = 0.5, colour = "grey20") +
+    scale_fill_manual(values = BEACOLS, breaks = if (ctl_only) "Non-carriers" else names(BEACOLS)) +
+    scale_x_discrete(drop = FALSE, labels = nlab) + coord_cartesian(ylim = ylim) +
+    labs(x = "Age band (years)", y = ylab, fill = NULL, subtitle = "BMI effect by age band (95% CI)") +
+    base_theme + theme(legend.position = "top", legend.justification = "left", legend.direction = "horizontal", legend.margin = margin(0, 0, 0, 0),   # JS 2026-10-27: legend above the bars so it never collides with P labels
+                       legend.box.spacing = unit(2, "pt"), legend.key.size = unit(9, "pt"), legend.text = element_text(size = 8), plot.subtitle = element_text(size = 11),
+                       axis.text.x = element_text(size = 8.5))
+  if (!ctl_only && nrow(b)) {
+    pl <- b[, .(age_bin = factor(age_bin, levels_x), neg = slope_carriers < 0,   # JS 2026-10-27 (Jon): P below the bars when the carrier bar is negative
+                y = ifelse(slope_carriers < 0, pmin(slope_controls - 1.96 * se_controls, slope_carriers - 1.96 * se_carriers) - 0.04 * diff(ylim),
+                           pmax(slope_controls + 1.96 * se_controls, slope_carriers + 1.96 * se_carriers) + 0.04 * diff(ylim)),
+                lab = gsub("= < ", "< ", sprintf("p = %s", sapply(p_diff, pfx)), fixed = TRUE), face = ifelse(p_diff < 0.05, "bold", "plain"))]
+    g <- g + geom_text(data = pl, aes(age_bin, y, label = lab, fontface = face, vjust = ifelse(neg, 1, 0)), inherit.aes = FALSE, size = 2.7)
+  }
+  g
+}
+yl_band <- function(b) { v <- b[, c(slope_controls - 1.96 * se_controls, slope_controls + 1.96 * se_controls, slope_carriers - 1.96 * se_carriers, slope_carriers + 1.96 * se_carriers)]
+  r <- range(c(v, 0), na.rm = TRUE); r + c(-0.2, 0.22) * diff(r) }   # room for P labels above and below
+YLH <- yl_band(bsl[outcome == "Height"]); YLC <- yl_band(bsl[outcome == "Head circumference"])
+LVH <- BLAB[BLAB %in% bsl[outcome == "Height", age_bin]]; LVC <- BLAB[BLAB %in% bsl[outcome == "Head circumference", age_bin]]
+
 HCMAX <- ceiling(quantile(dh$age, 0.975))   # JS 2026-10-27: HC axes end where the HC data end (Jon)
 yl_of <- function(b) { v <- b[!is.na(slope), c(slope - 1.96 * se, slope + 1.96 * se)]; r <- range(v); r + c(-0.12, 0.25) * diff(r) }   # JS 2026-10-27: prime-panel y axis from the curves of that column (Jon: the fixed -1..1.2 window wasted space); headroom for the p label
-YLH <- yl_of(bea[outcome == "Height"]); YLC <- yl_of(bea[outcome == "Head circumference"])
+# YLH / YLC now set from the band slopes above (bar panels)
 v2 <- list(); L1 <- LETTERS[1:6]; L2 <- LETTERS[7:12]
 for (i in seq_along(GROUPS)) {
   G <- GROUPS[i]; r <- ht[group == G]; ctl <- G == "No CNV"
@@ -318,9 +378,9 @@ for (i in seq_along(GROUPS)) {
   labh <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmh)), fixed = TRUE)   # JS 2026-10-23: no p in the control trajectory panels (A, G): a within-control BMI effect is not the carrier-vs-control test shown in B-E
   labc <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmc)), fixed = TRUE)
   v2[[paste("HEIGHT", G)]] <- traj2(if (ctl) Hctl_plot else H[locus == G], G, "Height (SD)", NULL, labh, 60, c(0.75, 0.93), bold = isTRUE(pmh < 0.05)) + labs(tag = L1[i])
-  v2[[paste("EFF HEIGHT", G)]] <- eff_panel(bea[outcome == "Height" & group == G], if (ctl) NULL else H[locus == G], "Height per +1 SD BMI (SD)", ctl, ylim = YLH) + labs(tag = paste0(L1[i], "'"))
+  v2[[paste("EFF HEIGHT", G)]] <- band_panel(bsl[outcome == "Height" & group == G], "Height per +1 SD BMI (SD)", ctl, YLH, LVH) + labs(tag = paste0(L1[i], "'"))
   v2[[paste("HC", G)]] <- traj2(dh[locus == G], G, "Head circumference (SD)", NULL, labc, HCMAX, c(0.75, 0.93), bold = isTRUE(pmc < 0.05)) + labs(tag = L2[i])
-  v2[[paste("EFF HC", G)]] <- eff_panel(bea[outcome == "Head circumference" & group == G], if (ctl) NULL else dh[locus == G], "Head circ. per +1 SD BMI (SD)", ctl, xmax = HCMAX, ylim = YLC) + labs(tag = paste0(L2[i], "'"))
+  v2[[paste("EFF HC", G)]] <- band_panel(bsl[outcome == "Head circumference" & group == G], "Head circ. per +1 SD BMI (SD)", ctl, YLC, LVC) + labs(tag = paste0(L2[i], "'"))
 }
 v2[["ASD HEIGHT"]] <- plots[["ASD HEIGHT"]] + labs(tag = L1[6]); v2[["ASD HC"]] <- plots[["ASD HC"]] + labs(tag = L2[6])
 # JS 2026-10-23: column headers above the panel letters, each spanning the trajectory + effect columns
