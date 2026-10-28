@@ -1,0 +1,14 @@
+FIGURE_CAPTION.txt
+README.md
+figures/Figure_S1_gene_count_mechanisms.pdf
+figures/Figure_S1_gene_count_mechanisms.png
+figures/Figure_main_continuous_vs_single_hit.pdf
+figures/Figure_main_continuous_vs_single_hit.png
+inputs/bmi_loci.csv
+inputs/height_loci.csv
+inputs/model_parameters.csv
+inputs/simulation_update_notes.txt
+outputs/directional_residuals_python_reference.csv
+outputs/gene_count_mechanisms_python_reference.csv
+outputs/simulated_clouds_python_reference.csv
+source/Sacks_supplementary_tables.xlsx

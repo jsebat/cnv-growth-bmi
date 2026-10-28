@@ -1,0 +1,2 @@
+trait,mirror_fit,alternative,test,n_loci,rho_full_fit,LRT,p_bootstrap_nullB,one_group_mean,one_group_tau,minor_weight,comp1_mean,comp2_mean,tau,separation,classes_agree,null_median_LRT,null_p95_LRT,n_boot,n_starts
+Height,mirror-class only,equal_var,measurement-error-aware,33,0.3511401099693037,9.90857375919942,0.015796840631873626,-0.10592976066843021,0.1141119177064203,0.3355051673362612,-0.2721302407831328,-0.02873182851811354,0.036634785708508824,0.24339841226501926,32,1.8477455768756137,7.2045876688001345,5000,25

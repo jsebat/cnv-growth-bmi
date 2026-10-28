@@ -1,17 +1,30 @@
 # cnv-growth-bmi
 
-Code and summary results for two parts of Sacks et al. (2026), "Context-dependent effects of CNVs on growth"
+Code and summary results for Figures 3, 4 and 6 of Sacks et al. (2026), "Context-dependent effects of CNVs on growth"
 (companion to the biobank meta-analysis code at https://github.com/mollysacks/Sacks2026).
 Jonathan Sebat (UCSD), analyses carried out with Claude, July to October 2026.
 
-## Part 1. Figure 4: pathway convergence of asymmetric CNVs and single-gene height associations
+## Part 1. Figures 1-2: CNV main effects on height and BMI (association tests)
+
+The biobank association tests and the meta-analysis are in Molly Sacks's repository, https://github.com/mollysacks/Sacks2026
+(`SharedAnalysisCode/` for height and BMI, `MetaAnalysisCode/`). The recurrent-CNV genotyping tutorial is also in this
+repository under `recurrentCNVgenotyping/`.
+
+## Part 2. Figure 3: mirror and asymmetric CNV effects (oligogenic model)
+
+`fig3_mirror_asymmetric/`: the perpendicular offset of each reciprocal CNV from the mirror line and its bimodality
+(measurement-error-aware mixture, parametric bootstrap), the size and gene-count comparisons of mirror and asymmetric loci,
+and simulations comparing the mirror-only, continuous and single-hit models. The figure is
+`perp_offset_bimodality/figures/Figure_height_main_v2_me`; see that folder's `README.md` for the run order.
+
+## Part 3. Figure 4: pathway convergence of asymmetric CNVs and single-gene height associations
 
 `fig4_pathway_analysis/`: gene-set enrichment of the genes inside asymmetric versus mirror recurrent CNVs, of the 207
 exome height genes of Kosmicki et al., and of their height-decreasing bias, on one 102-pathway analysis set with a
 locus-block permutation for the CNV layer. Inputs (gene tables and GMT libraries), scripts in run order, the master
 results table, Figure 4 and the full report are all in that folder; see its `README.md`.
 
-## Part 2. Figure 6 and supplement: body mass as a modifier of growth and autistic traits in CNV carriers
+## Part 4. Figure 6 and supplement: body mass as a modifier of growth and autistic traits in CNV carriers
 
 Analyses of body mass, growth (height, head circumference) and social-communication / cognitive phenotypes in carriers of
 16p11.2 and 22q11.2 copy-number variants (G2MH, SVIP, Searchlight, Cardiff) versus unaffected SSC relatives and SSC probands.

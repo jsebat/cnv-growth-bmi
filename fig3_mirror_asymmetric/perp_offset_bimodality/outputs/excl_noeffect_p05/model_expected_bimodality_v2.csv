@@ -1,0 +1,4 @@
+model,key,median_LRT,median_p_vs_unimodal,frac_p_lt_05,P_LRT_ge_observed,observed_percentile
+Mirror alone,mirror,3.663295467761369,0.2868,0.2165,0.253,0.747
++ continuous,open_continuous,2.634056132846066,0.41500000000000004,0.076,0.1,0.9
++ single hit,open_single,3.8392878344026347,0.2711,0.1445,0.1915,0.8085

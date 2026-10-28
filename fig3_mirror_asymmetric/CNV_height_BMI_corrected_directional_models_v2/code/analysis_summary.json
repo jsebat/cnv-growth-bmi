@@ -1,0 +1,312 @@
+{
+  "height": {
+    "mirror": {
+      "p": 0.5282929066872079,
+      "m": 0.052714351857927416,
+      "rho": 0.3511401082432984,
+      "tauD": 9.710951624974364e-09,
+      "tauU": 0.05067334037449642,
+      "sign_mean": -0.4,
+      "pi_positive": 0.3,
+      "model": "Mirror alone",
+      "negative_log_likelihood": -23.630941815213554,
+      "logLik": 23.630941815213554,
+      "n_parameters": 5,
+      "AIC": -37.26188363042711,
+      "BIC": -32.039271441809994
+    },
+    "models": {
+      "mirror": {
+        "model": "Mirror alone",
+        "q": 0.0,
+        "shift_magnitude": 0.0,
+        "shift_angle_deg": 45.0,
+        "shift_DEL": 0.0,
+        "shift_DUP": 0.0,
+        "negative_log_likelihood": 24.804393736773225,
+        "n_parameters_added": 0,
+        "conditional_AIC": 49.60878747354645,
+        "conditional_BIC": 49.60878747354645
+      },
+      "continuous": {
+        "model": "Mirror + continuous directional shift",
+        "q": 0.08167850268017693,
+        "shift_magnitude": 0.05578038177092066,
+        "shift_angle_deg": 85.0,
+        "shift_DEL": 0.00486158060399252,
+        "shift_DUP": 0.05556812057772461,
+        "negative_log_likelihood": -12.956628347499679,
+        "n_parameters_added": 3,
+        "conditional_AIC": -19.913256694999358,
+        "conditional_BIC": -15.423734010599917,
+        "max_q": 0.8
+      },
+      "single": {
+        "model": "Mirror + sparse single hit",
+        "q": 0.019481433665954336,
+        "shift_magnitude": 0.2826710357980205,
+        "shift_angle_deg": 85.0,
+        "shift_DEL": 0.02463640407822634,
+        "shift_DUP": 0.28159538716609,
+        "negative_log_likelihood": -14.17784770857743,
+        "n_parameters_added": 3,
+        "conditional_AIC": -22.35569541715486,
+        "conditional_BIC": -17.866172732755416,
+        "max_q": 0.2
+      }
+    },
+    "model_comparison": [
+      {
+        "model": "Mirror alone",
+        "q": 0.0,
+        "shift_magnitude": 0.0,
+        "shift_angle_deg": 45.0,
+        "shift_DEL": 0.0,
+        "shift_DUP": 0.0,
+        "negative_log_likelihood": 24.804393736773225,
+        "n_parameters_added": 0,
+        "conditional_AIC": 49.60878747354645,
+        "conditional_BIC": 49.60878747354645,
+        "max_q": NaN,
+        "conditional_LOO_log_predictive_density": -24.804393736773225,
+        "delta_conditional_AIC": 71.9644828907013,
+        "delta_conditional_BIC": 67.47496020630186,
+        "delta_conditional_LOO": 36.89987922005341
+      },
+      {
+        "model": "Mirror + continuous directional shift",
+        "q": 0.08167850268017693,
+        "shift_magnitude": 0.05578038177092066,
+        "shift_angle_deg": 85.0,
+        "shift_DEL": 0.00486158060399252,
+        "shift_DUP": 0.05556812057772461,
+        "negative_log_likelihood": -12.956628347499679,
+        "n_parameters_added": 3,
+        "conditional_AIC": -19.913256694999358,
+        "conditional_BIC": -15.423734010599917,
+        "max_q": 0.8,
+        "conditional_LOO_log_predictive_density": 11.224145537109875,
+        "delta_conditional_AIC": 2.442438722155501,
+        "delta_conditional_BIC": 2.442438722155499,
+        "delta_conditional_LOO": 0.8713399461703109
+      },
+      {
+        "model": "Mirror + sparse single hit",
+        "q": 0.019481433665954336,
+        "shift_magnitude": 0.2826710357980205,
+        "shift_angle_deg": 85.0,
+        "shift_DEL": 0.02463640407822634,
+        "shift_DUP": 0.28159538716609,
+        "negative_log_likelihood": -14.17784770857743,
+        "n_parameters_added": 3,
+        "conditional_AIC": -22.35569541715486,
+        "conditional_BIC": -17.866172732755416,
+        "max_q": 0.2,
+        "conditional_LOO_log_predictive_density": 12.095485483280186,
+        "delta_conditional_AIC": 0.0,
+        "delta_conditional_BIC": 0.0,
+        "delta_conditional_LOO": 0.0
+      }
+    ],
+    "burden": [
+      {
+        "model": "Mirror alone",
+        "DEL_effect_per_affected_gene_SD": -0.011139447266862676,
+        "DUP_effect_per_affected_gene_SD": 0.003911506719056675,
+        "DEL_effect_per_affected_gene_native": -0.08900418366223278,
+        "DUP_effect_per_affected_gene_native": 0.031252938685262834,
+        "Mace_DEL_target_per_Mb": -0.41,
+        "Mace_units": "cm/Mb",
+        "effective_dosage_genes_per_Mb_to_match_DEL": 4.606525032080887,
+        "predicted_DUP_effect_per_Mb_at_matched_density": 0.14396744437975234
+      },
+      {
+        "model": "Mirror + continuous",
+        "DEL_effect_per_affected_gene_SD": -0.011536533891255776,
+        "DUP_effect_per_affected_gene_SD": -0.0006272141664833992,
+        "DEL_effect_per_affected_gene_native": -0.09217690579113365,
+        "DUP_effect_per_affected_gene_native": -0.005011441190202359,
+        "Mace_DEL_target_per_Mb": -0.41,
+        "Mace_units": "cm/Mb",
+        "effective_dosage_genes_per_Mb_to_match_DEL": 4.447968788722752,
+        "predicted_DUP_effect_per_Mb_at_matched_density": -0.022290734000539696
+      },
+      {
+        "model": "Mirror + single hit",
+        "DEL_effect_per_affected_gene_SD": -0.01152649023946871,
+        "DUP_effect_per_affected_gene_SD": -0.0005124147012465347,
+        "DEL_effect_per_affected_gene_native": -0.092096657013355,
+        "DUP_effect_per_affected_gene_native": -0.004094193462959812,
+        "Mace_DEL_target_per_Mb": -0.41,
+        "Mace_units": "cm/Mb",
+        "effective_dosage_genes_per_Mb_to_match_DEL": 4.451844543505478,
+        "predicted_DUP_effect_per_Mb_at_matched_density": -0.018226712828133436
+      }
+    ],
+    "occupancy": {
+      "single_hit_frequency": 0.019481433665954336,
+      "expected_asymmetric_fraction": 0.36402108380180154,
+      "observed_asymmetric_fraction": 0.36363636363636365,
+      "conditional_simulations": 5477,
+      "observed_gene_count_difference": 9.0,
+      "simulated_gene_count_difference_mean": 12.40674639401132,
+      "simulated_gene_count_difference_2.5%": 2.1773809523809553,
+      "simulated_gene_count_difference_97.5%": 21.047619047619044,
+      "p_sim_gene_diff_ge_observed": 0.7767025744020449,
+      "observed_length_difference_Mb": 0.41312602380952357,
+      "simulated_length_difference_mean_Mb": 0.3038515455476146,
+      "simulated_length_difference_2.5%": -0.07998145238095244,
+      "simulated_length_difference_97.5%": 0.6547606928571427,
+      "p_sim_length_diff_ge_observed": 0.2908526565638123
+    }
+  },
+  "BMI": {
+    "mirror": {
+      "p": 0.02000059091527381,
+      "m": 0.27987196406667564,
+      "rho": 0.5003877391258821,
+      "tauD": 5.062292844294284e-09,
+      "tauU": 0.09917821446880723,
+      "sign_mean": 0.5714285714285714,
+      "pi_positive": 0.7857142857142857,
+      "model": "Mirror alone",
+      "negative_log_likelihood": -11.83519983353849,
+      "logLik": 11.83519983353849,
+      "n_parameters": 5,
+      "AIC": -13.670399667076978,
+      "BIC": -6.341720153078345
+    },
+    "models": {
+      "mirror": {
+        "model": "Mirror alone",
+        "q": 0.0,
+        "shift_magnitude": 0.0,
+        "shift_angle_deg": 45.0,
+        "shift_DEL": 0.0,
+        "shift_DUP": 0.0,
+        "negative_log_likelihood": -11.83519983353849,
+        "n_parameters_added": 0,
+        "conditional_AIC": -23.67039966707698,
+        "conditional_BIC": -23.67039966707698
+      },
+      "continuous": {
+        "model": "Mirror + continuous directional shift",
+        "q": 0.7999999999999926,
+        "shift_magnitude": 0.002638508890857501,
+        "shift_angle_deg": 70.11899490800418,
+        "shift_DEL": 0.0008972719236306664,
+        "shift_DUP": 0.0024812561863294578,
+        "negative_log_likelihood": -15.817071645340683,
+        "n_parameters_added": 3,
+        "conditional_AIC": -25.634143290681365,
+        "conditional_BIC": -21.236935582282186,
+        "max_q": 0.8
+      },
+      "single": {
+        "model": "Mirror + sparse single hit",
+        "q": 0.04257040778315181,
+        "shift_magnitude": 0.07828854272468744,
+        "shift_angle_deg": 71.09510980869109,
+        "shift_DEL": 0.025365344210432697,
+        "shift_DUP": 0.07406547937495227,
+        "negative_log_likelihood": -14.950450019541574,
+        "n_parameters_added": 3,
+        "conditional_AIC": -23.900900039083147,
+        "conditional_BIC": -19.50369233068397,
+        "max_q": 0.2
+      }
+    },
+    "model_comparison": [
+      {
+        "model": "Mirror alone",
+        "q": 0.0,
+        "shift_magnitude": 0.0,
+        "shift_angle_deg": 45.0,
+        "shift_DEL": 0.0,
+        "shift_DUP": 0.0,
+        "negative_log_likelihood": -11.83519983353849,
+        "n_parameters_added": 0,
+        "conditional_AIC": -23.67039966707698,
+        "conditional_BIC": -23.67039966707698,
+        "max_q": NaN,
+        "conditional_LOO_log_predictive_density": 11.83519983353849,
+        "delta_conditional_AIC": 1.9637436236043868,
+        "delta_conditional_BIC": 0.0,
+        "delta_conditional_LOO": 2.130299097618236
+      },
+      {
+        "model": "Mirror + continuous directional shift",
+        "q": 0.7999999999999926,
+        "shift_magnitude": 0.002638508890857501,
+        "shift_angle_deg": 70.11899490800418,
+        "shift_DEL": 0.0008972719236306664,
+        "shift_DUP": 0.0024812561863294578,
+        "negative_log_likelihood": -15.817071645340683,
+        "n_parameters_added": 3,
+        "conditional_AIC": -25.634143290681365,
+        "conditional_BIC": -21.236935582282186,
+        "max_q": 0.8,
+        "conditional_LOO_log_predictive_density": 13.965498931156725,
+        "delta_conditional_AIC": 0.0,
+        "delta_conditional_BIC": 2.4334640847947924,
+        "delta_conditional_LOO": 0.0
+      },
+      {
+        "model": "Mirror + sparse single hit",
+        "q": 0.04257040778315181,
+        "shift_magnitude": 0.07828854272468744,
+        "shift_angle_deg": 71.09510980869109,
+        "shift_DEL": 0.025365344210432697,
+        "shift_DUP": 0.07406547937495227,
+        "negative_log_likelihood": -14.950450019541574,
+        "n_parameters_added": 3,
+        "conditional_AIC": -23.900900039083147,
+        "conditional_BIC": -19.50369233068397,
+        "max_q": 0.2,
+        "conditional_LOO_log_predictive_density": 12.927070843293945,
+        "delta_conditional_AIC": 1.7332432515982177,
+        "delta_conditional_BIC": 4.16670733639301,
+        "delta_conditional_LOO": 1.0384280878627798
+      }
+    ],
+    "burden": [
+      {
+        "model": "Mirror alone",
+        "DEL_effect_per_affected_gene_SD": 0.0031986312354010233,
+        "DUP_effect_per_affected_gene_SD": -0.0016005558521797452,
+        "DEL_effect_per_affected_gene_native": 0.01503356680638481,
+        "DUP_effect_per_affected_gene_native": -0.007522612505244803,
+        "Mace_DEL_target_per_Mb": 0.14,
+        "Mace_units": "kg/m2/Mb",
+        "effective_dosage_genes_per_Mb_to_match_DEL": 9.312493954564497,
+        "predicted_DUP_effect_per_Mb_at_matched_density": -0.07005428347762349
+      },
+      {
+        "model": "Mirror + continuous",
+        "DEL_effect_per_affected_gene_SD": 0.00391644877430555,
+        "DUP_effect_per_affected_gene_SD": 0.00038444909688380245,
+        "DEL_effect_per_affected_gene_native": 0.018407309239236086,
+        "DUP_effect_per_affected_gene_native": 0.0018069107553538716,
+        "Mace_DEL_target_per_Mb": 0.14,
+        "Mace_units": "kg/m2/Mb",
+        "effective_dosage_genes_per_Mb_to_match_DEL": 7.6056743644846865,
+        "predicted_DUP_effect_per_Mb_at_matched_density": 0.013742774810906603
+      },
+      {
+        "model": "Mirror + single hit",
+        "DEL_effect_per_affected_gene_SD": 0.003906998725979237,
+        "DUP_effect_per_affected_gene_SD": 0.00046784019748743945,
+        "DEL_effect_per_affected_gene_native": 0.018362894012102414,
+        "DUP_effect_per_affected_gene_native": 0.0021988489281909657,
+        "Mace_DEL_target_per_Mb": 0.14,
+        "Mace_units": "kg/m2/Mb",
+        "effective_dosage_genes_per_Mb_to_match_DEL": 7.624070579927671,
+        "predicted_DUP_effect_per_Mb_at_matched_density": 0.016764179423126233
+      }
+    ]
+  },
+  "direction_correction": {
+    "height": "asymmetry shifts DEL and DUP effects toward the lower-left",
+    "BMI": "asymmetry shifts DEL and DUP effects toward the upper-right"
+  }
+}

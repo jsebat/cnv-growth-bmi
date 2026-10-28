@@ -1,0 +1,9 @@
+Revised BMI simulation note
+---------------------------
+BMI contributor frequency (p) and per-gene effect magnitude (m) are weakly identifiable from the reciprocal CNV data.
+The literal point estimate from the mirror fit (p≈0.02, m≈0.28 SD) creates a zero-inflated gene-level occupancy model and an artificial
+vertical streak of simulated points at DEL≈0 when used naively for point-cloud visualization.
+To correct this artifact, the revised BMI visual simulations generate the mirror component from a moment-matched aggregate Gaussian approximation,
+which preserves the fitted CNV-level means, variances, and DEL–DUP covariance as a function of gene count without imposing a literal zero-inflated
+per-gene occupancy. The inferential model-comparison results (mirror alone vs continuous vs sparse single hit) and burden predictions are unchanged.
+Height simulations are also generated from the same moment-matched aggregate formulation for consistency, but the height conclusions are unchanged.

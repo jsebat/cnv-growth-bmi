@@ -1,0 +1,100 @@
+"model","held_out_locus","held_out_log_predictive_density"
+"Mirror alone","10q11.21_11.23",-3.44621774702177
+"Mirror alone","15q13.1-13.2_BP3_BP4",-1.22186799425813
+"Mirror alone","15q13.3_BP4-BP5",-5.92913312842308
+"Mirror alone","16p11.2_BP1-BP3",-2.21577799634612
+"Mirror alone","16p11.2_BP2_BP3",-8.32578151481333
+"Mirror alone","17p12",-11.2399751164652
+"Mirror alone","17q12",-3.77956325205022
+"Mirror alone","22q11.21_A_B",-5.99876334268027
+"Mirror alone","2q11.2",-2.14571375636701
+"Mirror alone","2q13",-0.568718872796892
+"Mirror alone","7q11.23_WBS",-1.47935389802938
+"Mirror alone","7q11.23_distal",-2.08444311014859
+"Mirror alone","13q12.12",0.221981277797616
+"Mirror alone","15q11.2_BP1_BP2",0.703685335199264
+"Mirror alone","15q13.3_CHRNA7",2.71212842265906
+"Mirror alone","16p11.2_BP4_BP5",1.23036994730442
+"Mirror alone","16p12.2_BP1_BP2",2.92614002567838
+"Mirror alone","16p12.2_BP2_BP3",1.99803848985274
+"Mirror alone","16p13.11_BP1-BP3",0.781393674543142
+"Mirror alone","16p13.11_BP1_BP2",1.34101132096771
+"Mirror alone","16p13.11_BP2_BP3",0.622590386273643
+"Mirror alone","1q21.1",-0.834104668534478
+"Mirror alone","1q21.1_TAR_BP1-BP3",2.07659332581131
+"Mirror alone","1q21.1_TAR_BP1_BP2",3.06755079444597
+"Mirror alone","1q21.1_TAR_BP2_BP3",0.966252733273181
+"Mirror alone","22q11.21_B-D",1.52160849254686
+"Mirror alone","22q11.21_B_C",1.05401066991165
+"Mirror alone","22q11.21_C_D",0.249965223362122
+"Mirror alone","22q11.21_E_F",0.497539304201683
+"Mirror alone","22q11.21_G_H",-0.397139553978169
+"Mirror alone","2q13_NPHP1",3.32595557129022
+"Mirror alone","2q21.1",-0.524253248164321
+"Mirror alone","3q29",0.0896242906493868
+"Mirror + continuous directional shift","10q11.21_11.23",-0.901063399513121
+"Mirror + continuous directional shift","15q13.1-13.2_BP3_BP4",0.836252852653316
+"Mirror + continuous directional shift","15q13.3_BP4-BP5",-0.0111298335960985
+"Mirror + continuous directional shift","16p11.2_BP1-BP3",-0.957647320715341
+"Mirror + continuous directional shift","16p11.2_BP2_BP3",-0.166361653156651
+"Mirror + continuous directional shift","17p12",-0.847488676044405
+"Mirror + continuous directional shift","17q12",0.663438397779024
+"Mirror + continuous directional shift","22q11.21_A_B",0.117194145107411
+"Mirror + continuous directional shift","2q11.2",-1.08705049255657
+"Mirror + continuous directional shift","2q13",-0.06815439407534
+"Mirror + continuous directional shift","7q11.23_WBS",-0.656092298336545
+"Mirror + continuous directional shift","7q11.23_distal",-0.677966476508683
+"Mirror + continuous directional shift","13q12.12",0.604599179034584
+"Mirror + continuous directional shift","15q11.2_BP1_BP2",1.66159120398596
+"Mirror + continuous directional shift","15q13.3_CHRNA7",2.38436853077121
+"Mirror + continuous directional shift","16p11.2_BP4_BP5",-0.861048018121333
+"Mirror + continuous directional shift","16p12.2_BP1_BP2",2.4263276424911
+"Mirror + continuous directional shift","16p12.2_BP2_BP3",1.72162271869545
+"Mirror + continuous directional shift","16p13.11_BP1-BP3",-1.10138963867711
+"Mirror + continuous directional shift","16p13.11_BP1_BP2",1.36277626002503
+"Mirror + continuous directional shift","16p13.11_BP2_BP3",0.2118204237489
+"Mirror + continuous directional shift","1q21.1",-2.05306470019056
+"Mirror + continuous directional shift","1q21.1_TAR_BP1-BP3",0.885093932166615
+"Mirror + continuous directional shift","1q21.1_TAR_BP1_BP2",2.95377701271261
+"Mirror + continuous directional shift","1q21.1_TAR_BP2_BP3",0.760623432048433
+"Mirror + continuous directional shift","22q11.21_B-D",0.423355573830318
+"Mirror + continuous directional shift","22q11.21_B_C",1.02568805783298
+"Mirror + continuous directional shift","22q11.21_C_D",-0.614494305084508
+"Mirror + continuous directional shift","22q11.21_E_F",0.406707376899737
+"Mirror + continuous directional shift","22q11.21_G_H",-0.164604658786422
+"Mirror + continuous directional shift","2q13_NPHP1",3.01141243180424
+"Mirror + continuous directional shift","2q21.1",0.605197441601223
+"Mirror + continuous directional shift","3q29",-0.667245827251524
+"Mirror + sparse single hit","10q11.21_11.23",-0.844770124490137
+"Mirror + sparse single hit","15q13.1-13.2_BP3_BP4",0.545464343621687
+"Mirror + sparse single hit","15q13.3_BP4-BP5",-0.410568592627265
+"Mirror + sparse single hit","16p11.2_BP1-BP3",-1.04291135425204
+"Mirror + sparse single hit","16p11.2_BP2_BP3",0.760407881676391
+"Mirror + sparse single hit","17p12",-0.314733050152656
+"Mirror + sparse single hit","17q12",0.673206709682352
+"Mirror + sparse single hit","22q11.21_A_B",-0.31813040907918
+"Mirror + sparse single hit","2q11.2",-1.17383481806821
+"Mirror + sparse single hit","2q13",0.0217239361030539
+"Mirror + sparse single hit","7q11.23_WBS",-0.775599065909868
+"Mirror + sparse single hit","7q11.23_distal",-0.674929489610211
+"Mirror + sparse single hit","13q12.12",-0.233625777761554
+"Mirror + sparse single hit","15q11.2_BP1_BP2",0.605048758131263
+"Mirror + sparse single hit","15q13.3_CHRNA7",2.61254387287593
+"Mirror + sparse single hit","16p11.2_BP4_BP5",0.210251082524417
+"Mirror + sparse single hit","16p12.2_BP1_BP2",2.78602647423775
+"Mirror + sparse single hit","16p12.2_BP2_BP3",1.62902438069754
+"Mirror + sparse single hit","16p13.11_BP1-BP3",-0.515841281585749
+"Mirror + sparse single hit","16p13.11_BP1_BP2",0.927988815586696
+"Mirror + sparse single hit","16p13.11_BP2_BP3",0.317751156554596
+"Mirror + sparse single hit","1q21.1",-1.402843601712
+"Mirror + sparse single hit","1q21.1_TAR_BP1-BP3",1.61913941468922
+"Mirror + sparse single hit","1q21.1_TAR_BP1_BP2",2.98808318888476
+"Mirror + sparse single hit","1q21.1_TAR_BP2_BP3",0.636023850946847
+"Mirror + sparse single hit","22q11.21_B-D",0.595822795575899
+"Mirror + sparse single hit","22q11.21_B_C",0.821749549022587
+"Mirror + sparse single hit","22q11.21_C_D",-0.229519497826933
+"Mirror + sparse single hit","22q11.21_E_F",0.189021623333358
+"Mirror + sparse single hit","22q11.21_G_H",-0.353262421773376
+"Mirror + sparse single hit","2q13_NPHP1",3.24648385017263
+"Mirror + sparse single hit","2q21.1",-0.356935358791738
+"Mirror + sparse single hit","3q29",-0.439717036929773

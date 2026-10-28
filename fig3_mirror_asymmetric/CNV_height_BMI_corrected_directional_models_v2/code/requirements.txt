@@ -1,0 +1,8 @@
+# Python environment verified to reproduce this analysis
+# generated on the repair run
+python==3.14.7
+numpy==2.5.1
+pandas==3.0.5
+scipy==1.18.0
+matplotlib==3.11.1
+python-docx==1.2.0

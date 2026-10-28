@@ -1,0 +1,97 @@
+"model","held_out_locus","held_out_log_predictive_density"
+"Mirror alone","10q11.21_11.23",0.849832252358199
+"Mirror alone","13q12.12",1.44486081986383
+"Mirror alone","15q11.2_BP1_BP2",1.859508651938
+"Mirror alone","15q13.1-13.2_BP3_BP4",1.24613024973224
+"Mirror alone","15q13.3_BP4-BP5",0.359893692876538
+"Mirror alone","15q13.3_CHRNA7",1.03748314892884
+"Mirror alone","16p11.2_BP1-BP3",-1.13454153754335
+"Mirror alone","16p11.2_BP2_BP3",-1.78330054671347
+"Mirror alone","16p11.2_BP4_BP5",-1.59394195336949
+"Mirror alone","16p12.2_BP1_BP2",1.51565419361465
+"Mirror alone","16p12.2_BP2_BP3",0.816160429199178
+"Mirror alone","16p13.11_BP1_BP2",1.47238798446762
+"Mirror alone","16p13.11_BP1-BP3",0.717052105451007
+"Mirror alone","16p13.11_BP2_BP3",-0.422914281334154
+"Mirror alone","17p12",1.26429203867952
+"Mirror alone","17q12",-1.93228979769775
+"Mirror alone","1q21.1",1.42311760814185
+"Mirror alone","1q21.1_TAR_BP1_BP2",2.50088555576925
+"Mirror alone","1q21.1_TAR_BP1-BP3",0.435927528085092
+"Mirror alone","1q21.1_TAR_BP2_BP3",0.20644033768369
+"Mirror alone","22q11.21_A_B",-0.0773737607306115
+"Mirror alone","22q11.21_B_C",-0.322800278181224
+"Mirror alone","22q11.21_B-D",-1.64315326789514
+"Mirror alone","22q11.21_C_D",1.02917698878109
+"Mirror alone","22q11.21_E_F",0.493425657384965
+"Mirror alone","22q11.21_G_H",0.542738629533063
+"Mirror alone","2q11.2",0.272504662261584
+"Mirror alone","2q13",-1.49727196254551
+"Mirror alone","2q13_NPHP1",2.64098856676899
+"Mirror alone","2q21.1",1.66811067115233
+"Mirror alone","3q29",-1.97821525528849
+"Mirror alone","7q11.23_WBS",0.424430702153369
+"Mirror + continuous directional shift","10q11.21_11.23",0.524193754987522
+"Mirror + continuous directional shift","13q12.12",1.03417658128892
+"Mirror + continuous directional shift","15q11.2_BP1_BP2",1.97951188776421
+"Mirror + continuous directional shift","15q13.1-13.2_BP3_BP4",1.20673105199874
+"Mirror + continuous directional shift","15q13.3_BP4-BP5",0.920883305223275
+"Mirror + continuous directional shift","15q13.3_CHRNA7",1.10534480189198
+"Mirror + continuous directional shift","16p11.2_BP1-BP3",-1.40763329877897
+"Mirror + continuous directional shift","16p11.2_BP2_BP3",-2.84082251124877
+"Mirror + continuous directional shift","16p11.2_BP4_BP5",-1.00057688662568
+"Mirror + continuous directional shift","16p12.2_BP1_BP2",1.57861940257037
+"Mirror + continuous directional shift","16p12.2_BP2_BP3",1.18523614648648
+"Mirror + continuous directional shift","16p13.11_BP1_BP2",1.48772677746361
+"Mirror + continuous directional shift","16p13.11_BP1-BP3",0.0621671370325123
+"Mirror + continuous directional shift","16p13.11_BP2_BP3",-0.35097922091308
+"Mirror + continuous directional shift","17p12",0.790946641586656
+"Mirror + continuous directional shift","17q12",-1.21573802501027
+"Mirror + continuous directional shift","1q21.1",1.5662739208621
+"Mirror + continuous directional shift","1q21.1_TAR_BP1_BP2",2.50689229805679
+"Mirror + continuous directional shift","1q21.1_TAR_BP1-BP3",1.0274448800664
+"Mirror + continuous directional shift","1q21.1_TAR_BP2_BP3",0.318666717099896
+"Mirror + continuous directional shift","22q11.21_A_B",0.627570768840791
+"Mirror + continuous directional shift","22q11.21_B_C",-0.280328359698096
+"Mirror + continuous directional shift","22q11.21_B-D",-0.412265103043315
+"Mirror + continuous directional shift","22q11.21_C_D",0.875650999283525
+"Mirror + continuous directional shift","22q11.21_E_F",0.69020061762357
+"Mirror + continuous directional shift","22q11.21_G_H",0.5203927367773
+"Mirror + continuous directional shift","2q11.2",-0.0653109180436517
+"Mirror + continuous directional shift","2q13",-1.6887892719822
+"Mirror + continuous directional shift","2q13_NPHP1",2.62773475072136
+"Mirror + continuous directional shift","2q21.1",1.53462352380101
+"Mirror + continuous directional shift","3q29",-1.4698565757333
+"Mirror + continuous directional shift","7q11.23_WBS",0.526232509041882
+"Mirror + sparse single hit","10q11.21_11.23",0.582115191750114
+"Mirror + sparse single hit","13q12.12",1.00179284866259
+"Mirror + sparse single hit","15q11.2_BP1_BP2",1.97997293571744
+"Mirror + sparse single hit","15q13.1-13.2_BP3_BP4",1.14517754471846
+"Mirror + sparse single hit","15q13.3_BP4-BP5",0.902595634787634
+"Mirror + sparse single hit","15q13.3_CHRNA7",1.07517875117652
+"Mirror + sparse single hit","16p11.2_BP1-BP3",-1.32125309996961
+"Mirror + sparse single hit","16p11.2_BP2_BP3",-2.87987619480946
+"Mirror + sparse single hit","16p11.2_BP4_BP5",-1.09863895802314
+"Mirror + sparse single hit","16p12.2_BP1_BP2",1.51516441296886
+"Mirror + sparse single hit","16p12.2_BP2_BP3",1.15212088423247
+"Mirror + sparse single hit","16p13.11_BP1_BP2",1.39147123379455
+"Mirror + sparse single hit","16p13.11_BP1-BP3",0.551823754438626
+"Mirror + sparse single hit","16p13.11_BP2_BP3",-0.358770882588899
+"Mirror + sparse single hit","17p12",0.821917354266352
+"Mirror + sparse single hit","17q12",-1.32837482749156
+"Mirror + sparse single hit","1q21.1",1.49655283865419
+"Mirror + sparse single hit","1q21.1_TAR_BP1_BP2",2.46190009428459
+"Mirror + sparse single hit","1q21.1_TAR_BP1-BP3",1.02794236962552
+"Mirror + sparse single hit","1q21.1_TAR_BP2_BP3",0.295972740246095
+"Mirror + sparse single hit","22q11.21_A_B",0.406391863669945
+"Mirror + sparse single hit","22q11.21_B_C",-0.304832570121013
+"Mirror + sparse single hit","22q11.21_B-D",-0.722573733852088
+"Mirror + sparse single hit","22q11.21_C_D",0.82886670715635
+"Mirror + sparse single hit","22q11.21_E_F",0.65192559340268
+"Mirror + sparse single hit","22q11.21_G_H",0.499969082255642
+"Mirror + sparse single hit","2q11.2",-0.0290513121397198
+"Mirror + sparse single hit","2q13",-1.72880680162674
+"Mirror + sparse single hit","2q13_NPHP1",2.57722048291973
+"Mirror + sparse single hit","2q21.1",1.45657214457597
+"Mirror + sparse single hit","3q29",-1.63191429228773
+"Mirror + sparse single hit","7q11.23_WBS",0.508173576392976

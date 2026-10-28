@@ -1,0 +1,3 @@
+"variable","asymmetric_mean","mirror_mean","asymmetric_median","mirror_median","Welch_p","Mann_Whitney_p"
+"CNV_length_Mb",1.0626275,0.649501476190476,1.1833525,0.449369,0.00618803888107092,0.00744968956602876
+"Gene_count",31,22,29.5,19,0.0190651887861429,0.0492896263664935

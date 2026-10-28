@@ -1,0 +1,17 @@
+Gene,Optimal_mask,Beta_BMI_SD,CI_low,CI_high,P_value,AAF,Strict_pLoF_only,Direction
+UHMK1,pLoF + missense 5/5,-0.06,-0.09,-0.04,4.9e-08,0.0048,False,LoF/burden decreases BMI
+GPR75,pLoF,-0.34,-0.46,-0.22,2.6e-08,0.0002,True,LoF/burden decreases BMI
+ROBO1,pLoF,0.24,0.15,0.32,5.6e-08,0.0003,True,LoF/burden increases BMI
+KIAA1109,pLoF,0.13,0.09,0.18,5.1e-08,0.0011,True,LoF/burden increases BMI
+PCSK1,pLoF,0.33,0.21,0.44,1e-08,0.0002,True,LoF/burden increases BMI
+GPR151,pLoF + missense 5/5,-0.05,-0.06,-0.03,5.7e-09,0.0097,False,LoF/burden decreases BMI
+SPARC,pLoF + missense 1/5,0.05,0.03,0.06,1.2e-10,0.0113,False,LoF/burden increases BMI
+UBR2,pLoF,0.34,0.23,0.45,2.4e-09,0.0002,True,LoF/burden increases BMI
+CALCR,pLoF + missense 1/5,0.09,0.06,0.11,1.4e-13,0.0048,False,LoF/burden increases BMI
+PDE3B,pLoF,0.12,0.08,0.17,1.7e-07,0.0012,True,LoF/burden increases BMI
+ANO4,pLoF,0.29,0.19,0.38,1.1e-09,0.0003,True,LoF/burden increases BMI
+KIAA0586,pLoF + missense 5/5,-0.04,-0.05,-0.02,3.1e-07,0.0115,False,LoF/burden decreases BMI
+MC4R,pLoF + missense 5/5,0.3,0.26,0.34,4e-48,0.0016,False,LoF/burden increases BMI
+DPP9,pLoF + missense 5/5,-0.06,-0.08,-0.04,2e-08,0.0058,False,LoF/burden decreases BMI
+ANKRD27,pLoF + missense 1/5,0.04,0.02,0.05,5.9e-09,0.0171,False,LoF/burden increases BMI
+GIPR,pLoF + missense 1/5,-0.09,-0.11,-0.07,9.3e-19,0.0069,False,LoF/burden decreases BMI

@@ -1,0 +1,89 @@
+---
+title: "Corrected directional CNV models for height and BMI"
+author: "Reproducible R workflow"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+  word_document:
+    toc: true
+  pdf_document:
+    toc: true
+params:
+  project_dir: "."
+fontsize: 10pt
+geometry: margin=0.65in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, fig.align="center")
+root <- normalizePath(params$project_dir, mustWork=FALSE)
+readx <- function(...) read.csv(file.path(root, ...), check.names=FALSE)
+hmod <- readx("R_outputs","height","height_single_locus_model_comparison.csv")
+bmod <- readx("R_outputs","bmi","bmi_single_locus_model_comparison.csv")
+hbur <- readx("R_outputs","height","height_burden_predictions.csv")
+bbur <- readx("R_outputs","bmi","bmi_burden_predictions.csv")
+hpar <- readx("R_outputs","height","height_mirror_parameters.csv")
+bpar <- readx("R_outputs","bmi","bmi_mirror_parameters.csv")
+```
+
+# Overview
+
+This report compares the same three models for each trait: **mirror alone**, **mirror plus continuous directional asymmetry**, and **mirror plus a sparse single hit**. Height asymmetry is constrained toward the lower-left of the deletion-versus-duplication plot, whereas BMI asymmetry is constrained toward the upper-right. Fits to the Sacks et al. recurrent CNVs are presented separately from propagation to the Macé et al. genome-wide burden coefficients.
+
+# Height: Sacks single-locus results
+
+The height mirror component estimated a contributor frequency of `r sprintf('%.1f%%',100*hpar$p)` and mean absolute contributor effect of `r sprintf('%.3f SD',hpar$m)`. The duplication-to-deletion magnitude ratio was `r sprintf('%.2f',hpar$rho)`. These parameters lie on a broad frequency-effect ridge; the robust conclusion is that multiple modest gene effects aggregate within a CNV and that duplication effects are weaker than deletion effects.
+
+```{r}
+knitr::kable(hmod, digits=3)
+```
+
+```{r, out.width="100%"}
+knitr::include_graphics(file.path(root,"height","figures","Figure_2_height_single_locus_comparison.png"))
+```
+
+The sparse single-hit model is most parsimonious for height because it provides the best conditional AIC/BIC and predictive score, and the same hit frequency explains the discrete asymmetric fraction and the greater gene count and length of asymmetric CNVs. The continuous model remains plausible but predicts a progressively graded relationship with gene content that is not observed within either class.
+
+# Height: Macé/Auwerx burden results
+
+```{r}
+knitr::kable(hbur, digits=4)
+```
+
+```{r, out.width="95%"}
+knitr::include_graphics(file.path(root,"height","figures","Figure_3_height_burden_comparison.png"))
+```
+
+Mirror alone predicts deletion burden to reduce height but duplication burden to increase height. Both lower-left asymmetry models reverse the duplication direction while preserving a negative deletion effect. Burden data therefore reject mirror alone but do not distinguish continuous from sparse asymmetry; the single-hit conclusion comes from combining burden and single-locus evidence.
+
+# BMI: Sacks single-locus results
+
+The BMI mirror component estimated a contributor frequency of `r sprintf('%.1f%%',100*bpar$p)` and an effective mean absolute effect of `r sprintf('%.3f SD',bpar$m)`, with duplication effects `r sprintf('%.2f',bpar$rho)` times the deletion magnitude. Frequency and magnitude are weakly identifiable; the robust feature is a reciprocal relationship with a systematic upper-right displacement.
+
+```{r}
+knitr::kable(bmod, digits=3)
+```
+
+```{r, out.width="100%"}
+knitr::include_graphics(file.path(root,"bmi","figures","Figure_2_BMI_single_locus_comparison.png"))
+```
+
+Both DEL-side and DUP-side buffering are represented by the corrected upper-right parameterization. The continuous model has the best conditional AIC and leave-one-locus-out prediction, while the BMI loci form one continuous cloud rather than two separated curves. The sparse model is compatible with particular loci but does not identify a stable event frequency or a distinct asymmetric class.
+
+# BMI: Macé/Auwerx burden results
+
+```{r}
+knitr::kable(bbur, digits=4)
+```
+
+```{r, out.width="95%"}
+knitr::include_graphics(file.path(root,"bmi","figures","Figure_3_BMI_burden_comparison.png"))
+```
+
+Mirror alone predicts that duplication burden should reduce BMI. Both corrected upper-right models shift the predicted duplication burden toward zero or positive values. Because both models make this correction, the burden analysis does not support a distinct sparse BMI class.
+
+# Synthesis
+
+For height, the sparse single-hit model is the most parsimonious across scales: it fits the recurrent loci, explains the approximately 30% asymmetric group and its size enrichment, and produces the adverse direction of both deletion and duplication burden. For BMI, the most parsimonious description is a continuously shifted obesity-directed mirror model: the reciprocal trend is strong, buffering occurs on both copy-state axes in the upper-right direction, and there is no compelling evidence for two discrete classes.

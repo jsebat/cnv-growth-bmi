@@ -1,0 +1,13 @@
+Gene,Sign,Evidence,Direction
+GPR75,-1,Strict pLoF-only exome-wide discovery mask,decreases BMI
+ROBO1,1,Strict pLoF-only exome-wide discovery mask,increases BMI
+KIAA1109,1,Strict pLoF-only exome-wide discovery mask,increases BMI
+PCSK1,1,Strict pLoF-only exome-wide discovery mask,increases BMI
+UBR2,1,Strict pLoF-only exome-wide discovery mask,increases BMI
+PDE3B,1,Strict pLoF-only exome-wide discovery mask,increases BMI
+ANO4,1,Strict pLoF-only exome-wide discovery mask,increases BMI
+CALCR,1,Akbari pLoF-only follow-up: higher BMI,increases BMI
+GIPR,-1,Akbari pLoF-only follow-up: lower BMI,decreases BMI
+MC4R,1,Akbari pLoF-specific/known obesity gene: higher BMI,increases BMI
+LEP,1,Akbari pLoF-specific known-gene test: higher BMI,increases BMI
+POMC,1,Akbari pLoF-specific known-gene test: higher BMI,increases BMI

@@ -1,0 +1,97 @@
+model,held_out_locus,held_out_log_predictive_density
+Mirror alone,10q11.21_11.23,0.8498325162149424
+Mirror alone,13q12.12,1.4448609486443318
+Mirror alone,15q11.2_BP1_BP2,1.8595083710369718
+Mirror alone,15q13.1-13.2_BP3_BP4,1.246129950557831
+Mirror alone,15q13.3_BP4-BP5,0.3598925734271847
+Mirror alone,15q13.3_CHRNA7,1.0374825134110734
+Mirror alone,16p11.2_BP1-BP3,-1.1345420969940523
+Mirror alone,16p11.2_BP2_BP3,-1.7832984064353328
+Mirror alone,16p11.2_BP4_BP5,-1.5939470672842044
+Mirror alone,16p12.2_BP1_BP2,1.5156546236473567
+Mirror alone,16p12.2_BP2_BP3,0.8161594171783297
+Mirror alone,16p13.11_BP1_BP2,1.4723882977626792
+Mirror alone,16p13.11_BP1-BP3,0.7170525871552649
+Mirror alone,16p13.11_BP2_BP3,-0.42291412123078753
+Mirror alone,17p12,1.2642921848666508
+Mirror alone,17q12,-1.932286698761585
+Mirror alone,1q21.1,1.4231176571670523
+Mirror alone,1q21.1_TAR_BP1_BP2,2.500885625840464
+Mirror alone,1q21.1_TAR_BP1-BP3,0.43592695778440493
+Mirror alone,1q21.1_TAR_BP2_BP3,0.2064400050678285
+Mirror alone,22q11.21_A_B,-0.07737422790633974
+Mirror alone,22q11.21_B_C,-0.3228000874434882
+Mirror alone,22q11.21_B-D,-1.6431510366632711
+Mirror alone,22q11.21_C_D,1.0291771110711987
+Mirror alone,22q11.21_E_F,0.4934247863927297
+Mirror alone,22q11.21_G_H,0.5427385140184563
+Mirror alone,2q11.2,0.2725047743549992
+Mirror alone,2q13,-1.4972715302982254
+Mirror alone,2q13_NPHP1,2.6409886153537
+Mirror alone,2q21.1,1.668110728466348
+Mirror alone,3q29,-1.9782142141512047
+Mirror alone,7q11.23_WBS,0.4244305612871867
+Mirror + continuous directional shift,10q11.21_11.23,0.5241939016042645
+Mirror + continuous directional shift,13q12.12,1.0341763548042802
+Mirror + continuous directional shift,15q11.2_BP1_BP2,1.9795113493133996
+Mirror + continuous directional shift,15q13.1-13.2_BP3_BP4,1.2067298835584406
+Mirror + continuous directional shift,15q13.3_BP4-BP5,0.9208787637275346
+Mirror + continuous directional shift,15q13.3_CHRNA7,1.1053493748134995
+Mirror + continuous directional shift,16p11.2_BP1-BP3,-1.407477111249795
+Mirror + continuous directional shift,16p11.2_BP2_BP3,-2.8406600201465944
+Mirror + continuous directional shift,16p11.2_BP4_BP5,-1.000318555100772
+Mirror + continuous directional shift,16p12.2_BP1_BP2,1.5786183871486452
+Mirror + continuous directional shift,16p12.2_BP2_BP3,1.1852312000169598
+Mirror + continuous directional shift,16p13.11_BP1_BP2,1.4877268506798726
+Mirror + continuous directional shift,16p13.11_BP1-BP3,0.062168297888622215
+Mirror + continuous directional shift,16p13.11_BP2_BP3,-0.3509792811323329
+Mirror + continuous directional shift,17p12,0.7909471559022145
+Mirror + continuous directional shift,17q12,-1.215733910573408
+Mirror + continuous directional shift,1q21.1,1.5662737302421559
+Mirror + continuous directional shift,1q21.1_TAR_BP1_BP2,2.5068925583583392
+Mirror + continuous directional shift,1q21.1_TAR_BP1-BP3,1.0274470492634267
+Mirror + continuous directional shift,1q21.1_TAR_BP2_BP3,0.3186666432449996
+Mirror + continuous directional shift,22q11.21_A_B,0.6275703322546831
+Mirror + continuous directional shift,22q11.21_B_C,-0.28032785471816246
+Mirror + continuous directional shift,22q11.21_B-D,-0.41225972047342485
+Mirror + continuous directional shift,22q11.21_C_D,0.8756507299894596
+Mirror + continuous directional shift,22q11.21_E_F,0.6901975436813796
+Mirror + continuous directional shift,22q11.21_G_H,0.5203927444498277
+Mirror + continuous directional shift,2q11.2,-0.06531474270323911
+Mirror + continuous directional shift,2q13,-1.6887887148247724
+Mirror + continuous directional shift,2q13_NPHP1,2.6277347262815227
+Mirror + continuous directional shift,2q21.1,1.534622807946295
+Mirror + continuous directional shift,3q29,-1.4698580093044111
+Mirror + continuous directional shift,7q11.23_WBS,0.5262325075194344
+Mirror + sparse single hit,10q11.21_11.23,0.5821166713802953
+Mirror + sparse single hit,13q12.12,1.0017931164634606
+Mirror + sparse single hit,15q11.2_BP1_BP2,1.9799765484315919
+Mirror + sparse single hit,15q13.1-13.2_BP3_BP4,1.1451769462486698
+Mirror + sparse single hit,15q13.3_BP4-BP5,0.9025955322278016
+Mirror + sparse single hit,15q13.3_CHRNA7,1.0751798279451454
+Mirror + sparse single hit,16p11.2_BP1-BP3,-1.3211455349521253
+Mirror + sparse single hit,16p11.2_BP2_BP3,-2.8798714964285392
+Mirror + sparse single hit,16p11.2_BP4_BP5,-1.098444318402961
+Mirror + sparse single hit,16p12.2_BP1_BP2,1.5151636995381195
+Mirror + sparse single hit,16p12.2_BP2_BP3,1.1521149433888902
+Mirror + sparse single hit,16p13.11_BP1_BP2,1.3914720032497496
+Mirror + sparse single hit,16p13.11_BP1-BP3,0.5518225398979484
+Mirror + sparse single hit,16p13.11_BP2_BP3,-0.3587695455351313
+Mirror + sparse single hit,17p12,0.8219161349783557
+Mirror + sparse single hit,17q12,-1.3283729534312136
+Mirror + sparse single hit,1q21.1,1.496552831099594
+Mirror + sparse single hit,1q21.1_TAR_BP1_BP2,2.4618999969035387
+Mirror + sparse single hit,1q21.1_TAR_BP1-BP3,1.0279463190220366
+Mirror + sparse single hit,1q21.1_TAR_BP2_BP3,0.2959726503825715
+Mirror + sparse single hit,22q11.21_A_B,0.40639991281943383
+Mirror + sparse single hit,22q11.21_B_C,-0.30483306310535874
+Mirror + sparse single hit,22q11.21_B-D,-0.7225779642410346
+Mirror + sparse single hit,22q11.21_C_D,0.8288642029502407
+Mirror + sparse single hit,22q11.21_E_F,0.651932368355089
+Mirror + sparse single hit,22q11.21_G_H,0.49996875530050294
+Mirror + sparse single hit,2q11.2,-0.029050804412171227
+Mirror + sparse single hit,2q13,-1.7288023065241362
+Mirror + sparse single hit,2q13_NPHP1,2.577220490874716
+Mirror + sparse single hit,2q21.1,1.4565720582589559
+Mirror + sparse single hit,3q29,-1.6319161609000172
+Mirror + sparse single hit,7q11.23_WBS,0.5081734964992292

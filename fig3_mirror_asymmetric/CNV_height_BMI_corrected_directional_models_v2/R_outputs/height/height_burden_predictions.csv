@@ -1,0 +1,4 @@
+"model","DEL_effect_per_affected_gene_SD","DUP_effect_per_affected_gene_SD","DEL_effect_per_affected_gene_native","DUP_effect_per_affected_gene_native","Mace_DEL_target_per_Mb","Mace_units","effective_dosage_genes_per_Mb_to_match_DEL","predicted_DUP_effect_per_Mb_at_matched_density"
+"Mirror alone",-0.0111394606559208,0.00391151026100973,-0.089004290640807,0.0312529669854678,-0.41,"cm/Mb",4.606519495275,0.143967401703743
+"Mirror + continuous",-0.0115365472430795,-0.000627210198938888,-0.0921770124722049,-0.00501140948952171,-0.41,"cm/Mb",4.44796364086579,-0.0222905671988824
+"Mirror + single hit",-0.0115265035991296,-0.000512410823281464,-0.0920967637570457,-0.00409416247801889,-0.41,"cm/Mb",4.45183938364646,-0.0182265537626921

@@ -1,0 +1,241 @@
+model,held_out_locus,held_out_log_predictive_density
+Mirror alone,10q11.21_11.23,-3.8091523020952547
+Mirror alone,15q13.1-13.2_BP3_BP4,-1.0524154859373311
+Mirror alone,15q13.3_BP4-BP5,-4.953273466982468
+Mirror alone,16p11.2_BP2_BP3,-6.991845403126309
+Mirror alone,17p12,-9.766369728919521
+Mirror alone,17q12,-3.6203862893352374
+Mirror alone,22q11.21_A_B,-6.045334482006801
+Mirror alone,2q11.2,-2.6468346607103257
+Mirror alone,2q13,-0.5376286621622144
+Mirror alone,7q11.23_WBS,-1.3215729803676597
+Mirror alone,7q11.23_distal,-2.439090077140616
+Mirror alone,13q12.12,-0.07709223227838935
+Mirror alone,15q11.2_BP1_BP2,1.1182022965010947
+Mirror alone,16p11.2_BP4_BP5,1.5271448361180524
+Mirror alone,16p12.2_BP1_BP2,2.7501836055143207
+Mirror alone,16p12.2_BP2_BP3,1.9268599565970392
+Mirror alone,16p13.11_BP1_BP2,1.138939987353208
+Mirror alone,1q21.1,-0.1540708820526544
+Mirror alone,1q21.1_TAR_BP1-BP3,2.0040229761677764
+Mirror alone,22q11.21_B-D,1.4202527184769125
+Mirror alone,22q11.21_C_D,0.5858726276071842
+Mirror alone,2q13_NPHP1,3.1286959846010025
+Mirror alone,2q21.1,-0.5732052557590852
+Mirror alone,3q29,0.22274060516191455
+"Mirror + continuous shift, constrained angle",10q11.21_11.23,-1.2550048757686971
+"Mirror + continuous shift, constrained angle",15q13.1-13.2_BP3_BP4,0.9543941704147567
+"Mirror + continuous shift, constrained angle",15q13.3_BP4-BP5,-0.24006172532396652
+"Mirror + continuous shift, constrained angle",16p11.2_BP2_BP3,-0.10693672932524567
+"Mirror + continuous shift, constrained angle",17p12,-0.8570121727826607
+"Mirror + continuous shift, constrained angle",17q12,0.36992444097408506
+"Mirror + continuous shift, constrained angle",22q11.21_A_B,0.1518812873703746
+"Mirror + continuous shift, constrained angle",2q11.2,-1.5684138919064852
+"Mirror + continuous shift, constrained angle",2q13,0.008912333568551922
+"Mirror + continuous shift, constrained angle",7q11.23_WBS,-0.29271190862594443
+"Mirror + continuous shift, constrained angle",7q11.23_distal,-0.8830783912135749
+"Mirror + continuous shift, constrained angle",13q12.12,0.1334714666368444
+"Mirror + continuous shift, constrained angle",15q11.2_BP1_BP2,1.8289247623024099
+"Mirror + continuous shift, constrained angle",16p11.2_BP4_BP5,-0.7669159057437549
+"Mirror + continuous shift, constrained angle",16p12.2_BP1_BP2,2.2795592693193454
+"Mirror + continuous shift, constrained angle",16p12.2_BP2_BP3,1.629283260180931
+"Mirror + continuous shift, constrained angle",16p13.11_BP1_BP2,1.0202740005913835
+"Mirror + continuous shift, constrained angle",1q21.1,-1.3589773867992885
+"Mirror + continuous shift, constrained angle",1q21.1_TAR_BP1-BP3,0.7352892272236056
+"Mirror + continuous shift, constrained angle",22q11.21_B-D,0.26244084639989806
+"Mirror + continuous shift, constrained angle",22q11.21_C_D,-0.6181170690812472
+"Mirror + continuous shift, constrained angle",2q13_NPHP1,2.8539789720473387
+"Mirror + continuous shift, constrained angle",2q21.1,0.43389730300028395
+"Mirror + continuous shift, constrained angle",3q29,-0.6577526187478504
+"Mirror + single hit, constrained angle",10q11.21_11.23,-1.1567959851851752
+"Mirror + single hit, constrained angle",15q13.1-13.2_BP3_BP4,0.748497744027797
+"Mirror + single hit, constrained angle",15q13.3_BP4-BP5,-0.6661870976914651
+"Mirror + single hit, constrained angle",16p11.2_BP2_BP3,0.6824649553994225
+"Mirror + single hit, constrained angle",17p12,-0.33792445521662356
+"Mirror + single hit, constrained angle",17q12,0.5093736505973732
+"Mirror + single hit, constrained angle",22q11.21_A_B,-0.34130722301928423
+"Mirror + single hit, constrained angle",2q11.2,-1.601370335603519
+"Mirror + single hit, constrained angle",2q13,0.1556098332411472
+"Mirror + single hit, constrained angle",7q11.23_WBS,-0.3187580970791375
+"Mirror + single hit, constrained angle",7q11.23_distal,-0.8081259921744742
+"Mirror + single hit, constrained angle",13q12.12,-0.6681286025614834
+"Mirror + single hit, constrained angle",15q11.2_BP1_BP2,0.9907192167621691
+"Mirror + single hit, constrained angle",16p11.2_BP4_BP5,0.11914473266491793
+"Mirror + single hit, constrained angle",16p12.2_BP1_BP2,2.5651538443920816
+"Mirror + single hit, constrained angle",16p12.2_BP2_BP3,1.4372490298016745
+"Mirror + single hit, constrained angle",16p13.11_BP1_BP2,0.5888831542363897
+"Mirror + single hit, constrained angle",1q21.1,-0.9205522240407374
+"Mirror + single hit, constrained angle",1q21.1_TAR_BP1-BP3,1.3904962401332586
+"Mirror + single hit, constrained angle",22q11.21_B-D,0.19544142053478444
+"Mirror + single hit, constrained angle",22q11.21_C_D,-0.057903972674974005
+"Mirror + single hit, constrained angle",2q13_NPHP1,3.024050689661303
+"Mirror + single hit, constrained angle",2q21.1,-0.44685358639198136
+"Mirror + single hit, constrained angle",3q29,-0.3858224447597933
+"Mirror + continuous shift, axis-aligned",10q11.21_11.23,-1.1238637985715458
+"Mirror + continuous shift, axis-aligned",15q13.1-13.2_BP3_BP4,0.9519302157048062
+"Mirror + continuous shift, axis-aligned",15q13.3_BP4-BP5,-0.12724066783842258
+"Mirror + continuous shift, axis-aligned",16p11.2_BP2_BP3,-0.010342344308008844
+"Mirror + continuous shift, axis-aligned",17p12,-0.7169016023914851
+"Mirror + continuous shift, axis-aligned",17q12,0.42156971248559244
+"Mirror + continuous shift, axis-aligned",22q11.21_A_B,0.17985905962543097
+"Mirror + continuous shift, axis-aligned",2q11.2,-1.4481558742741587
+"Mirror + continuous shift, axis-aligned",2q13,0.008222682489101185
+"Mirror + continuous shift, axis-aligned",7q11.23_WBS,-0.3543871983354676
+"Mirror + continuous shift, axis-aligned",7q11.23_distal,-0.810708222748981
+"Mirror + continuous shift, axis-aligned",13q12.12,0.17815184528093853
+"Mirror + continuous shift, axis-aligned",15q11.2_BP1_BP2,1.7871738931314842
+"Mirror + continuous shift, axis-aligned",16p11.2_BP4_BP5,-0.7762803222678791
+"Mirror + continuous shift, axis-aligned",16p12.2_BP1_BP2,2.2770308250592977
+"Mirror + continuous shift, axis-aligned",16p12.2_BP2_BP3,1.622737585667265
+"Mirror + continuous shift, axis-aligned",16p13.11_BP1_BP2,1.040629884259059
+"Mirror + continuous shift, axis-aligned",1q21.1,-1.3947043286660397
+"Mirror + continuous shift, axis-aligned",1q21.1_TAR_BP1-BP3,0.7315379006373809
+"Mirror + continuous shift, axis-aligned",22q11.21_B-D,0.25328627544594595
+"Mirror + continuous shift, axis-aligned",22q11.21_C_D,-0.6113034725504791
+"Mirror + continuous shift, axis-aligned",2q13_NPHP1,2.853282005020138
+"Mirror + continuous shift, axis-aligned",2q21.1,0.5043818036632899
+"Mirror + continuous shift, axis-aligned",3q29,-0.6755527004467179
+"Mirror + single hit, axis-aligned",10q11.21_11.23,-1.0759325469693148
+"Mirror + single hit, axis-aligned",15q13.1-13.2_BP3_BP4,0.8614569294417932
+"Mirror + single hit, axis-aligned",15q13.3_BP4-BP5,-0.3973116450407789
+"Mirror + single hit, axis-aligned",16p11.2_BP2_BP3,0.8666411138355572
+"Mirror + single hit, axis-aligned",17p12,-0.21071441337832691
+"Mirror + single hit, axis-aligned",17q12,0.45882825912864955
+"Mirror + single hit, axis-aligned",22q11.21_A_B,-0.6408125727067986
+"Mirror + single hit, axis-aligned",2q11.2,-1.4814301920064763
+"Mirror + single hit, axis-aligned",2q13,0.277147744956309
+"Mirror + single hit, axis-aligned",7q11.23_WBS,-0.38716728401767897
+"Mirror + single hit, axis-aligned",7q11.23_distal,-0.7097190444527136
+"Mirror + single hit, axis-aligned",13q12.12,-0.7587148679726272
+"Mirror + single hit, axis-aligned",15q11.2_BP1_BP2,1.0278361789450816
+"Mirror + single hit, axis-aligned",16p11.2_BP4_BP5,0.3514671834209665
+"Mirror + single hit, axis-aligned",16p12.2_BP1_BP2,2.334768987071537
+"Mirror + single hit, axis-aligned",16p12.2_BP2_BP3,1.3617010413467572
+"Mirror + single hit, axis-aligned",16p13.11_BP1_BP2,0.4752629045767487
+"Mirror + single hit, axis-aligned",1q21.1,-0.8487357190595786
+"Mirror + single hit, axis-aligned",1q21.1_TAR_BP1-BP3,1.038858951195943
+"Mirror + single hit, axis-aligned",22q11.21_B-D,0.41225030515543665
+"Mirror + single hit, axis-aligned",22q11.21_C_D,-0.4649143823002731
+"Mirror + single hit, axis-aligned",2q13_NPHP1,2.9045991380330425
+"Mirror + single hit, axis-aligned",2q21.1,-0.3787979349647763
+"Mirror + single hit, axis-aligned",3q29,-0.26568834066340186
+"Mirror + continuous shift, free angle",10q11.21_11.23,-0.18185861517623247
+"Mirror + continuous shift, free angle",15q13.1-13.2_BP3_BP4,0.5154671306068533
+"Mirror + continuous shift, free angle",15q13.3_BP4-BP5,0.6925280639356485
+"Mirror + continuous shift, free angle",16p11.2_BP2_BP3,0.2805224431509945
+"Mirror + continuous shift, free angle",17p12,-0.06400944478701454
+"Mirror + continuous shift, free angle",17q12,0.7837208417254707
+"Mirror + continuous shift, free angle",22q11.21_A_B,-0.10898055432902842
+"Mirror + continuous shift, free angle",2q11.2,-0.42412892574305294
+"Mirror + continuous shift, free angle",2q13,-0.2491198999193338
+"Mirror + continuous shift, free angle",7q11.23_WBS,-1.1371905621409213
+"Mirror + continuous shift, free angle",7q11.23_distal,-0.29043905506840406
+"Mirror + continuous shift, free angle",13q12.12,0.6881748238227238
+"Mirror + continuous shift, free angle",15q11.2_BP1_BP2,1.17050765488484
+"Mirror + continuous shift, free angle",16p11.2_BP4_BP5,-0.7523839288324423
+"Mirror + continuous shift, free angle",16p12.2_BP1_BP2,2.2707321426550298
+"Mirror + continuous shift, free angle",16p12.2_BP2_BP3,1.5819829801463452
+"Mirror + continuous shift, free angle",16p13.11_BP1_BP2,1.316371728127102
+"Mirror + continuous shift, free angle",1q21.1,-1.5841033825333204
+"Mirror + continuous shift, free angle",1q21.1_TAR_BP1-BP3,0.7599972675749537
+"Mirror + continuous shift, free angle",22q11.21_B-D,0.2722548784855281
+"Mirror + continuous shift, free angle",22q11.21_C_D,-0.5469701551436794
+"Mirror + continuous shift, free angle",2q13_NPHP1,2.835157301274599
+"Mirror + continuous shift, free angle",2q21.1,1.076698457536537
+"Mirror + continuous shift, free angle",3q29,-0.8787591210386265
+"Mirror + single hit, free angle (buffering)",10q11.21_11.23,-0.15613225858535001
+"Mirror + single hit, free angle (buffering)",15q13.1-13.2_BP3_BP4,-0.10946598061969437
+"Mirror + single hit, free angle (buffering)",15q13.3_BP4-BP5,0.692202802426181
+"Mirror + single hit, free angle (buffering)",16p11.2_BP2_BP3,1.0295126165803463
+"Mirror + single hit, free angle (buffering)",17p12,0.13342110768882126
+"Mirror + single hit, free angle (buffering)",17q12,1.0211581099713123
+"Mirror + single hit, free angle (buffering)",22q11.21_A_B,-0.4274167827895807
+"Mirror + single hit, free angle (buffering)",2q11.2,-0.3884036498614324
+"Mirror + single hit, free angle (buffering)",2q13,-0.47790271744773055
+"Mirror + single hit, free angle (buffering)",7q11.23_WBS,-1.2456261732469258
+"Mirror + single hit, free angle (buffering)",7q11.23_distal,-0.19898528505784852
+"Mirror + single hit, free angle (buffering)",13q12.12,-0.46873234954521803
+"Mirror + single hit, free angle (buffering)",15q11.2_BP1_BP2,0.9859473932928208
+"Mirror + single hit, free angle (buffering)",16p11.2_BP4_BP5,0.07980529282146726
+"Mirror + single hit, free angle (buffering)",16p12.2_BP1_BP2,2.5634975167812133
+"Mirror + single hit, free angle (buffering)",16p12.2_BP2_BP3,1.4320866725722698
+"Mirror + single hit, free angle (buffering)",16p13.11_BP1_BP2,0.594141433751184
+"Mirror + single hit, free angle (buffering)",1q21.1,-0.9345143989466915
+"Mirror + single hit, free angle (buffering)",1q21.1_TAR_BP1-BP3,1.3812031795892363
+"Mirror + single hit, free angle (buffering)",22q11.21_B-D,0.1913829105978596
+"Mirror + single hit, free angle (buffering)",22q11.21_C_D,-0.0679761369767512
+"Mirror + single hit, free angle (buffering)",2q13_NPHP1,3.0232289329551008
+"Mirror + single hit, free angle (buffering)",2q21.1,0.041208468482532346
+"Mirror + single hit, free angle (buffering)",3q29,-0.5391034973746145
+"Mirror + single hit, free angle, saturating occupancy",10q11.21_11.23,-0.2070016001065699
+"Mirror + single hit, free angle, saturating occupancy",15q13.1-13.2_BP3_BP4,-0.045400793464590083
+"Mirror + single hit, free angle, saturating occupancy",15q13.3_BP4-BP5,0.7718833591688464
+"Mirror + single hit, free angle, saturating occupancy",16p11.2_BP2_BP3,1.087827540285224
+"Mirror + single hit, free angle, saturating occupancy",17p12,0.12718955309995358
+"Mirror + single hit, free angle, saturating occupancy",17q12,0.9479527445546958
+"Mirror + single hit, free angle, saturating occupancy",22q11.21_A_B,-0.6584371738057306
+"Mirror + single hit, free angle, saturating occupancy",2q11.2,-0.3961795342343777
+"Mirror + single hit, free angle, saturating occupancy",2q13,-0.47048182856720994
+"Mirror + single hit, free angle, saturating occupancy",7q11.23_WBS,-1.2309372180256728
+"Mirror + single hit, free angle, saturating occupancy",7q11.23_distal,-0.18472834591262077
+"Mirror + single hit, free angle, saturating occupancy",13q12.12,-0.4993758784699928
+"Mirror + single hit, free angle, saturating occupancy",15q11.2_BP1_BP2,0.8952408776928188
+"Mirror + single hit, free angle, saturating occupancy",16p11.2_BP4_BP5,0.09935236478119952
+"Mirror + single hit, free angle, saturating occupancy",16p12.2_BP1_BP2,2.443897832312307
+"Mirror + single hit, free angle, saturating occupancy",16p12.2_BP2_BP3,1.315137050123729
+"Mirror + single hit, free angle, saturating occupancy",16p13.11_BP1_BP2,0.4961750938541099
+"Mirror + single hit, free angle, saturating occupancy",1q21.1,-0.9667449910242605
+"Mirror + single hit, free angle, saturating occupancy",1q21.1_TAR_BP1-BP3,1.2958180523289122
+"Mirror + single hit, free angle, saturating occupancy",22q11.21_B-D,0.27279950411113907
+"Mirror + single hit, free angle, saturating occupancy",22q11.21_C_D,-0.14334239411365574
+"Mirror + single hit, free angle, saturating occupancy",2q13_NPHP1,2.9501699024475503
+"Mirror + single hit, free angle, saturating occupancy",2q21.1,0.09901835302383472
+"Mirror + single hit, free angle, saturating occupancy",3q29,-0.4613701319746738
+"Mirror + single hit, duplication axis only",10q11.21_11.23,-1.0199995572045277
+"Mirror + single hit, duplication axis only",15q13.1-13.2_BP3_BP4,0.7290453211686664
+"Mirror + single hit, duplication axis only",15q13.3_BP4-BP5,-0.5076051750334913
+"Mirror + single hit, duplication axis only",16p11.2_BP2_BP3,0.7792815800649374
+"Mirror + single hit, duplication axis only",17p12,-0.21207830782673537
+"Mirror + single hit, duplication axis only",17q12,0.5719181390263445
+"Mirror + single hit, duplication axis only",22q11.21_A_B,-0.29518424298523827
+"Mirror + single hit, duplication axis only",2q11.2,-1.4590995532246929
+"Mirror + single hit, duplication axis only",2q13,0.14972693468477355
+"Mirror + single hit, duplication axis only",7q11.23_WBS,-0.38474787712741665
+"Mirror + single hit, duplication axis only",7q11.23_distal,-0.726550283997915
+"Mirror + single hit, duplication axis only",13q12.12,-0.6647854988112774
+"Mirror + single hit, duplication axis only",15q11.2_BP1_BP2,0.9888466348548197
+"Mirror + single hit, duplication axis only",16p11.2_BP4_BP5,0.10720468078961616
+"Mirror + single hit, duplication axis only",16p12.2_BP1_BP2,2.563657060950101
+"Mirror + single hit, duplication axis only",16p12.2_BP2_BP3,1.4330994165548097
+"Mirror + single hit, duplication axis only",16p13.11_BP1_BP2,0.5845905553857578
+"Mirror + single hit, duplication axis only",1q21.1,-0.9270079229850432
+"Mirror + single hit, duplication axis only",1q21.1_TAR_BP1-BP3,1.3854650056919648
+"Mirror + single hit, duplication axis only",22q11.21_B-D,0.1830713604306386
+"Mirror + single hit, duplication axis only",22q11.21_C_D,-0.0631910255966526
+"Mirror + single hit, duplication axis only",2q13_NPHP1,3.0232062003693376
+"Mirror + single hit, duplication axis only",2q21.1,-0.39578225589299487
+"Mirror + single hit, duplication axis only",3q29,-0.3998933281435668
+Mirror + aggregate drift (occupancy dropped),10q11.21_11.23,-1.6211393772761613
+Mirror + aggregate drift (occupancy dropped),15q13.1-13.2_BP3_BP4,0.5731510946871723
+Mirror + aggregate drift (occupancy dropped),15q13.3_BP4-BP5,-1.2409798966577212
+Mirror + aggregate drift (occupancy dropped),16p11.2_BP2_BP3,-2.505622548277556
+Mirror + aggregate drift (occupancy dropped),17p12,-3.950528630625439
+Mirror + aggregate drift (occupancy dropped),17q12,0.5927924574370187
+Mirror + aggregate drift (occupancy dropped),22q11.21_A_B,-0.5449253945919847
+Mirror + aggregate drift (occupancy dropped),2q11.2,-1.5121771179915369
+Mirror + aggregate drift (occupancy dropped),2q13,-0.15064835702073465
+Mirror + aggregate drift (occupancy dropped),7q11.23_WBS,-0.16859403210450852
+Mirror + aggregate drift (occupancy dropped),7q11.23_distal,-1.1090647469648245
+Mirror + aggregate drift (occupancy dropped),13q12.12,0.8272676182288718
+Mirror + aggregate drift (occupancy dropped),15q11.2_BP1_BP2,1.6665338408014367
+Mirror + aggregate drift (occupancy dropped),16p11.2_BP4_BP5,-5.577028776325563
+Mirror + aggregate drift (occupancy dropped),16p12.2_BP1_BP2,2.5353114779949255
+Mirror + aggregate drift (occupancy dropped),16p12.2_BP2_BP3,2.168522815838054
+Mirror + aggregate drift (occupancy dropped),16p13.11_BP1_BP2,1.7248212881328975
+Mirror + aggregate drift (occupancy dropped),1q21.1,-1.695865356913485
+Mirror + aggregate drift (occupancy dropped),1q21.1_TAR_BP1-BP3,0.031536180031718875
+Mirror + aggregate drift (occupancy dropped),22q11.21_B-D,-0.17798762537452473
+Mirror + aggregate drift (occupancy dropped),22q11.21_C_D,-2.196774849753096
+Mirror + aggregate drift (occupancy dropped),2q13_NPHP1,3.095148895145668
+Mirror + aggregate drift (occupancy dropped),2q21.1,0.32886701819602027
+Mirror + aggregate drift (occupancy dropped),3q29,-0.5105558326348866
