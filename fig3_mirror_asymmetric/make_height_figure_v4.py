@@ -471,10 +471,11 @@ for k, (lbl, col, rr, pp) in enumerate(ents):
             size=6.9, color=col, weight='bold' if pp < .05 else 'normal')
 ax.text(.03, .99 - 3 * .085, f'separate lines for the two classes: $p$={_fp(tst.loc[[i for i in tst.index if i.startswith("separate")][0]].p_welch)}',
         transform=ax.transAxes, ha='left', va='top', size=6.6, color=GREY)
-# Jon 2026-11-03: with constrained-gene burden (summed GeneBayes s_het) controlled, the concordance holds with Williams included
-# (partial Spearman given burden, circular permutation; concordance/twas_constraint_perm.py -> twas_constraint_perm.csv)
-_cp = pd.read_csv(CONC / 'twas_constraint_perm.csv').query("trait == 'height' and sample == 'all'").iloc[0]
-ax.text(.03, .99 - 4 * .085, f'all incl. Williams, given constrained-gene burden:  partial $\\rho$={_cp.partial_spearman_twas_given_burden:+.2f}  $p$={_fp(_cp.p_circular_one_sided)}',
+# Jon 2026-11-03: rank correlation with Williams included (plain Spearman, circular permutation; concordance/twas_dosage_bmi.py,
+# height rows of twas_dosage_bmi_stats.csv). The rank test is not driven by the Williams outlier; the constrained-burden
+# adjustment matters only in the linear model (Supplementary Note 4).
+_cp = pd.read_csv(CONC / 'twas_dosage_bmi_stats.csv').query("trait == 'height' and group == 'all'").iloc[0]
+ax.text(.03, .99 - 4 * .085, f'all incl. Williams  $\\rho$={_cp.spearman_rho:+.2f}  $p$={_fp(_cp.p_circular_one_sided)}',
         transform=ax.transAxes, ha='left', va='top', size=6.6, color=INK, weight='bold' if _cp.p_circular_one_sided < .05 else 'normal')
 ax.set_ylim(min(-.5, tw.dosage_effect.min() - .08), max(1.62, tw.dosage_effect.max() + .95))
 ax.set_xlabel('Summed TWAS z of genes in the CNV\n(common-variant predicted expression; + = higher expression, taller)')
