@@ -31,3 +31,16 @@ with the deletion. A full rare-variant test needs all-gene burden statistics (Ge
 `twas_dosage_bmi.py`: the Fig. 2E test with BMI (dosage effect on BMI vs summed BMI TWAS z, same non-overlapping CNVs, circular
 permutation; height rerun as a check). BMI is null (rho -0.10, P 0.66, 22 CNVs); Williams is not an outlier for BMI, and
 `twas_dosage_bmi_influence.csv` gives each CNV's robust residual, Cook's distance and leave-one-out rho.
+
+
+## Constrained genes (Supplementary Note 4, Supplementary Table 29D-F)
+
+`twas_constraint.py`: GeneBayes s_het (Zeng et al. 2024; `GeneBayes_shet_Zeng2024.tsv`, mapped to symbols with `hgnc_map.tsv`)
+vs TWAS coverage and signal genome-wide, constrained-gene burden per CNV, and models of the dosage effect on burden and summed TWAS z.
+`twas_constraint_perm.py`: partial Spearman of dosage effect with summed TWAS z given burden, with circular-permutation P, and the
+least-squares joint fit (Williams-Beuren residual with and without burden). Constrained genes have expression models less often
+(25% vs 39%), so CNV effects through them are largely invisible to TWAS; for height, burden adds a positive dosage lean (mostly via
+Williams-Beuren) and the TWAS association is robust to that outlier once burden is in the model; BMI shows neither.
+
+`psychencode_twas/twas_cnv.sbatch`: FUSION TWAS of BMI (Yengo 2018) and height (Yengo 2022) on PsychENCODE cortex weights, run on
+Expanse with the ConGA-GWAS FUSION install (results to follow).
