@@ -15,7 +15,7 @@ cog <- function(ph) c(list(panel_ctl(ph, probands = TRUE, show_title = FALSE)), 
 tr_h <- lapply(GROUPS, function(G) v2[[paste("HEIGHT", G)]] + labs(tag = NULL)); ef_h <- lapply(GROUPS, function(G) v2[[paste("EFF HEIGHT", G)]] + labs(tag = NULL))
 tr_c <- lapply(GROUPS, function(G) v2[[paste("HC", G)]] + labs(tag = NULL));     ef_c <- lapply(GROUPS, function(G) v2[[paste("EFF HC", G)]] + labs(tag = NULL))
 cols <- list(tr_h, ef_h, tr_c, ef_c, cog("SRS"), cog("SCQ"))
-tagsets <- list(LETTERS[1:5], paste0(LETTERS[1:5], "'"), LETTERS[6:10], paste0(LETTERS[6:10], "'"), LETTERS[11:15], LETTERS[16:20])
+tagsets <- list(letters[1:5], paste0(letters[1:5], "'"), letters[6:10], paste0(letters[6:10], "'"), letters[11:15], letters[16:20])   # JS 2026-11-02: lower-case panel letters (referee 3 #14: upper-case clashed with the 22q11.2 A-D breakpoint labels)
 plots <- unlist(lapply(seq_along(cols), function(j) Map(function(p, tg) p + labs(tag = tg), cols[[j]], tagsets[[j]])), recursive = FALSE)
 hdr5 <- function(txt) ggplot() + annotate("text", x = 0.5, y = 0.5, label = txt, size = 9, fontface = "bold") + theme_void() + theme(plot.margin = margin(0, 0, 0, 0))
 W <- c(2, 1.3, 2, 1.3, 1.3, 1.3)   # JS 2026-10-27: SRS/SCQ columns widened (labels were clipped at width 1)
