@@ -59,6 +59,15 @@ Analyses of body mass, growth (height, head circumference) and social-communicat
 - `Molly/`, `aou/`, `ukbb_bodysize/`: side analyses (head-circumference figures, All of Us and UK Biobank anchors, UKBB body size at 10 vs adult).
 - `resources/`: copy of the lab GWAS summary-statistics sheet.
 
+### Extended two-component models (Supplementary Note 5, Supplementary Table 30)
+
+`fig3_mirror_asymmetric/CNV_height_BMI_corrected_directional_models_v2/code/models_grid.py` extends the Fig. 2K-O models in a 2 x 2
+design (along the mirror line / perpendicular; diffuse / sparse hits) with summed TWAS z on the mirror component: 21 architectures per
+trait (`models_twas_burden.py`, `models_mirror_hits.py` hold the step-by-step fits; outputs in `py_outputs/`). Height: mirror + TWAS +
+sparse asymmetric hits is best; no mirror hits. BMI: mirror + continuous upper-right shift with constrained genes, weakly supported.
+Set TWAS_SOURCE=brain to use the PsychENCODE cortex TWAS (`concordance/twas_psychencode.py`, gene tables in
+`concordance/psychencode_twas/`).
+
 ### Pubertal timing and Mendelian randomization (Supplementary Fig. 5, Supplementary Tables 24, 27, 28)
 
 Reviewer request: is body mass causal? `fig_supp5_combined.R` (runs on Expanse) builds Supplementary Fig. 5 from UK Biobank: adult

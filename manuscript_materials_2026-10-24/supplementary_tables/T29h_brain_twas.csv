@@ -1,0 +1,7 @@
+trait,group,n_cnv,spearman_rho,partial_rho_given_burden,p_circular_one_sided,note,p_partial_circular
+BMI_TAN,genome-wide,13910,1.0118531377066857,64.0,0.0019266503594536325,genome-wide: n_cnv = genes with z; spearman_rho = mean |z|; partial = genes |z|>4.5; p = mean z,
+BMI_TAN,all,19,-0.20526315789473687,-0.17915763521439657,0.7245275472452755,,0.7182281771822818
+BMI_TAN,without Williams,18,-0.16821465428276572,-0.1588452463461532,0.6788321167883211,,0.6822317768223177
+HEIGHT_TAN,genome-wide,13904,1.349395069404488,381.0,0.00013052581990794003,genome-wide: n_cnv = genes with z; spearman_rho = mean |z|; partial = genes |z|>4.5; p = mean z,
+HEIGHT_TAN,all,20,0.3669172932330827,0.3894235557290468,0.06939306069393061,,0.054894510548945105
+HEIGHT_TAN,without Williams,19,0.3017543859649123,0.34524350964336653,0.0983901609839016,,0.0745925407459254

@@ -28,7 +28,8 @@ out, per = [], []
 for trait, cnvtrait in [("BMI_TAN", "bmi"), ("HEIGHT_TAN", "height")]:
     fs = sorted(glob.glob(HERE + rf"\psychencode_twas\raw\{trait}\PECfull.*.dat"))
     if len(fs) < 22: print(trait, "incomplete:", len(fs), "chromosomes"); continue
-    t = pd.concat([pd.read_csv(f, sep="\t") for f in fs]); t = t.dropna(subset=["TWAS.Z"])
+    t = pd.concat([pd.read_csv(f, sep="\t") for f in fs]); t["TWAS.Z"] = pd.to_numeric(t["TWAS.Z"], errors="coerce")
+    t["P0"] = pd.to_numeric(t["P0"], errors="coerce"); t["CHR"] = pd.to_numeric(t["CHR"], errors="coerce"); t = t.dropna(subset=["TWAS.Z", "P0", "CHR"])
     t["ens"] = t.ID.str.split(".").str[0]; t["sym"] = t.ens.map(ens2sym)
     g = t.groupby("ens").agg(z=("TWAS.Z", "mean"), chr=("CHR", "first"), pos=("P0", "first"), sym=("sym", "first")).reset_index()
     g = g.sort_values(["chr", "pos"]).reset_index(drop=True)
