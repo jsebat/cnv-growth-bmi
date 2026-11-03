@@ -1,4 +1,4 @@
-# Fig. 1F-G rebuilt with faint grey 95% CI whiskers on both axes (JS 2026-11-03; reviewer request).
+# Fig. 1F-G rebuilt with faint grey whiskers (+-1 SE) on both axes (JS 2026-11-03; reviewer request).
 # Molly's original plotting code could not be found (Dropbox, Drive, GitHub), so the panels are redrawn from
 # Supplementary Table 3 (meta-analysis DEL and DUP effects, SEs, P) for the 34 reciprocal loci.
 #  F (height): two parallel dose-response lines from a 2-component mixture regression (common slope, EM),
@@ -67,8 +67,8 @@ panel <- function(tr, title, stats_txt, two_lines, xl, yl) {
     geom_vline(xintercept = 0, linetype = "dashed", colour = "grey60", linewidth = 0.3) +
     geom_ribbon(data = band, aes(x = x, ymin = lo, ymax = hi, group = cl), inherit.aes = FALSE, fill = "grey75", alpha = 0.55) +
     geom_line(data = band, aes(x = x, y = fit, group = cl), inherit.aes = FALSE, colour = "grey45", linewidth = 0.4) +
-    geom_errorbarh(aes(xmin = x - 1.96 * sx, xmax = x + 1.96 * sx), height = 0, colour = "grey80", linewidth = 0.3) +
-    geom_errorbar(aes(ymin = y - 1.96 * sy, ymax = y + 1.96 * sy), width = 0, colour = "grey80", linewidth = 0.3) +
+    geom_errorbarh(aes(xmin = x - sx, xmax = x + sx), height = 0, colour = "grey80", linewidth = 0.3) +
+    geom_errorbar(aes(ymin = y - sy, ymax = y + sy), width = 0, colour = "grey80", linewidth = 0.3) +
     geom_point(aes(colour = sig), size = 2.2) +
     geom_text_repel(data = lab, aes(label = label, fontface = ifelse(bold, "bold", "plain")), size = 2.3, colour = "black",
                     min.segment.length = 0.3, segment.colour = "grey60", segment.size = 0.2, box.padding = 0.25, max.overlaps = Inf, seed = 1) +
