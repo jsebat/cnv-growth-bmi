@@ -1,4 +1,4 @@
-# Supplementary figure: CNV main effects on height, BMI and head circumference within the Fig. 6 age bands (2-9, 10-18, 19-39,
+# Supplementary figure (rows = CNV; columns = height, head circumference, BMI): CNV main effects within the Fig. 6 age bands (2-9, 10-18, 19-39,
 # 40-73 y), drawn like the Fig. 6 prime panels. Data of 17_main_with_ukbb.R: children on the external references (WHO height
 # and BMI, UK90 head circumference), adults relative to the non-carrier adults of their own cohort (Box-Cox scaling);
 # UK Biobank adults in the height and BMI 40-73 band. Bars: mean Z (95% CI) in non-carrier controls (grey) and carriers
@@ -47,8 +47,10 @@ pfun <- function(o, G, ylab) {
     theme_classic(base_size = 9) + theme(legend.position = "top", legend.key.size = unit(0.3, "cm"), plot.title = element_text(size = 10), plot.subtitle = element_text(size = 7.5))
 }
 ylabs <- c(Height = "Height (SD)", BMI = "BMI (SD)", `Head circumference` = "Head circumference (SD)")
-plots <- list(); for (o in names(sets)) for (G in LOCI) plots[[length(plots) + 1]] <- pfun(o, G, ylabs[[o]])
-fig <- wrap_plots(plots, ncol = 4, byrow = TRUE) + plot_annotation(tag_levels = "a") & theme(plot.tag = element_text(face = "bold", size = 11))
-ggsave(file.path(WD, "fig_supp_main_effects_by_band.png"), fig, width = 13, height = 10, dpi = 250, bg = "white")
-ggsave(file.path(WD, "fig_supp_main_effects_by_band.pdf"), fig, width = 13, height = 10)
+# layout (Jon 2026-11-02): rows = CNV, columns = height, head circumference, BMI
+COLS <- c("Height", "Head circumference", "BMI")
+plots <- list(); for (G in LOCI) for (o in COLS) plots[[length(plots) + 1]] <- pfun(o, G, ylabs[[o]])
+fig <- wrap_plots(plots, ncol = 3, byrow = TRUE) + plot_annotation(tag_levels = "a") & theme(plot.tag = element_text(face = "bold", size = 11))
+ggsave(file.path(WD, "fig_supp_main_effects_by_band.png"), fig, width = 10.5, height = 13, dpi = 250, bg = "white")
+ggsave(file.path(WD, "fig_supp_main_effects_by_band.pdf"), fig, width = 10.5, height = 13)
 cat("supp main-effects figure written\n")
