@@ -1,0 +1,23 @@
+Test,N_CNVs,Estimate,Statistic,P,Null
+Fig. 2E: all CNVs including Williams,23.0,0.533,Spearman rho,0.0068993100689931,"circular genomic permutation (10,000), one-sided"
+"Fig. 2E: dosage effect vs summed TWAS z, all CNVs except Williams",22.0,0.689,Spearman rho,0.0007999200079992,"circular genomic permutation (10,000), one-sided"
+Fig. 2E: mirror CNVs,13.0,0.445,Spearman rho,0.0622937706229377,"circular genomic permutation (10,000), one-sided"
+Fig. 2E: asymmetric CNVs including Williams,10.0,0.297,Spearman rho,0.2040795920407959,"circular genomic permutation (10,000), one-sided"
+Fig. 2E: asymmetric CNVs except Williams,9.0,0.783,Spearman rho,0.0101989801019898,"circular genomic permutation (10,000), one-sided"
+Fig. 2E: separate lines for mirror and asymmetric CNVs vs one line (without Williams),22.0,,F test,0.2549819360756726,nested least squares
+"Fig. 2F: mirror, summed TWAS z vs equal-gene-count windows",13.0,-0.077,mean standardised z,0.7893210678932107,"circular genomic permutation (10,000), two-sided"
+"Fig. 2F: asymmetric, summed TWAS z vs equal-gene-count windows",10.0,-0.383,mean standardised z,0.2067793220677932,"circular genomic permutation (10,000), two-sided"
+"Fig. 2F: asymmetric minus mirror, summed TWAS z vs equal-gene-count windows",,-0.307,mean standardised z,0.4545545445455454,"circular genomic permutation (10,000), two-sided"
+"Genome-wide direction of TWAS z, height: mean z per gene",,-0.0271,mean over 9220 genes,0.31569985371308,block jackknife (10-Mb blocks)
+"Genome-wide direction of TWAS z, bmi: mean z per gene",,-0.0137,mean over 9224 genes,0.2796860135648269,block jackknife (10-Mb blocks)
+"Asymmetric offset on the dosage scale, given gene content (without Williams)",22.0,-0.108,least-squares coefficient (SD),0.2951510330490907,t test
+"BMI: DEL effect vs summed TWAS z, all CNVs",31.0,-0.085,Spearman rho,0.3427657234276572,"gene-label permutation (10,000), one-sided"
+"BMI: DUP effect vs summed TWAS z, all CNVs",32.0,0.028,Spearman rho,0.432956704329567,"gene-label permutation (10,000), one-sided"
+"BMI (as Fig. 2E): dosage effect vs summed BMI TWAS z, all CNVs (primary; no outlier excluded)",22.0,-0.1,Spearman rho,0.6553344665533447,"circular genomic permutation (10,000), one-sided"
+BMI (as Fig. 2E): all CNVs except Williams (not an outlier for BMI; for comparison with height),21.0,-0.143,Spearman rho,0.7123287671232876,"circular genomic permutation (10,000), one-sided"
+BMI (as Fig. 2E): without 16p11.2 BP1-BP3 (most influential point; 5 deletion carriers),21.0,-0.232,Spearman rho,0.31055989862791317,"asymptotic, two-sided"
+BMI (as Fig. 2E): without 16p11.2 BP1-BP3 and BP4-BP5 (largest robust residuals),20.0,-0.155,Spearman rho,0.5143826800752828,"asymptotic, two-sided"
+Exome: XYLT1 (pLoF) in 16p13.11_BP1-BP3; gene effect -0.486 SD vs deletion effect -0.113 SD,,,concordant,,
+Exome: XYLT1 (pLoF) in 16p13.11_BP2_BP3; gene effect -0.486 SD vs deletion effect -0.255 SD,,,concordant,,
+Exome: CNNM3 (pLoF + deleterious missense) in 2q11.2; gene effect +0.147 SD vs deletion effect +0.207 SD,,,concordant,,
+Exome: POR (pLoF + deleterious missense) in 7q11.23_distal; gene effect +0.056 SD vs deletion effect +0.116 SD,,,concordant,,

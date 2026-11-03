@@ -24,3 +24,10 @@ with the deletion. A full rare-variant test needs all-gene burden statistics (Ge
    +0.55 (10/12 asym negative), circular P = 0.09 (per gene 0.16) - a trend only. Supp T29 sheets J, K.
 6. Single panel for a main figure: `twas_dosage_panel_stats.py` (per CNV, (DUP-DEL)/2 vs summed z; mirror rho 0.64, circular P 0.004;
    asymmetric 0.22, P 0.26) and `fig_twas_dosage_panel.R` -> fig_twas_dosage_panel.{png,pdf}. Draft text: twas_results_text_and_legend.md.
+
+
+## BMI dosage analysis (Supplementary Note 4, Supplementary Table 29B-C)
+
+`twas_dosage_bmi.py`: the Fig. 2E test with BMI (dosage effect on BMI vs summed BMI TWAS z, same non-overlapping CNVs, circular
+permutation; height rerun as a check). BMI is null (rho -0.10, P 0.66, 22 CNVs); Williams is not an outlier for BMI, and
+`twas_dosage_bmi_influence.csv` gives each CNV's robust residual, Cook's distance and leave-one-out rho.

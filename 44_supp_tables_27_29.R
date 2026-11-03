@@ -2,7 +2,7 @@
 #  T24  UK Biobank: body size at 10 vs adult BMI, menarche, genetic instruments (Supplementary Fig. 5; fig_supp5_combined_tables.csv)
 #  T27  UK Biobank Mendelian randomization of childhood body mass on adult height (supp_table_S27_..., from ukbb_mr_childhood_obesity.R)
 #  T28  Polygenic scores in the clinical cohorts: reduced form and adjustment for measured BMI (T28a.csv, T28b.csv)
-#  T29  CNV-TWAS concordance (Fig. 3I-J): per CNV and tests (T29a_per_cnv.csv, T29b_tests.csv; full detail in
+#  T29  CNV-TWAS concordance (Fig. 2E-F; BMI in part C): per CNV and tests (T29a_per_cnv.csv, T29b_tests.csv; full detail in
 #       supp_table_S29_cnv_twas_exome_concordance.xlsx)
 # Layout as 37_supp_table_agebands.R: title row 1, description row 2, table from row 4. A backup of the workbook is taken first.
 suppressMessages({ library(data.table); library(openxlsx) })
@@ -39,10 +39,11 @@ put("T28 Clinical PGS reduced form", "Supplementary Table 28. Polygenic scores f
     "Part A: outcome ~ score x carrier + sex + age + height score, for height by age band, head circumference, SRS and SCQ. Part B: within carriers, the score effect with and without adjustment for measured BMI. All carriers are from G2MH and all controls from SSC, so interactions are also cohort contrasts.",
     list(list(head = "A. Score effects in carriers and controls", data = fread(file.path(ST, "T28a.csv"))),
          list(head = "B. Within carriers, with and without adjustment for measured BMI", data = fread(file.path(ST, "T28b.csv")))))
-put("T29 CNV TWAS concordance", "Supplementary Table 29. Concordance of CNV effects on height with common-variant gene effects (TWAS) and exome-wide genes (Fig. 3I-J, Supplementary Note 4)",
-    "Summed TWAS z = sum over the genes in the CNV (contiguous run of TWAS genes) of the gene-level height TWAS z (mean over expression panels; Mancuso et al. 2017). Dosage effect = (DUP - DEL)/2. Fig. 3I-J use non-overlapping CNVs (spanning intervals kept: 22q11.2 A-D, 16p11.2 BP1-BP3, 1q21.1 TAR BP1-BP3, 16p13.11 BP1-BP3); Williams (7q11.23) is excluded from the line and correlations. Full detail, sensitivity analyses and BMI in supp_table_S29_cnv_twas_exome_concordance.xlsx.",
+put("T29 CNV TWAS concordance", "Supplementary Table 29. Concordance of CNV effects on height and BMI with common-variant gene effects (TWAS) and exome-wide genes (Fig. 2E-F, Supplementary Note 4)",
+    "Summed TWAS z = sum over the genes in the CNV (contiguous run of TWAS genes) of the gene-level height TWAS z (mean over expression panels; Mancuso et al. 2017). Dosage effect = (DUP - DEL)/2. Fig. 2E-F and the BMI analysis use non-overlapping CNVs (spanning intervals kept: 22q11.2 A-D, 16p11.2 BP1-BP3, 1q21.1 TAR BP1-BP3, 16p13.11 BP1-BP3); Williams (7q11.23) is excluded from the line and correlations. Full detail, sensitivity analyses and BMI in supp_table_S29_cnv_twas_exome_concordance.xlsx.",
     list(list(head = "A. Per CNV", data = fread(file.path(ST, "T29a_per_cnv.csv"))),
-         list(head = "B. Tests", data = fread(file.path(ST, "T29b_tests.csv")))))
+         list(head = "B. Tests", data = fread(file.path(ST, "T29b_tests.csv"))),
+         list(head = "C. BMI, per CNV (as Fig. 2E): dosage effect on BMI, (DUP - DEL)/2, against summed BMI TWAS z; robust residual from the Theil-Sen line (MAD z), Cook's distance and Spearman rho with the CNV left out", data = fread(file.path(ST, "T29c_bmi_per_cnv.csv")))))
 # keep table order: T1 ... T26, T27, T28, T29, notes last
 nm <- names(wb); num <- suppressWarnings(as.numeric(sub("^T([0-9]+).*", "\\1", nm))); num[is.na(num)] <- 999
 num[nm == "T19b Medication prevalence"] <- 19.5
