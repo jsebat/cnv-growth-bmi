@@ -1,0 +1,8 @@
+test,mirror,asymmetric,p,note,rho
+genes per CNV (TWAS span),4.0,8.0,0.06610021638139245,medians; Mann-Whitney,
+"class difference, mean z per gene",0.14714979185022234,-0.3112117571457223,0.16628337166283372,"circular permutation, one-sided (asymmetric lower)",
+"class difference, summed z adjusted for gene count",1.406551951480186,-2.344253252466976,0.062493750624937505,"circular permutation, one-sided (asymmetric lower)",
+"pooled dosage correlation without Williams, summed z",,,0.00039996000399960006,circular permutation,0.6955645161290324
+"pooled dosage correlation without Williams, mean z per gene",,,9.999000099990002e-05,circular permutation,0.647983870967742
+"pooled dosage correlation without Williams, partial Spearman on gene count",,,2.030229289712393e-06,t test,0.7478795828473591
+gene count vs dosage effect without Williams,,,0.1735284428367557,Spearman,0.2508133375713244

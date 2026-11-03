@@ -1,0 +1,11 @@
+cnv_set,sample,component,mean_asym,mean_mirror,difference,p,test,n_asym,n_mirror
+22q11.2 A-D,all,common (DUP + DEL)/2 [single hit kept],-0.21529474184545583,-0.09634632871457825,-0.11894841313087758,0.032387173625559526,Mann-Whitney,10.0,13.0
+22q11.2 A-D,all,"dosage (DUP - DEL)/2 [single hit cancels], offset given gene content",-0.02527064027192255,0.15063227837876536,-0.1160336498346174,0.4151724493783826,"least squares, asymmetric offset adjusted for summed TWAS z",10.0,13.0
+22q11.2 A-D,without Williams,common (DUP + DEL)/2 [single hit kept],-0.1812217040013665,-0.09634632871457825,-0.08487537528678825,0.061513599996043326,Mann-Whitney,9.0,13.0
+22q11.2 A-D,without Williams,"dosage (DUP - DEL)/2 [single hit cancels], offset given gene content",-0.09164087025004508,0.15063227837876536,-0.10797070196186484,0.2951510330490907,"least squares, asymmetric offset adjusted for summed TWAS z",9.0,13.0
+22q11.2 A-D,without Williams,seed check (seed 99): pooled dosage rho,,,0.68944099378882,0.0006999300069993001,circular permutation,,
+"Fig. 3 loci (22q11.2 A-B, B-D)",all,common (DUP + DEL)/2 [single hit kept],-0.2180526727149989,-0.10459977673391775,-0.11345289598108114,0.057039874249055496,Mann-Whitney,10.0,14.0
+"Fig. 3 loci (22q11.2 A-B, B-D)",all,"dosage (DUP - DEL)/2 [single hit cancels], offset given gene content",-0.03318947253964795,0.16627092169312302,-0.1386737376060889,0.3401725575098577,"least squares, asymmetric offset adjusted for summed TWAS z",10.0,14.0
+"Fig. 3 loci (22q11.2 A-B, B-D)",without Williams,common (DUP + DEL)/2 [single hit kept],-0.18428607163419214,-0.10459977673391775,-0.07968629490027439,0.10819724752370144,Mann-Whitney,9.0,14.0
+"Fig. 3 loci (22q11.2 A-B, B-D)",without Williams,"dosage (DUP - DEL)/2 [single hit cancels], offset given gene content",-0.10043957276973997,0.16627092169312302,-0.10328641605412986,0.34421736669114583,"least squares, asymmetric offset adjusted for summed TWAS z",9.0,14.0
+"Fig. 3 loci (22q11.2 A-B, B-D)",without Williams,seed check (seed 99): pooled dosage rho,,,0.6215415019762845,0.0018998100189981002,circular permutation,,

@@ -1,0 +1,2 @@
+genome_mean_z_per_gene,median_genes_mirror,median_genes_asym,mean_genes_mirror,mean_genes_asym,expected_difference_from_gene_count,null_mean_difference_circular,null_sd_difference,observed_difference,observed_z_vs_null,p_one_sided
+-0.027065854090187583,4.0,8.0,5.15,9.916666666666666,-0.12901390449656078,-0.14372565165538867,2.8826900914567926,-3.9511094707079244,-1.320774588408302,0.08659134086591341

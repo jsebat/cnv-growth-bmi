@@ -1,0 +1,13 @@
+axis,sample,group,n,spearman_rho,p_circular_two_sided
+perpendicular offset (asymmetry),all CNVs,all,32,0.5436217008797654,0.0071992800719928
+along mirror line (dosage),all CNVs,all,32,0.531158357771261,0.0131986801319868
+perpendicular offset (asymmetry),all CNVs,mirror,20,0.31127819548872177,0.1596840315968403
+along mirror line (dosage),all CNVs,mirror,20,0.6601503759398496,0.007599240075992401
+perpendicular offset (asymmetry),all CNVs,asymmetric,12,-0.02097902097902098,0.9541045895410459
+along mirror line (dosage),all CNVs,asymmetric,12,0.2657342657342658,0.48565143485651435
+perpendicular offset (asymmetry),without Williams,all,31,0.5217741935483872,0.012398760123987601
+along mirror line (dosage),without Williams,all,31,0.6842741935483871,0.0007999200079992001
+perpendicular offset (asymmetry),without Williams,mirror,20,0.31127819548872177,0.1596840315968403
+along mirror line (dosage),without Williams,mirror,20,0.6601503759398496,0.007599240075992401
+perpendicular offset (asymmetry),without Williams,asymmetric,11,-0.02727272727272728,0.9437056294370563
+along mirror line (dosage),without Williams,asymmetric,11,0.6454545454545455,0.07689231076892311

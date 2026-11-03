@@ -1,0 +1,33 @@
+cnv_set,test,n_mirror,n_asym,estimate,p_welch,p_mannwhitney,p_size_matched
+primary (spanning intervals; 22q A-D),"class difference, summed z",13,10,-3.2483084282685692,0.0598421227147682,0.06732289313487129,0.1307869213078692
+primary (spanning intervals; 22q A-D),"class difference, mean z per gene",13,10,-0.06833924290919868,0.8233133202189146,0.22653276315984072,0.44545545445455453
+primary (spanning intervals; 22q A-D),"dosage rho, all",13,10,0.532608695652174,,,0.006899310068993101
+primary (spanning intervals; 22q A-D),"dosage rho, all without Williams",13,9,0.68944099378882,,,0.0007999200079992001
+primary (spanning intervals; 22q A-D),"dosage rho, mirror",13,0,0.4450549450549451,,,0.06229377062293771
+primary (spanning intervals; 22q A-D),"dosage rho, asymmetric",0,10,0.29696969696969694,,,0.20407959204079593
+primary (spanning intervals; 22q A-D),"dosage rho, asymmetric without Williams",0,9,0.7833333333333333,,,0.010198980101989802
+primary (spanning intervals; 22q A-D),"separate class lines vs one line, without Williams (F test)",13,9,,0.25498193607567265,,
+"sensitivity (subregions; 22q A-B, B-D)","class difference, summed z",16,10,-3.719888459151732,0.016536967925994007,0.00565759781506436,0.07189281071892811
+"sensitivity (subregions; 22q A-B, B-D)","class difference, mean z per gene",16,10,-0.2960676472004884,0.3374618895875371,0.06901681800293338,0.2843715628437156
+"sensitivity (subregions; 22q A-B, B-D)","dosage rho, all",16,10,0.4755555555555555,,,0.0100989901009899
+"sensitivity (subregions; 22q A-B, B-D)","dosage rho, all without Williams",16,9,0.6123076923076923,,,0.0013998600139986002
+"sensitivity (subregions; 22q A-B, B-D)","dosage rho, mirror",16,0,0.5794117647058823,,,0.013498650134986502
+"sensitivity (subregions; 22q A-B, B-D)","dosage rho, asymmetric",0,10,-0.006060606060606061,,,0.49055094490550943
+"sensitivity (subregions; 22q A-B, B-D)","dosage rho, asymmetric without Williams",0,9,0.3666666666666667,,,0.1678832116788321
+"sensitivity (subregions; 22q A-B, B-D)","separate class lines vs one line, without Williams (F test)",16,9,,0.2281299277206848,,
+"sensitivity (subregions; 22q A-B, B-C, C-D)","class difference, summed z",17,10,-3.7781900584951518,0.014701350609154975,0.0038886679169946366,0.0633936606339366
+"sensitivity (subregions; 22q A-B, B-C, C-D)","class difference, mean z per gene",17,10,-0.45938671513991847,0.18641469775581693,0.047336055102535496,0.1852814718528147
+"sensitivity (subregions; 22q A-B, B-C, C-D)","dosage rho, all",17,10,0.49145299145299143,,,0.006799320067993201
+"sensitivity (subregions; 22q A-B, B-C, C-D)","dosage rho, all without Williams",17,9,0.6266666666666666,,,0.0007999200079992001
+"sensitivity (subregions; 22q A-B, B-C, C-D)","dosage rho, mirror",17,0,0.5980392156862745,,,0.0098990100989901
+"sensitivity (subregions; 22q A-B, B-C, C-D)","dosage rho, asymmetric",0,10,-0.006060606060606061,,,0.49055094490550943
+"sensitivity (subregions; 22q A-B, B-C, C-D)","dosage rho, asymmetric without Williams",0,9,0.3666666666666667,,,0.1678832116788321
+"sensitivity (subregions; 22q A-B, B-C, C-D)","separate class lines vs one line, without Williams (F test)",17,9,,0.2613452434782502,,
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","class difference, summed z",14,10,-3.903744686234853,0.019160375481074743,0.010862255333717217,0.0785921407859214
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","class difference, mean z per gene",14,10,-0.12435136179865833,0.6734538045573135,0.10734653699381098,0.39736026397360263
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","dosage rho, all",14,10,0.4765217391304347,,,0.0108989101089891
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","dosage rho, all without Williams",14,9,0.6215415019762845,,,0.0017998200179982
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","dosage rho, mirror",14,0,0.5076923076923077,,,0.0313968603139686
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","dosage rho, asymmetric",0,10,0.11515151515151514,,,0.36806319368063195
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","dosage rho, asymmetric without Williams",0,9,0.5333333333333333,,,0.07879212078792121
+"Fig. 3 loci, spanning intervals (22q A-B, B-D)","separate class lines vs one line, without Williams (F test)",14,9,,0.18446631222481244,,

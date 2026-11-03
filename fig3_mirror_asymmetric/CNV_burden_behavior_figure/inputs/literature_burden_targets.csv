@@ -1,0 +1,5 @@
+source,trait,copy_state,estimate,units,interpretation
+Mace_2017,height,deletion,-0.41,cm_per_Mb,Published deletion-burden coefficient
+Mace_2017,BMI,deletion,0.14,kg_m2_per_Mb,Published deletion-burden coefficient
+Auwerx_2022,height,all_CNV,,direction_only,Greater CNV burden associated with lower physical traits including height
+Auwerx_2022,BMI/adiposity,all_CNV,,direction_only,Greater CNV burden associated with increased adiposity

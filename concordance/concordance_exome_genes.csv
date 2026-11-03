@@ -1,0 +1,5 @@
+trait,CNV_ID,cls,gene,burden_category,gene_effect_sd,gene_p,DEL_effect_sd,DEL_p,concordant
+height,16p13.11_BP1-BP3,mirror,XYLT1,pLoF,-0.486,1.33e-11,-0.112913602627688,0.181549530604302,True
+height,16p13.11_BP2_BP3,mirror,XYLT1,pLoF,-0.486,1.33e-11,-0.254889845901733,0.553476472738174,True
+height,2q11.2,asymmetric,CNNM3,pLoF + deleterious missense,0.147,8.93e-29,0.206956037726583,0.0560148465141214,True
+height,7q11.23_distal,asymmetric,POR,pLoF + deleterious missense,0.0563,2.34e-14,0.115572672243088,0.739881337521213,True

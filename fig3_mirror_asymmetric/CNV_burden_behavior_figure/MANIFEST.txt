@@ -1,0 +1,12 @@
+FIGURE_CAPTION.txt
+README.md
+code/install_packages.R
+code/make_burden_behavior_figure.R
+code/python_reference_generator.py
+figures/Figure_burden_model_behavior.pdf
+figures/Figure_burden_model_behavior.png
+inputs/bmi_burden_predictions.csv
+inputs/height_burden_predictions.csv
+inputs/literature_burden_targets.csv
+outputs/simulated_burden_clouds.csv
+source/SOURCES.md

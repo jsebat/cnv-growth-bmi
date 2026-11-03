@@ -53,7 +53,9 @@ tc[, group := factor(group, GROUPS)]
 mr <- fread(MR)
 td <- rbind(mr[group %in% GROUPS, .(group, pgs, n = n_carriers, est = height_per_pgs_carriers, se = se_carriers, p = p_carriers, fs = fs_step10_carriers, p_int = interaction_p)],
             unique(mr[, .(group = "No CNV", pgs, n = n_noncarriers, est = height_per_pgs_noncarriers, se = NA_real_, p = p_noncarriers, fs = fs_step10_noncarriers, p_int = NA_real_)]))
-if (file.exists(AAM)) {
+USE_AAM <- TRUE   # JS 2026-11-03: menarche PGS included, plus panel e (MR of age at menarche on adult height). Note: the Guan 2025 ext
+                  # weights are the within-family estimate (N ~11k), so the instrument is weak; its first stage is reported.
+if (USE_AAM && file.exists(AAM)) {
   aam <- fread(AAM)[n_chr == 22, .(IID, pgs_aam = PGS)]; dd <- merge(gm, aam, by = "IID")
   ht <- fread(file.path(MS, "comparitiveBodySize/PGS_Height_genomewide.tsv"))[n_chr == 22, .(IID, pgs_ht = PGS)]; dd <- merge(dd, ht, by = "IID")
   for (v in c("pgs_aam", "pgs_ht")) { r <- resid(lm(as.formula(paste(v, "~", pcs)), dd)); set(dd, j = v, value = r / sd(r)) }
@@ -62,7 +64,22 @@ if (file.exists(AAM)) {
     fs <- if (x[!is.na(menarche), .N] > 10) coef(lm(menarche ~ pgs_aam, x[!is.na(menarche)]))["pgs_aam"] else NA_real_
     ip <- if (G == "No CNV") NA_real_ else summary(lm(hZ ~ pgs_aam * I(locus == G) + pgs_ht * I(locus == G), dd[locus %in% c(G, "No CNV")]))$coefficients["pgs_aam:I(locus == G)TRUE", 4]
     data.table(group = G, pgs = "age at menarche PGS", n = nrow(x), est = s["pgs_aam", 1], se = s["pgs_aam", 2], p = s["pgs_aam", 4], fs = fs, p_int = ip) })))
-  cat("menarche PGS included\n")
+  # ---- e: Mendelian randomization of age at menarche on adult height, women, within genotype.
+  # Wald ratio = reduced form (height ~ menarche PGS + height PGS, within genotype) / first stage (menarche ~ menarche PGS
+  # + height PGS + age + PCs) estimated in all women (the carrier groups are too small for their own first stage; theirs is
+  # reported as fs_group). Delta-method SE. p_diff: reduced-form difference from non-carriers (PGS x genotype interaction).
+  dw <- dd[sex == 2 & !is.na(menarche)]
+  fsa <- summary(lm(as.formula(paste("menarche ~ pgs_aam + pgs_ht + age +", pcs)), dw))$coefficients["pgs_aam", ]
+  te <- rbindlist(lapply(GROUPS, function(G) { x <- dw[locus == G]
+    rf <- summary(lm(hZ ~ pgs_aam + pgs_ht, x))$coefficients["pgs_aam", ]
+    fg <- summary(lm(menarche ~ pgs_aam, x))$coefficients["pgs_aam", ]
+    est <- rf[1] / fsa[1]; se <- sqrt(rf[2]^2 / fsa[1]^2 + rf[1]^2 * fsa[2]^2 / fsa[1]^4)
+    pdf_ <- if (G == "No CNV") NA_real_ else summary(lm(hZ ~ pgs_aam * I(locus == G) + pgs_ht * I(locus == G), dw[locus %in% c(G, "No CNV")]))$coefficients["pgs_aam:I(locus == G)TRUE", 4]
+    data.table(group = G, n = nrow(x), mr = est, mr_se = se, mr_p = 2 * pnorm(-abs(est / se)), rf = rf[1], rf_se = rf[2],
+               fs_group = fg[1], fs_group_se = fg[2], p_diff = pdf_) }))
+  te[, `:=`(fs_all = fsa[1], fs_all_se = fsa[2], fs_all_F = (fsa[1] / fsa[2])^2, n_women_all = nrow(dw))]
+  fwrite(te, file.path(WD, "mr_menarche_height_ukbb.csv"))
+  cat("menarche PGS included; first stage in all women:", round(fsa[1], 3), "years per s.d., F =", round((fsa[1] / fsa[2])^2), "\n"); print(te)
 } else cat("menarche PGS not yet scored (", AAM, "): panel d has childhood obesity and adult BMI PGS only\n")
 PGSL <- c("childhood obesity PGS", "adult BMI PGS", "age at menarche PGS"); td <- td[pgs %in% PGSL][, pgs := factor(pgs, PGSL)][, group := factor(group, GROUPS)]
 td[is.na(se) & group == "No CNV", se := abs(est / qnorm(p / 2))]
@@ -117,13 +134,25 @@ pd4 <- ggplot(td, aes(group, est, colour = pgs)) + geom_hline(yintercept = 0, co
   scale_x_discrete(labels = setNames(paste0(levels(td$group), "\nn = ", td[pgs == "childhood obesity PGS"][match(levels(td$group), group), ifelse(n >= 10000, paste0(round(n / 1000), "k"), n)]), levels(td$group))) +
   labs(title = "d  Genetic instruments", subtitle = "adult height per s.d. of polygenic score within genotype,
 adjusted for height PGS and PC1-10, 95% CI", x = NULL, y = "Adult height (SD) per s.d. of PGS") + th
-fig <- pa / (pb | pc | pd4) + plot_layout(heights = c(1.25, 1))
-ggsave(file.path(WD, "fig_supp5_combined.png"), fig, width = 14, height = 11.5, dpi = 250, bg = "white")
-ggsave(file.path(WD, "fig_supp5_combined.pdf"), fig, width = 14, height = 11.5)
+# ---------------------------------------------------------------- panel e: observational vs MR estimate of later menarche on adult height
+ee <- rbind(tc[, .(group, type = "observational", est = slope, lo, hi, p)],
+            te[, .(group = factor(group, GROUPS), type = "MR (menarche PGS)", est = mr, lo = mr - 1.96 * mr_se, hi = mr + 1.96 * mr_se, p = mr_p)])
+ee[, type := factor(type, c("observational", "MR (menarche PGS)"))]
+pe <- ggplot(ee, aes(group, est, shape = type, colour = group)) + geom_hline(yintercept = 0, colour = "grey60") +
+  geom_errorbar(aes(ymin = lo, ymax = hi), position = pdd, width = 0.2, linewidth = 0.7) + geom_point(position = pdd, size = 3, fill = "white") +
+  geom_text(aes(y = hi + 0.02, label = pfx(p), fontface = ifelse(p < 0.05, "bold", "plain"), group = type), position = pdd, size = 2.3, vjust = 0, show.legend = FALSE) +
+  scale_shape_manual(values = c("observational" = 16, "MR (menarche PGS)" = 24), name = NULL) + scale_colour_manual(values = GCOL, guide = "none") +
+  labs(title = "e  Menarche and adult height: observational vs MR", subtitle = sprintf("women; adult height Z per year of later menarche, 95%% CI;
+MR first stage in all women %.2f y per s.d. of PGS (F = %.0f)", te$fs_all[1], te$fs_all_F[1]),
+       x = NULL, y = "Adult height (SD) per year") + th
+fig <- pa / (pb | pc) / (pd4 | pe) + plot_layout(heights = c(1.25, 1, 1))
+ggsave(file.path(WD, "fig_supp5_combined.png"), fig, width = 14, height = 15.5, dpi = 250, bg = "white")
+ggsave(file.path(WD, "fig_supp5_combined.pdf"), fig, width = 14, height = 15.5)
 fwrite(rbindlist(list(ta[, .(panel = "a", group, measure, n, est = trend, lo = lower95, hi = upper95, p, p_interaction = p_interaction_vs_noCNV)],
                       tb[, .(panel = "b", group, measure = "age at menarche", n, est = diff, lo, hi, p, p_interaction = NA_real_, mean_years = mean)],
                       tc[, .(panel = "c", group, measure = "height per year of menarche", n, est = slope, lo, hi, p, p_interaction)],
-                      td[, .(panel = "d", group, measure = as.character(pgs), n, est, lo = est - 1.96 * se, hi = est + 1.96 * se, p, p_interaction = p_int, first_stage = fs)]), fill = TRUE),
+                      td[, .(panel = "d", group, measure = as.character(pgs), n, est, lo = est - 1.96 * se, hi = est + 1.96 * se, p, p_interaction = p_int, first_stage = fs)],
+                      te[, .(panel = "e", group, measure = "MR: height per year of menarche", n, est = mr, lo = mr - 1.96 * mr_se, hi = mr + 1.96 * mr_se, p = mr_p, p_interaction = p_diff, first_stage = fs_all)]), fill = TRUE),
        file.path(WD, "fig_supp5_combined_tables.csv"))
 print(tb); print(tc); print(td)
 cat("fig_supp5_combined written\n")
