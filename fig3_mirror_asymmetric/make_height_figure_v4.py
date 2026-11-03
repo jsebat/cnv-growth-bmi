@@ -471,7 +471,12 @@ for k, (lbl, col, rr, pp) in enumerate(ents):
             size=6.9, color=col, weight='bold' if pp < .05 else 'normal')
 ax.text(.03, .99 - 3 * .085, f'separate lines for the two classes: $p$={_fp(tst.loc[[i for i in tst.index if i.startswith("separate")][0]].p_welch)}',
         transform=ax.transAxes, ha='left', va='top', size=6.6, color=GREY)
-ax.set_ylim(min(-.5, tw.dosage_effect.min() - .08), max(1.45, tw.dosage_effect.max() + .78))
+# Jon 2026-11-03: with constrained-gene burden (summed GeneBayes s_het) controlled, the concordance holds with Williams included
+# (partial Spearman given burden, circular permutation; concordance/twas_constraint_perm.py -> twas_constraint_perm.csv)
+_cp = pd.read_csv(CONC / 'twas_constraint_perm.csv').query("trait == 'height' and sample == 'all'").iloc[0]
+ax.text(.03, .99 - 4 * .085, f'all incl. Williams, given constrained-gene burden:  partial $\\rho$={_cp.partial_spearman_twas_given_burden:+.2f}  $p$={_fp(_cp.p_circular_one_sided)}',
+        transform=ax.transAxes, ha='left', va='top', size=6.6, color=INK, weight='bold' if _cp.p_circular_one_sided < .05 else 'normal')
+ax.set_ylim(min(-.5, tw.dosage_effect.min() - .08), max(1.62, tw.dosage_effect.max() + .95))
 ax.set_xlabel('Summed TWAS z of genes in the CNV\n(common-variant predicted expression; + = higher expression, taller)')
 ax.set_ylabel('CNV dosage effect on height (SD)\n(DUP − DEL) / 2')
 ax.set_title('Predicted expression (TWAS) predicts dosage effects', size=8.4, pad=5, weight='bold')
