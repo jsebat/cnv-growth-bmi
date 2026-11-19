@@ -10,6 +10,7 @@
 Sys.setenv(PHENO_RUN_TESTS = "FALSE", PHENO_DRAW_FIG = "FALSE")
 HERE <- "C:/Users/Jonathan Sebat/sebatlab Dropbox/Manuscripts/PGC_joint_submission/Molly/CNV_ASD_growth_analysis/CNV_growth_trajectories"
 if (!exists("D")) { sink(tempfile()); source(file.path(HERE, "21_pheno_bmi_gam.R")); sink() }   # D already present when sourced after 23
+if (Sys.getenv("SRSSCQ_SCALE") == "boxcox") source(file.path(HERE, "00_boxcox_srs_scq.R"))   # JS 2026-11-14: Box-Cox SRS/SCQ (default stays linear)
 suppressPackageStartupMessages({ library(mgcv); library(ggplot2); library(patchwork) })
 t0 <- Sys.time()
 PH <- c("SRS", "SCQ", "CNB accuracy", "CNB speed")   # JS 2026-10-24: CNB added (carriers only; the CNB non-carriers have no BMI)

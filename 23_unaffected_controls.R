@@ -23,9 +23,11 @@ s_asd <- fread(file.path(DB, "Jon/Claude/G2MH_CNV_growth/subjects.csv"), colClas
 g2asd <- setNames(as.integer(s_asd$asd), s_asd$sfari_id)
 dx <- fread(file.path(DB, "G2MH/Simons_Searchlight/SVIP/SVIP/Simons_VIP__16p11.2_Dataset_v10.0/diagnosis_summary.csv"), colClasses = list(character = "diagnosis_summary.clinical_asd_dx"))
 sv <- setNames(tolower(dx$diagnosis_summary.clinical_asd_dx), dx$individual)
+chusj <- chusj_rows(); chusj_asd <- setNames(chusj$asd, chusj$sampleID)   # JS 2026-11-02: CHUSJ ASD from the staging sheet (8 of 37 known)
 asd_of <- function(cohort, sampleID, GUID) fifelse(cohort %in% c("G2MH", "Cardiff"), suppressWarnings(as.integer(g2asd[GUID])),
                                                  fifelse(cohort == "SVIP", fifelse(sv[sampleID] == "true", 1L, fifelse(sv[sampleID] == "false", 0L, NA_integer_)),
-                                                 fifelse(cohort == "SSC", as.integer(grepl("[.]p[0-9]$", sampleID)), NA_integer_)))
+                                                 fifelse(cohort == "SSC", as.integer(grepl("[.]p[0-9]$", sampleID)),
+                                                 fifelse(cohort == "CHUSJ", as.integer(chusj_asd[sampleID]), NA_integer_))))
 
 # ---------------------------------------------------------------- growth outcomes: carriers and unaffected controls
 gmc <- gm[!(cohort == "G2MH" & Cardiff_mask %in% TRUE) & !is.na(BMI_raw) & !is.na(age) & age >= 2 & age <= 65]

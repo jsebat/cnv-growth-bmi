@@ -22,6 +22,7 @@ DATA <- file.path(DB, "Jon/Claude/CNV_growth_trajectories_data")   # participant
 g <- fread(file.path(DB, "G2MH/NetworkPaper/AnalysisByMolly/Clinical/genomatrix/genomatrix.Clinical.02092026.csv"))
 g <- g[!(cohort == "G2MH" & Cardiff_mask == TRUE)]
 g[, CNV := trimws(CNV)]
+source(file.path(HERE, "00_add_chusj.R")); g <- add_chusj(g)   # JS 2026-11-02: CHU Sainte-Justine archival carriers (ARPA-H Montreal)
 lab <- c("16p11.2 proximal DEL" = "16p11.2 del", "16p11.2 proximal DUP" = "16p11.2 dup",
          "22q11.2 A-D DEL" = "22q11.2 del", "22q11.2 A-D DUP" = "22q11.2 dup", "No CNV" = "No CNV")
 g <- g[CNV %in% names(lab)]
@@ -47,9 +48,9 @@ g[, visit := seq_len(.N), by = id]; g[, n_visits := .N, by = id]
 g[, latest := visit == n_visits]
 
 # Cardiff stimulant flag
-tmp <- file.path(tempdir(), "cardiff"); dir.create(tmp, showWarnings = FALSE)
-unzip(file.path(DB, "G2MH/NetworkPaper/AnalysisByAnjali/data/Cardiff22qData.zip"), exdir = tmp)
-cf <- as.data.table(read_excel(list.files(tmp, "CardiffLongitudinal.*xlsx", recursive = TRUE, full.names = TRUE)[1], sheet = 1))
+# JS 2026-11-02: the zip was moved to data/cardiff_22q/ on 2026-10-26, where the workbook is already extracted
+cf_xlsx <- list.files(file.path(DB, "G2MH/NetworkPaper/AnalysisByAnjali/data/cardiff_22q"), "CardiffLongitudinal.*xlsx$", full.names = TRUE)[1]
+cf <- as.data.table(read_excel(cf_xlsx, sheet = 1))
 cf <- unique(cf[, .(GUID = guid, age = as.numeric(Age), stimulant = ndri == "yes", antipsychotic = antipsychotic == "yes")])
 cf <- cf[, .(stimulant = any(stimulant), antipsychotic = any(antipsychotic)), by = .(GUID, age)]
 g <- merge(g, cf, by = c("GUID", "age"), all.x = TRUE)

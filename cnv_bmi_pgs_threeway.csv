@@ -1,0 +1,68 @@
+trait,block,spec,n,b,se,p
+SRS,T1 three-way CNV x BMI x autism score,reference: Unaffected relatives,5337,-0.0789292934155387,0.0402665744116103,0.0499760332227536
+SRS,T1 three-way CNV x BMI x autism score,BMI x score in reference: Unaffected relatives,4988,-0.013248028621818,0.0129327688162924,0.305657325184441
+SRS,T1 three-way CNV x BMI x autism score,reference: SSC ASD probands,2237,-0.0945123808865379,0.039942453479691,0.0179710675323871
+SRS,T1 three-way CNV x BMI x autism score,BMI x score in reference: SSC ASD probands,1888,0.00233505884918312,0.0116099583144599,0.840600431264729
+SRS,T2 within carriers: BMI x autism score,main (Box-Cox),349,-0.102326503740748,0.0367894927552356,0.00541240572860789
+SRS,T2 within carriers: BMI x autism score,linear z scale,349,-0.203479578561558,0.0763307397224417,0.00768140720307407
+SRS,T2 within carriers: BMI x autism score,ordinal (scale-free),349,-0.147129152589686,0.0596154295441019,0.0135881319117094
+SRS,T2 within carriers: BMI x autism score,"+ covariate x BMI and covariate x score (age, sex, CNV, 10 PCs)",349,-0.129901713573886,0.0439545485092558,0.00312299815222588
+SRS,T2 within carriers: BMI x autism score,+ BMI x each of the other nine scores,349,-0.105985339141425,0.040686648854574,0.00918965458283729
+SRS,T2 within carriers: BMI x autism score,+ ASD diagnosis and ASD x BMI,330,-0.0834560459883196,0.0342514585238964,0.014827335617365
+SRS,T2 within carriers: BMI x autism score,"medication known (same subset, unadjusted)",314,-0.104164706948,0.0414620710605266,0.0119950796507836
+SRS,T2 within carriers: BMI x autism score,"+ psychotropic, antipsychotic, weight-gain class and x BMI",314,-0.0990418536894326,0.0403871189455116,0.0141941165372807
+SRS,T2 within carriers: BMI x autism score,no current psychotropic,212,-0.127661513618331,0.0497299057776751,0.0102553790944677
+SRS,T2 within carriers: BMI x autism score,BMI winsorised at |z| 3,349,-0.105020927496845,0.0413889520554055,0.0111674639809121
+SRS,T2 within carriers: BMI x autism score,Cook's D > 4/n removed (21 points),328,-0.152724972233629,0.0355999443128628,1.78645749769202e-05
+SRS,T2 within carriers: BMI x autism score,children (< 18 y),275,-0.0914320317616269,0.0388866431291015,0.0187107010331118
+SRS,T2 within carriers: BMI x autism score,adults (>= 18 y),74,-0.106043875363081,0.213397415957285,0.619237432118464
+SRS,T2 within carriers: BMI x autism score,SRS child form only,263,-0.117601035366233,0.0420909632008028,0.0052064746570843
+SRS,T2 within carriers: BMI x autism score,carriers with ASD diagnosis,92,-0.0447091172262843,0.070570352438024,0.52638128903898
+SRS,T2 within carriers: BMI x autism score,carriers without ASD diagnosis,238,-0.0846071032363679,0.0440375939478639,0.054700552569945
+SRS,T2 within carriers: BMI x autism score,leave out 16p11.2 del,275,-0.0843801064923027,0.0438304744185826,0.054210969998745
+SRS,T2 within carriers: BMI x autism score,leave out 16p11.2 dup,320,-0.119117882343744,0.0404630095045083,0.00324135018148832
+SRS,T2 within carriers: BMI x autism score,leave out 22q11.2 del,163,-0.108343642857741,0.0560038985320374,0.0530426877414084
+SRS,T2 within carriers: BMI x autism score,leave out 22q11.2 dup,289,-0.101248966571545,0.0357770336644073,0.00465481615048492
+SRS,T2 within carriers: BMI x autism score,only 16p11.2 del,74,-0.159613886233468,0.0687926382548946,0.0203291119588996
+SRS,T2 within carriers: BMI x autism score,only 16p11.2 dup,29,0.130048656804601,0.0930935109231893,0.162423190829834
+SRS,T2 within carriers: BMI x autism score,only 22q11.2 del,186,-0.114312226085465,0.0480259430874982,0.0173023870207213
+SRS,T2 within carriers: BMI x autism score,only 22q11.2 dup,60,-0.0662159602681526,0.184223663420981,0.719271612669906
+SRS,T2 within carriers: BMI x autism score,heterogeneity of the interaction across CNVs (3 df F test),349,,,0.443485523010841
+SRS,T2 within carriers: BMI x autism score,"permutation P (score permuted within CNV, 10,000)",349,-0.102326503740748,,0.0090990900909909
+SRS,T2 selection check: autism score -> BMI,all carriers,349,0.000395957339654228,0.0721257228406345,0.995619778233114
+SRS,T2 selection check: autism score -> BMI,ASD diagnosis,92,-0.220039962992835,0.140530915931172,0.117401020778436
+SRS,T2 selection check: autism score -> BMI,no ASD diagnosis,238,0.0627648115947785,0.0848839755623133,0.459652699501798
+SRS,T2 selection check: ASD diagnosis ~ score x BMI (log-odds),all carriers,330,-0.179836803203286,0.0996279179103285,0.0710614714563348
+SCQ,T1 three-way CNV x BMI x autism score,reference: Unaffected relatives,1298,-0.0121488865861317,0.043765278793754,0.781325656136952
+SCQ,T1 three-way CNV x BMI x autism score,BMI x score in reference: Unaffected relatives,1030,-0.0052823808891734,0.0238224827617783,0.824516826844769
+SCQ,T1 three-way CNV x BMI x autism score,reference: SSC ASD probands,1651,-0.0139277559405035,0.0374186490404505,0.709733306283034
+SCQ,T1 three-way CNV x BMI x autism score,BMI x score in reference: SSC ASD probands,1383,-0.00350351153479816,0.0074886642514152,0.639897595045538
+SCQ,T2 within carriers: BMI x autism score,main (Box-Cox),268,-0.0287163331221452,0.0376854162251378,0.446059276299881
+SCQ,T2 within carriers: BMI x autism score,linear z scale,268,-0.00168565777508833,0.131621107669652,0.989781855112048
+SCQ,T2 within carriers: BMI x autism score,ordinal (scale-free),268,-0.0133827989429468,0.06735947183029,0.842515170967166
+SCQ,T2 within carriers: BMI x autism score,"+ covariate x BMI and covariate x score (age, sex, CNV, 10 PCs)",268,-0.00371356629914407,0.0431800773892612,0.931464950998148
+SCQ,T2 within carriers: BMI x autism score,+ BMI x each of the other nine scores,268,-0.0231166508483644,0.0382068510105483,0.545152806817019
+SCQ,T2 within carriers: BMI x autism score,+ ASD diagnosis and ASD x BMI,253,-0.0262983768365584,0.038667279917983,0.49642870408768
+SCQ,T2 within carriers: BMI x autism score,"medication known (same subset, unadjusted)",238,-0.0561507138571274,0.0419012129332487,0.180221382337907
+SCQ,T2 within carriers: BMI x autism score,"+ psychotropic, antipsychotic, weight-gain class and x BMI",238,-0.0604031255053689,0.0422187316134381,0.152510874051559
+SCQ,T2 within carriers: BMI x autism score,no current psychotropic,161,-0.0744592193066969,0.0469941450979379,0.113094515538733
+SCQ,T2 within carriers: BMI x autism score,BMI winsorised at |z| 3,268,-0.0312334169552153,0.0404219189514206,0.439708730716064
+SCQ,T2 within carriers: BMI x autism score,Cook's D > 4/n removed (17 points),251,0.0133681577976409,0.0284097814503558,0.637963751289119
+SCQ,T2 within carriers: BMI x autism score,children (< 18 y),221,-0.0227835897546619,0.0420952550240548,0.588342924569034
+SCQ,T2 within carriers: BMI x autism score,adults (>= 18 y),47,0.168490302878724,0.14258280437741,0.237324193369594
+SCQ,T2 within carriers: BMI x autism score,carriers with ASD diagnosis,72,0.0473495072866456,0.0474413527109843,0.318248314863896
+SCQ,T2 within carriers: BMI x autism score,carriers without ASD diagnosis,181,-0.0180707612389815,0.0562313971249458,0.747934365385387
+SCQ,T2 within carriers: BMI x autism score,leave out 16p11.2 del,212,-0.0198090574245442,0.0490923333756131,0.686575926521875
+SCQ,T2 within carriers: BMI x autism score,leave out 16p11.2 dup,251,-0.0247828111312942,0.0431684280431081,0.565903008264281
+SCQ,T2 within carriers: BMI x autism score,leave out 22q11.2 del,117,-0.0201633077048007,0.0409997387620356,0.622867010235615
+SCQ,T2 within carriers: BMI x autism score,leave out 22q11.2 dup,224,-0.0473906158089246,0.0385423896235226,0.218857685797241
+SCQ,T2 within carriers: BMI x autism score,only 16p11.2 del,56,-0.0511624031207817,0.0573735793499011,0.372531490874793
+SCQ,T2 within carriers: BMI x autism score,only 16p11.2 dup,17,0.110732916765199,0.0538145088035193,0.0396210787289068
+SCQ,T2 within carriers: BMI x autism score,only 22q11.2 del,151,-0.0614577344637712,0.0633152538159202,0.331716435269404
+SCQ,T2 within carriers: BMI x autism score,only 22q11.2 dup,44,0.142874006581885,0.128737378990049,0.267080989555146
+SCQ,T2 within carriers: BMI x autism score,heterogeneity of the interaction across CNVs (3 df F test),268,,,0.233497926873998
+SCQ,T2 within carriers: BMI x autism score,"permutation P (score permuted within CNV, 10,000)",268,-0.0287163331221452,,0.381861813818618
+SCQ,T2 selection check: autism score -> BMI,all carriers,268,-0.0371988488219823,0.0772254776122092,0.630025182616677
+SCQ,T2 selection check: autism score -> BMI,ASD diagnosis,72,-0.244897252612519,0.183861124265434,0.182870491993829
+SCQ,T2 selection check: autism score -> BMI,no ASD diagnosis,181,0.0653255635892586,0.0938040395626222,0.486175490168075
+SCQ,T2 selection check: ASD diagnosis ~ score x BMI (log-odds),all carriers,253,-0.156399932248978,0.104935479025084,0.136108839826026

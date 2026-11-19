@@ -1,0 +1,22 @@
+set,n_female,n_male,mean_female,mean_male,p,trait,score,test,b,se
+SSC siblings,778,697,-0.0417942205699407,-0.145246876235479,0.0469643006052016,,,,,
+SSC parents,2389,2389,-0.0251344273059889,-0.0973854251230597,0.0115633781231088,,,,,
+carriers: all carriers,308,308,-0.0225492127425548,0.0279806869266132,0.536453607744741,,,,,
+carriers: SVIP,42,62,0.0383809864085169,-0.038802754329246,0.69596842436324,,,,,
+carriers: G2MH,262,236,-0.0289134564049067,0.0811832560809451,0.229390565921479,,,,,
+,,,,,0.0119518344052588,SRS,score z within cohort (as Supp. Fig. 8),three-way vs SSC relatives,-0.0754671123326582,0.0300239559614238
+,,,,,0.011142608717056,SRS,score z within cohort (as Supp. Fig. 8),"three-way vs SSC relatives, + sex x BMI (x CNV) and sex x score",-0.0773009548646219,0.0304550969163766
+,,,,,0.00191161152711729,SRS,score z within cohort (as Supp. Fig. 8),within carriers BMI x score,-0.0851565879401333,0.0274377236061539
+,,,,,0.00218331791418484,SRS,score z within cohort (as Supp. Fig. 8),"within carriers BMI x score, + sex x BMI and sex x score",-0.086317965379573,0.0281708142957232
+,,,,,0.0123688558837232,SRS,score z within cohort and sex,three-way vs SSC relatives,-0.0758441833141447,0.03032017972379
+,,,,,0.0101931145409728,SRS,score z within cohort and sex,"three-way vs SSC relatives, + sex x BMI (x CNV) and sex x score",-0.0787012870432409,0.0306325044954387
+,,,,,0.00214195696033938,SRS,score z within cohort and sex,within carriers BMI x score,-0.0853808705146588,0.0278130887584704
+,,,,,0.00203819428700065,SRS,score z within cohort and sex,"within carriers BMI x score, + sex x BMI and sex x score",-0.0876793985904802,0.0284247950547671
+,,,,,0.486420130109498,SCQ,score z within cohort (as Supp. Fig. 8),three-way vs SSC relatives,-0.0259982826272749,0.0373531088105424
+,,,,,0.427958590000667,SCQ,score z within cohort (as Supp. Fig. 8),"three-way vs SSC relatives, + sex x BMI (x CNV) and sex x score",-0.0298385250154591,0.0376421218193848
+,,,,,0.375028135882387,SCQ,score z within cohort (as Supp. Fig. 8),within carriers BMI x score,-0.025854606987616,0.0291452748193342
+,,,,,0.315485033227893,SCQ,score z within cohort (as Supp. Fig. 8),"within carriers BMI x score, + sex x BMI and sex x score",-0.0297334497575525,0.0296215030051667
+,,,,,0.48643275135025,SCQ,score z within cohort and sex,three-way vs SSC relatives,-0.0263847307361964,0.0379094369605971
+,,,,,0.412308146895144,SCQ,score z within cohort and sex,"three-way vs SSC relatives, + sex x BMI (x CNV) and sex x score",-0.0313029156254797,0.0381818045965608
+,,,,,0.374608626019407,SCQ,score z within cohort and sex,within carriers BMI x score,-0.0266615125328601,0.0300284925468488
+,,,,,0.302084661418407,SCQ,score z within cohort and sex,"within carriers BMI x score, + sex x BMI and sex x score",-0.0314222457227582,0.0304487025513007

@@ -1,0 +1,2 @@
+outcome,n_controls,n_carriers,offset_carriers,offset_controls,offset_vs_ctl,p,p_heterogeneity_4cnv
+Head circumference,6247,817,0.963085314765601,0.572321384777481,0.566768417318361,1.09220614162458e-08,0.143505361679458

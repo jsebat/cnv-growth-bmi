@@ -26,8 +26,9 @@ test_2way <- function(dc) {
   c(curve_p = s$s.table[grep("grp", rownames(s$s.table)), "p-value"], offset = unname(s$p.coeff[2]), offset_p = unname(s$p.pv[2]))
 }
 
-PANELS <- list(c("No CNV", "nocnv"), c("16p11.2 del", "16pdel"), c("22q11.2 del", "22qdel"))
-POSTER_NAME <- c("16p11.2 del" = "16p11.2 BP4-BP5 DEL", "22q11.2 del" = "22q11.2 A-D DEL")   # poster labels
+PANELS <- list(c("No CNV", "nocnv"), c("16p11.2 del", "16pdel"), c("16p11.2 dup", "16pdup"), c("22q11.2 del", "22qdel"))   # 16p dup added MS 2026-11-06
+POSTER_NAME <- c("16p11.2 del" = "16p11.2 BP4-BP5 DEL", "16p11.2 dup" = "16p11.2 BP4-BP5 DUP", "22q11.2 del" = "22q11.2 A-D DEL")   # poster labels
+ONLY <- strsplit(Sys.getenv("PANELS_ONLY", ""), ",")[[1]]; if (length(ONLY)) PANELS <- Filter(function(P) P[2] %in% ONLY, PANELS)   # e.g. PANELS_ONLY=16pdup
 for (P in PANELS) {
   L <- P[1]
   dc <- d[locus == L][, bmi_grp := factor(ifelse(BMI >= qnorm(.7), lv[2], ifelse(BMI <= qnorm(.3), lv[1], NA)), levels = lv)][!is.na(bmi_grp)]

@@ -38,7 +38,9 @@ lab4 <- c("16p11.2 proximal DEL" = "16p11.2 del", "16p11.2 proximal DUP" = "16p1
 
 # ---------------------------------------------------------------- growth genomatrix: BMI, age, sex, CNV
 gm <- fread(file.path(DB, "G2MH/NetworkPaper/AnalysisByMolly/Clinical/genomatrix/genomatrix.Clinical.02092026.csv"))
-gm <- gm[!(cohort == "G2MH" & Cardiff_mask %in% TRUE)][, CNV := trimws(CNV)][, sex := ifelse(sex_numeric == 1, "male", ifelse(sex_numeric == 2, "female", NA))]
+gm <- gm[!(cohort == "G2MH" & Cardiff_mask %in% TRUE)][, CNV := trimws(CNV)]
+source(file.path(HERE, "00_add_chusj.R")); gm <- add_chusj(gm)   # JS 2026-11-02: CHU Sainte-Justine archival carriers (ARPA-H Montreal)
+gm[, sex := ifelse(sex_numeric == 1, "male", ifelse(sex_numeric == 2, "female", NA))]
 # JS 2026-10-24: SSC ages. The "age" in Age_individual_v14_parent_age.txt / SSC_Age_of_Subjects (and, for SSC parents, the
 # age in Molly's genomatrix) is a snapshot age as of 2012-09, not age at measurement: it overstates visit age by ~3 y
 # (median 3.2 y). Probands in the genomatrix carry age_at_ados (= age at evaluation), which is correct. Siblings and
@@ -58,7 +60,19 @@ cat("SSC parent ages in genomatrix replaced by visit age (snapshot age - ~3 y):"
 # JS 2026-10-24: plausibility QC of height / BMI / head circumference before any scoring (rules in 00_qc_growth.R; flagged rows in implausible_height_weight.csv)
 source(file.path(HERE, "00_qc_growth.R")); gm <- qc_growth(gm, label = "growth genomatrix")
 REFad <- readRDS(file.path(DATA, "analysis_table.rds"))[locus == "No CNV" & age >= 19 & !is.na(BMI_raw) & BMI_raw >= 10 & BMI_raw <= 70]   # JS 2026-10-24: plausibility bound (00_qc_growth.R)[order(id, -age)][, .SD[1], by = id]
-bmiZ <- function(b, a, s) score_bmi(b, a, s, REFad$BMI_raw, REFad$age, as.character(REFad$sex))
+bmiZ_rank <- function(b, a, s) score_bmi(b, a, s, REFad$BMI_raw, REFad$age, as.character(REFad$sex))   # pre-2026-11-14 adult scaling (mid-rank centile -> normal score)
+# JS 2026-11-14: adults on the same Box-Cox scale as the growth panels of Fig. 5 (00_scoring.R score_adult_bc as run in
+# 17_main_with_ukbb.R): lambda fixed per sex at the UK Biobank estimate (male -0.75, female -1.05), reference = clinical non-carrier
+# adults (REFad), Z = residual of lm(BoxCox(BMI) ~ age + age^2) / residual SD, by sex. Children unchanged (WHO). BMI_ADULT_SCALE=rank
+# restores the old scaling.
+BMI_LAMBDA <- c(male = -0.75, female = -1.05)
+bmiZ_bc <- function(b, a, s) {
+  z <- score_bmi_child(b, a, s); ad <- !is.na(a) & a >= 19; z[ad] <- NA
+  for (sx in c("male", "female")) { L <- BMI_LAMBDA[[sx]]; tr <- function(v) (v^L - 1) / L
+    r <- REFad[as.character(sex) == sx & !is.na(BMI_raw) & !is.na(age)]; m <- lm(tr(BMI_raw) ~ age + I(age^2), data = r); sdr <- sd(resid(m))
+    i <- which(ad & s == sx & !is.na(b) & b > 0); if (length(i)) z[i] <- (tr(b[i]) - predict(m, newdata = data.frame(age = a[i]))) / sdr }
+  z[!is.na(z) & abs(z) > 10] <- NA; z }
+bmiZ <- if (Sys.getenv("BMI_ADULT_SCALE") == "rank") bmiZ_rank else bmiZ_bc
 
 # ---------------------------------------------------------------- SSC phenotypes (all non-carrier SSC individuals in the genomatrix)
 ssc <- gm[cohort == "SSC" & CNV == "No CNV" & !is.na(BMI_raw) & !is.na(age), .(id = sampleID, cohort = "SSC", locus = "No CNV", sex, age, BMI_raw)]

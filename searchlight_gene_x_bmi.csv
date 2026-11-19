@@ -1,0 +1,2 @@
+trait,genotype,tier,n,pct_child_form,median_age,carrier_slope,carrier_slope_p,x_bmi_vs_siblings,se_sib,p_sib,x_bmi_vs_relatives,p_rel
+SRS,16p11.2 deletion,N 50-100,89,99,12,0.0934093150215521,0.146441720025432,0.0962652135983395,0.0643988683420686,0.135149933270388,0.0739712411253845,0.237302775311492

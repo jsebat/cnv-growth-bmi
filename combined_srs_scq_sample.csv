@@ -1,0 +1,13 @@
+pheno,locus,G2MH,SSC,SVIP,Searchlight
+SCQ,16p11.2 del,70,3,87,99
+SCQ,16p11.2 dup,22,6,38,32
+SCQ,22q11.2 del,275,0,0,0
+SCQ,22q11.2 dup,56,1,0,0
+SCQ,Non-carrier relative,0,0,48,1
+SCQ,SSC relative,0,1174,0,0
+SRS,16p11.2 del,91,8,94,86
+SRS,16p11.2 dup,37,8,65,30
+SRS,22q11.2 del,317,0,0,0
+SRS,22q11.2 dup,77,1,0,0
+SRS,Non-carrier relative,0,0,202,0
+SRS,SSC relative,0,5609,0,0
