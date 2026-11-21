@@ -1,0 +1,74 @@
+block,outcome,band,rows,rows_in_both,max_abs_diff_fixed_ukbb,exact_fixed_ukbb,max_abs_diff_estimate_mode,exact_estimate_mode
+band: control BMI slope,Height,2-9,1,1,0,1,0,1
+band: control BMI slope,Height,10-18,1,1,0,1,0,1
+band: control BMI slope,Height,19-39,1,1,0.0003311096849931,0,0.000459663400974399,0
+band: control BMI slope,Height,40-73,1,1,0.0730640010221017,0,0.0733215786730177,0
+band: control BMI slope,Head circumference,2-9,1,1,9.99200722162641e-16,1,9.99200722162641e-16,1
+band: control BMI slope,Head circumference,10-18,1,1,9.99200722162641e-16,1,9.99200722162641e-16,1
+band: control BMI slope,Head circumference,19-39,1,1,0.000141763576927967,0,9.99200722162641e-16,1
+band: control BMI slope,Head circumference,40-73,1,1,0.000602295366902983,0,9.99200722162641e-16,1
+band: CNV x BMI,Height,2-9,4,4,1.99840144432528e-15,4,1.99840144432528e-15,4
+"band: BMI slope, carriers",Height,2-9,4,4,1.99840144432528e-15,4,1.99840144432528e-15,4
+"band: CNV x BMI, SE",Height,2-9,4,4,0,4,0,4
+band: CNV x BMI,Height,10-18,4,4,5.29958021910915e-16,4,5.29958021910915e-16,4
+"band: BMI slope, carriers",Height,10-18,4,4,9.99200722162641e-16,4,9.99200722162641e-16,4
+"band: CNV x BMI, SE",Height,10-18,4,4,1.94289029309402e-16,4,1.94289029309402e-16,4
+band: CNV x BMI,Height,19-39,4,4,0.000381032213375002,0,0.00859485458102602,0
+"band: BMI slope, carriers",Height,19-39,4,4,4.00174364514061e-05,0,0.00905335483255899,0
+"band: CNV x BMI, SE",Height,19-39,4,4,2.70163970569892e-05,0,0.00136057346139599,0
+band: CNV x BMI,Height,40-73,4,4,0.357364221588544,0,0.349327156968545,0
+"band: BMI slope, carriers",Height,40-73,4,4,0.326604705712112,0,0.332997096907346,0
+"band: CNV x BMI, SE",Height,40-73,4,4,0.22063124504584,0,0.221728228070882,0
+band: CNV x BMI,Head circumference,2-9,4,4,9.99200722162641e-16,4,9.99200722162641e-16,4
+"band: BMI slope, carriers",Head circumference,2-9,4,4,1.99840144432528e-15,4,1.99840144432528e-15,4
+"band: CNV x BMI, SE",Head circumference,2-9,4,4,9.99200722162641e-16,4,9.99200722162641e-16,4
+band: CNV x BMI,Head circumference,10-18,4,4,3.99680288865056e-15,4,3.99680288865056e-15,4
+"band: BMI slope, carriers",Head circumference,10-18,4,4,4.9960036108132e-15,4,4.9960036108132e-15,4
+"band: CNV x BMI, SE",Head circumference,10-18,4,4,9.99200722162641e-16,4,9.99200722162641e-16,4
+band: CNV x BMI,Head circumference,19-39,4,4,0.0031944593031622,0,1.39998689724363e-14,4
+"band: BMI slope, carriers",Head circumference,19-39,4,4,0.00333551772980001,0,1.3988810110277e-14,4
+"band: CNV x BMI, SE",Head circumference,19-39,4,4,0.001300645287898,0,3.99680288865056e-15,4
+band: CNV x BMI,Head circumference,40-73,1,1,0.00234008384623,0,1.19904086659517e-14,1
+"band: BMI slope, carriers",Head circumference,40-73,1,1,0.00294230749509621,0,1.34059430223488e-14,1
+"band: CNV x BMI, SE",Head circumference,40-73,1,1,0.000669717314008,0,0,1
+"band: CNV x BMI, family-clustered SE",Height,2-9,4,4,9.71445146547012e-17,4,9.71445146547012e-17,4
+"band: CNV x BMI, family-clustered SE",Height,10-18,4,4,9.71445146547012e-17,4,9.71445146547012e-17,4
+"band: CNV x BMI, family-clustered SE",Height,19-39,4,4,9.78500647279279e-06,0,0.00440356962427529,0
+"band: CNV x BMI, family-clustered SE",Height,40-73,4,4,0.195679352945012,0,0.192110132438939,0
+"band: CNV x BMI, family-clustered SE",Head circumference,2-9,4,4,9.71445146547012e-17,4,9.71445146547012e-17,4
+"band: CNV x BMI, family-clustered SE",Head circumference,10-18,4,4,4.9960036108132e-16,4,4.9960036108132e-16,4
+"band: CNV x BMI, family-clustered SE",Head circumference,19-39,4,4,0.00296741519475802,0,2.99760216648792e-15,4
+"band: CNV x BMI, family-clustered SE",Head circumference,40-73,1,1,0.000201787787256991,0,7.99360577730113e-15,1
+"pooled four CNVs: CNV x BMI, band",Height,2-9,2,2,3.98986399474666e-16,2,3.98986399474666e-16,2
+"pooled four CNVs: CNV x BMI, band",Height,10-18,2,2,5.00294250471711e-15,2,5.00294250471711e-15,2
+"pooled four CNVs: CNV x BMI, band",Height,19-39,2,2,0.000365187767373102,0,0.000862841323691743,0
+"pooled four CNVs: CNV x BMI, band",Height,40-73,2,2,0.06820287716815,0,0.068971638109079,0
+"pooled four CNVs: CNV x BMI, all ages",Height,all ages / other,3,3,0.0634523742307475,0,0.063296165226593,0
+"pooled four CNVs: CNV x BMI, band",Head circumference,2-9,2,2,1.09634523681734e-15,2,1.09634523681734e-15,2
+"pooled four CNVs: CNV x BMI, band",Head circumference,10-18,2,2,2.3037127760972e-15,2,2.3037127760972e-15,2
+"pooled four CNVs: CNV x BMI, band",Head circumference,19-39,2,2,0.00283979839204264,0,4.52936299577544e-15,2
+"pooled four CNVs: CNV x BMI, band",Head circumference,40-73,2,2,0.000394980061325018,0,1.79856129989275e-14,2
+"pooled four CNVs: CNV x BMI, all ages",Head circumference,all ages / other,3,3,0.000625721866566926,0,3.56702514747731e-15,3
+all ages: CNV x BMI per genotype (bam),Height,all ages / other,4,4,0.0629622328673494,0,0.0616574773514474,0
+all ages: CNV x BMI per genotype (bam),Head circumference,all ages / other,4,4,0.00137025218461295,0,1.20459198171829e-14,4
+sex: CNV x BMI x sex,Height,all ages / other,5,5,0.0715620866383845,0,0.0721721547616639,0
+sex: CNV x BMI x sex,Height,2-9,5,5,9.99200722162641e-16,5,9.99200722162641e-16,5
+sex: CNV x BMI x sex,Height,10-18,5,5,9.99200722162641e-16,5,9.99200722162641e-16,5
+sex: CNV x BMI x sex,Height,19-39,4,4,0.000944737322204209,0,0.0089106240651588,0
+sex: CNV x BMI x sex,Height,40-73,5,1,0.0688939059323515,0,0.0495952723150485,0
+sex: CNV x BMI x sex,Head circumference,all ages / other,5,5,0.00589780823922198,0,5.39845945723982e-15,5
+sex: CNV x BMI x sex,Head circumference,2-9,5,5,1.99840144432528e-15,5,1.99840144432528e-15,5
+sex: CNV x BMI x sex,Head circumference,10-18,5,5,5.99520433297585e-15,5,5.99520433297585e-15,5
+sex: CNV x BMI x sex,Head circumference,19-39,2,2,0.003004605440663,0,9.99200722162641e-16,2
+sex: CNV x BMI x sex,Head circumference,40-73,1,1,0.002984962138045,0,9.99200722162641e-16,1
+band: BMI effect differs by genotype (F statistic),Height,2-9,1,1,0,1,0,1
+band: BMI effect differs by genotype (F statistic),Height,10-18,1,1,8.99280649946377e-14,1,8.99280649946377e-14,1
+band: BMI effect differs by genotype (F statistic),Height,19-39,1,1,0.001636806828334,0,0.030317535382722,0
+band: BMI effect differs by genotype (F statistic),Height,40-73,1,1,0.25791200232222,0,0.262155605785287,0
+band: BMI effect differs by genotype (F statistic),Head circumference,2-9,1,1,1.30562227695918e-13,1,1.30562227695918e-13,1
+band: BMI effect differs by genotype (F statistic),Head circumference,10-18,1,1,1.20126131264442e-13,1,1.20126131264442e-13,1
+band: BMI effect differs by genotype (F statistic),Head circumference,19-39,1,1,0.024615868483199,0,5.39568389967826e-14,1
+band: BMI effect differs by genotype (F statistic),Head circumference,40-73,1,1,0.0369969831736001,0,5.40012479177676e-13,1
+longitudinal: BMI coefficient (same table),Height,all ages / other,20,19,0,19,,0
+longitudinal: BMI coefficient (analysis table only),Head circumference,all ages / other,20,13,0.171419115718187,0,,0
+longitudinal: BMI coefficient (head-circumference sources of 80),Head circumference,all ages / other,20,19,0,19,,0
