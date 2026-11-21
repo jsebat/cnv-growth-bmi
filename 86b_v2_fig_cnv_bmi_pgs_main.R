@@ -2,6 +2,7 @@
 # What it does: main figure of section 3 (CNV x BMI x autism polygenic score -> autistic traits; exploratory), four panels:
 #   a  SRS against BMI in genotyped carriers below vs above the median autism score (partial residuals: cohort x CNV, age, sex
 #      removed; fitted lines with 95% bands), SSC unaffected relatives as a thin grey reference line
+#      Printed tests (2026-11-21): BMI x score within carriers (cohort-adjusted model) and the three-way term vs relatives
 #   b  BMI slope on SRS by fifth of the autism score (95% CI) with the continuous interaction line, carriers and relatives
 #   c  forest of the three-way term for SRS: pooled, per CNV, per cohort, leave-one-cohort-out, leave-one-CNV-out, and SCQ pooled
 #   d  effect of BMI on SRS / SCQ: observational estimate next to Mendelian-randomisation estimates (2SLS with three adiposity
@@ -23,11 +24,16 @@ X3[, hl := factor(lab[half], lab)]
 f3 <- X3[, { f <- lm(ya ~ BMI); g <- seq(quantile(BMI, 0.02), quantile(BMI, 0.98), length.out = 40); pr <- predict(f, data.frame(BMI = g), se.fit = TRUE); .(BMI = g, fit = pr$fit, lo = pr$fit - 1.96 * pr$se.fit, hi = pr$fit + 1.96 * pr$se.fit) }, by = hl]
 rel <- RELf(XG[pheno == "SRS"]); mr0 <- lm(y ~ poly(age, 2) + male + BMI, rel); rl <- data.table(BMI = c(-2.8, 3.8))[, fit := mean(rel$y) + coef(mr0)[["BMI"]] * (BMI - mean(rel$BMI))]
 HC2 <- setNames(c(C_LOW, C_HIGH), lab)
+# tests printed on panel a (JS 2026-11-21): continuous score, from 86_v2_cnv_bmi_pgs_stats.R (RB = threeway_pgs_robustness.csv)
+ra2 <- RB[trait == "SRS" & analysis == "within carriers BMI x autism score (cohort x BMI and cohort x score terms)" & subset == "all carriers"]
+ra3 <- RB[trait == "SRS" & analysis == A3 & subset == "all carriers"]; stopifnot(nrow(ra2) == 1, nrow(ra3) == 1)
 pa <- ggplot(X3, aes(BMI, ya, colour = hl)) + geom_point(size = 1.5, alpha = 0.45) +
   geom_line(data = rl, aes(BMI, fit), inherit.aes = FALSE, colour = C_NON, linewidth = 0.9) +
   geom_ribbon(data = f3, aes(BMI, ymin = lo, ymax = hi, fill = hl), inherit.aes = FALSE, alpha = 0.2) + geom_line(data = f3, aes(BMI, fit), linewidth = 1.5) +
   annotate("label", x = 3.8, y = rl$fit[2] - 0.3, label = sprintf("unaffected relatives (n = %d): slope = %+.2f", nrow(rel), coef(mr0)[["BMI"]]), hjust = 1, vjust = 1, size = TS, colour = "grey30", fill = "white", alpha = 0.85, linewidth = 0) +
-  scale_colour_manual(values = HC2, name = NULL) + scale_fill_manual(values = HC2, guide = "none") + coord_cartesian(xlim = c(-2.8, 3.8), ylim = c(-1.2, 5)) + guides(colour = guide_legend(ncol = 1, override.aes = list(alpha = 1, size = 3))) +
+  annotate("label", x = -2.75, y = 5.75, hjust = 0, vjust = 1, size = TS, lineheight = 1.05, colour = "grey10", fill = "white", alpha = 0.85, linewidth = 0, fontface = "bold",
+           label = sprintf("BMI \u00d7 autism score in carriers = %+.3f, %s\nCNV \u00d7 BMI \u00d7 autism score (carriers vs relatives) = %+.3f, %s", ra2$b, plab(ra2$p), ra3$b, plab(ra3$p))) +
+  scale_colour_manual(values = HC2, name = NULL) + scale_fill_manual(values = HC2, guide = "none") + coord_cartesian(xlim = c(-2.8, 3.8), ylim = c(-1.2, 5.8)) + guides(colour = guide_legend(ncol = 1, override.aes = list(alpha = 1, size = 3))) +
   labs(x = "BMI (SD)", y = "Social Responsiveness Scale (SD)", tag = "a", title = "BMI and autistic traits in carriers, by autism polygenic score") + th_v2(BS) + theme(legend.position = "bottom", legend.text = element_text(size = 14.5))
 # ---------------------------------------------------------------- b
 GC <- c("CNV carriers" = C_CAR, "SSC unaffected relatives" = C_NON)
