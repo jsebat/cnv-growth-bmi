@@ -1,0 +1,25 @@
+Sexes,Group,Measure,n,Estimate,SE,Lower 95% CI,Upper 95% CI,P,"P, interaction versus non-carriers"
+all,16p11.2 DEL,Body size at age 10,106,-0.284,0.134,-0.549,-0.019,0.036,0.1
+all,16p11.2 DEL,Adult BMI group,106,-0.029,0.16,-0.346,0.288,0.85,0.57
+women,16p11.2 DEL,Body size at age 10,52,-0.23,0.183,-0.597,0.137,0.21,0.37
+women,16p11.2 DEL,Adult BMI group,52,-0.113,0.305,-0.727,0.5,0.71,0.91
+men,16p11.2 DEL,Body size at age 10,54,-0.33,0.199,-0.729,0.07,0.1,0.18
+men,16p11.2 DEL,Adult BMI group,54,-0.061,0.195,-0.452,0.329,0.75,0.94
+all,No CNV,Body size at age 10,444852,-0.072,0.002,-0.076,-0.068,1.1e-233,
+all,No CNV,Adult BMI group,444852,-0.115,0.002,-0.119,-0.111,<1e-300,
+women,No CNV,Body size at age 10,242000,-0.075,0.003,-0.081,-0.069,1.2e-141,
+women,No CNV,Adult BMI group,242000,-0.146,0.003,-0.151,-0.141,<1e-300,
+men,No CNV,Body size at age 10,202852,-0.069,0.003,-0.076,-0.063,4.1e-95,
+men,No CNV,Adult BMI group,202852,-0.076,0.003,-0.082,-0.07,1.8e-152,
+all,16p11.2 DUP,Body size at age 10,140,-0.166,0.129,-0.421,0.09,0.2,0.44
+all,16p11.2 DUP,Adult BMI group,140,-0.353,0.123,-0.597,-0.11,0.0047,0.043
+women,16p11.2 DUP,Body size at age 10,76,-0.165,0.18,-0.523,0.193,0.36,0.58
+women,16p11.2 DUP,Adult BMI group,76,-0.34,0.175,-0.688,0.008,0.056,0.22
+men,16p11.2 DUP,Body size at age 10,64,-0.162,0.185,-0.532,0.208,0.39,0.62
+men,16p11.2 DUP,Adult BMI group,64,-0.351,0.173,-0.697,-0.005,0.047,0.12
+all,22q11.2 DUP,Body size at age 10,262,-0.179,0.08,-0.337,-0.021,0.027,0.23
+all,22q11.2 DUP,Adult BMI group,262,-0.114,0.073,-0.258,0.029,0.12,1
+women,22q11.2 DUP,Body size at age 10,122,-0.191,0.12,-0.43,0.047,0.11,0.38
+women,22q11.2 DUP,Adult BMI group,122,-0.25,0.113,-0.474,-0.026,0.029,0.41
+men,22q11.2 DUP,Body size at age 10,140,-0.179,0.108,-0.393,0.034,0.099,0.36
+men,22q11.2 DUP,Adult BMI group,140,-0.03,0.095,-0.219,0.158,0.75,0.66

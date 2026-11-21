@@ -1,0 +1,401 @@
+Analysis,Outcome,Genotype,Age window,Cohorts,Children (n),Visit pairs (n),Median age at first visit of pair (years),Median interval (years),Change in Z to next visit per SD of BMI Z,SE,Lower 95% CI,Upper 95% CI,P,"P, BMI x age window","P, heterogeneity across genotypes"
+PRIMARY,Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+PRIMARY,Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+PRIMARY,Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+PRIMARY,Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+PRIMARY,Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+PRIMARY,Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+PRIMARY,Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+PRIMARY,Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+PRIMARY,Head circumference,22q11.2 del,All ages,Cardiff+CHOP,331,1411,2.2,0.54,0.012,0.013,-0.013,0.037,0.33,0.49,
+PRIMARY,Head circumference,22q11.2 del,<2 y,CHOP,164,667,0.92,0.25,-0.003,0.018,-0.038,0.033,0.88,,
+PRIMARY,Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.016,0.031,-0.044,0.076,0.6,,
+PRIMARY,Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,201,463,9.04,1.24,0.028,0.02,-0.01,0.067,0.15,,
+PRIMARY,Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,46,232,1.97,0.48,0.049,0.042,-0.033,0.131,0.24,0.44,
+PRIMARY,Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.025,0.051,-0.075,0.125,0.63,,
+PRIMARY,Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.005,0.111,-0.222,0.212,0.96,,
+PRIMARY,Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,27,74,8.15,1.05,0.116,0.075,-0.03,0.262,0.12,,
+PRIMARY,Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,518,2103,1.83,0.5,0.03,0.011,0.008,0.052,0.0089,0.75,0.03
+PRIMARY,Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1100,0.83,0.25,0.024,0.015,-0.006,0.054,0.12,,0.22
+PRIMARY,Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,413,2.83,1.07,0.026,0.027,-0.026,0.078,0.33,,0.72
+PRIMARY,Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,274,590,8.95,1.29,0.041,0.019,0.004,0.077,0.031,,0.26
+One interval per child (the first),Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,94,0.96,0.5,0.047,0.082,-0.114,0.207,0.57,0.6,
+One interval per child (the first),Head circumference,16p11.2 del,<2 y,SVIP,55,55,0.33,0.25,0.043,0.095,-0.144,0.23,0.65,,
+One interval per child (the first),Head circumference,16p11.2 del,2-5 y,SVIP,11,11,3.75,1.25,,,,,,,
+One interval per child (the first),Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,28,28,8.33,3,-0.041,0.171,-0.376,0.293,0.81,,
+One interval per child (the first),Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,47,1.33,0.33,0.002,0.082,-0.159,0.164,0.98,0.44,
+One interval per child (the first),Head circumference,16p11.2 dup,<2 y,SVIP,30,30,0.25,0.17,0.023,0.099,-0.172,0.217,0.82,,
+One interval per child (the first),Head circumference,16p11.2 dup,2-5 y,SVIP,10,10,3.33,1.42,,,,,,,
+One interval per child (the first),Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,7,7,7.58,2,,,,,,,
+One interval per child (the first),Head circumference,22q11.2 del,All ages,Cardiff+CHOP,331,331,2.01,0.82,0.017,0.031,-0.043,0.077,0.57,0.29,
+One interval per child (the first),Head circumference,22q11.2 del,<2 y,CHOP,164,164,0.35,0.26,0.009,0.044,-0.077,0.096,0.83,,
+One interval per child (the first),Head circumference,22q11.2 del,2-5 y,CHOP,45,45,2.86,1.72,-0.092,0.078,-0.245,0.061,0.24,,
+One interval per child (the first),Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,122,122,8.86,3,0.051,0.048,-0.042,0.144,0.28,,
+One interval per child (the first),Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,46,46,1.14,0.62,0.138,0.106,-0.069,0.346,0.2,0.3,
+One interval per child (the first),Head circumference,22q11.2 dup,<2 y,CHOP,26,26,0.22,0.19,0.051,0.131,-0.206,0.307,0.7,,
+One interval per child (the first),Head circumference,22q11.2 dup,2-5 y,CHOP,<5,<5,3.19,1.05,,,,,,,
+One interval per child (the first),Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,17,17,7.1,1.48,0.329,0.176,-0.017,0.675,0.071,,
+One interval per child (the first),Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,518,518,1.64,0.67,0.037,0.026,-0.015,0.088,0.17,0.34,0.21
+One interval per child (the first),Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,275,0.33,0.25,0.019,0.035,-0.05,0.088,0.59,,0.73
+One interval per child (the first),Head circumference,All four CNVs,2-5 y,CHOP+SVIP,69,69,3.17,1.54,-0.03,0.069,-0.166,0.106,0.67,,0.13
+One interval per child (the first),Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,174,174,8.27,3,0.077,0.042,-0.006,0.16,0.069,,0.24
+Intervals of 0.5-3 y only,Head circumference,16p11.2 del,All ages,Cardiff+SVIP,75,114,2,0.92,0.144,0.063,0.021,0.267,0.024,0.98,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 del,<2 y,SVIP,42,51,1.08,0.58,0.142,0.093,-0.04,0.325,0.13,,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 del,2-5 y,SVIP,24,32,3.08,0.96,0.151,0.114,-0.072,0.375,0.19,,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,28,31,7.92,2,0.122,0.111,-0.095,0.339,0.27,,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,36,60,2,1,0.093,0.087,-0.078,0.264,0.29,0.79,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 dup,<2 y,SVIP,22,29,1.33,0.5,0.116,0.105,-0.09,0.321,0.28,,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 dup,2-5 y,SVIP,17,25,3.25,1.08,0.065,0.176,-0.28,0.41,0.71,,
+Intervals of 0.5-3 y only,Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,5,6,7.42,2,,,,,,,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 del,All ages,Cardiff+CHOP,259,593,5.15,1.07,0.025,0.021,-0.016,0.065,0.24,0.29,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 del,<2 y,CHOP,104,129,1.29,0.75,-0.008,0.046,-0.099,0.083,0.86,,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 del,2-5 y,CHOP,105,162,2.98,1.12,-0.02,0.043,-0.103,0.064,0.65,,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,152,302,9.4,1.21,0.048,0.026,-0.003,0.098,0.064,,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,33,86,5.21,1.08,0.037,0.083,-0.126,0.199,0.66,0.37,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 dup,<2 y,CHOP,12,13,1.25,0.79,,,,,,,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 dup,2-5 y,CHOP,13,26,3.13,1.05,,,,,,,
+Intervals of 0.5-3 y only,Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,19,47,8.26,1.11,0.141,0.11,-0.074,0.356,0.2,,
+Intervals of 0.5-3 y only,Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,403,853,4.19,1.04,0.051,0.018,0.015,0.087,0.0052,0.39,0.02
+Intervals of 0.5-3 y only,Head circumference,All four CNVs,<2 y,CHOP+SVIP,180,222,1.25,0.69,0.045,0.036,-0.026,0.116,0.22,,0.47
+Intervals of 0.5-3 y only,Head circumference,All four CNVs,2-5 y,CHOP+SVIP,159,245,3,1.08,0.011,0.037,-0.061,0.083,0.76,,0.23
+Intervals of 0.5-3 y only,Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,204,386,9,1.25,0.069,0.024,0.022,0.116,0.0041,,0.51
+CHOP excluded,Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+CHOP excluded,Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+CHOP excluded,Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+CHOP excluded,Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+CHOP excluded,Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+CHOP excluded,Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+CHOP excluded,Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+CHOP excluded,Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+CHOP excluded,Head circumference,22q11.2 del,All ages,Cardiff,50,56,10,3,0.192,0.113,-0.031,0.414,0.098,,
+CHOP excluded,Head circumference,22q11.2 del,5-18 y,Cardiff,50,56,10,3,,,,,,,
+CHOP excluded,Head circumference,22q11.2 dup,All ages,Cardiff,6,7,7,4,,,,,,,
+CHOP excluded,Head circumference,22q11.2 dup,5-18 y,Cardiff,6,7,7,4,,,,,,,
+CHOP excluded,Head circumference,All four CNVs,All ages,Cardiff+SVIP,197,523,1.33,0.5,0.102,0.029,0.045,0.158,0.00057,0.36,0.2
+CHOP excluded,Head circumference,All four CNVs,<2 y,SVIP,85,316,0.75,0.25,0.074,0.037,0.002,0.146,0.047,,0.34
+CHOP excluded,Head circumference,All four CNVs,2-5 y,SVIP,60,91,2.67,1,0.098,0.064,-0.028,0.224,0.13,,0.49
+CHOP excluded,Head circumference,All four CNVs,5-18 y,Cardiff+SVIP,102,116,9,3,0.159,0.052,0.057,0.261,0.0024,,0.56
+CHOP only (22q11.2),Head circumference,22q11.2 del,All ages,CHOP,281,1355,2.04,0.52,0.005,0.013,-0.019,0.03,0.66,0.74,
+CHOP only (22q11.2),Head circumference,22q11.2 del,<2 y,CHOP,164,667,0.92,0.25,-0.004,0.018,-0.039,0.031,0.81,,
+CHOP only (22q11.2),Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.014,0.03,-0.045,0.072,0.64,,
+CHOP only (22q11.2),Head circumference,22q11.2 del,5-18 y,CHOP,151,407,8.95,1.07,0.015,0.02,-0.025,0.054,0.46,,
+CHOP only (22q11.2),Head circumference,22q11.2 dup,All ages,CHOP,40,225,1.86,0.47,0.043,0.043,-0.041,0.127,0.32,0.54,
+CHOP only (22q11.2),Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.025,0.052,-0.076,0.126,0.63,,
+CHOP only (22q11.2),Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.007,0.111,-0.225,0.212,0.95,,
+CHOP only (22q11.2),Head circumference,22q11.2 dup,5-18 y,CHOP,21,67,8.16,0.98,0.105,0.079,-0.051,0.26,0.19,,
+CHOP only (22q11.2),Head circumference,All four CNVs,All ages,CHOP,321,1580,2.01,0.5,0.009,0.012,-0.014,0.033,0.43,0.9,0.34
+CHOP only (22q11.2),Head circumference,All four CNVs,<2 y,CHOP,190,784,0.91,0.25,0.007,0.016,-0.026,0.039,0.69,,0.32
+CHOP only (22q11.2),Head circumference,All four CNVs,2-5 y,CHOP,169,322,2.85,1.08,0.003,0.028,-0.052,0.059,0.91,,0.85
+CHOP only (22q11.2),Head circumference,All four CNVs,5-18 y,CHOP,172,474,8.88,1.04,0.016,0.019,-0.022,0.054,0.41,,0.31
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 del,All ages,Cardiff+CHOP,307,1383,2.12,0.53,0.01,0.013,-0.014,0.035,0.41,0.58,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 del,<2 y,CHOP,164,667,0.92,0.25,-0.003,0.018,-0.038,0.033,0.88,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.016,0.03,-0.044,0.075,0.61,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,177,435,9,1.19,0.024,0.02,-0.015,0.063,0.23,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,46,232,1.97,0.48,0.049,0.042,-0.033,0.131,0.24,0.44,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.025,0.051,-0.075,0.125,0.63,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.005,0.111,-0.222,0.212,0.96,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,27,74,8.15,1.05,0.116,0.075,-0.03,0.262,0.12,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,494,2075,1.78,0.5,0.029,0.011,0.006,0.051,0.012,0.84,0.025
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1100,0.83,0.25,0.024,0.015,-0.006,0.053,0.11,,0.22
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,413,2.83,1.07,0.026,0.026,-0.026,0.078,0.32,,0.72
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,250,562,8.77,1.2,0.037,0.019,0,0.074,0.051,,0.22
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 del,All ages,Cardiff+CHOP,289,1363,2.06,0.52,0.007,0.013,-0.018,0.031,0.6,0.74,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 del,<2 y,CHOP,164,667,0.92,0.25,-0.003,0.018,-0.038,0.032,0.86,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.015,0.03,-0.044,0.074,0.61,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,159,415,8.96,1.09,0.016,0.02,-0.024,0.055,0.44,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,44,229,1.89,0.47,0.048,0.042,-0.034,0.129,0.26,0.44,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.024,0.051,-0.075,0.123,0.64,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.005,0.111,-0.222,0.212,0.96,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,25,71,8.16,1.04,0.117,0.075,-0.03,0.265,0.12,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,474,2052,1.75,0.5,0.026,0.011,0.004,0.048,0.023,0.94,0.02
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1100,0.83,0.25,0.023,0.015,-0.006,0.053,0.12,,0.22
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,413,2.83,1.07,0.026,0.026,-0.026,0.077,0.33,,0.72
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,230,539,8.66,1.14,0.031,0.019,-0.007,0.068,0.11,,0.21
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 del,All ages,Cardiff+CHOP,329,1408,2.19,0.54,0.012,0.013,-0.013,0.037,0.36,0.52,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 del,<2 y,CHOP,164,667,0.92,0.25,-0.003,0.018,-0.039,0.033,0.88,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.016,0.031,-0.045,0.076,0.61,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,199,460,9.03,1.23,0.027,0.02,-0.012,0.066,0.18,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,46,232,1.97,0.48,0.049,0.042,-0.033,0.131,0.24,0.44,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.025,0.051,-0.075,0.125,0.63,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.005,0.111,-0.222,0.212,0.96,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,27,74,8.15,1.05,0.116,0.075,-0.03,0.262,0.12,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,516,2100,1.82,0.5,0.029,0.011,0.007,0.052,0.01,0.78,0.029
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1100,0.83,0.25,0.024,0.015,-0.006,0.053,0.12,,0.22
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,413,2.83,1.07,0.026,0.027,-0.026,0.078,0.33,,0.72
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,272,587,8.92,1.28,0.039,0.019,0.002,0.076,0.037,,0.26
+childsds scoring for CHOP,Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+childsds scoring for CHOP,Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+childsds scoring for CHOP,Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+childsds scoring for CHOP,Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+childsds scoring for CHOP,Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+childsds scoring for CHOP,Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+childsds scoring for CHOP,Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+childsds scoring for CHOP,Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+childsds scoring for CHOP,Head circumference,22q11.2 del,All ages,Cardiff+CHOP,331,1396,2.15,0.54,0.012,0.013,-0.013,0.037,0.34,0.48,
+childsds scoring for CHOP,Head circumference,22q11.2 del,<2 y,CHOP,164,666,0.91,0.25,-0.002,0.018,-0.038,0.034,0.92,,
+childsds scoring for CHOP,Head circumference,22q11.2 del,2-5 y,CHOP,153,279,2.78,1.11,0.007,0.031,-0.053,0.068,0.81,,
+childsds scoring for CHOP,Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,198,451,9.03,1.23,0.03,0.02,-0.009,0.069,0.13,,
+childsds scoring for CHOP,Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,45,227,1.88,0.48,0.047,0.042,-0.036,0.13,0.27,0.43,
+childsds scoring for CHOP,Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.026,0.053,-0.078,0.129,0.63,,
+childsds scoring for CHOP,Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.009,0.112,-0.228,0.209,0.93,,
+childsds scoring for CHOP,Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,25,69,8.16,1.04,0.12,0.076,-0.03,0.269,0.12,,
+childsds scoring for CHOP,Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,517,2083,1.79,0.5,0.03,0.011,0.007,0.052,0.0097,0.66,0.027
+childsds scoring for CHOP,Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1099,0.83,0.25,0.024,0.015,-0.005,0.054,0.11,,0.23
+childsds scoring for CHOP,Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,411,2.79,1.07,0.019,0.027,-0.033,0.071,0.47,,0.63
+childsds scoring for CHOP,Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,269,573,8.94,1.28,0.043,0.019,0.006,0.08,0.024,,0.27
+childsds scoring for every cohort,Head circumference,16p11.2 del,All ages,Cardiff+SVIP,91,287,1.08,0.42,0.082,0.039,0.006,0.158,0.039,0.94,
+childsds scoring for every cohort,Head circumference,16p11.2 del,<2 y,SVIP,55,203,0.75,0.25,0.089,0.046,-0.001,0.179,0.057,,
+childsds scoring for every cohort,Head circumference,16p11.2 del,2-5 y,SVIP,31,44,2.33,1.17,0.082,0.087,-0.089,0.253,0.35,,
+childsds scoring for every cohort,Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,34,40,7.92,2,0.051,0.094,-0.132,0.235,0.58,,
+childsds scoring for every cohort,Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,46,159,1.08,0.42,0.05,0.053,-0.054,0.154,0.35,0.47,
+childsds scoring for every cohort,Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.046,0.066,-0.083,0.175,0.49,,
+childsds scoring for every cohort,Head circumference,16p11.2 dup,2-5 y,SVIP,25,36,2.62,1.08,0.087,0.095,-0.099,0.273,0.36,,
+childsds scoring for every cohort,Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+childsds scoring for every cohort,Head circumference,22q11.2 del,All ages,Cardiff+CHOP,331,1396,2.15,0.54,0.012,0.013,-0.013,0.037,0.34,0.48,
+childsds scoring for every cohort,Head circumference,22q11.2 del,<2 y,CHOP,164,666,0.91,0.25,-0.002,0.018,-0.038,0.034,0.92,,
+childsds scoring for every cohort,Head circumference,22q11.2 del,2-5 y,CHOP,153,279,2.78,1.11,0.007,0.031,-0.053,0.068,0.81,,
+childsds scoring for every cohort,Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,198,451,9.03,1.23,0.03,0.02,-0.009,0.069,0.13,,
+childsds scoring for every cohort,Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,45,227,1.88,0.48,0.047,0.042,-0.036,0.13,0.27,0.43,
+childsds scoring for every cohort,Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.026,0.053,-0.078,0.129,0.63,,
+childsds scoring for every cohort,Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.009,0.112,-0.228,0.209,0.93,,
+childsds scoring for every cohort,Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,25,69,8.16,1.04,0.12,0.076,-0.03,0.269,0.12,,
+childsds scoring for every cohort,Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,513,2069,1.78,0.5,0.029,0.011,0.006,0.051,0.013,0.62,0.059
+childsds scoring for every cohort,Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1098,0.83,0.25,0.024,0.015,-0.006,0.054,0.11,,0.28
+childsds scoring for every cohort,Head circumference,All four CNVs,2-5 y,CHOP+SVIP,225,400,2.77,1.08,0.015,0.027,-0.037,0.068,0.57,,0.87
+childsds scoring for every cohort,Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,267,571,8.95,1.28,0.042,0.019,0.005,0.079,0.027,,0.32
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 del,All ages,Cardiff+CHOP,325,1272,2.58,0.65,0.011,0.013,-0.015,0.037,0.42,0.53,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 del,<2 y,CHOP,157,528,1.08,0.27,-0.006,0.021,-0.046,0.035,0.79,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.012,0.031,-0.048,0.073,0.69,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,201,463,9.04,1.24,0.026,0.02,-0.013,0.064,0.19,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,45,214,2.31,0.5,0.053,0.042,-0.031,0.136,0.22,0.54,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 dup,<2 y,CHOP,25,99,1,0.26,0.033,0.053,-0.07,0.137,0.53,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.009,0.112,-0.228,0.211,0.94,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,27,74,8.15,1.05,0.113,0.075,-0.034,0.26,0.13,,
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,511,1946,2.01,0.54,0.03,0.012,0.007,0.053,0.01,0.83,0.015
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,All four CNVs,<2 y,CHOP+SVIP,267,943,1,0.26,0.026,0.016,-0.006,0.058,0.11,,0.16
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,413,2.83,1.07,0.023,0.027,-0.029,0.075,0.38,,0.72
+CHOP from analysis_table_chop (infant lengths < 60 cm removed by 00_qc_growth),Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,274,590,8.95,1.29,0.039,0.019,0.002,0.076,0.037,,0.26
+PRIMARY,Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+PRIMARY,Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+PRIMARY,Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+PRIMARY,Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+PRIMARY,Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+PRIMARY,Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+PRIMARY,Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+PRIMARY,Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+PRIMARY,Height,22q11.2 del,All ages,Cardiff+CHOP,541,2482,8.84,0.87,0.012,0.007,-0.001,0.025,0.071,1.6e-05,
+PRIMARY,Height,22q11.2 del,2-8 y,Cardiff+CHOP,367,1086,5.22,0.9,0.052,0.011,0.031,0.072,1.7e-06,,
+PRIMARY,Height,22q11.2 del,8-13 y,Cardiff+CHOP,357,840,10.32,0.91,0.006,0.01,-0.014,0.025,0.56,,
+PRIMARY,Height,22q11.2 del,13-18 y,Cardiff+CHOP,243,556,14.72,0.77,-0.022,0.012,-0.045,0.002,0.074,,
+PRIMARY,Height,22q11.2 dup,All ages,Cardiff+CHOP,68,313,8.75,0.92,0.065,0.023,0.021,0.11,0.0041,0.065,
+PRIMARY,Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,134,5.21,0.94,0.127,0.036,0.057,0.198,0.00049,,
+PRIMARY,Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.045,0.031,-0.015,0.104,0.14,,
+PRIMARY,Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.011,0.045,-0.077,0.1,0.8,,
+PRIMARY,Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,774,3107,8.9,0.93,0.033,0.008,0.018,0.048,2.1e-05,8.2e-11,0.43
+PRIMARY,Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,1337,5.23,0.95,0.089,0.012,0.066,0.112,1.9e-14,,0.083
+PRIMARY,Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,486,1083,10.25,0.98,0.029,0.011,0.009,0.05,0.0055,,0.069
+PRIMARY,Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,309,687,14.67,0.81,-0.022,0.013,-0.047,0.004,0.092,,0.17
+One interval per child (the first),Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,117,7.83,2.08,0.08,0.058,-0.033,0.193,0.17,0.07,
+One interval per child (the first),Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,62,4.71,2.46,0.191,0.084,0.027,0.355,0.024,,
+One interval per child (the first),Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,43,43,10.08,2.25,0.028,0.09,-0.147,0.204,0.75,,
+One interval per child (the first),Height,16p11.2 del,13-18 y,Searchlight+SVIP,12,12,13.71,1.46,,,,,,,
+One interval per child (the first),Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,48,8,2.25,0.111,0.083,-0.052,0.273,0.19,0.09,
+One interval per child (the first),Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.115,0.137,-0.154,0.384,0.41,,
+One interval per child (the first),Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,19,19,9,2.17,0.287,0.132,0.028,0.546,0.037,,
+One interval per child (the first),Height,16p11.2 dup,13-18 y,Searchlight+SVIP,9,9,13.42,1,,,,,,,
+One interval per child (the first),Height,22q11.2 del,All ages,Cardiff+CHOP,541,541,5.03,1.04,0.009,0.018,-0.026,0.043,0.63,0.038,
+One interval per child (the first),Height,22q11.2 del,2-8 y,Cardiff+CHOP,367,367,3.63,0.97,0.045,0.023,-0.001,0.09,0.056,,
+One interval per child (the first),Height,22q11.2 del,8-13 y,Cardiff+CHOP,119,119,10,2,-0.048,0.03,-0.107,0.01,0.11,,
+One interval per child (the first),Height,22q11.2 del,13-18 y,Cardiff+CHOP,55,55,14.28,1.25,-0.031,0.054,-0.137,0.075,0.57,,
+One interval per child (the first),Height,22q11.2 dup,All ages,Cardiff+CHOP,68,68,5.27,1.06,0.085,0.052,-0.017,0.187,0.11,0.93,
+One interval per child (the first),Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,48,3.62,1.03,0.095,0.071,-0.043,0.233,0.18,,
+One interval per child (the first),Height,22q11.2 dup,8-13 y,Cardiff+CHOP,18,18,9.33,1.3,0.075,0.077,-0.077,0.226,0.34,,
+One interval per child (the first),Height,22q11.2 dup,13-18 y,Cardiff+CHOP,<5,<5,13.47,1.31,,,,,,,
+One interval per child (the first),Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,774,774,5.99,1.25,0.033,0.016,0,0.065,0.047,0.026,0.19
+One interval per child (the first),Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,497,3.83,1.03,0.07,0.022,0.026,0.114,0.0017,,0.66
+One interval per child (the first),Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,199,199,10,2,0.002,0.026,-0.049,0.054,0.93,,0.041
+One interval per child (the first),Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,78,78,14,1.27,-0.049,0.046,-0.14,0.041,0.29,,0.66
+Intervals of 0.5-3 y only,Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,97,185,9.17,1.17,0.032,0.041,-0.048,0.112,0.43,0.57,
+Intervals of 0.5-3 y only,Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,40,69,5.5,1,0.086,0.074,-0.059,0.232,0.24,,
+Intervals of 0.5-3 y only,Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,49,77,10.17,1.58,0.012,0.059,-0.104,0.129,0.84,,
+Intervals of 0.5-3 y only,Height,16p11.2 del,13-18 y,Searchlight+SVIP,26,39,14.17,1,-0.007,0.073,-0.149,0.136,0.93,,
+Intervals of 0.5-3 y only,Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,37,63,11.08,1.17,0.021,0.064,-0.104,0.147,0.74,5e-04,
+Intervals of 0.5-3 y only,Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,9,9,6.08,1.83,,,,,,,
+Intervals of 0.5-3 y only,Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,20,32,9.88,1.29,0.182,0.088,0.009,0.355,0.045,,
+Intervals of 0.5-3 y only,Height,16p11.2 dup,13-18 y,Searchlight+SVIP,10,22,14.5,1,,,,,,,
+Intervals of 0.5-3 y only,Height,22q11.2 del,All ages,Cardiff+CHOP,503,2344,8.95,0.83,0.015,0.006,0.003,0.028,0.017,7.4e-06,
+Intervals of 0.5-3 y only,Height,22q11.2 del,2-8 y,Cardiff+CHOP,331,1010,5.18,0.85,0.052,0.01,0.032,0.072,4.4e-07,,
+Intervals of 0.5-3 y only,Height,22q11.2 del,8-13 y,Cardiff+CHOP,325,784,10.35,0.86,0.016,0.01,-0.003,0.035,0.1,,
+Intervals of 0.5-3 y only,Height,22q11.2 del,13-18 y,Cardiff+CHOP,237,550,14.73,0.76,-0.022,0.011,-0.044,0.001,0.058,,
+Intervals of 0.5-3 y only,Height,22q11.2 dup,All ages,Cardiff+CHOP,61,295,8.74,0.85,0.09,0.021,0.049,0.132,9.2e-05,0.015,
+Intervals of 0.5-3 y only,Height,22q11.2 dup,2-8 y,Cardiff+CHOP,43,126,5.21,0.88,0.157,0.034,0.091,0.223,9.1e-06,,
+Intervals of 0.5-3 y only,Height,22q11.2 dup,8-13 y,Cardiff+CHOP,38,103,10.32,0.86,0.076,0.029,0.02,0.132,0.0089,,
+Intervals of 0.5-3 y only,Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.015,0.04,-0.064,0.094,0.71,,
+Intervals of 0.5-3 y only,Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,698,2887,9,0.88,0.033,0.007,0.019,0.046,5e-06,1.1e-10,0.011
+Intervals of 0.5-3 y only,Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,423,1214,5.2,0.9,0.083,0.011,0.062,0.104,4.4e-14,,0.00075
+Intervals of 0.5-3 y only,Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,432,996,10.3,0.92,0.04,0.01,0.02,0.059,6.8e-05,,0.2
+Intervals of 0.5-3 y only,Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,299,677,14.71,0.81,-0.02,0.012,-0.043,0.002,0.081,,0.092
+CHOP excluded,Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+CHOP excluded,Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+CHOP excluded,Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+CHOP excluded,Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+CHOP excluded,Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+CHOP excluded,Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+CHOP excluded,Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+CHOP excluded,Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+CHOP excluded,Height,22q11.2 del,All ages,Cardiff,73,102,10,3,-0.035,0.046,-0.126,0.055,0.45,0.9,
+CHOP excluded,Height,22q11.2 del,2-8 y,Cardiff,14,14,7,3,,,,,,,
+CHOP excluded,Height,22q11.2 del,8-13 y,Cardiff,52,65,10,3,-0.057,0.06,-0.175,0.062,0.35,,
+CHOP excluded,Height,22q11.2 del,13-18 y,Cardiff,22,23,14,3,-0.019,0.12,-0.254,0.215,0.87,,
+CHOP excluded,Height,22q11.2 dup,All ages,Cardiff,11,12,8.5,3,,,,,,,
+CHOP excluded,Height,22q11.2 dup,2-8 y,Cardiff,5,5,7,4,,,,,,,
+CHOP excluded,Height,22q11.2 dup,8-13 y,Cardiff,6,6,9.5,3,,,,,,,
+CHOP excluded,Height,22q11.2 dup,13-18 y,Cardiff,<5,<5,13,2,,,,,,,
+CHOP excluded,Height,All four CNVs,All ages,Cardiff+Searchlight+SVIP,249,426,10,2,0.03,0.026,-0.022,0.082,0.26,0.014,0.22
+CHOP excluded,Height,All four CNVs,2-8 y,Cardiff+Searchlight+SVIP,101,136,6,2.08,0.127,0.046,0.036,0.218,0.0064,,0.27
+CHOP excluded,Height,All four CNVs,8-13 y,Cardiff+Searchlight+SVIP,143,201,10,2,0.015,0.036,-0.056,0.086,0.68,,0.12
+CHOP excluded,Height,All four CNVs,13-18 y,Cardiff+Searchlight+SVIP,63,89,14,1.58,-0.061,0.05,-0.159,0.036,0.22,,0.38
+CHOP only (22q11.2),Height,22q11.2 del,All ages,CHOP,468,2380,8.69,0.84,0.011,0.006,-0.001,0.023,0.071,1.6e-05,
+CHOP only (22q11.2),Height,22q11.2 del,2-8 y,CHOP,353,1072,5.18,0.9,0.048,0.01,0.028,0.067,2.3e-06,,
+CHOP only (22q11.2),Height,22q11.2 del,8-13 y,CHOP,305,775,10.38,0.84,0.006,0.01,-0.013,0.024,0.57,,
+CHOP only (22q11.2),Height,22q11.2 del,13-18 y,CHOP,221,533,14.77,0.74,-0.022,0.011,-0.045,0,0.05,,
+CHOP only (22q11.2),Height,22q11.2 dup,All ages,CHOP,57,301,8.75,0.86,0.059,0.023,0.014,0.103,0.011,0.023,
+CHOP only (22q11.2),Height,22q11.2 dup,2-8 y,CHOP,43,129,5.15,0.91,0.127,0.035,0.059,0.196,0.00031,,
+CHOP only (22q11.2),Height,22q11.2 dup,8-13 y,CHOP,38,107,10.41,0.88,0.033,0.032,-0.029,0.095,0.3,,
+CHOP only (22q11.2),Height,22q11.2 dup,13-18 y,CHOP,25,65,14.49,0.78,-0.006,0.044,-0.092,0.08,0.9,,
+CHOP only (22q11.2),Height,All four CNVs,All ages,CHOP,525,2681,8.72,0.84,0.014,0.006,0.003,0.026,0.017,6.2e-07,0.046
+CHOP only (22q11.2),Height,All four CNVs,2-8 y,CHOP,396,1201,5.18,0.9,0.054,0.01,0.035,0.073,2.3e-08,,0.017
+CHOP only (22q11.2),Height,All four CNVs,8-13 y,CHOP,343,882,10.38,0.86,0.007,0.009,-0.011,0.025,0.46,,0.64
+CHOP only (22q11.2),Height,All four CNVs,13-18 y,CHOP,246,598,14.76,0.75,-0.022,0.011,-0.044,0,0.05,,0.94
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 del,All ages,Cardiff+CHOP,505,2434,8.77,0.85,0.011,0.006,-0.001,0.024,0.077,2.4e-05,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 del,2-8 y,Cardiff+CHOP,363,1082,5.2,0.9,0.048,0.01,0.028,0.068,4.4e-06,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 del,8-13 y,Cardiff+CHOP,330,806,10.35,0.88,0.007,0.01,-0.012,0.027,0.45,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 del,13-18 y,Cardiff+CHOP,233,546,14.75,0.75,-0.023,0.012,-0.047,0,0.047,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 dup,All ages,Cardiff+CHOP,68,313,8.75,0.92,0.065,0.023,0.021,0.11,0.0041,0.065,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,134,5.21,0.94,0.127,0.036,0.057,0.198,0.00049,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.045,0.031,-0.015,0.104,0.14,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.011,0.045,-0.077,0.1,0.8,,
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,738,3059,8.83,0.92,0.034,0.008,0.019,0.049,1.4e-05,8.4e-11,0.49
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,493,1333,5.22,0.95,0.089,0.011,0.067,0.112,1.3e-14,,0.088
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,459,1049,10.26,0.96,0.033,0.011,0.012,0.053,0.0023,,0.084
+"Candidate duplicates removed, strict rule (41 Cardiff children; chance-level matches)",Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,299,677,14.71,0.81,-0.022,0.013,-0.047,0.003,0.088,,0.18
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 del,All ages,Cardiff+CHOP,483,2397,8.74,0.84,0.012,0.006,0,0.025,0.053,9e-07,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 del,2-8 y,Cardiff+CHOP,355,1074,5.19,0.9,0.055,0.01,0.035,0.076,1.3e-07,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 del,8-13 y,Cardiff+CHOP,312,782,10.37,0.86,0.007,0.01,-0.013,0.026,0.49,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 del,13-18 y,Cardiff+CHOP,229,541,14.75,0.75,-0.025,0.012,-0.048,-0.002,0.032,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 dup,All ages,Cardiff+CHOP,66,310,8.78,0.9,0.062,0.022,0.018,0.105,0.0061,0.073,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 dup,2-8 y,Cardiff+CHOP,46,132,5.2,0.94,0.121,0.036,0.051,0.191,0.00078,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 dup,8-13 y,Cardiff+CHOP,43,112,10.23,0.94,0.042,0.03,-0.017,0.101,0.16,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.008,0.044,-0.079,0.095,0.85,,
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,714,3019,8.8,0.92,0.035,0.008,0.02,0.05,7.5e-06,1.5e-12,0.56
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,483,1323,5.2,0.94,0.097,0.012,0.074,0.119,1e-16,,0.12
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,440,1024,10.3,0.94,0.033,0.011,0.012,0.054,0.0022,,0.079
+"Candidate duplicates removed, loose rule (66 Cardiff children; upper bound)",Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,295,672,14.72,0.8,-0.023,0.013,-0.048,0.002,0.071,,0.17
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 del,All ages,Cardiff+CHOP,539,2478,8.84,0.87,0.012,0.007,-0.001,0.025,0.072,1.5e-05,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 del,2-8 y,Cardiff+CHOP,367,1086,5.22,0.9,0.052,0.011,0.031,0.073,1.7e-06,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 del,8-13 y,Cardiff+CHOP,355,837,10.33,0.91,0.006,0.01,-0.014,0.026,0.55,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 del,13-18 y,Cardiff+CHOP,242,555,14.72,0.76,-0.022,0.012,-0.046,0.002,0.07,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 dup,All ages,Cardiff+CHOP,68,313,8.75,0.92,0.065,0.023,0.021,0.11,0.0041,0.065,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,134,5.21,0.94,0.127,0.036,0.057,0.198,0.00049,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.045,0.031,-0.015,0.104,0.14,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.011,0.045,-0.077,0.1,0.8,,
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,772,3103,8.89,0.93,0.034,0.008,0.018,0.049,1.9e-05,7.3e-11,0.43
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,1337,5.23,0.95,0.089,0.012,0.067,0.112,1.6e-14,,0.083
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,484,1080,10.25,0.98,0.03,0.011,0.009,0.051,0.0048,,0.07
+"Candidate duplicates removed, height + weight rule (2 Cardiff children)",Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,308,686,14.67,0.81,-0.022,0.013,-0.047,0.003,0.091,,0.17
+childsds scoring for CHOP,Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+childsds scoring for CHOP,Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+childsds scoring for CHOP,Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+childsds scoring for CHOP,Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+childsds scoring for CHOP,Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+childsds scoring for CHOP,Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+childsds scoring for CHOP,Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+childsds scoring for CHOP,Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+childsds scoring for CHOP,Height,22q11.2 del,All ages,Cardiff+CHOP,541,2473,8.86,0.88,0.013,0.007,0,0.026,0.055,7.4e-06,
+childsds scoring for CHOP,Height,22q11.2 del,2-8 y,Cardiff+CHOP,367,1077,5.24,0.91,0.054,0.011,0.033,0.075,5.9e-07,,
+childsds scoring for CHOP,Height,22q11.2 del,8-13 y,Cardiff+CHOP,357,840,10.32,0.91,0.006,0.01,-0.013,0.026,0.52,,
+childsds scoring for CHOP,Height,22q11.2 del,13-18 y,Cardiff+CHOP,243,556,14.72,0.77,-0.022,0.012,-0.046,0.002,0.074,,
+childsds scoring for CHOP,Height,22q11.2 dup,All ages,Cardiff+CHOP,68,311,8.82,0.93,0.06,0.022,0.017,0.104,0.0072,0.11,
+childsds scoring for CHOP,Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,132,5.23,0.96,0.114,0.036,0.044,0.184,0.0021,,
+childsds scoring for CHOP,Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.044,0.03,-0.015,0.103,0.15,,
+childsds scoring for CHOP,Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.009,0.044,-0.078,0.096,0.84,,
+childsds scoring for CHOP,Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,774,3096,8.92,0.93,0.034,0.008,0.019,0.049,1.6e-05,4.3e-11,0.59
+childsds scoring for CHOP,Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,1326,5.24,0.96,0.09,0.012,0.068,0.113,9.7e-15,,0.19
+childsds scoring for CHOP,Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,486,1083,10.25,0.98,0.03,0.011,0.009,0.051,0.0049,,0.069
+childsds scoring for CHOP,Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,309,687,14.67,0.81,-0.022,0.013,-0.047,0.003,0.088,,0.17
+childsds scoring for every cohort,Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,116,220,9,1.67,0.085,0.043,0.001,0.169,0.05,0.0099,
+childsds scoring for every cohort,Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,61,89,6,2,0.234,0.067,0.103,0.364,0.00056,,
+childsds scoring for every cohort,Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.064,-0.119,0.134,0.9,,
+childsds scoring for every cohort,Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.026,0.082,-0.187,0.136,0.76,,
+childsds scoring for every cohort,Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,47,83,10,1.92,0.017,0.066,-0.112,0.147,0.79,0.013,
+childsds scoring for every cohort,Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,19,19,5.67,3.42,0.143,0.12,-0.092,0.377,0.24,,
+childsds scoring for every cohort,Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.107,0.09,-0.069,0.282,0.24,,
+childsds scoring for every cohort,Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+childsds scoring for every cohort,Height,22q11.2 del,All ages,Cardiff+CHOP,541,2473,8.86,0.88,0.013,0.007,0,0.026,0.055,7.4e-06,
+childsds scoring for every cohort,Height,22q11.2 del,2-8 y,Cardiff+CHOP,367,1077,5.24,0.91,0.054,0.011,0.033,0.075,5.9e-07,,
+childsds scoring for every cohort,Height,22q11.2 del,8-13 y,Cardiff+CHOP,357,840,10.32,0.91,0.006,0.01,-0.013,0.026,0.52,,
+childsds scoring for every cohort,Height,22q11.2 del,13-18 y,Cardiff+CHOP,243,556,14.72,0.77,-0.022,0.012,-0.046,0.002,0.074,,
+childsds scoring for every cohort,Height,22q11.2 dup,All ages,Cardiff+CHOP,68,311,8.82,0.93,0.06,0.022,0.017,0.104,0.0072,0.11,
+childsds scoring for every cohort,Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,132,5.23,0.96,0.114,0.036,0.044,0.184,0.0021,,
+childsds scoring for every cohort,Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.044,0.03,-0.015,0.103,0.15,,
+childsds scoring for every cohort,Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.009,0.044,-0.078,0.096,0.84,,
+childsds scoring for every cohort,Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,772,3087,8.94,0.93,0.035,0.008,0.019,0.05,1.3e-05,5e-11,0.61
+childsds scoring for every cohort,Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,495,1317,5.27,0.96,0.091,0.012,0.068,0.113,1e-14,,0.21
+childsds scoring for every cohort,Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,486,1083,10.25,0.98,0.031,0.011,0.01,0.052,0.0038,,0.069
+childsds scoring for every cohort,Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,309,687,14.67,0.81,-0.021,0.013,-0.047,0.004,0.097,,0.17

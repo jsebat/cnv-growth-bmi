@@ -1,0 +1,38 @@
+Run,Outcome,Group,Age band (years),Carriers (n),Controls (n),Carrier - control (CNV x BMI),Difference SE,P,Difference SE (family-clustered),P (family-clustered),Families (n)
+main,Height,16p11.2 del,2-9,167,923,-0.112,0.063,0.077,0.091,0.22,1076
+main,Height,16p11.2 del,10-18,169,721,-0.044,0.067,0.51,0.086,0.61,872
+main,Height,16p11.2 del,19-39,42,1787,0.118,0.13,0.36,0.091,0.2,1272
+main,Height,16p11.2 del,40-73,132,52421,0.003,0.073,0.96,0.067,0.96,51716
+main,Height,16p11.2 dup,2-9,77,923,-0.411,0.099,3.4e-05,0.156,0.0085,987
+main,Height,16p11.2 dup,10-18,80,721,0.126,0.087,0.15,0.116,0.28,785
+main,Height,16p11.2 dup,19-39,41,1787,-0.088,0.118,0.46,0.112,0.43,1259
+main,Height,16p11.2 dup,40-73,182,52421,-0.089,0.078,0.25,0.086,0.3,51761
+main,Height,22q11.2 del,2-9,351,923,0.003,0.057,0.95,0.057,0.95,1273
+main,Height,22q11.2 del,10-18,348,721,0.057,0.05,0.25,0.052,0.27,1067
+main,Height,22q11.2 del,19-39,234,1787,0.003,0.055,0.95,0.057,0.96,1466
+main,Height,22q11.2 del,40-73,37,52421,0.056,0.144,0.7,0.161,0.73,51624
+main,Height,22q11.2 dup,2-9,61,923,0.22,0.13,0.091,0.131,0.094,982
+main,Height,22q11.2 dup,10-18,62,721,0.004,0.099,0.97,0.095,0.97,781
+main,Height,22q11.2 dup,19-39,40,1787,0.164,0.104,0.12,0.096,0.09,1272
+main,Height,22q11.2 dup,40-73,287,52421,0.027,0.052,0.61,0.047,0.57,51874
+main,Head circumference,16p11.2 del,2-9,91,918,0.153,0.075,0.04,0.088,0.082,992
+main,Head circumference,16p11.2 del,10-18,103,720,0.071,0.083,0.4,0.085,0.4,809
+main,Head circumference,16p11.2 del,19-39,24,1779,-0.057,0.217,0.79,0.278,0.84,1250
+main,Head circumference,16p11.2 dup,2-9,47,918,-0.077,0.139,0.58,0.129,0.55,956
+main,Head circumference,16p11.2 dup,10-18,47,720,-0.097,0.113,0.39,0.125,0.44,759
+main,Head circumference,16p11.2 dup,19-39,30,1779,0.001,0.157,0.99,0.201,1,1242
+main,Head circumference,16p11.2 dup,40-73,19,2410,-0.236,0.199,0.24,0.31,0.45,1597
+main,Head circumference,22q11.2 del,2-9,262,918,-0.002,0.065,0.97,0.069,0.97,1179
+main,Head circumference,22q11.2 del,10-18,246,720,-0.096,0.058,0.096,0.061,0.12,964
+main,Head circumference,22q11.2 del,19-39,92,1779,-0.103,0.082,0.21,0.086,0.23,1320
+main,Head circumference,22q11.2 dup,2-9,49,918,0.556,0.141,8.8e-05,0.132,2.9e-05,965
+main,Head circumference,22q11.2 dup,10-18,48,720,0.168,0.117,0.15,0.12,0.16,766
+main,Head circumference,22q11.2 dup,19-39,23,1779,0.035,0.139,0.8,0.084,0.68,1251
+main,Height,All four CNVs,2-9,656,923,-0.079,0.047,0.093,0.057,0.17,1552
+main,Height,All four CNVs,10-18,659,721,0.038,0.044,0.38,0.047,0.42,1348
+main,Height,All four CNVs,19-39,357,1787,0.023,0.046,0.62,0.046,0.62,1573
+main,Height,All four CNVs,40-73,638,52421,-0.002,0.036,0.96,0.035,0.96,52214
+main,Head circumference,All four CNVs,2-9,449,918,0.089,0.051,0.082,0.056,0.11,1341
+main,Head circumference,All four CNVs,10-18,444,720,-0.032,0.049,0.52,0.052,0.54,1144
+main,Head circumference,All four CNVs,19-39,169,1779,-0.055,0.065,0.4,0.068,0.42,1379
+main,Head circumference,All four CNVs,40-73,52,2410,-0.203,0.139,0.15,0.201,0.31,1627

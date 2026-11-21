@@ -1,0 +1,17 @@
+version,outcome,locus,CHOP,CHUSJ,SVIP,SVIP (hc_visits),Searchlight
+v2: CHOP from the workbook (infant lengths kept),Head circumference,16p11.2 del,0,0,<5,55,0
+v2: CHOP from the workbook (infant lengths kept),Head circumference,16p11.2 dup,0,<5,<5,30,0
+v2: CHOP from the workbook (infant lengths kept),Head circumference,22q11.2 del,207,<5,0,0,0
+v2: CHOP from the workbook (infant lengths kept),Head circumference,22q11.2 dup,30,0,0,0,0
+v2: CHOP from the workbook (infant lengths kept),Height,16p11.2 del,0,<5,6,0,7
+v2: CHOP from the workbook (infant lengths kept),Height,16p11.2 dup,0,<5,<5,0,0
+v2: CHOP from the workbook (infant lengths kept),Height,22q11.2 del,227,<5,0,0,0
+v2: CHOP from the workbook (infant lengths kept),Height,22q11.2 dup,33,0,0,0,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Head circumference,16p11.2 del,0,0,<5,55,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Head circumference,16p11.2 dup,0,<5,<5,30,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Head circumference,22q11.2 del,189,<5,0,0,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Head circumference,22q11.2 dup,26,0,0,0,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Height,16p11.2 del,0,<5,6,0,7
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Height,16p11.2 dup,0,<5,<5,0,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Height,22q11.2 del,216,<5,0,0,0
+v3 reproduced: CHOP from the analysis table (infant lengths under 60 cm lost),Height,22q11.2 dup,31,0,0,0,0

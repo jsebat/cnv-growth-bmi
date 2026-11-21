@@ -1,0 +1,71 @@
+Sample,Group,n,Autism diagnosis (n),Cohorts in the model,Term,Log odds ratio per SD,SE,P,Odds ratio per SD,"Odds ratio, lower 95% CI","Odds ratio, upper 95% CI"
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),All four CNVs,586,162,G2MH+SSC+SVIP,BMI,-0.037,0.067,0.58,0.964,0.845,1.099
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),All four CNVs,586,162,G2MH+SSC+SVIP,autism score,0.15,0.105,0.15,1.162,0.946,1.427
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),All four CNVs,586,162,G2MH+SSC+SVIP,BMI x autism score,-0.08,0.061,0.19,0.923,0.819,1.041
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),16p11.2 del,143,50,G2MH+SVIP,BMI,-0.041,0.123,0.74,0.96,0.754,1.221
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),16p11.2 del,143,50,G2MH+SVIP,autism score,-0.002,0.262,0.99,0.998,0.597,1.667
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),16p11.2 del,143,50,G2MH+SVIP,BMI x autism score,-0.108,0.124,0.39,0.898,0.704,1.145
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),16p11.2 dup,81,27,G2MH+SSC+SVIP,BMI,-1.339,0.564,0.018,0.262,0.087,0.791
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),16p11.2 dup,81,27,G2MH+SSC+SVIP,autism score,0.811,0.437,0.063,2.251,0.955,5.304
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),16p11.2 dup,81,27,G2MH+SSC+SVIP,BMI x autism score,1.024,0.383,0.0075,2.785,1.314,5.904
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),22q11.2 del,284,61,G2MH,BMI,0.049,0.101,0.63,1.05,0.862,1.28
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),22q11.2 del,284,61,G2MH,autism score,0.248,0.164,0.13,1.282,0.93,1.767
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),22q11.2 del,284,61,G2MH,BMI x autism score,-0.104,0.113,0.35,0.901,0.722,1.123
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),22q11.2 dup,70,16,G2MH,BMI,0.399,0.328,0.22,1.49,0.784,2.834
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),22q11.2 dup,70,16,G2MH,autism score,-0.534,0.362,0.14,0.586,0.288,1.192
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),22q11.2 dup,70,16,G2MH,BMI x autism score,0.127,0.253,0.62,1.135,0.692,1.864
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: G2MH",468,125,G2MH,BMI,0.037,0.074,0.62,1.038,0.897,1.2
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: G2MH",468,125,G2MH,autism score,0.143,0.115,0.21,1.154,0.921,1.446
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: G2MH",468,125,G2MH,BMI x autism score,-0.102,0.069,0.14,0.903,0.79,1.034
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: SSC",14,13,"",BMI x autism score,,,,,,
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: SVIP",104,24,SVIP,BMI,-0.482,0.203,0.018,0.618,0.415,0.919
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: SVIP",104,24,SVIP,autism score,0.485,0.349,0.17,1.624,0.819,3.219
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, cohort: SVIP",104,24,SVIP,BMI x autism score,0.077,0.225,0.73,1.08,0.695,1.677
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out G2MH",118,37,SSC+SVIP,BMI,-0.482,0.203,0.017,0.617,0.415,0.919
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out G2MH",118,37,SSC+SVIP,autism score,0.475,0.348,0.17,1.609,0.813,3.184
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out G2MH",118,37,SSC+SVIP,BMI x autism score,0.079,0.224,0.73,1.082,0.697,1.679
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out SSC",572,149,G2MH+SVIP,BMI,-0.041,0.067,0.55,0.96,0.841,1.096
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out SSC",572,149,G2MH+SVIP,autism score,0.159,0.105,0.13,1.172,0.953,1.441
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out SSC",572,149,G2MH+SVIP,BMI x autism score,-0.081,0.062,0.19,0.922,0.817,1.04
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out SVIP",482,138,G2MH+SSC,BMI,0.04,0.074,0.59,1.041,0.901,1.202
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out SVIP",482,138,G2MH+SSC,autism score,0.133,0.115,0.25,1.142,0.912,1.43
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),"All four CNVs, leave out SVIP",482,138,G2MH+SSC,BMI x autism score,-0.101,0.068,0.14,0.904,0.791,1.033
+carriers of the SRS / SCQ sample with the score (BMI at the questionnaire visit),heterogeneity across the four CNVs (Cochran Q),,,"",BMI x autism score,,,0.033,,,
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),All four CNVs,571,189,Cardiff+G2MH+SSC+SVIP,BMI,-0.02,0.068,0.77,0.98,0.858,1.12
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),All four CNVs,571,189,Cardiff+G2MH+SSC+SVIP,autism score,0.093,0.105,0.38,1.097,0.894,1.347
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),All four CNVs,571,189,Cardiff+G2MH+SSC+SVIP,BMI x autism score,-0.092,0.062,0.14,0.912,0.808,1.029
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),16p11.2 del,172,62,Cardiff+G2MH+SVIP,BMI,0.005,0.114,0.96,1.005,0.805,1.255
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),16p11.2 del,172,62,Cardiff+G2MH+SVIP,autism score,0.169,0.262,0.52,1.184,0.708,1.978
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),16p11.2 del,172,62,Cardiff+G2MH+SVIP,BMI x autism score,-0.197,0.127,0.12,0.821,0.64,1.053
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),16p11.2 dup,115,40,Cardiff+G2MH+SSC+SVIP,BMI,-0.241,0.242,0.32,0.786,0.49,1.262
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),16p11.2 dup,115,40,Cardiff+G2MH+SSC+SVIP,autism score,0.264,0.284,0.35,1.302,0.745,2.272
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),16p11.2 dup,115,40,Cardiff+G2MH+SSC+SVIP,BMI x autism score,0.35,0.202,0.083,1.418,0.955,2.107
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),22q11.2 del,195,58,Cardiff+G2MH,BMI,0.082,0.125,0.51,1.086,0.85,1.387
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),22q11.2 del,195,58,Cardiff+G2MH,autism score,0.273,0.187,0.14,1.314,0.911,1.896
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),22q11.2 del,195,58,Cardiff+G2MH,BMI x autism score,-0.25,0.142,0.078,0.779,0.589,1.029
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),22q11.2 dup,81,21,Cardiff+G2MH,BMI,0.061,0.27,0.82,1.063,0.627,1.803
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),22q11.2 dup,81,21,Cardiff+G2MH,autism score,-0.47,0.331,0.16,0.625,0.327,1.195
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),22q11.2 dup,81,21,Cardiff+G2MH,BMI x autism score,0.155,0.238,0.52,1.167,0.733,1.86
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: Cardiff",66,37,Cardiff,BMI,0.183,0.191,0.34,1.201,0.826,1.746
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: Cardiff",66,37,Cardiff,autism score,-0.103,0.309,0.74,0.902,0.492,1.652
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: Cardiff",66,37,Cardiff,BMI x autism score,0.182,0.179,0.31,1.199,0.844,1.703
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: G2MH",393,122,G2MH,BMI,0.015,0.082,0.85,1.015,0.864,1.193
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: G2MH",393,122,G2MH,autism score,0.12,0.125,0.34,1.127,0.882,1.441
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: G2MH",393,122,G2MH,BMI x autism score,-0.158,0.076,0.039,0.854,0.735,0.992
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: SSC",14,13,"",BMI x autism score,,,,,,
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: SVIP",98,17,SVIP,BMI,-0.506,0.246,0.04,0.603,0.372,0.977
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: SVIP",98,17,SVIP,autism score,0.561,0.364,0.12,1.752,0.859,3.575
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, cohort: SVIP",98,17,SVIP,BMI x autism score,-0.002,0.232,0.99,0.998,0.633,1.572
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out Cardiff",505,152,G2MH+SSC+SVIP,BMI,-0.044,0.075,0.56,0.957,0.826,1.109
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out Cardiff",505,152,G2MH+SSC+SVIP,autism score,0.168,0.116,0.15,1.183,0.942,1.486
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out Cardiff",505,152,G2MH+SSC+SVIP,BMI x autism score,-0.138,0.069,0.046,0.871,0.761,0.997
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out G2MH",178,67,Cardiff+SSC+SVIP,BMI,-0.072,0.135,0.59,0.931,0.715,1.212
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out G2MH",178,67,Cardiff+SSC+SVIP,autism score,0.051,0.218,0.82,1.052,0.686,1.614
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out G2MH",178,67,Cardiff+SSC+SVIP,BMI x autism score,0.126,0.131,0.34,1.134,0.877,1.466
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out SSC",557,176,Cardiff+G2MH+SVIP,BMI,-0.026,0.068,0.7,0.974,0.852,1.114
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out SSC",557,176,Cardiff+G2MH+SVIP,autism score,0.101,0.105,0.34,1.106,0.9,1.358
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out SSC",557,176,Cardiff+G2MH+SVIP,BMI x autism score,-0.094,0.062,0.13,0.911,0.806,1.029
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out SVIP",473,172,Cardiff+G2MH+SSC,BMI,0.026,0.073,0.72,1.027,0.891,1.184
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out SVIP",473,172,Cardiff+G2MH+SSC,autism score,0.043,0.111,0.7,1.044,0.84,1.296
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),"All four CNVs, leave out SVIP",473,172,Cardiff+G2MH+SSC,BMI x autism score,-0.1,0.066,0.13,0.904,0.794,1.03
+growth-table carriers with the score (fill_gaps visit; G2MH CHOP-site carriers excluded by the CHOP overlap rule),heterogeneity across the four CNVs (Cochran Q),,,"",BMI x autism score,,,0.05,,,

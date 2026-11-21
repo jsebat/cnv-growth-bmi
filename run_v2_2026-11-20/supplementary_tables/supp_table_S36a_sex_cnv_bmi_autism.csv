@@ -1,0 +1,204 @@
+Outcome,Test,Group,Sex,n,Reference group (n),Estimate,SE,P,Note
+SRS,(i) BMI slope,SSC unaffected relatives,female,2875,,0.034,0.017,0.041,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,SSC unaffected relatives,male,2734,,0.013,0.018,0.47,SD of trait (Box-Cox) per SD of BMI
+SRS,"(i) BMI slope, male - female (separately fitted)",SSC unaffected relatives,male - female,5609,,-0.022,0.024,0.38,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,All four CNVs,female,397,,0.159,0.041,0.00014,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,All four CNVs,male,417,,0.055,0.032,0.085,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",All four CNVs,male - female,814,,-0.103,0.052,0.049,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model",All four CNVs,male - female,814,,-0.155,0.049,0.0017,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),All four CNVs,female,397,2875,0.126,0.044,0.0038,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),All four CNVs,male,417,2734,0.041,0.04,0.3,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam)",All four CNVs,male - female,814,5609,-0.137,0.052,0.0088,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",All four CNVs,male - female,814,5609,-0.086,0.055,0.12,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",All four CNVs,male - female,814,5609,-0.129,0.054,0.018,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,16p11.2 del,female,126,,0.121,0.068,0.08,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,16p11.2 del,male,153,,0.008,0.056,0.89,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",16p11.2 del,male - female,279,,-0.113,0.088,0.2,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model",16p11.2 del,male - female,279,,-0.122,0.087,0.16,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 del,female,126,2875,0.082,0.066,0.21,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 del,male,153,2734,0.013,0.057,0.81,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam)",16p11.2 del,male - female,279,5609,-0.101,0.082,0.22,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",16p11.2 del,male - female,279,5609,-0.093,0.083,0.27,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",16p11.2 del,male - female,279,5609,-0.117,0.08,0.14,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,16p11.2 dup,female,64,,0.153,0.11,0.17,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,16p11.2 dup,male,76,,0.072,0.075,0.34,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",16p11.2 dup,male - female,140,,-0.081,0.133,0.54,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model",16p11.2 dup,male - female,140,,-0.056,0.128,0.67,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 dup,female,64,2875,0.115,0.101,0.26,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 dup,male,76,2734,0.073,0.089,0.41,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam)",16p11.2 dup,male - female,140,5609,-0.038,0.133,0.78,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",16p11.2 dup,male - female,140,5609,-0.054,0.134,0.68,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",16p11.2 dup,male - female,140,5609,-0.063,0.131,0.63,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,22q11.2 del,female,168,,0.179,0.062,0.0044,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,22q11.2 del,male,149,,0.132,0.049,0.0076,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",22q11.2 del,male - female,317,,-0.047,0.079,0.55,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model",22q11.2 del,male - female,317,,-0.047,0.079,0.55,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 del,female,168,2875,0.134,0.064,0.036,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 del,male,149,2734,0.105,0.056,0.064,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam)",22q11.2 del,male - female,317,5609,-0.033,0.081,0.68,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",22q11.2 del,male - female,317,5609,-0.013,0.087,0.88,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,22q11.2 dup,female,39,,-0.077,0.209,0.71,SD of trait (Box-Cox) per SD of BMI
+SRS,(i) BMI slope,22q11.2 dup,male,39,,-0.044,0.109,0.69,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",22q11.2 dup,male - female,78,,0.033,0.235,0.89,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model",22q11.2 dup,male - female,78,,0.032,0.234,0.89,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 dup,female,39,2875,-0.108,0.174,0.53,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 dup,male,39,2734,-0.073,0.103,0.48,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam)",22q11.2 dup,male - female,78,5609,0.041,0.203,0.84,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",22q11.2 dup,male - female,78,5609,0.041,0.203,0.84,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",22q11.2 dup,male - female,78,5609,-0.021,0.255,0.93,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of G2MH",All four CNVs,male - female,292,5609,-0.173,0.08,0.03,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model; leave out G2MH",All four CNVs,male - female,292,,-0.192,0.078,0.014,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); carriers of G2MH only",All four CNVs,male - female,522,5609,-0.082,0.063,0.2,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of Searchlight",All four CNVs,male - female,698,5609,-0.115,0.056,0.039,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model; leave out Searchlight",All four CNVs,male - female,698,,-0.135,0.054,0.013,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); carriers of Searchlight only",All four CNVs,male - female,116,5609,-0.24,0.119,0.044,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of SSC",All four CNVs,male - female,797,5609,-0.127,0.053,0.016,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model; leave out SSC",All four CNVs,male - female,797,,-0.144,0.05,0.0039,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); carriers of SSC only",All four CNVs,male - female,17,5609,,,,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of SVIP",All four CNVs,male - female,655,5609,-0.135,0.057,0.018,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model; leave out SVIP",All four CNVs,male - female,655,,-0.151,0.055,0.0066,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); carriers of SVIP only",All four CNVs,male - female,159,5609,-0.103,0.107,0.34,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); carriers without an autism diagnosis",All four CNVs,male - female,551,5609,-0.101,0.061,0.096,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); carriers with an autism diagnosis",All four CNVs,male - female,232,5609,-0.039,0.09,0.67,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); age < 18 (vs SSC siblings)",All four CNVs,male - female,555,1628,-0.096,0.068,0.16,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam); age 18+ (vs SSC parents)",All four CNVs,male - female,259,3981,-0.164,0.106,0.12,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,SSC unaffected relatives,female,629,,0.013,0.032,0.69,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,SSC unaffected relatives,male,545,,-0.005,0.031,0.88,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(i) BMI slope, male - female (separately fitted)",SSC unaffected relatives,male - female,1174,,-0.018,0.045,0.69,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,All four CNVs,female,337,,0.107,0.035,0.0026,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,All four CNVs,male,352,,0.034,0.027,0.21,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",All four CNVs,male - female,689,,-0.073,0.044,0.097,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model",All four CNVs,male - female,689,,-0.087,0.041,0.035,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),All four CNVs,female,337,629,0.096,0.05,0.056,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),All four CNVs,male,352,545,0.032,0.043,0.46,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam)",All four CNVs,male - female,689,1174,-0.07,0.062,0.25,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",All four CNVs,male - female,689,1174,-0.057,0.064,0.38,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",All four CNVs,male - female,689,1174,-0.064,0.062,0.3,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,16p11.2 del,female,115,,0.063,0.056,0.26,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,16p11.2 del,male,144,,-0.027,0.045,0.56,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",16p11.2 del,male - female,259,,-0.09,0.072,0.21,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model",16p11.2 del,male - female,259,,-0.101,0.07,0.15,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 del,female,115,629,0.045,0.067,0.5,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 del,male,144,545,-0.021,0.058,0.72,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam)",16p11.2 del,male - female,259,1174,-0.084,0.087,0.33,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",16p11.2 del,male - female,259,1174,-0.07,0.088,0.43,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",16p11.2 del,male - female,259,1174,-0.091,0.081,0.26,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,16p11.2 dup,female,43,,0.186,0.116,0.12,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,16p11.2 dup,male,55,,0.06,0.059,0.32,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",16p11.2 dup,male - female,98,,-0.126,0.13,0.33,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model",16p11.2 dup,male - female,98,,-0.122,0.118,0.3,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 dup,female,43,629,0.174,0.126,0.17,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),16p11.2 dup,male,55,545,0.067,0.093,0.47,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam)",16p11.2 dup,male - female,98,1174,-0.11,0.152,0.47,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",16p11.2 dup,male - female,98,1174,-0.107,0.156,0.49,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",16p11.2 dup,male - female,98,1174,-0.089,0.136,0.51,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,22q11.2 del,female,149,,0.128,0.049,0.0098,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,22q11.2 del,male,126,,0.042,0.04,0.29,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",22q11.2 del,male - female,275,,-0.086,0.063,0.17,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model",22q11.2 del,male - female,275,,-0.087,0.063,0.17,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 del,female,149,629,0.113,0.076,0.14,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 del,male,126,545,0.052,0.069,0.45,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam)",22q11.2 del,male - female,275,1174,-0.07,0.089,0.43,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",22q11.2 del,male - female,275,1174,-0.066,0.084,0.43,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,22q11.2 dup,female,30,,-0.001,0.171,0.99,SD of trait (Box-Cox) per SD of BMI
+SCQ,(i) BMI slope,22q11.2 dup,male,27,,0.177,0.115,0.14,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, slopes fitted separately by sex (66 method)",22q11.2 dup,male - female,57,,0.178,0.206,0.39,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model",22q11.2 dup,male - female,57,,0.177,0.207,0.4,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 dup,female,30,629,-0.006,0.177,0.97,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives),22q11.2 dup,male,27,545,0.137,0.124,0.27,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam)",22q11.2 dup,male - female,57,1174,0.187,0.207,0.37,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam) with sex-specific cohort x CNV intercepts (sensitivity)",22q11.2 dup,male - female,57,1174,0.187,0.207,0.37,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, linear model with robust SE (sensitivity)",22q11.2 dup,male - female,57,1174,0.239,0.162,0.14,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of G2MH",All four CNVs,male - female,266,1174,-0.113,0.088,0.2,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model; leave out G2MH",All four CNVs,male - female,266,,-0.129,0.07,0.067,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); carriers of G2MH only",All four CNVs,male - female,423,1174,-0.054,0.073,0.46,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of Searchlight",All four CNVs,male - female,558,1174,-0.048,0.066,0.47,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model; leave out Searchlight",All four CNVs,male - female,558,,-0.065,0.046,0.16,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); carriers of Searchlight only",All four CNVs,male - female,131,1174,-0.201,0.114,0.078,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of SSC",All four CNVs,male - female,679,1174,-0.071,0.062,0.25,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model; leave out SSC",All four CNVs,male - female,679,,-0.087,0.041,0.035,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); carriers of SSC only",All four CNVs,male - female,10,1174,,,,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); leave out carriers of SVIP",All four CNVs,male - female,564,1174,-0.077,0.066,0.24,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model; leave out SVIP",All four CNVs,male - female,564,,-0.095,0.045,0.034,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); carriers of SVIP only",All four CNVs,male - female,125,1174,-0.027,0.128,0.83,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); carriers without an autism diagnosis",All four CNVs,male - female,449,1174,-0.082,0.071,0.25,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); carriers with an autism diagnosis",All four CNVs,male - female,212,1174,0.05,0.096,0.6,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); age < 18 (vs SSC siblings)",All four CNVs,male - female,517,1174,-0.045,0.068,0.51,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam); age 18+ (vs SSC parents)",All four CNVs,male - female,<5,<5,,,,SD of trait (Box-Cox) per SD of BMI
+SRS,"(iii) CNV x BMI x sex, one model (bam) - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.89,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,female,,,,,0.61,SD of trait (Box-Cox) per SD of BMI
+SRS,(ii) CNV x BMI within sex (vs same-sex SSC relatives) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,male,,,,,0.42,SD of trait (Box-Cox) per SD of BMI
+SRS,"within carriers: BMI x sex, one model - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.89,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(iii) CNV x BMI x sex, one model (bam) - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.65,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,female,,,,,0.74,SD of trait (Box-Cox) per SD of BMI
+SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,male,,,,,0.62,SD of trait (Box-Cox) per SD of BMI
+SCQ,"within carriers: BMI x sex, one model - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.62,SD of trait (Box-Cox) per SD of BMI
+SRS,(iii) CNV x BMI x sex: inverse-variance mean of the four per-CNV estimates,All four CNVs,male - female,814,,-0.056,0.051,0.28,SD of trait (Box-Cox) per SD of BMI
+SCQ,(iii) CNV x BMI x sex: inverse-variance mean of the four per-CNV estimates,All four CNVs,male - female,689,,-0.062,0.055,0.26,SD of trait (Box-Cox) per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),All four CNVs,female,705,,0.151,0.088,0.086,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),All four CNVs,male,766,,0.056,0.056,0.31,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",All four CNVs,male - female,1482,,-0.156,0.096,0.1,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),16p11.2 del,female,120,,0.186,0.163,0.25,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),16p11.2 del,male,123,,-0.088,0.122,0.47,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",16p11.2 del,male - female,248,,-0.211,0.189,0.26,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),16p11.2 dup,female,81,,-0.013,0.272,0.96,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),16p11.2 dup,male,85,,0.08,0.191,0.67,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",16p11.2 dup,male - female,174,,0.04,0.323,0.9,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),22q11.2 del,female,426,,0.151,0.129,0.24,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),22q11.2 del,male,465,,0.119,0.077,0.12,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",22q11.2 del,male - female,891,,-0.085,0.143,0.55,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),22q11.2 dup,female,73,,0.147,0.359,0.68,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),22q11.2 dup,male,88,,-0.048,0.175,0.79,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",22q11.2 dup,male - female,161,,-0.172,0.384,0.65,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort Cardiff only,All four CNVs,male - female,74,,0.376,0.4,0.35,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out Cardiff,All four CNVs,male - female,1408,,-0.184,0.1,0.065,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort Cardiff only,All four CNVs,female,33,,-0.074,0.399,0.85,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort Cardiff only,All four CNVs,male,41,,0.327,0.23,0.16,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort CHOP only,All four CNVs,male - female,728,,-0.043,0.182,0.81,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out CHOP,All four CNVs,male - female,754,,-0.24,0.114,0.035,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHOP only,All four CNVs,female,326,,0.221,0.162,0.17,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHOP only,All four CNVs,male,402,,0.164,0.092,0.074,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort CHUSJ only,All four CNVs,male - female,24,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out CHUSJ,All four CNVs,male - female,1458,,-0.151,0.096,0.12,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHUSJ only,All four CNVs,female,8,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHUSJ only,All four CNVs,male,16,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort G2MH only,All four CNVs,male - female,444,,-0.273,0.142,0.056,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out G2MH,All four CNVs,male - female,1038,,-0.073,0.133,0.58,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort G2MH only,All four CNVs,female,239,,0.1,0.128,0.44,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort G2MH only,All four CNVs,male,205,,-0.025,0.091,0.79,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort SSC only,All four CNVs,male - female,18,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out SSC,All four CNVs,male - female,1464,,-0.143,0.096,0.14,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SSC only,All four CNVs,female,7,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SSC only,All four CNVs,male,<5,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort SVIP only,All four CNVs,male - female,194,,-0.233,0.259,0.37,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out SVIP,All four CNVs,male - female,1288,,-0.149,0.104,0.15,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SVIP only,All four CNVs,female,92,,0.106,0.247,0.67,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SVIP only,All four CNVs,male,102,,-0.194,0.167,0.25,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; age < 18 y,All four CNVs,male - female,1040,,-0.185,0.116,0.11,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model) - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.91,SD of trait (Box-Cox) per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,female,,,,,0.94,SD of trait (Box-Cox) per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,male,,,,,0.49,SD of trait (Box-Cox) per SD of BMI
+SRS,"(v) CNV x BMI x sex in the genotyped sample, without the autism score",All four CNVs,male - female,583,5120,-0.167,0.061,0.0068,SD of trait (Box-Cox) per SD of BMI
+SRS,"(v) CNV x BMI x sex in the genotyped sample, adjusted for score, BMI x score and their carrier interactions",All four CNVs,male - female,583,5120,-0.162,0.061,0.0082,SD of trait (Box-Cox) per SD of BMI
+SRS,"(v) within carriers BMI x sex (linear, robust SE), genotyped sample, without the score",All four CNVs,male - female,583,,-0.175,0.063,0.0053,SD of trait (Box-Cox) per SD of BMI
+SRS,"(v) within carriers BMI x sex (linear, robust SE), genotyped sample, adjusted for BMI x score",All four CNVs,male - female,583,,-0.174,0.061,0.0043,SD of trait (Box-Cox) per SD of BMI
+SRS,(v) BMI x autism score within carriers of one sex,All four CNVs,female,290,,-0.095,0.05,0.055,SD of trait (Box-Cox) per SD of BMI
+SRS,(v) BMI x autism score within carriers of one sex,All four CNVs,male,293,,-0.077,0.034,0.025,SD of trait (Box-Cox) per SD of BMI
+SRS,"(v) BMI x autism score within carriers, male - female (separately fitted)",All four CNVs,male - female,583,,0.018,0.06,0.77,SD of trait (Box-Cox) per SD of BMI
+SRS,(v) CNV x BMI x autism score within one sex (vs same-sex relatives),All four CNVs,female,290,2604,-0.083,0.052,0.11,SD of trait (Box-Cox) per SD of BMI
+SRS,(v) CNV x BMI x autism score within one sex (vs same-sex relatives),All four CNVs,male,293,2516,-0.071,0.039,0.065,SD of trait (Box-Cox) per SD of BMI
+SRS,"(v) CNV x BMI x autism score, male - female (separately fitted)",All four CNVs,male - female,583,,0.011,0.065,0.86,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(v) CNV x BMI x sex in the genotyped sample, without the autism score",All four CNVs,male - female,468,1068,-0.096,0.073,0.19,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(v) CNV x BMI x sex in the genotyped sample, adjusted for score, BMI x score and their carrier interactions",All four CNVs,male - female,468,1068,-0.096,0.073,0.19,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(v) within carriers BMI x sex (linear, robust SE), genotyped sample, without the score",All four CNVs,male - female,468,,-0.108,0.057,0.06,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(v) within carriers BMI x sex (linear, robust SE), genotyped sample, adjusted for BMI x score",All four CNVs,male - female,468,,-0.107,0.057,0.063,SD of trait (Box-Cox) per SD of BMI
+SCQ,(v) BMI x autism score within carriers of one sex,All four CNVs,female,234,,0.01,0.045,0.82,SD of trait (Box-Cox) per SD of BMI
+SCQ,(v) BMI x autism score within carriers of one sex,All four CNVs,male,234,,-0.048,0.039,0.22,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(v) BMI x autism score within carriers, male - female (separately fitted)",All four CNVs,male - female,468,,-0.058,0.059,0.33,SD of trait (Box-Cox) per SD of BMI
+SCQ,(v) CNV x BMI x autism score within one sex (vs same-sex relatives),All four CNVs,female,234,560,0.031,0.055,0.57,SD of trait (Box-Cox) per SD of BMI
+SCQ,(v) CNV x BMI x autism score within one sex (vs same-sex relatives),All four CNVs,male,234,508,-0.071,0.05,0.16,SD of trait (Box-Cox) per SD of BMI
+SCQ,"(v) CNV x BMI x autism score, male - female (separately fitted)",All four CNVs,male - female,468,,-0.102,0.075,0.17,SD of trait (Box-Cox) per SD of BMI
+Autism diagnosis,"(v) diagnosis ~ BMI x sex, genotyped carriers (SRS / SCQ sample), without the score",All four CNVs,male - female,586,,-0.29,0.133,0.029,log odds ratio per SD of BMI
+Autism diagnosis,"(v) diagnosis ~ BMI x sex, genotyped carriers, adjusted for BMI x score",All four CNVs,male - female,586,,-0.29,0.133,0.029,log odds ratio per SD of BMI
+Autism diagnosis,(v) diagnosis ~ BMI x autism score within one sex (genotyped carriers),All four CNVs,female,291,,-0.166,0.136,0.22,log odds ratio per SD x SD
+Autism diagnosis,(v) diagnosis ~ BMI x autism score within one sex (genotyped carriers),All four CNVs,male,285,,-0.058,0.069,0.4,log odds ratio per SD x SD

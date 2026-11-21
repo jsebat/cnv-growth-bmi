@@ -1,0 +1,11 @@
+Outcome,Group,Clinical cohorts (n),UK Biobank (n),"Shift vs controls, under 18 y (SD)","SE, under 18 y","P, under 18 y","Shift vs controls, 18 y and over (SD)","SE, 18 y and over","P, 18 y and over","BMI slope (controls) or CNV x BMI (carriers), all ages, SD per SD",SE,P,CNV x BMI in the five-group model,SE (five-group),P (five-group)
+Height,Non-carrier controls,5852,50000,,,,,,,-0.079,0.004,3e-79,,,
+Height,16p11.2 del,393,117,-0.347,0.072,1.7e-06,-1.047,0.076,5.6e-43,-0.028,0.034,0.41,-0.045,0.034,0.18
+Height,16p11.2 dup,231,149,-0.654,0.096,1.5e-11,0.411,0.067,1e-09,-0.107,0.044,0.015,-0.109,0.044,0.013
+Height,22q11.2 del,965,5,-1.439,0.052,2.2e-143,-0.679,0.06,7.9e-30,0.023,0.03,0.45,0.038,0.03,0.2
+Height,22q11.2 dup,180,270,-0.108,0.106,0.31,-0.316,0.055,1.2e-08,0.046,0.039,0.24,0.07,0.04,0.079
+Head circumference,Non-carrier controls,5827,0,,,,,,,0.331,0.012,1.1e-154,,,
+Head circumference,16p11.2 del,229,0,0.586,0.092,3.1e-10,0.181,0.171,0.29,0.129,0.048,0.0074,0.122,0.049,0.013
+Head circumference,16p11.2 dup,143,0,-1.402,0.126,6.7e-28,-0.913,0.144,2.6e-10,-0.067,0.067,0.32,-0.071,0.069,0.3
+Head circumference,22q11.2 del,611,0,-0.979,0.063,5.4e-51,-0.631,0.101,4e-10,-0.067,0.035,0.058,-0.072,0.036,0.044
+Head circumference,22q11.2 dup,131,0,-0.279,0.127,0.029,-0.062,0.171,0.72,0.25,0.069,0.00026,0.251,0.07,0.00035

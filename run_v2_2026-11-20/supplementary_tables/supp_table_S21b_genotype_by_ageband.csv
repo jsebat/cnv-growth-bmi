@@ -1,0 +1,9 @@
+Outcome,Age band (years),Test,F,df,P,CNVs in the model (at least 15 carriers in the band),Model
+Height,2-9,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",5.72,4,0.00014,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Height,10-18,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",1.14,4,0.34,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Height,19-39,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",0.82,4,0.51,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Height,40-73,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",0.43,4,0.79,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Head circumference,2-9,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",4.69,4,0.00092,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Head circumference,10-18,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",1.83,4,0.12,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Head circumference,19-39,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",0.42,4,0.79,16p11.2 del; 16p11.2 dup; 22q11.2 del; 22q11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"
+Head circumference,40-73,"BMI effect differs among controls and the CNVs (genotype x BMI, F test)",1.41,1,0.24,16p11.2 dup,"outcome Z ~ genotype x BMI Z + sex + age, controls and CNVs together"

@@ -1,0 +1,21 @@
+Outcome,Genotype,Age window,Cohorts,Children (n),Visit pairs (n),Median age at first visit of pair (years),Median interval (years),Change in Z to next visit per SD of BMI Z,SE,Lower 95% CI,Upper 95% CI,P,"P, BMI x age window","P, heterogeneity across genotypes"
+Height,16p11.2 del,All ages,Cardiff+Searchlight+SVIP,117,228,8.83,1.5,0.088,0.042,0.005,0.17,0.038,0.0082,
+Height,16p11.2 del,2-8 y,Cardiff+Searchlight+SVIP,62,97,5.42,1.42,0.233,0.064,0.108,0.358,0.00035,,
+Height,16p11.2 del,8-13 y,Cardiff+Searchlight+SVIP,60,90,10.17,1.88,0.008,0.063,-0.117,0.132,0.9,,
+Height,16p11.2 del,13-18 y,Searchlight+SVIP,28,41,14.17,1.08,-0.024,0.081,-0.183,0.136,0.77,,
+Height,16p11.2 dup,All ages,Cardiff+Searchlight+SVIP,48,84,10,1.87,0.022,0.064,-0.104,0.149,0.73,0.015,
+Height,16p11.2 dup,2-8 y,Cardiff+Searchlight+SVIP,20,20,5.62,3.33,0.153,0.117,-0.077,0.383,0.2,,
+Height,16p11.2 dup,8-13 y,Cardiff+Searchlight+SVIP,25,40,9.88,1.96,0.111,0.089,-0.064,0.285,0.22,,
+Height,16p11.2 dup,13-18 y,Searchlight+SVIP,12,24,14.04,1.04,,,,,,,
+Height,22q11.2 del,All ages,Cardiff+CHOP,541,2482,8.84,0.87,0.012,0.007,-0.001,0.025,0.071,1.6e-05,
+Height,22q11.2 del,2-8 y,Cardiff+CHOP,367,1086,5.22,0.9,0.052,0.011,0.031,0.072,1.7e-06,,
+Height,22q11.2 del,8-13 y,Cardiff+CHOP,357,840,10.32,0.91,0.006,0.01,-0.014,0.025,0.56,,
+Height,22q11.2 del,13-18 y,Cardiff+CHOP,243,556,14.72,0.77,-0.022,0.012,-0.045,0.002,0.074,,
+Height,22q11.2 dup,All ages,Cardiff+CHOP,68,313,8.75,0.92,0.065,0.023,0.021,0.11,0.0041,0.065,
+Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,134,5.21,0.94,0.127,0.036,0.057,0.198,0.00049,,
+Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.045,0.031,-0.015,0.104,0.14,,
+Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.011,0.045,-0.077,0.1,0.8,,
+Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,774,3107,8.9,0.93,0.033,0.008,0.018,0.048,2.1e-05,8.2e-11,0.43
+Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,1337,5.23,0.95,0.089,0.012,0.066,0.112,1.9e-14,,0.083
+Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,486,1083,10.25,0.98,0.029,0.011,0.009,0.05,0.0055,,0.069
+Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,309,687,14.67,0.81,-0.022,0.013,-0.047,0.004,0.092,,0.17

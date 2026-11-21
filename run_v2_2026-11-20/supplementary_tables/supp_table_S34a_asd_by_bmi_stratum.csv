@@ -1,0 +1,162 @@
+Predictor,Group,Cohort,Band,n,Autism diagnosis (n),Share with autism diagnosis,Lower 95% CI,Upper 95% CI,Mean Z of the predictor
+BMI,16p11.2 del,CHUSJ,30th-70th,<5,<5,,,,
+BMI,16p11.2 del,CHUSJ,≥ 70th,<5,<5,,,,
+BMI,16p11.2 del,Cardiff,≤ 30th,<5,<5,,,,
+BMI,16p11.2 del,Cardiff,30th-70th,<5,<5,,,,
+BMI,16p11.2 del,Cardiff,≥ 70th,16,8,0.5,0.28,0.72,2.076
+BMI,16p11.2 del,G2MH,≤ 30th,18,6,0.333,0.163,0.563,-1.505
+BMI,16p11.2 del,G2MH,30th-70th,13,6,0.462,0.232,0.709,-0.007
+BMI,16p11.2 del,G2MH,≥ 70th,78,34,0.436,0.331,0.546,1.949
+BMI,16p11.2 del,SSC,≤ 30th,<5,<5,,,,
+BMI,16p11.2 del,SSC,30th-70th,<5,<5,,,,
+BMI,16p11.2 del,SSC,≥ 70th,5,<5,,,,2.275
+BMI,16p11.2 del,SVIP,≤ 30th,11,<5,,,,-0.978
+BMI,16p11.2 del,SVIP,30th-70th,21,<5,,,,-0.068
+BMI,16p11.2 del,SVIP,≥ 70th,78,18,0.231,0.151,0.336,2.166
+BMI,16p11.2 del,all cohorts,≤ 30th,34,12,0.353,0.215,0.521,-1.349
+BMI,16p11.2 del,all cohorts,30th-70th,40,11,0.275,0.161,0.428,-0.043
+BMI,16p11.2 del,all cohorts,≥ 70th,178,64,0.36,0.293,0.432,2.057
+BMI,16p11.2 dup,CHUSJ,≤ 30th,<5,<5,,,,
+BMI,16p11.2 dup,CHUSJ,30th-70th,<5,<5,,,,
+BMI,16p11.2 dup,CHUSJ,≥ 70th,<5,<5,,,,
+BMI,16p11.2 dup,Cardiff,≤ 30th,5,<5,,,,-2.377
+BMI,16p11.2 dup,Cardiff,30th-70th,<5,<5,,,,
+BMI,16p11.2 dup,Cardiff,≥ 70th,6,>1,,,,1.234
+BMI,16p11.2 dup,G2MH,≤ 30th,21,9,0.429,0.245,0.635,-1.655
+BMI,16p11.2 dup,G2MH,30th-70th,19,6,0.316,0.154,0.54,-0.033
+BMI,16p11.2 dup,G2MH,≥ 70th,19,6,0.316,0.154,0.54,1.209
+BMI,16p11.2 dup,SSC,≤ 30th,<5,<5,,,,
+BMI,16p11.2 dup,SSC,30th-70th,<5,<5,,,,
+BMI,16p11.2 dup,SSC,≥ 70th,<5,<5,,,,
+BMI,16p11.2 dup,SVIP,≤ 30th,37,6,0.162,0.077,0.311,-1.242
+BMI,16p11.2 dup,SVIP,30th-70th,22,<5,,,,-0.037
+BMI,16p11.2 dup,SVIP,≥ 70th,25,<5,,,,1.431
+BMI,16p11.2 dup,all cohorts,≤ 30th,69,21,0.304,0.208,0.421,-1.457
+BMI,16p11.2 dup,all cohorts,30th-70th,47,14,0.298,0.187,0.44,-0.022
+BMI,16p11.2 dup,all cohorts,≥ 70th,58,19,0.328,0.221,0.456,1.309
+BMI,22q11.2 del,CHOP,≤ 30th,167,16,0.096,0.06,0.15,-1.434
+BMI,22q11.2 del,CHOP,30th-70th,209,28,0.134,0.094,0.187,0.01
+BMI,22q11.2 del,CHOP,≥ 70th,283,44,0.155,0.118,0.202,1.517
+BMI,22q11.2 del,CHUSJ,≤ 30th,<5,<5,,,,
+BMI,22q11.2 del,CHUSJ,≥ 70th,7,<5,,,,1.287
+BMI,22q11.2 del,Cardiff,≤ 30th,8,<5,,,,-1.236
+BMI,22q11.2 del,Cardiff,30th-70th,6,<5,,,,0.14
+BMI,22q11.2 del,Cardiff,≥ 70th,12,5,0.417,0.193,0.68,1.718
+BMI,22q11.2 del,G2MH,≤ 30th,80,25,0.312,0.222,0.421,-1.563
+BMI,22q11.2 del,G2MH,30th-70th,59,9,0.153,0.082,0.265,0.03
+BMI,22q11.2 del,G2MH,≥ 70th,57,21,0.368,0.255,0.498,1.473
+BMI,22q11.2 del,all cohorts,≤ 30th,258,42,0.163,0.123,0.213,-1.46
+BMI,22q11.2 del,all cohorts,30th-70th,274,40,0.146,0.109,0.193,0.017
+BMI,22q11.2 del,all cohorts,≥ 70th,359,72,0.201,0.162,0.245,1.512
+BMI,22q11.2 dup,CHOP,≤ 30th,10,<5,,,,-1.267
+BMI,22q11.2 dup,CHOP,30th-70th,20,6,0.3,0.145,0.519,0.224
+BMI,22q11.2 dup,CHOP,≥ 70th,39,16,0.41,0.271,0.566,1.532
+BMI,22q11.2 dup,CHUSJ,≤ 30th,<5,<5,,,,
+BMI,22q11.2 dup,CHUSJ,≥ 70th,<5,<5,,,,
+BMI,22q11.2 dup,Cardiff,≤ 30th,<5,<5,,,,
+BMI,22q11.2 dup,Cardiff,30th-70th,<5,<5,,,,
+BMI,22q11.2 dup,Cardiff,≥ 70th,6,<5,,,,1.674
+BMI,22q11.2 dup,G2MH,≤ 30th,16,5,0.312,0.142,0.556,-1.812
+BMI,22q11.2 dup,G2MH,30th-70th,28,<5,,,,0.04
+BMI,22q11.2 dup,G2MH,≥ 70th,36,8,0.222,0.117,0.381,1.441
+BMI,22q11.2 dup,SSC,≥ 70th,<5,<5,,,,
+BMI,22q11.2 dup,all cohorts,≤ 30th,32,10,0.312,0.18,0.486,-1.664
+BMI,22q11.2 dup,all cohorts,30th-70th,50,12,0.24,0.143,0.374,0.119
+BMI,22q11.2 dup,all cohorts,≥ 70th,83,28,0.337,0.245,0.444,1.483
+BMI,All four CNVs,CHOP,≤ 30th,177,18,0.102,0.065,0.155,-1.424
+BMI,All four CNVs,CHOP,30th-70th,229,34,0.148,0.108,0.2,0.028
+BMI,All four CNVs,CHOP,≥ 70th,322,60,0.186,0.148,0.232,1.519
+BMI,All four CNVs,CHUSJ,≤ 30th,7,<5,,,,-1.432
+BMI,All four CNVs,CHUSJ,30th-70th,<5,<5,,,,
+BMI,All four CNVs,CHUSJ,≥ 70th,13,<5,,,,1.062
+BMI,All four CNVs,Cardiff,≤ 30th,20,9,0.45,0.258,0.658,-1.666
+BMI,All four CNVs,Cardiff,30th-70th,14,>9,,,,0.065
+BMI,All four CNVs,Cardiff,≥ 70th,40,21,0.525,0.375,0.671,1.782
+BMI,All four CNVs,G2MH,≤ 30th,135,45,0.333,0.259,0.416,-1.599
+BMI,All four CNVs,G2MH,30th-70th,119,25,0.21,0.147,0.292,0.019
+BMI,All four CNVs,G2MH,≥ 70th,190,69,0.363,0.298,0.434,1.636
+BMI,All four CNVs,SSC,≤ 30th,6,<5,,,,-1.383
+BMI,All four CNVs,SSC,30th-70th,<5,<5,,,,
+BMI,All four CNVs,SSC,≥ 70th,10,>5,,,,1.828
+BMI,All four CNVs,SVIP,≤ 30th,48,9,0.188,0.102,0.319,-1.181
+BMI,All four CNVs,SVIP,30th-70th,43,5,0.116,0.051,0.245,-0.052
+BMI,All four CNVs,SVIP,≥ 70th,103,21,0.204,0.137,0.292,1.988
+BMI,All four CNVs,all cohorts,≤ 30th,393,85,0.216,0.178,0.26,-1.466
+BMI,All four CNVs,all cohorts,30th-70th,411,77,0.187,0.153,0.228,0.019
+BMI,All four CNVs,all cohorts,≥ 70th,678,183,0.27,0.238,0.305,1.634
+Head circumference,16p11.2 del,CHUSJ,≤ 30th,<5,<5,,,,
+Head circumference,16p11.2 del,Cardiff,≤ 30th,<5,<5,,,,
+Head circumference,16p11.2 del,Cardiff,30th-70th,<5,<5,,,,
+Head circumference,16p11.2 del,Cardiff,≥ 70th,12,7,0.583,0.32,0.807,1.815
+Head circumference,16p11.2 del,G2MH,≤ 30th,19,9,0.474,0.273,0.683,-1.383
+Head circumference,16p11.2 del,G2MH,30th-70th,21,6,0.286,0.138,0.5,0.005
+Head circumference,16p11.2 del,G2MH,≥ 70th,48,22,0.458,0.326,0.597,1.759
+Head circumference,16p11.2 del,SSC,30th-70th,<5,<5,,,,
+Head circumference,16p11.2 del,SSC,≥ 70th,<5,<5,,,,
+Head circumference,16p11.2 del,SVIP,≤ 30th,22,<5,,,,-1.581
+Head circumference,16p11.2 del,SVIP,30th-70th,29,6,0.207,0.098,0.384,0
+Head circumference,16p11.2 del,SVIP,≥ 70th,45,13,0.289,0.177,0.434,1.471
+Head circumference,16p11.2 del,all cohorts,≤ 30th,46,12,0.261,0.156,0.403,-1.449
+Head circumference,16p11.2 del,all cohorts,30th-70th,58,18,0.31,0.206,0.438,-0.002
+Head circumference,16p11.2 del,all cohorts,≥ 70th,109,45,0.413,0.325,0.507,1.666
+Head circumference,16p11.2 dup,CHUSJ,≤ 30th,<5,<5,,,,
+Head circumference,16p11.2 dup,CHUSJ,30th-70th,<5,<5,,,,
+Head circumference,16p11.2 dup,Cardiff,≤ 30th,12,>7,,,,-1.703
+Head circumference,16p11.2 dup,Cardiff,30th-70th,<5,<5,,,,
+Head circumference,16p11.2 dup,G2MH,≤ 30th,35,15,0.429,0.28,0.591,-1.976
+Head circumference,16p11.2 dup,G2MH,30th-70th,7,<5,,,,-0.016
+Head circumference,16p11.2 dup,G2MH,≥ 70th,<5,<5,,,,
+Head circumference,16p11.2 dup,SSC,≤ 30th,8,>3,,,,-1.789
+Head circumference,16p11.2 dup,SSC,30th-70th,<5,<5,,,,
+Head circumference,16p11.2 dup,SVIP,≤ 30th,45,8,0.178,0.093,0.313,-1.797
+Head circumference,16p11.2 dup,SVIP,30th-70th,17,<5,,,,-0.011
+Head circumference,16p11.2 dup,SVIP,≥ 70th,<5,<5,,,,
+Head circumference,16p11.2 dup,all cohorts,≤ 30th,101,40,0.396,0.306,0.494,-1.857
+Head circumference,16p11.2 dup,all cohorts,30th-70th,29,8,0.276,0.147,0.457,-0.011
+Head circumference,16p11.2 dup,all cohorts,≥ 70th,7,<5,,,,1.476
+Head circumference,22q11.2 del,CHOP,≤ 30th,281,44,0.157,0.119,0.204,-1.997
+Head circumference,22q11.2 del,CHOP,30th-70th,85,24,0.282,0.198,0.386,-0.066
+Head circumference,22q11.2 del,CHOP,≥ 70th,40,9,0.225,0.123,0.375,1.178
+Head circumference,22q11.2 del,CHUSJ,≤ 30th,<5,<5,,,,
+Head circumference,22q11.2 del,Cardiff,≤ 30th,7,<5,,,,-1.414
+Head circumference,22q11.2 del,Cardiff,30th-70th,7,<5,,,,-0.005
+Head circumference,22q11.2 del,Cardiff,≥ 70th,12,5,0.417,0.193,0.68,1.135
+Head circumference,22q11.2 del,G2MH,≤ 30th,68,18,0.265,0.174,0.38,-1.533
+Head circumference,22q11.2 del,G2MH,30th-70th,32,11,0.344,0.204,0.517,-0.038
+Head circumference,22q11.2 del,G2MH,≥ 70th,16,<5,,,,1.624
+Head circumference,22q11.2 del,all cohorts,≤ 30th,358,64,0.179,0.143,0.222,-1.9
+Head circumference,22q11.2 del,all cohorts,30th-70th,124,37,0.298,0.225,0.384,-0.055
+Head circumference,22q11.2 del,all cohorts,≥ 70th,68,17,0.25,0.162,0.364,1.275
+Head circumference,22q11.2 dup,CHOP,≤ 30th,25,11,0.44,0.267,0.629,-1.956
+Head circumference,22q11.2 dup,CHOP,30th-70th,8,<5,,,,0.04
+Head circumference,22q11.2 dup,CHOP,≥ 70th,15,7,0.467,0.248,0.699,1.816
+Head circumference,22q11.2 dup,Cardiff,≤ 30th,<5,<5,,,,
+Head circumference,22q11.2 dup,Cardiff,30th-70th,7,>2,,,,0.011
+Head circumference,22q11.2 dup,Cardiff,≥ 70th,<5,<5,,,,
+Head circumference,22q11.2 dup,G2MH,≤ 30th,18,5,0.278,0.125,0.509,-1.818
+Head circumference,22q11.2 dup,G2MH,30th-70th,23,<5,,,,-0.026
+Head circumference,22q11.2 dup,G2MH,≥ 70th,20,5,0.25,0.112,0.469,1.355
+Head circumference,22q11.2 dup,SSC,30th-70th,<5,<5,,,,
+Head circumference,22q11.2 dup,all cohorts,≤ 30th,46,17,0.37,0.245,0.514,-1.869
+Head circumference,22q11.2 dup,all cohorts,30th-70th,39,14,0.359,0.227,0.516,-0.008
+Head circumference,22q11.2 dup,all cohorts,≥ 70th,37,14,0.378,0.241,0.539,1.57
+Head circumference,All four CNVs,CHOP,≤ 30th,306,55,0.18,0.141,0.227,-1.994
+Head circumference,All four CNVs,CHOP,30th-70th,93,28,0.301,0.217,0.401,-0.057
+Head circumference,All four CNVs,CHOP,≥ 70th,55,16,0.291,0.188,0.421,1.352
+Head circumference,All four CNVs,CHUSJ,≤ 30th,<5,<5,,,,
+Head circumference,All four CNVs,CHUSJ,30th-70th,<5,<5,,,,
+Head circumference,All four CNVs,Cardiff,≤ 30th,26,15,0.577,0.389,0.745,-1.529
+Head circumference,All four CNVs,Cardiff,30th-70th,21,11,0.524,0.324,0.717,0
+Head circumference,All four CNVs,Cardiff,≥ 70th,26,14,0.538,0.355,0.712,1.506
+Head circumference,All four CNVs,G2MH,≤ 30th,140,47,0.336,0.263,0.417,-1.66
+Head circumference,All four CNVs,G2MH,30th-70th,83,23,0.277,0.192,0.382,-0.022
+Head circumference,All four CNVs,G2MH,≥ 70th,87,30,0.345,0.253,0.449,1.65
+Head circumference,All four CNVs,SSC,≤ 30th,8,>3,,,,-1.789
+Head circumference,All four CNVs,SSC,30th-70th,6,>1,,,,-0.072
+Head circumference,All four CNVs,SSC,≥ 70th,<5,<5,,,,
+Head circumference,All four CNVs,SVIP,≤ 30th,67,10,0.149,0.083,0.253,-1.726
+Head circumference,All four CNVs,SVIP,30th-70th,46,8,0.174,0.091,0.307,-0.004
+Head circumference,All four CNVs,SVIP,≥ 70th,49,13,0.265,0.162,0.403,1.438
+Head circumference,All four CNVs,all cohorts,≤ 30th,551,133,0.241,0.208,0.279,-1.852
+Head circumference,All four CNVs,all cohorts,30th-70th,250,77,0.308,0.254,0.368,-0.031
+Head circumference,All four CNVs,all cohorts,≥ 70th,221,76,0.344,0.284,0.409,1.524

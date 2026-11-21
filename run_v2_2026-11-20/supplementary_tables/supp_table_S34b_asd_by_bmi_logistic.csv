@@ -1,0 +1,102 @@
+Predictor,Analysis,Group,n,Autism diagnosis (n),Cohorts in the model,Log odds ratio per SD,SE,Odds ratio per SD,"Odds ratio, lower 95% CI","Odds ratio, upper 95% CI",P
+BMI,"main: + ns(age,3) + sex + cohort (+ CNV)",All four CNVs,1482,345,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.078,0.046,1.081,0.987,1.183,0.094
+BMI,"main: + ns(age,3) + sex + cohort (+ CNV)",16p11.2 del,248,87,Cardiff+G2MH+SSC+SVIP,0.036,0.093,1.037,0.864,1.244,0.7
+BMI,"main: + ns(age,3) + sex + cohort (+ CNV)",16p11.2 dup,174,54,Cardiff+CHUSJ+G2MH+SSC+SVIP,0.048,0.15,1.049,0.782,1.408,0.75
+BMI,"main: + ns(age,3) + sex + cohort (+ CNV)",22q11.2 del,891,154,Cardiff+CHOP+CHUSJ+G2MH,0.124,0.066,1.132,0.995,1.288,0.059
+BMI,"main: + ns(age,3) + sex + cohort (+ CNV)",22q11.2 dup,161,49,Cardiff+CHOP+G2MH,0.022,0.139,1.022,0.779,1.341,0.88
+BMI,no cohort terms,All four CNVs,1482,345,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.037,0.044,1.038,0.952,1.132,0.4
+BMI,linear age,All four CNVs,1482,345,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.068,0.046,1.07,0.978,1.171,0.14
+BMI,age < 18 y,All four CNVs,1040,256,Cardiff+CHOP+CHUSJ+G2MH+SVIP,0.103,0.055,1.109,0.996,1.235,0.059
+BMI,age >= 18 y,All four CNVs,424,74,Cardiff+CHOP+G2MH+SVIP,0.108,0.104,1.114,0.909,1.364,0.3
+BMI,age < 18 y,16p11.2 del,200,72,Cardiff+G2MH+SVIP,0.043,0.102,1.044,0.854,1.276,0.67
+BMI,age < 18 y,16p11.2 dup,109,40,Cardiff+CHUSJ+G2MH+SVIP,0.084,0.17,1.088,0.779,1.518,0.62
+BMI,age < 18 y,22q11.2 del,619,104,Cardiff+CHOP+CHUSJ+G2MH,0.132,0.081,1.141,0.974,1.336,0.1
+BMI,age < 18 y,22q11.2 dup,105,40,Cardiff+CHOP+G2MH,0.043,0.174,1.044,0.743,1.468,0.8
+BMI,cohort: Cardiff,All four CNVs,74,41,Cardiff,0.161,0.177,1.175,0.83,1.664,0.36
+BMI,leave out Cardiff,All four CNVs,1408,304,CHOP+CHUSJ+G2MH+SSC+SVIP,0.075,0.048,1.077,0.98,1.185,0.12
+BMI,cohort: CHOP,All four CNVs,728,112,CHOP,0.175,0.079,1.192,1.02,1.392,0.027
+BMI,leave out CHOP,All four CNVs,754,233,Cardiff+CHUSJ+G2MH+SSC+SVIP,0.016,0.058,1.016,0.907,1.139,0.78
+BMI,cohort: CHUSJ,All four CNVs,24,<5,"",,,,,,
+BMI,leave out CHUSJ,All four CNVs,1458,342,Cardiff+CHOP+G2MH+SSC+SVIP,0.065,0.047,1.067,0.974,1.169,0.17
+BMI,cohort: G2MH,All four CNVs,444,139,G2MH,0.009,0.072,1.009,0.876,1.163,0.9
+BMI,leave out G2MH,All four CNVs,1038,206,Cardiff+CHOP+CHUSJ+SSC+SVIP,0.132,0.061,1.141,1.012,1.287,0.031
+BMI,cohort: SSC,All four CNVs,18,15,"",,,,,,
+BMI,leave out SSC,All four CNVs,1464,330,Cardiff+CHOP+CHUSJ+G2MH+SVIP,0.076,0.047,1.079,0.985,1.182,0.1
+BMI,cohort: SVIP,All four CNVs,194,35,SVIP,-0.097,0.136,0.908,0.695,1.186,0.48
+BMI,leave out SVIP,All four CNVs,1288,310,Cardiff+CHOP+CHUSJ+G2MH+SSC,0.103,0.05,1.108,1.006,1.221,0.038
+BMI,cohort: Cardiff,16p11.2 del,21,11,Cardiff,-0.074,0.398,0.929,0.426,2.029,0.85
+BMI,cohort: CHUSJ,16p11.2 del,<5,<5,"",,,,,,
+BMI,cohort: G2MH,16p11.2 del,109,46,G2MH,0.018,0.127,1.018,0.794,1.306,0.89
+BMI,cohort: SSC,16p11.2 del,8,7,"",,,,,,
+BMI,cohort: SVIP,16p11.2 del,110,23,SVIP,-0.031,0.164,0.97,0.704,1.336,0.85
+BMI,cohort: Cardiff,16p11.2 dup,15,13,"",,,,,,
+BMI,cohort: CHUSJ,16p11.2 dup,7,<5,"",,,,,,
+BMI,cohort: G2MH,16p11.2 dup,59,21,G2MH,0.163,0.227,1.177,0.754,1.836,0.47
+BMI,cohort: SSC,16p11.2 dup,9,7,"",,,,,,
+BMI,cohort: SVIP,16p11.2 dup,84,12,SVIP,-0.282,0.278,0.754,0.437,1.301,0.31
+BMI,cohort: Cardiff,22q11.2 del,26,9,Cardiff,0.605,0.382,1.831,0.866,3.87,0.11
+BMI,cohort: CHOP,22q11.2 del,659,88,CHOP,0.148,0.084,1.16,0.984,1.367,0.077
+BMI,cohort: CHUSJ,22q11.2 del,10,<5,"",,,,,,
+BMI,cohort: G2MH,22q11.2 del,196,55,G2MH,-0.002,0.118,0.998,0.792,1.256,0.99
+BMI,cohort: Cardiff,22q11.2 dup,12,8,"",,,,,,
+BMI,cohort: CHOP,22q11.2 dup,69,24,CHOP,0.228,0.249,1.256,0.771,2.047,0.36
+BMI,cohort: CHUSJ,22q11.2 dup,<5,<5,"",,,,,,
+BMI,cohort: G2MH,22q11.2 dup,80,17,G2MH,0.172,0.282,1.188,0.683,2.064,0.54
+BMI,cohort: SSC,22q11.2 dup,<5,<5,"",,,,,,
+BMI,without CHOP and SSC (diagnosis recorded by a research protocol),All four CNVs,736,218,Cardiff+CHUSJ+G2MH+SVIP,0.013,0.059,1.013,0.903,1.136,0.83
+BMI,with Searchlight v14 diagnoses added,All four CNVs,1639,426,Cardiff+CHOP+CHUSJ+G2MH+Searchlight+SSC+SVIP,0.061,0.042,1.063,0.98,1.153,0.14
+BMI,with Searchlight v14 diagnoses added,16p11.2 del,361,144,Cardiff+G2MH+Searchlight+SSC+SVIP,0.003,0.07,1.003,0.874,1.151,0.97
+BMI,with Searchlight v14 diagnoses added,16p11.2 dup,218,78,Cardiff+CHUSJ+G2MH+Searchlight+SSC+SVIP,0.082,0.125,1.085,0.849,1.387,0.51
+BMI,heterogeneity across the four CNVs (Cochran Q),All four CNVs,1482,,"",,,,,,0.83
+BMI,heterogeneity across the four CNVs (LRT of predictor x CNV),All four CNVs,1482,,"",,,,,,0.96
+BMI,"heterogeneity across cohorts, pooled CNVs (Cochran Q)",All four CNVs,1482,,"",,,,,,0.24
+Head circumference,"main: + ns(age,3) + sex + cohort (+ CNV)",All four CNVs,1022,286,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.126,0.057,1.135,1.015,1.268,0.026
+Head circumference,"main: + ns(age,3) + sex + cohort (+ CNV)",16p11.2 del,212,75,Cardiff+G2MH+SSC+SVIP,0.187,0.113,1.206,0.967,1.503,0.097
+Head circumference,"main: + ns(age,3) + sex + cohort (+ CNV)",16p11.2 dup,137,48,Cardiff+CHUSJ+G2MH+SSC+SVIP,0.009,0.205,1.009,0.676,1.507,0.97
+Head circumference,"main: + ns(age,3) + sex + cohort (+ CNV)",22q11.2 del,548,118,Cardiff+CHOP+G2MH,0.105,0.083,1.11,0.943,1.307,0.21
+Head circumference,"main: + ns(age,3) + sex + cohort (+ CNV)",22q11.2 dup,121,44,Cardiff+CHOP+G2MH,0.112,0.143,1.119,0.845,1.482,0.43
+Head circumference,no cohort terms,All four CNVs,1022,286,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.126,0.055,1.135,1.019,1.264,0.022
+Head circumference,linear age,All four CNVs,1022,286,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.186,0.055,1.204,1.082,1.341,7e-04
+Head circumference,age < 18 y,All four CNVs,790,226,Cardiff+CHOP+CHUSJ+G2MH+SVIP,0.135,0.063,1.144,1.011,1.295,0.033
+Head circumference,age >= 18 y,All four CNVs,214,45,Cardiff+CHOP+G2MH+SVIP,0.007,0.144,1.007,0.759,1.336,0.96
+Head circumference,age < 18 y,16p11.2 del,176,64,Cardiff+G2MH+SVIP,0.21,0.122,1.234,0.971,1.567,0.086
+Head circumference,age < 18 y,16p11.2 dup,82,35,Cardiff+CHUSJ+G2MH+SVIP,-0.037,0.266,0.964,0.572,1.625,0.89
+Head circumference,age < 18 y,22q11.2 del,440,87,Cardiff+CHOP+G2MH,0.109,0.094,1.115,0.927,1.341,0.25
+Head circumference,age < 18 y,22q11.2 dup,89,40,Cardiff+CHOP+G2MH,0.139,0.154,1.149,0.849,1.555,0.37
+Head circumference,cohort: Cardiff,All four CNVs,73,40,Cardiff,0.39,0.229,1.477,0.943,2.313,0.089
+Head circumference,leave out Cardiff,All four CNVs,949,246,CHOP+CHUSJ+G2MH+SSC+SVIP,0.107,0.059,1.113,0.992,1.25,0.069
+Head circumference,cohort: CHOP,All four CNVs,454,99,CHOP,0.109,0.087,1.116,0.94,1.324,0.21
+Head circumference,leave out CHOP,All four CNVs,568,187,Cardiff+CHUSJ+G2MH+SSC+SVIP,0.13,0.076,1.139,0.982,1.322,0.086
+Head circumference,cohort: CHUSJ,All four CNVs,5,<5,"",,,,,,
+Head circumference,leave out CHUSJ,All four CNVs,1017,285,Cardiff+CHOP+G2MH+SSC+SVIP,0.121,0.057,1.129,1.011,1.262,0.032
+Head circumference,cohort: G2MH,All four CNVs,310,100,G2MH,0.06,0.098,1.062,0.877,1.285,0.54
+Head circumference,leave out G2MH,All four CNVs,712,186,Cardiff+CHOP+CHUSJ+SSC+SVIP,0.15,0.072,1.162,1.01,1.338,0.036
+Head circumference,cohort: SSC,All four CNVs,18,15,"",,,,,,
+Head circumference,leave out SSC,All four CNVs,1004,271,Cardiff+CHOP+CHUSJ+G2MH+SVIP,0.122,0.057,1.13,1.011,1.263,0.031
+Head circumference,cohort: SVIP,All four CNVs,162,31,SVIP,0.146,0.168,1.157,0.832,1.609,0.39
+Head circumference,leave out SVIP,All four CNVs,860,255,Cardiff+CHOP+CHUSJ+G2MH+SSC,0.127,0.06,1.136,1.009,1.278,0.035
+Head circumference,cohort: Cardiff,16p11.2 del,20,10,Cardiff,0.592,0.566,1.807,0.596,5.477,0.3
+Head circumference,cohort: CHUSJ,16p11.2 del,<5,<5,"",,,,,,
+Head circumference,cohort: G2MH,16p11.2 del,88,37,G2MH,-0.012,0.156,0.988,0.727,1.342,0.94
+Head circumference,cohort: SSC,16p11.2 del,8,7,"",,,,,,
+Head circumference,cohort: SVIP,16p11.2 del,96,21,SVIP,0.279,0.207,1.322,0.882,1.982,0.18
+Head circumference,cohort: Cardiff,16p11.2 dup,15,13,"",,,,,,
+Head circumference,cohort: CHUSJ,16p11.2 dup,<5,<5,"",,,,,,
+Head circumference,cohort: G2MH,16p11.2 dup,45,17,G2MH,0.254,0.325,1.29,0.682,2.44,0.43
+Head circumference,cohort: SSC,16p11.2 dup,9,7,"",,,,,,
+Head circumference,cohort: SVIP,16p11.2 dup,66,10,SVIP,-0.383,0.354,0.682,0.34,1.365,0.28
+Head circumference,cohort: Cardiff,22q11.2 del,26,9,Cardiff,0.182,0.455,1.199,0.492,2.923,0.69
+Head circumference,cohort: CHOP,22q11.2 del,406,77,CHOP,0.123,0.101,1.131,0.928,1.379,0.22
+Head circumference,cohort: CHUSJ,22q11.2 del,<5,<5,"",,,,,,
+Head circumference,cohort: G2MH,22q11.2 del,116,32,G2MH,0.097,0.177,1.102,0.778,1.56,0.58
+Head circumference,cohort: Cardiff,22q11.2 dup,12,8,"",,,,,,
+Head circumference,cohort: CHOP,22q11.2 dup,48,22,CHOP,0.165,0.187,1.18,0.818,1.702,0.38
+Head circumference,cohort: G2MH,22q11.2 dup,61,14,G2MH,0.148,0.329,1.16,0.608,2.212,0.65
+Head circumference,cohort: SSC,22q11.2 dup,<5,<5,"",,,,,,
+Head circumference,without CHOP and SSC (diagnosis recorded by a research protocol),All four CNVs,550,172,Cardiff+CHUSJ+G2MH+SVIP,0.122,0.076,1.129,0.973,1.311,0.11
+Head circumference,with Searchlight v14 diagnoses added,All four CNVs,1022,286,Cardiff+CHOP+CHUSJ+G2MH+SSC+SVIP,0.126,0.057,1.135,1.015,1.268,0.026
+Head circumference,with Searchlight v14 diagnoses added,16p11.2 del,212,75,Cardiff+G2MH+SSC+SVIP,0.187,0.113,1.206,0.967,1.503,0.097
+Head circumference,with Searchlight v14 diagnoses added,16p11.2 dup,137,48,Cardiff+CHUSJ+G2MH+SSC+SVIP,0.009,0.205,1.009,0.676,1.507,0.97
+Head circumference,heterogeneity across the four CNVs (Cochran Q),All four CNVs,1022,,"",,,,,,0.88
+Head circumference,heterogeneity across the four CNVs (LRT of predictor x CNV),All four CNVs,1022,,"",,,,,,0.74
+Head circumference,"heterogeneity across cohorts, pooled CNVs (Cochran Q)",All four CNVs,1022,,"",,,,,,0.62

@@ -1,0 +1,21 @@
+Outcome,Genotype,Age window,Cohorts,Children (n),Visit pairs (n),Median age at first visit of pair (years),Median interval (years),Change in Z to next visit per SD of BMI Z,SE,Lower 95% CI,Upper 95% CI,P,"P, BMI x age window","P, heterogeneity across genotypes"
+Head circumference,16p11.2 del,All ages,Cardiff+SVIP,94,296,1.08,0.5,0.087,0.037,0.015,0.159,0.023,0.87,
+Head circumference,16p11.2 del,<2 y,SVIP,55,204,0.75,0.25,0.08,0.043,-0.004,0.164,0.069,,
+Head circumference,16p11.2 del,2-5 y,SVIP,34,50,2.5,1,0.121,0.083,-0.042,0.284,0.15,,
+Head circumference,16p11.2 del,5-18 y,Cardiff+SVIP,36,42,7.62,2,0.073,0.086,-0.096,0.242,0.4,,
+Head circumference,16p11.2 dup,All ages,Cardiff+SVIP,47,164,1.17,0.42,0.052,0.053,-0.051,0.155,0.33,0.51,
+Head circumference,16p11.2 dup,<2 y,SVIP,30,112,0.75,0.25,0.049,0.065,-0.079,0.177,0.46,,
+Head circumference,16p11.2 dup,2-5 y,SVIP,26,41,2.92,1.08,0.075,0.094,-0.109,0.259,0.43,,
+Head circumference,16p11.2 dup,5-18 y,Cardiff+SVIP,10,11,7.25,2,,,,,,,
+Head circumference,22q11.2 del,All ages,Cardiff+CHOP,331,1411,2.2,0.54,0.012,0.013,-0.013,0.037,0.33,0.49,
+Head circumference,22q11.2 del,<2 y,CHOP,164,667,0.92,0.25,-0.003,0.018,-0.038,0.033,0.88,,
+Head circumference,22q11.2 del,2-5 y,CHOP,153,281,2.78,1.11,0.016,0.031,-0.044,0.076,0.6,,
+Head circumference,22q11.2 del,5-18 y,Cardiff+CHOP,201,463,9.04,1.24,0.028,0.02,-0.01,0.067,0.15,,
+Head circumference,22q11.2 dup,All ages,Cardiff+CHOP,46,232,1.97,0.48,0.049,0.042,-0.033,0.131,0.24,0.44,
+Head circumference,22q11.2 dup,<2 y,CHOP,26,117,0.8,0.25,0.025,0.051,-0.075,0.125,0.63,,
+Head circumference,22q11.2 dup,2-5 y,CHOP,16,41,3.32,0.76,-0.005,0.111,-0.222,0.212,0.96,,
+Head circumference,22q11.2 dup,5-18 y,Cardiff+CHOP,27,74,8.15,1.05,0.116,0.075,-0.03,0.262,0.12,,
+Head circumference,All four CNVs,All ages,Cardiff+CHOP+SVIP,518,2103,1.83,0.5,0.03,0.011,0.008,0.052,0.0089,0.75,0.03
+Head circumference,All four CNVs,<2 y,CHOP+SVIP,275,1100,0.83,0.25,0.024,0.015,-0.006,0.054,0.12,,0.22
+Head circumference,All four CNVs,2-5 y,CHOP+SVIP,229,413,2.83,1.07,0.026,0.027,-0.026,0.078,0.33,,0.72
+Head circumference,All four CNVs,5-18 y,Cardiff+CHOP+SVIP,274,590,8.95,1.29,0.041,0.019,0.004,0.077,0.031,,0.26

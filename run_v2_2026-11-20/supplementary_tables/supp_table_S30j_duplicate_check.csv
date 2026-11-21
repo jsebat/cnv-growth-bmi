@@ -1,0 +1,9 @@
+Matching rule,Same-sex child pairs matched (n),Cardiff children in a same-sex match (n),CHOP children in a same-sex match (n),"Opposite-sex child pairs matched, negative control (n)",Cardiff 22q11.2 children (n),CHOP children (n)
+"STRICT: >= 1 visit, age within 0.02 y, HC or height within 0.2 cm",62,41,44,72,108,767
+STRICT: >= 2 visits,0,0,0,0,108,767
+LOOSE (whole-year Cardiff age): >= 1 Cardiff visit matched,1954,103,403,1717,108,767
+LOOSE: >= 2 Cardiff visits matched,188,66,102,121,108,767
+LOOSE: every Cardiff visit of the child matched (>= 2),52,32,45,41,108,767
+LOOSE: >= 3 Cardiff visits matched,14,13,14,5,108,767
+LOOSE + WEIGHT: height (0.2 cm) and weight (0.5 kg) agree at >= 1 Cardiff visit,90,51,74,71,108,767
+LOOSE + WEIGHT: height and weight agree at >= 2 Cardiff visits,2,2,2,0,108,767

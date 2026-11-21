@@ -1,0 +1,7 @@
+Outcome,Group,Carriers (n),Controls (n),"CNV x BMI, all ages (SD per SD)",SE,P,Model
+Height,All four CNVs,2310,55852,-0.052,0.02,0.009,"est_main form, no locus term"
+Height,All four CNVs,2310,55852,-0.034,0.021,0.1,est_main form + locus (primary)
+Height,All four CNVs,2310,55852,0,0.021,0.99,"locus-specific age curves (omnibus model of 38, one CNV x BMI term)"
+Head circumference,All four CNVs,1114,5827,0.096,0.028,0.00065,"est_main form, no locus term"
+Head circumference,All four CNVs,1114,5827,0.001,0.028,0.98,est_main form + locus (primary)
+Head circumference,All four CNVs,1114,5827,0.011,0.029,0.71,"locus-specific age curves (omnibus model of 38, one CNV x BMI term)"

@@ -1,0 +1,21 @@
+Analysis,Method,Unit,SNPs (n),Mean F of instruments,Outcome sample (n),Estimate,SE,Lower 95% CI,Upper 95% CI,P,Cochran Q,"P, Cochran Q",Egger intercept,SE (Egger intercept),"P, Egger intercept"
+childhood BMI (Vogelezang 2020) -> age at menarche,Inverse-variance weighted,years per SD of childhood BMI,16,48.371,238681,-0.592,0.088,-0.764,-0.419,1.8e-11,256.222,6.5e-46,,,
+childhood BMI (Vogelezang 2020) -> age at menarche,Weighted median,years per SD of childhood BMI,16,48.371,238681,-0.66,0.059,-0.777,-0.544,8.8e-29,,,,,
+childhood BMI (Vogelezang 2020) -> age at menarche,MR-Egger,years per SD of childhood BMI,16,48.371,238681,-0.451,0.346,-1.129,0.227,0.21,,,-0.01,0.024,0.68
+"childhood obesity (Bradfield 2019, EUR) -> age at menarche",Inverse-variance weighted,years per log-odds of childhood obesity,9,57.246,238681,-0.256,0.049,-0.351,-0.161,1.3e-07,168.387,2.8e-32,,,
+"childhood obesity (Bradfield 2019, EUR) -> age at menarche",Weighted median,years per log-odds of childhood obesity,9,57.246,238681,-0.303,0.027,-0.355,-0.251,4.5e-30,,,,,
+"childhood obesity (Bradfield 2019, EUR) -> age at menarche",MR-Egger,years per log-odds of childhood obesity,9,57.246,238681,-0.289,0.261,-0.801,0.223,0.31,,,0.006,0.046,0.9
+age at menarche (Perry 2014) -> adult height,Inverse-variance weighted,SD height per year later,92,53.254,238681,0.182,0.026,0.131,0.233,3e-12,960.421,3.7e-145,,,
+age at menarche (Perry 2014) -> adult height,Weighted median,SD height per year later,92,53.254,238681,0.211,0.016,0.179,0.242,9.1e-39,,,,,
+age at menarche (Perry 2014) -> adult height,MR-Egger,SD height per year later,92,53.254,238681,0.462,0.092,0.282,0.642,2.6e-06,,,-0.012,0.004,0.0021
+"childhood BMI (Vogelezang 2020) -> adult height, total",Inverse-variance weighted,SD height per SD of childhood BMI,16,48.371,238681,0.023,0.049,-0.074,0.12,0.64,221.154,1e-38,,,
+"childhood BMI (Vogelezang 2020) -> adult height, total",Weighted median,SD height per SD of childhood BMI,16,48.371,238681,0.003,0.025,-0.045,0.052,0.89,,,,,
+"childhood BMI (Vogelezang 2020) -> adult height, total",MR-Egger,SD height per SD of childhood BMI,16,48.371,238681,-0.029,0.194,-0.41,0.351,0.88,,,0.004,0.013,0.78
+"childhood obesity (Bradfield 2019, EUR) -> adult height, total",Inverse-variance weighted,SD height per log-odds of childhood obesity,9,57.246,238681,0.035,0.024,-0.013,0.082,0.15,115.309,3.1e-21,,,
+"childhood obesity (Bradfield 2019, EUR) -> adult height, total",Weighted median,SD height per log-odds of childhood obesity,9,57.246,238681,0.02,0.011,-0.002,0.041,0.076,,,,,
+"childhood obesity (Bradfield 2019, EUR) -> adult height, total",MR-Egger,SD height per log-odds of childhood obesity,9,57.246,238681,-0.025,0.128,-0.277,0.226,0.85,,,0.011,0.022,0.65
+multivariable: childhood BMI (Vogelezang 2020) + age at menarche (Perry 2014) -> adult height,Multivariable inverse-variance weighted,"SD height per SD of childhood BMI, direct",95,,238681,0.1,0.045,0.012,0.187,0.028,,,,,
+multivariable: childhood BMI (Vogelezang 2020) + age at menarche (Perry 2014) -> adult height,Multivariable inverse-variance weighted,"SD height per year later, adjusted for childhood adiposity",95,,238681,0.213,0.03,0.155,0.272,1.9e-10,,,,,
+"multivariable: childhood obesity (Bradfield 2019, EUR) + age at menarche (Perry 2014) -> adult height",Multivariable inverse-variance weighted,"SD height per log-odds of childhood obesity, direct",93,,238681,0.075,0.02,0.036,0.114,0.00028,,,,,
+"multivariable: childhood obesity (Bradfield 2019, EUR) + age at menarche (Perry 2014) -> adult height",Multivariable inverse-variance weighted,"SD height per year later, adjusted for childhood adiposity",93,,238681,0.232,0.028,0.177,0.288,1.7e-12,,,,,
+check: Perry 2014 SNP effects on menarche replicate in UK Biobank women,weighted slope through origin,UKB years per Perry year,92,53.254,238681,1.052,0.026,1.001,1.102,2.4e-60,,,,,

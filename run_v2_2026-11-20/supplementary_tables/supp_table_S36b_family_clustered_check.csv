@@ -1,0 +1,14 @@
+Block,Test,n,Carriers (n),Carriers sharing a family (n),Families (n),Estimate,SE (model),P (model),SE (family-clustered),P (family-clustered),Scale,"SE ratio, clustered / model",Crosses P = 0.05,Conclusion changes
+1 CNV x BMI,"SRS, all four CNVs vs SSC relatives",6423,814,180,3102,0.072,0.029,0.013,0.03,0.017,SD per SD,1.046,FALSE,no
+1 CNV x BMI,"SCQ, all four CNVs vs SSC relatives",1863,689,79,1816,0.061,0.033,0.063,0.032,0.058,SD per SD,0.981,FALSE,no
+1 CNV x BMI,"SRS, 22q11.2 del vs SSC relatives",5926,317,12,2708,0.11,0.042,0.0088,0.045,0.014,SD per SD,1.063,FALSE,no
+2 CNV x BMI x autism score,SRS three-way vs SSC relatives (model SE = HC1 robust),5703,583,117,2728,-0.075,0.03,0.012,0.03,0.012,SD per SD,1.001,FALSE,no
+2 CNV x BMI x autism score,"SRS within carriers, BMI x score (model SE = HC1 robust)",583,583,106,526,-0.085,0.027,0.0019,0.027,0.0018,SD per SD,0.994,FALSE,no
+2 CNV x BMI x autism score,"SRS within carriers, BMI x score, with cohort x BMI and cohort x score (model SE = HC1 robust)",583,583,106,526,-0.084,0.028,0.0026,0.028,0.0026,SD per SD,0.999,FALSE,no
+2 CNV x BMI x autism score,SCQ three-way vs SSC relatives (model SE = HC1 robust),1536,468,40,1512,-0.026,0.037,0.49,0.037,0.49,SD per SD,1.003,FALSE,no
+3 CNV x BMI x sex,"SRS, one model",6423,814,180,3102,-0.137,0.052,0.0088,0.055,0.013,SD per SD,1.054,FALSE,no
+3 CNV x BMI x sex,"SRS, one model with sex-specific cohort x CNV intercepts",6423,814,180,3102,-0.086,0.055,0.12,0.057,0.13,SD per SD,1.031,FALSE,no
+4 autism diagnosis,"Head circumference Z, diagnosis vs none, all four CNVs",1022,1022,167,930,0.21,0.104,0.043,0.107,0.05,SD,1.032,FALSE,no
+4 autism diagnosis,"logistic: diagnosis on Head circumference Z, all four CNVs",1022,1022,167,930,0.126,0.057,0.026,0.06,0.035,log odds ratio per SD,1.06,FALSE,no
+4 autism diagnosis,"BMI Z, diagnosis vs none, all four CNVs",1482,1482,220,1356,0.174,0.091,0.056,0.092,0.058,SD,1.008,FALSE,no
+4 autism diagnosis,"logistic: diagnosis on BMI Z, all four CNVs",1482,1482,220,1356,0.078,0.046,0.094,0.046,0.094,log odds ratio per SD,0.997,FALSE,no

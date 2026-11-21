@@ -1,0 +1,107 @@
+Analysis,Step,Unit,n,F,Estimate,SE,Lower 95% CI,Upper 95% CI,P,"R2, first stage"
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted",exposure score -> age at menarche,years per SD of score,238681,1416.736,-0.122,0.003,-0.128,-0.116,1.1e-308,0.006
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted",menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5525.944,0.238,0.003,0.232,0.244,<1e-300,0.023
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted",age at menarche -> adult height (Wald ratio),SD height per year later,238681,5525.944,0.093,0.007,0.079,0.107,9.7e-38,0.023
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted","age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5494.209,0.094,0.007,0.08,0.108,5.9e-39,0.023
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted",age at menarche -> adult height (observational),SD height per year later,238681,,0.048,0.001,0.046,0.05,<1e-300,
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted","exposure score -> adult height, total",SD height per SD of score,238681,,0.002,0.002,-0.001,0.005,0.21,
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted","exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5494.209,0.014,0.002,0.01,0.017,1.5e-12,0.023
+"main: childhood-obesity score, menarche score (Guan 2025), height score adjusted","exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.011,0.001,-0.013,-0.01,5.9e-35,
+without height-score adjustment,exposure score -> age at menarche,years per SD of score,238681,1396.668,-0.121,0.003,-0.128,-0.115,1.1e-305,0.006
+without height-score adjustment,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5647.916,0.241,0.003,0.234,0.247,<1e-300,0.023
+without height-score adjustment,age at menarche -> adult height (Wald ratio),SD height per year later,238681,5647.916,0.189,0.008,0.172,0.205,1.5e-109,0.023
+without height-score adjustment,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5619.752,0.19,0.008,0.174,0.206,5.7e-116,0.023
+without height-score adjustment,age at menarche -> adult height (observational),SD height per year later,238681,,0.06,0.001,0.057,0.062,<1e-300,
+without height-score adjustment,"exposure score -> adult height, total",SD height per SD of score,238681,,0.008,0.002,0.004,0.012,4.5e-05,
+without height-score adjustment,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5619.752,0.031,0.002,0.027,0.035,7.5e-44,0.023
+without height-score adjustment,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.023,0.001,-0.025,-0.021,7.4e-85,
+plus adult-BMI score adjustment,exposure score -> age at menarche,years per SD of score,238681,544.695,-0.077,0.003,-0.084,-0.071,1.8e-120,0.002
+plus adult-BMI score adjustment,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5044.388,0.226,0.003,0.22,0.232,<1e-300,0.021
+plus adult-BMI score adjustment,age at menarche -> adult height (Wald ratio),SD height per year later,238681,5044.388,0.086,0.008,0.071,0.101,1.4e-29,0.021
+plus adult-BMI score adjustment,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5067.689,0.086,0.007,0.071,0.1,3.3e-30,0.021
+plus adult-BMI score adjustment,age at menarche -> adult height (observational),SD height per year later,238681,,0.045,0.001,0.043,0.048,<1e-300,
+plus adult-BMI score adjustment,"exposure score -> adult height, total",SD height per SD of score,238681,,0.014,0.002,0.01,0.017,1e-14,
+plus adult-BMI score adjustment,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5067.689,0.02,0.002,0.017,0.024,7.3e-28,0.021
+plus adult-BMI score adjustment,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.007,0.001,-0.008,-0.005,1.1e-24,
+childhood-BMI score (Vogelezang 2020) as exposure,exposure score -> age at menarche,years per SD of score,238681,1520.279,-0.126,0.003,-0.133,-0.12,<1e-300,0.006
+childhood-BMI score (Vogelezang 2020) as exposure,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5525.944,0.238,0.003,0.232,0.244,<1e-300,0.023
+childhood-BMI score (Vogelezang 2020) as exposure,age at menarche -> adult height (Wald ratio),SD height per year later,238681,5525.944,0.093,0.007,0.079,0.107,9.7e-38,0.023
+childhood-BMI score (Vogelezang 2020) as exposure,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5526.517,0.093,0.007,0.079,0.107,7.6e-39,0.023
+childhood-BMI score (Vogelezang 2020) as exposure,age at menarche -> adult height (observational),SD height per year later,238681,,0.048,0.001,0.046,0.05,<1e-300,
+childhood-BMI score (Vogelezang 2020) as exposure,"exposure score -> adult height, total",SD height per SD of score,238681,,-0.001,0.002,-0.005,0.002,0.38,
+childhood-BMI score (Vogelezang 2020) as exposure,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5526.517,0.01,0.002,0.007,0.014,9.6e-08,0.023
+childhood-BMI score (Vogelezang 2020) as exposure,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.012,0.001,-0.014,-0.01,4.1e-35,
+adult-BMI score (Yengo 2018) as exposure,exposure score -> age at menarche,years per SD of score,238681,4120.838,-0.208,0.003,-0.214,-0.202,<1e-300,0.017
+adult-BMI score (Yengo 2018) as exposure,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5525.944,0.238,0.003,0.232,0.244,<1e-300,0.023
+adult-BMI score (Yengo 2018) as exposure,age at menarche -> adult height (Wald ratio),SD height per year later,238681,5525.944,0.093,0.007,0.079,0.107,9.7e-38,0.023
+adult-BMI score (Yengo 2018) as exposure,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5044.388,0.086,0.008,0.071,0.101,2.5e-30,0.021
+adult-BMI score (Yengo 2018) as exposure,age at menarche -> adult height (observational),SD height per year later,238681,,0.048,0.001,0.046,0.05,<1e-300,
+adult-BMI score (Yengo 2018) as exposure,"exposure score -> adult height, total",SD height per SD of score,238681,,-0.045,0.002,-0.049,-0.042,1.9e-154,
+adult-BMI score (Yengo 2018) as exposure,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5044.388,-0.027,0.002,-0.032,-0.023,2.3e-32,0.021
+adult-BMI score (Yengo 2018) as exposure,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.018,0.002,-0.021,-0.015,1.9e-29,
+menarche instrument without UK Biobank: Perry 2014 allele score,exposure score -> age at menarche,years per SD of score,238681,1416.736,-0.122,0.003,-0.128,-0.116,1.1e-308,0.006
+menarche instrument without UK Biobank: Perry 2014 allele score,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,6246.348,0.253,0.003,0.247,0.26,<1e-300,0.026
+menarche instrument without UK Biobank: Perry 2014 allele score,age at menarche -> adult height (Wald ratio),SD height per year later,238681,6246.348,0.085,0.007,0.071,0.098,1.6e-35,0.026
+menarche instrument without UK Biobank: Perry 2014 allele score,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5324.496,0.096,0.007,0.081,0.11,2.8e-39,0.022
+menarche instrument without UK Biobank: Perry 2014 allele score,age at menarche -> adult height (observational),SD height per year later,238681,,0.048,0.001,0.046,0.05,<1e-300,
+menarche instrument without UK Biobank: Perry 2014 allele score,"exposure score -> adult height, total",SD height per SD of score,238681,,0.002,0.002,-0.001,0.005,0.21,
+menarche instrument without UK Biobank: Perry 2014 allele score,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5324.496,0.014,0.002,0.01,0.018,7.7e-13,0.022
+menarche instrument without UK Biobank: Perry 2014 allele score,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.012,0.001,-0.014,-0.01,3.3e-35,
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),exposure score -> age at menarche,years per SD of score,238681,1520.279,-0.126,0.003,-0.133,-0.12,<1e-300,0.006
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,6246.348,0.253,0.003,0.247,0.26,<1e-300,0.026
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),age at menarche -> adult height (Wald ratio),SD height per year later,238681,6246.348,0.085,0.007,0.071,0.098,1.6e-35,0.026
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5369.424,0.092,0.007,0.078,0.106,1.1e-36,0.022
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),age at menarche -> adult height (observational),SD height per year later,238681,,0.048,0.001,0.046,0.05,<1e-300,
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),"exposure score -> adult height, total",SD height per SD of score,238681,,-0.001,0.002,-0.005,0.002,0.38,
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5369.424,0.01,0.002,0.006,0.014,1.8e-07,0.022
+childhood-BMI score and Perry 2014 allele score (no UK Biobank in either),"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.012,0.001,-0.013,-0.01,2.4e-33,
+"Perry 2014 allele score, without height-score adjustment",exposure score -> age at menarche,years per SD of score,238681,1396.668,-0.121,0.003,-0.128,-0.115,1.1e-305,0.006
+"Perry 2014 allele score, without height-score adjustment",menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,6372.172,0.256,0.003,0.249,0.262,<1e-300,0.026
+"Perry 2014 allele score, without height-score adjustment",age at menarche -> adult height (Wald ratio),SD height per year later,238681,6372.172,0.173,0.008,0.157,0.188,5.8e-105,0.026
+"Perry 2014 allele score, without height-score adjustment","age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5453.644,0.198,0.008,0.181,0.214,3.8e-121,0.022
+"Perry 2014 allele score, without height-score adjustment",age at menarche -> adult height (observational),SD height per year later,238681,,0.06,0.001,0.057,0.062,<1e-300,
+"Perry 2014 allele score, without height-score adjustment","exposure score -> adult height, total",SD height per SD of score,238681,,0.008,0.002,0.004,0.012,4.5e-05,
+"Perry 2014 allele score, without height-score adjustment","exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5453.644,0.032,0.002,0.028,0.036,6.7e-46,0.022
+"Perry 2014 allele score, without height-score adjustment","exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.024,0.001,-0.026,-0.022,1.5e-87,
+"Perry 2014 allele score, plus adult-BMI score adjustment",exposure score -> age at menarche,years per SD of score,238681,544.695,-0.077,0.003,-0.084,-0.071,1.8e-120,0.002
+"Perry 2014 allele score, plus adult-BMI score adjustment",menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5501.557,0.237,0.003,0.231,0.243,<1e-300,0.023
+"Perry 2014 allele score, plus adult-BMI score adjustment",age at menarche -> adult height (Wald ratio),SD height per year later,238681,5501.557,0.074,0.007,0.06,0.089,1.5e-24,0.023
+"Perry 2014 allele score, plus adult-BMI score adjustment","age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5047.24,0.09,0.008,0.075,0.105,4.9e-33,0.021
+"Perry 2014 allele score, plus adult-BMI score adjustment",age at menarche -> adult height (observational),SD height per year later,238681,,0.045,0.001,0.043,0.048,<1e-300,
+"Perry 2014 allele score, plus adult-BMI score adjustment","exposure score -> adult height, total",SD height per SD of score,238681,,0.014,0.002,0.01,0.017,1e-14,
+"Perry 2014 allele score, plus adult-BMI score adjustment","exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5047.24,0.021,0.002,0.017,0.024,1e-28,0.021
+"Perry 2014 allele score, plus adult-BMI score adjustment","exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.007,0.001,-0.008,-0.006,1.7e-26,
+height on the Box-Cox within-sex scale,exposure score -> age at menarche,years per SD of score,238681,1416.736,-0.122,0.003,-0.128,-0.116,1.1e-308,0.006
+height on the Box-Cox within-sex scale,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5525.944,0.238,0.003,0.232,0.244,<1e-300,0.023
+height on the Box-Cox within-sex scale,age at menarche -> adult height (Wald ratio),SD height per year later,238681,5525.944,0.097,0.008,0.082,0.112,1.1e-37,0.023
+height on the Box-Cox within-sex scale,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5494.209,0.097,0.007,0.083,0.112,6.7e-39,0.023
+height on the Box-Cox within-sex scale,age at menarche -> adult height (observational),SD height per year later,238681,,0.05,0.001,0.048,0.052,<1e-300,
+height on the Box-Cox within-sex scale,"exposure score -> adult height, total",SD height per SD of score,238681,,0.002,0.002,-0.001,0.006,0.21,
+height on the Box-Cox within-sex scale,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5494.209,0.014,0.002,0.01,0.018,1.5e-12,0.023
+height on the Box-Cox within-sex scale,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.012,0.001,-0.014,-0.01,6.5e-35,
+women with a body-size-at-10 answer,exposure score -> age at menarche,years per SD of score,235757,1398.658,-0.122,0.003,-0.128,-0.116,4.1e-306,0.006
+women with a body-size-at-10 answer,menarche instrument -> age at menarche (first stage),years per SD of instrument,235757,5465.474,0.238,0.003,0.232,0.245,<1e-300,0.023
+women with a body-size-at-10 answer,age at menarche -> adult height (Wald ratio),SD height per year later,235757,5465.474,0.094,0.007,0.08,0.108,5e-38,0.023
+women with a body-size-at-10 answer,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,235757,5433.339,0.095,0.007,0.08,0.109,2.9e-39,0.023
+women with a body-size-at-10 answer,age at menarche -> adult height (observational),SD height per year later,235757,,0.049,0.001,0.046,0.051,<1e-300,
+women with a body-size-at-10 answer,"exposure score -> adult height, total",SD height per SD of score,235757,,0.002,0.002,-0.001,0.005,0.25,
+women with a body-size-at-10 answer,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,235757,5433.339,0.013,0.002,0.01,0.017,2.4e-12,0.023
+women with a body-size-at-10 answer,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,235757,,-0.012,0.001,-0.013,-0.01,3.8e-35,
+women with SNP-instrument genotypes,exposure score -> age at menarche,years per SD of score,238681,1416.736,-0.122,0.003,-0.128,-0.116,1.1e-308,0.006
+women with SNP-instrument genotypes,menarche instrument -> age at menarche (first stage),years per SD of instrument,238681,5525.944,0.238,0.003,0.232,0.244,<1e-300,0.023
+women with SNP-instrument genotypes,age at menarche -> adult height (Wald ratio),SD height per year later,238681,5525.944,0.093,0.007,0.079,0.107,9.7e-38,0.023
+women with SNP-instrument genotypes,"age at menarche -> adult height (2SLS, exposure score as covariate)",SD height per year later,238681,5494.209,0.094,0.007,0.08,0.108,5.9e-39,0.023
+women with SNP-instrument genotypes,age at menarche -> adult height (observational),SD height per year later,238681,,0.048,0.001,0.046,0.05,<1e-300,
+women with SNP-instrument genotypes,"exposure score -> adult height, total",SD height per SD of score,238681,,0.002,0.002,-0.001,0.005,0.21,
+women with SNP-instrument genotypes,"exposure score -> adult height, direct (menarche instrumented)",SD height per SD of score,238681,5494.209,0.014,0.002,0.01,0.017,1.5e-12,0.023
+women with SNP-instrument genotypes,"exposure score -> adult height, through menarche (a x b)",SD height per SD of score,238681,,-0.011,0.001,-0.013,-0.01,5.9e-35,
+per category of recalled body size at 10 (instrument: childhood-obesity score),score -> body size at 10 (first stage),categories per SD of score,235757,4412.678,0.093,0.001,0.09,0.096,<1e-300,0.018
+per category of recalled body size at 10 (instrument: childhood-obesity score),body size at 10 -> age at menarche (Wald ratio),years per category plumper,235757,4412.678,-1.309,0.04,-1.388,-1.23,5.9e-233,0.018
+per category of recalled body size at 10 (instrument: childhood-obesity score),"body size at 10 -> adult height, total (Wald ratio)",SD height per category plumper,235757,4412.678,0.021,0.018,-0.015,0.057,0.25,0.018
+per category of recalled body size at 10 (instrument: childhood-obesity score),body size at 10 -> age at menarche (observational),years per category plumper,235757,,-0.424,0.005,-0.433,-0.415,<1e-300,
+per category of recalled body size at 10 (instrument: childhood-obesity score),body size at 10 -> adult height (observational),SD height per category plumper,235757,,-0.072,0.003,-0.078,-0.066,1.9e-139,
+per category of recalled body size at 10 (instrument: childhood-BMI score),score -> body size at 10 (first stage),categories per SD of score,235757,5560.47,0.104,0.001,0.102,0.107,<1e-300,0.023
+per category of recalled body size at 10 (instrument: childhood-BMI score),body size at 10 -> age at menarche (Wald ratio),years per category plumper,235757,5560.47,-1.216,0.035,-1.285,-1.147,8.29999999999999e-261,0.023
+per category of recalled body size at 10 (instrument: childhood-BMI score),"body size at 10 -> adult height, total (Wald ratio)",SD height per category plumper,235757,5560.47,-0.017,0.016,-0.049,0.016,0.31,0.023
+per category of recalled body size at 10 (instrument: childhood-BMI score),body size at 10 -> age at menarche (observational),years per category plumper,235757,,-0.424,0.005,-0.433,-0.415,<1e-300,
+per category of recalled body size at 10 (instrument: childhood-BMI score),body size at 10 -> adult height (observational),SD height per category plumper,235757,,-0.072,0.003,-0.078,-0.066,1.9e-139,

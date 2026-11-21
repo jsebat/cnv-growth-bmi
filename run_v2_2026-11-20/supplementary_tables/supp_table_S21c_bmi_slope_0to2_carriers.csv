@@ -1,0 +1,10 @@
+Outcome,CNV group,Age band (years),Carriers (n),Carriers under 4 months (n),Median age (years),Carrier BMI slope,Carrier SE,P,"P, heterogeneity across CNVs (pooled rows)",Model
+Head circumference,16p11.2 del,0-2,58,<5,1.5,0.095,0.158,0.55,,Z ~ BMI Z + sex + age
+Head circumference,16p11.2 dup,0-2,33,<5,1.5,0.06,0.209,0.77,,Z ~ BMI Z + sex + age
+Head circumference,22q11.2 del,0-2,208,17,1.54,0.356,0.072,1.5e-06,,Z ~ BMI Z + sex + age
+Head circumference,22q11.2 dup,0-2,30,5,1.52,1.001,0.258,0.00064,,Z ~ BMI Z + sex + age
+Head circumference,All four CNVs,0-2,329,23,1.5,0.339,0.063,1.2e-07,0.002,new: Z ~ BMI Z + sex + age + CNV (4 CNVs with >= 15 carriers); heterogeneity = F test of BMI x CNV
+Height,16p11.2 del,0-2,15,<5,1.08,0.017,0.192,0.93,,Z ~ BMI Z + sex + age
+Height,22q11.2 del,0-2,228,11,1.72,-0.032,0.065,0.62,,Z ~ BMI Z + sex + age
+Height,22q11.2 dup,0-2,33,<5,1.78,0.428,0.211,0.051,,Z ~ BMI Z + sex + age
+Height,All four CNVs,0-2,276,13,1.7,0.052,0.06,0.39,0.0071,new: Z ~ BMI Z + sex + age + CNV (3 CNVs with >= 15 carriers); heterogeneity = F test of BMI x CNV

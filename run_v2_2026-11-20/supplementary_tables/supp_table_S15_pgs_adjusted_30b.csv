@@ -1,0 +1,329 @@
+Trait,Group,Model,Covariates added (each with its interaction with BMI),Carriers (n),Carrier BMI slope,SE (BMI slope),P (BMI slope),"P, covariate x BMI (single-covariate models)",Controls (n),CNV x BMI vs controls,SE (CNV x BMI),P (CNV x BMI)
+Height,16p11.2 del,unadjusted (same individuals),"",131,0.304,0.074,6.6e-05,,5150,0.191,0.065,0.0034
+Height,16p11.2 del,+ sex,sex (male),131,0.301,0.114,0.0095,0.97,5150,0.194,0.065,0.0029
+Height,16p11.2 del,+ childhood obesity PGS,childhood obesity PGS,131,0.32,0.076,4.5e-05,0.68,5150,0.193,0.065,0.0032
+Height,16p11.2 del,+ adult BMI PGS,adult BMI PGS,131,0.309,0.079,0.00015,0.064,5150,0.195,0.065,0.0028
+Height,16p11.2 del,+ height PGS,height PGS,131,0.331,0.073,1.4e-05,0.14,5150,0.223,0.056,6.8e-05
+Height,16p11.2 del,+ autism PGS (2026),autism PGS (2026),131,0.3,0.073,7.8e-05,0.093,5150,0.191,0.065,0.0034
+Height,16p11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),131,0.324,0.078,6.7e-05,,5150,0.23,0.056,3.8e-05
+Height,16p11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),131,0.311,0.117,0.0089,,5150,0.234,0.056,2.8e-05
+Height,16p11.2 dup,unadjusted (same individuals),"",70,0.014,0.109,0.9,,5150,-0.074,0.096,0.44
+Height,16p11.2 dup,+ sex,sex (male),70,0.08,0.176,0.65,0.64,5150,-0.063,0.096,0.51
+Height,16p11.2 dup,+ childhood obesity PGS,childhood obesity PGS,70,-0.063,0.11,0.57,0.015,5150,-0.074,0.096,0.44
+Height,16p11.2 dup,+ adult BMI PGS,adult BMI PGS,70,-0.003,0.109,0.98,0.023,5150,-0.073,0.096,0.45
+Height,16p11.2 dup,+ height PGS,height PGS,70,0.004,0.098,0.97,0.5,5150,-0.099,0.082,0.22
+Height,16p11.2 dup,+ autism PGS (2026),autism PGS (2026),70,0.036,0.12,0.77,0.7,5150,-0.069,0.096,0.47
+Height,16p11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),70,-0.058,0.108,0.59,,5150,-0.089,0.082,0.28
+Height,16p11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),70,0.008,0.15,0.96,,5150,-0.07,0.082,0.39
+Height,22q11.2 del,unadjusted (same individuals),"",424,0.023,0.039,0.55,,5150,-0.023,0.043,0.59
+Height,22q11.2 del,+ sex,sex (male),424,0.003,0.061,0.97,0.67,5150,-0.025,0.043,0.55
+Height,22q11.2 del,+ childhood obesity PGS,childhood obesity PGS,424,0.018,0.04,0.65,0.81,5150,-0.024,0.043,0.57
+Height,22q11.2 del,+ adult BMI PGS,adult BMI PGS,424,0.049,0.041,0.23,0.84,5150,-0.02,0.043,0.64
+Height,22q11.2 del,+ height PGS,height PGS,424,0.032,0.035,0.36,0.11,5150,-0.013,0.037,0.73
+Height,22q11.2 del,+ autism PGS (2026),autism PGS (2026),424,0.022,0.039,0.58,0.35,5150,-0.023,0.043,0.59
+Height,22q11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),424,0.034,0.037,0.35,,5150,-0.008,0.037,0.82
+Height,22q11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),424,0.029,0.056,0.6,,5150,-0.008,0.037,0.82
+Height,22q11.2 dup,unadjusted (same individuals),"",110,0.128,0.078,0.1,,5150,0.064,0.08,0.42
+Height,22q11.2 dup,+ sex,sex (male),110,-0.1,0.133,0.46,0.036,5150,0.067,0.079,0.4
+Height,22q11.2 dup,+ childhood obesity PGS,childhood obesity PGS,110,0.101,0.078,0.2,0.37,5150,0.063,0.08,0.43
+Height,22q11.2 dup,+ adult BMI PGS,adult BMI PGS,110,0.112,0.078,0.15,0.054,5150,0.064,0.08,0.42
+Height,22q11.2 dup,+ height PGS,height PGS,110,0.119,0.067,0.078,0.73,5150,0.043,0.068,0.53
+Height,22q11.2 dup,+ autism PGS (2026),autism PGS (2026),110,0.082,0.084,0.33,0.16,5150,0.061,0.08,0.45
+Height,22q11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),110,0.034,0.07,0.63,,5150,0.047,0.068,0.49
+Height,22q11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),110,-0.083,0.115,0.47,,5150,0.053,0.068,0.44
+Height,Overgrowth CNVs,unadjusted (same individuals),"",241,0.239,0.054,1.5e-05,,5150,0.149,0.053,0.0046
+Height,Overgrowth CNVs,+ sex,sex (male),241,0.189,0.086,0.028,0.44,5150,0.152,0.053,0.0038
+Height,Overgrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,241,0.238,0.055,1.9e-05,0.28,5150,0.15,0.053,0.0043
+Height,Overgrowth CNVs,+ adult BMI PGS,adult BMI PGS,241,0.228,0.056,6.1e-05,0.01,5150,0.151,0.053,0.0041
+Height,Overgrowth CNVs,+ height PGS,height PGS,241,0.265,0.051,5.5e-07,0.55,5150,0.164,0.045,3e-04
+Height,Overgrowth CNVs,+ autism PGS (2026),autism PGS (2026),241,0.246,0.055,1.2e-05,0.63,5150,0.148,0.053,0.0048
+Height,Overgrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),241,0.255,0.054,4.3e-06,,5150,0.171,0.045,0.00016
+Height,Overgrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),241,0.225,0.083,0.0068,,5150,0.175,0.045,0.00011
+Height,Undergrowth CNVs,unadjusted (same individuals),"",494,0.024,0.036,0.52,,5150,-0.024,0.04,0.56
+Height,Undergrowth CNVs,+ sex,sex (male),494,0.009,0.058,0.88,0.73,5150,-0.023,0.04,0.56
+Height,Undergrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,494,0.021,0.037,0.58,0.25,5150,-0.024,0.04,0.54
+Height,Undergrowth CNVs,+ adult BMI PGS,adult BMI PGS,494,0.046,0.038,0.23,0.68,5150,-0.021,0.04,0.6
+Height,Undergrowth CNVs,+ height PGS,height PGS,494,0.029,0.033,0.38,0.078,5150,-0.021,0.035,0.55
+Height,Undergrowth CNVs,+ autism PGS (2026),autism PGS (2026),494,0.026,0.037,0.47,0.46,5150,-0.023,0.04,0.57
+Height,Undergrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),494,0.032,0.035,0.36,,5150,-0.015,0.035,0.67
+Height,Undergrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),494,0.025,0.053,0.63,,5150,-0.013,0.035,0.7
+Height,All CNVs,unadjusted (same individuals),"",735,0.086,0.031,0.0065,,5150,0.035,0.035,0.31
+Height,All CNVs,+ sex,sex (male),735,0.028,0.048,0.56,0.11,5150,0.036,0.035,0.31
+Height,All CNVs,+ childhood obesity PGS,childhood obesity PGS,735,0.084,0.032,0.0088,0.9,5150,0.036,0.035,0.3
+Height,All CNVs,+ adult BMI PGS,adult BMI PGS,735,0.095,0.033,0.004,0.02,5150,0.038,0.035,0.28
+Height,All CNVs,+ height PGS,height PGS,735,0.099,0.029,0.00069,0.45,5150,0.035,0.03,0.26
+Height,All CNVs,+ autism PGS (2026),autism PGS (2026),735,0.085,0.031,0.0069,0.51,5150,0.036,0.035,0.31
+Height,All CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),735,0.092,0.031,0.0026,,5150,0.041,0.03,0.18
+Height,All CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),735,0.042,0.045,0.35,,5150,0.043,0.03,0.16
+Head circumference,16p11.2 del,unadjusted (same individuals),"",107,0.487,0.08,2.1e-08,,5125,0.138,0.074,0.061
+Head circumference,16p11.2 del,+ sex,sex (male),107,0.558,0.125,2e-05,0.44,5125,0.148,0.073,0.044
+Head circumference,16p11.2 del,+ childhood obesity PGS,childhood obesity PGS,107,0.495,0.083,3.4e-08,0.3,5125,0.141,0.074,0.056
+Head circumference,16p11.2 del,+ adult BMI PGS,adult BMI PGS,107,0.501,0.086,6.3e-08,0.19,5125,0.14,0.074,0.057
+Head circumference,16p11.2 del,+ height PGS,height PGS,107,0.498,0.081,1.3e-08,0.24,5125,0.147,0.073,0.043
+Head circumference,16p11.2 del,+ autism PGS (2026),autism PGS (2026),107,0.487,0.08,2.3e-08,0.45,5125,0.14,0.074,0.059
+Head circumference,16p11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),107,0.514,0.087,6e-08,,5125,0.154,0.073,0.035
+Head circumference,16p11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),107,0.513,0.132,0.00019,,5125,0.163,0.072,0.024
+Head circumference,16p11.2 dup,unadjusted (same individuals),"",56,0.092,0.12,0.44,,5125,-0.261,0.115,0.023
+Head circumference,16p11.2 dup,+ sex,sex (male),56,0.055,0.216,0.8,0.79,5125,-0.221,0.115,0.054
+Head circumference,16p11.2 dup,+ childhood obesity PGS,childhood obesity PGS,56,0.091,0.124,0.47,0.57,5125,-0.262,0.115,0.023
+Head circumference,16p11.2 dup,+ adult BMI PGS,adult BMI PGS,56,0.065,0.127,0.61,0.85,5125,-0.259,0.115,0.024
+Head circumference,16p11.2 dup,+ height PGS,height PGS,56,0.065,0.122,0.6,0.36,5125,-0.263,0.114,0.02
+Head circumference,16p11.2 dup,+ autism PGS (2026),autism PGS (2026),56,0.065,0.136,0.64,0.72,5125,-0.251,0.115,0.03
+Head circumference,16p11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),56,0.054,0.147,0.72,,5125,-0.253,0.114,0.027
+Head circumference,16p11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),56,-0.032,0.24,0.89,,5125,-0.214,0.113,0.059
+Head circumference,22q11.2 del,unadjusted (same individuals),"",248,0.274,0.058,3.6e-06,,5125,-0.088,0.056,0.12
+Head circumference,22q11.2 del,+ sex,sex (male),248,0.33,0.088,0.00024,0.42,5125,-0.077,0.056,0.17
+Head circumference,22q11.2 del,+ childhood obesity PGS,childhood obesity PGS,248,0.259,0.059,1.6e-05,0.045,5125,-0.088,0.056,0.12
+Head circumference,22q11.2 del,+ adult BMI PGS,adult BMI PGS,248,0.283,0.062,7.3e-06,0.76,5125,-0.089,0.056,0.11
+Head circumference,22q11.2 del,+ height PGS,height PGS,248,0.307,0.059,4.5e-07,0.039,5125,-0.087,0.056,0.12
+Head circumference,22q11.2 del,+ autism PGS (2026),autism PGS (2026),248,0.275,0.058,3.7e-06,0.71,5125,-0.09,0.056,0.11
+Head circumference,22q11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),248,0.294,0.064,6.5e-06,,5125,-0.09,0.056,0.11
+Head circumference,22q11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),248,0.341,0.091,0.00022,,5125,-0.077,0.055,0.16
+Head circumference,22q11.2 dup,unadjusted (same individuals),"",81,0.513,0.105,5.7e-06,,5125,0.142,0.101,0.16
+Head circumference,22q11.2 dup,+ sex,sex (male),81,0.501,0.168,0.0038,0.99,5125,0.155,0.101,0.13
+Head circumference,22q11.2 dup,+ childhood obesity PGS,childhood obesity PGS,81,0.505,0.111,1.9e-05,0.98,5125,0.139,0.102,0.17
+Head circumference,22q11.2 dup,+ adult BMI PGS,adult BMI PGS,81,0.486,0.107,2e-05,0.19,5125,0.144,0.101,0.16
+Head circumference,22q11.2 dup,+ height PGS,height PGS,81,0.551,0.097,2.3e-07,0.96,5125,0.153,0.099,0.12
+Head circumference,22q11.2 dup,+ autism PGS (2026),autism PGS (2026),81,0.508,0.109,1.4e-05,0.77,5125,0.144,0.102,0.16
+Head circumference,22q11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),81,0.502,0.108,1.5e-05,,5125,0.157,0.099,0.11
+Head circumference,22q11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),81,0.548,0.17,0.002,,5125,0.167,0.099,0.092
+Head circumference,Overgrowth CNVs,unadjusted (same individuals),"",188,0.494,0.063,4.9e-13,,5125,0.137,0.061,0.025
+Head circumference,Overgrowth CNVs,+ sex,sex (male),188,0.57,0.099,3.6e-08,0.31,5125,0.147,0.061,0.016
+Head circumference,Overgrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,188,0.488,0.064,1.5e-12,0.51,5125,0.138,0.061,0.024
+Head circumference,Overgrowth CNVs,+ adult BMI PGS,adult BMI PGS,188,0.491,0.066,3.2e-12,0.073,5125,0.139,0.061,0.023
+Head circumference,Overgrowth CNVs,+ height PGS,height PGS,188,0.52,0.062,1.5e-14,0.44,5125,0.15,0.06,0.013
+Head circumference,Overgrowth CNVs,+ autism PGS (2026),autism PGS (2026),188,0.499,0.064,5.4e-13,0.84,5125,0.139,0.061,0.024
+Head circumference,Overgrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),188,0.515,0.065,2.5e-13,,5125,0.156,0.06,0.0097
+Head circumference,Overgrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),188,0.576,0.1,3.3e-08,,5125,0.165,0.06,0.0058
+Head circumference,Undergrowth CNVs,unadjusted (same individuals),"",304,0.226,0.053,2.4e-05,,5125,-0.137,0.052,0.0078
+Head circumference,Undergrowth CNVs,+ sex,sex (male),304,0.269,0.083,0.0013,0.55,5125,-0.121,0.051,0.018
+Head circumference,Undergrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,304,0.214,0.053,7.1e-05,0.071,5125,-0.137,0.052,0.0081
+Head circumference,Undergrowth CNVs,+ adult BMI PGS,adult BMI PGS,304,0.224,0.056,8.1e-05,0.6,5125,-0.137,0.052,0.0078
+Head circumference,Undergrowth CNVs,+ height PGS,height PGS,304,0.247,0.054,5.7e-06,0.051,5125,-0.137,0.051,0.0073
+Head circumference,Undergrowth CNVs,+ autism PGS (2026),autism PGS (2026),304,0.229,0.053,1.9e-05,0.73,5125,-0.137,0.052,0.0081
+Head circumference,Undergrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),304,0.236,0.056,3.8e-05,,5125,-0.137,0.051,0.0073
+Head circumference,Undergrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),304,0.264,0.085,0.002,,5125,-0.12,0.051,0.018
+Head circumference,All CNVs,unadjusted (same individuals),"",492,0.33,0.041,4.3e-15,,5125,-0.032,0.042,0.44
+Head circumference,All CNVs,+ sex,sex (male),492,0.38,0.063,2.8e-09,0.33,5125,-0.019,0.042,0.65
+Head circumference,All CNVs,+ childhood obesity PGS,childhood obesity PGS,492,0.32,0.041,4.2e-14,0.29,5125,-0.031,0.042,0.46
+Head circumference,All CNVs,+ adult BMI PGS,adult BMI PGS,492,0.326,0.043,1.1e-13,0.13,5125,-0.032,0.042,0.45
+Head circumference,All CNVs,+ height PGS,height PGS,492,0.337,0.041,1.1e-15,0.32,5125,-0.029,0.042,0.48
+Head circumference,All CNVs,+ autism PGS (2026),autism PGS (2026),492,0.329,0.041,5.1e-15,0.91,5125,-0.031,0.042,0.46
+Head circumference,All CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),492,0.327,0.043,9.3e-14,,5125,-0.027,0.042,0.52
+Head circumference,All CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),492,0.37,0.064,1.1e-08,,5125,-0.013,0.041,0.76
+SRS,16p11.2 del,unadjusted (same individuals),"",84,0.042,0.096,0.66,,5120,0.02,0.075,0.79
+SRS,16p11.2 del,+ sex,sex (male),84,0.06,0.134,0.65,0.88,5120,0.02,0.075,0.79
+SRS,16p11.2 del,+ childhood obesity PGS,childhood obesity PGS,84,0.017,0.094,0.86,0.53,5120,0.019,0.075,0.8
+SRS,16p11.2 del,+ adult BMI PGS,adult BMI PGS,84,0.057,0.1,0.57,0.21,5120,0.023,0.075,0.76
+SRS,16p11.2 del,+ height PGS,height PGS,84,0.023,0.1,0.82,0.26,5120,0.021,0.075,0.78
+SRS,16p11.2 del,+ autism PGS (2026),autism PGS (2026),84,0.049,0.096,0.61,0.083,5120,0.021,0.075,0.78
+SRS,16p11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),84,0.03,0.101,0.77,,5120,0.027,0.075,0.72
+SRS,16p11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),84,0.023,0.151,0.88,,5120,0.027,0.075,0.72
+SRS,16p11.2 dup,unadjusted (same individuals),"",30,0.15,0.165,0.37,,5120,0.12,0.155,0.44
+SRS,16p11.2 dup,+ sex,sex (male),30,0.355,0.252,0.17,0.57,5120,0.124,0.155,0.42
+SRS,16p11.2 dup,+ childhood obesity PGS,childhood obesity PGS,30,0.042,0.18,0.82,0.16,5120,0.112,0.155,0.47
+SRS,16p11.2 dup,+ adult BMI PGS,adult BMI PGS,30,0.218,0.178,0.23,0.33,5120,0.119,0.155,0.44
+SRS,16p11.2 dup,+ height PGS,height PGS,30,0.185,0.168,0.28,0.34,5120,0.123,0.155,0.43
+SRS,16p11.2 dup,+ autism PGS (2026),autism PGS (2026),30,0.225,0.182,0.23,0.4,5120,0.144,0.155,0.35
+SRS,16p11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),30,0.362,0.224,0.12,,5120,0.132,0.155,0.4
+SRS,16p11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),30,0.605,0.431,0.18,,5120,0.136,0.155,0.38
+SRS,22q11.2 del,unadjusted (same individuals),"",289,0.165,0.041,5.9e-05,,5120,0.126,0.044,0.0041
+SRS,22q11.2 del,+ sex,sex (male),289,0.185,0.066,0.0054,0.69,5120,0.125,0.044,0.0044
+SRS,22q11.2 del,+ childhood obesity PGS,childhood obesity PGS,289,0.174,0.042,3.9e-05,0.37,5120,0.126,0.044,0.004
+SRS,22q11.2 del,+ adult BMI PGS,adult BMI PGS,289,0.172,0.042,6.6e-05,0.8,5120,0.125,0.044,0.0043
+SRS,22q11.2 del,+ height PGS,height PGS,289,0.167,0.041,5.5e-05,0.64,5120,0.127,0.044,0.0038
+SRS,22q11.2 del,+ autism PGS (2026),autism PGS (2026),289,0.155,0.039,0.00011,0.012,5120,0.125,0.044,0.0042
+SRS,22q11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),289,0.167,0.042,7.9e-05,,5120,0.126,0.044,0.0041
+SRS,22q11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),289,0.188,0.067,0.0056,,5120,0.125,0.044,0.0044
+SRS,22q11.2 dup,unadjusted (same individuals),"",68,-0.04,0.111,0.72,,5120,-0.08,0.096,0.4
+SRS,22q11.2 dup,+ sex,sex (male),68,-0.099,0.207,0.63,0.87,5120,-0.085,0.096,0.38
+SRS,22q11.2 dup,+ childhood obesity PGS,childhood obesity PGS,68,-0.067,0.114,0.56,0.17,5120,-0.084,0.096,0.38
+SRS,22q11.2 dup,+ adult BMI PGS,adult BMI PGS,68,-0.047,0.114,0.68,0.78,5120,-0.078,0.096,0.42
+SRS,22q11.2 dup,+ height PGS,height PGS,68,-0.068,0.114,0.55,0.94,5120,-0.082,0.096,0.39
+SRS,22q11.2 dup,+ autism PGS (2026),autism PGS (2026),68,-0.126,0.115,0.28,0.15,5120,-0.093,0.096,0.33
+SRS,22q11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),68,-0.177,0.124,0.16,,5120,-0.096,0.096,0.32
+SRS,22q11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),68,-0.089,0.212,0.68,,5120,-0.101,0.096,0.29
+SRS,Overgrowth CNVs,unadjusted (same individuals),"",152,0.009,0.072,0.9,,5120,-0.02,0.061,0.74
+SRS,Overgrowth CNVs,+ sex,sex (male),152,0.095,0.11,0.39,0.31,5120,-0.02,0.061,0.74
+SRS,Overgrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,152,-0.009,0.072,0.9,0.027,5120,-0.022,0.061,0.72
+SRS,Overgrowth CNVs,+ adult BMI PGS,adult BMI PGS,152,0.02,0.075,0.79,0.15,5120,-0.017,0.061,0.79
+SRS,Overgrowth CNVs,+ height PGS,height PGS,152,0.01,0.072,0.89,0.49,5120,-0.02,0.061,0.75
+SRS,Overgrowth CNVs,+ autism PGS (2026),autism PGS (2026),152,-0.019,0.072,0.79,0.034,5120,-0.024,0.061,0.69
+SRS,Overgrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),152,-0.013,0.074,0.86,,5120,-0.021,0.061,0.74
+SRS,Overgrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),152,0.087,0.113,0.44,,5120,-0.021,0.061,0.73
+SRS,Undergrowth CNVs,unadjusted (same individuals),"",319,0.165,0.039,2.7e-05,,5120,0.127,0.042,0.0027
+SRS,Undergrowth CNVs,+ sex,sex (male),319,0.204,0.064,0.0015,0.45,5120,0.127,0.042,0.0027
+SRS,Undergrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,319,0.174,0.039,1.4e-05,0.18,5120,0.127,0.042,0.0028
+SRS,Undergrowth CNVs,+ adult BMI PGS,adult BMI PGS,319,0.173,0.041,3.5e-05,0.91,5120,0.127,0.042,0.0028
+SRS,Undergrowth CNVs,+ height PGS,height PGS,319,0.167,0.039,2.6e-05,0.91,5120,0.128,0.042,0.0025
+SRS,Undergrowth CNVs,+ autism PGS (2026),autism PGS (2026),319,0.161,0.039,4.5e-05,0.038,5120,0.129,0.042,0.0021
+SRS,Undergrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),319,0.178,0.041,1.6e-05,,5120,0.129,0.042,0.0019
+SRS,Undergrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),319,0.212,0.065,0.0012,,5120,0.13,0.042,0.0019
+SRS,All CNVs,unadjusted (same individuals),"",471,0.113,0.036,0.0016,,5120,0.079,0.037,0.032
+SRS,All CNVs,+ sex,sex (male),471,0.171,0.055,0.0019,0.17,5120,0.08,0.037,0.031
+SRS,All CNVs,+ childhood obesity PGS,childhood obesity PGS,471,0.112,0.036,0.0019,0.0082,5120,0.078,0.037,0.035
+SRS,All CNVs,+ adult BMI PGS,adult BMI PGS,471,0.111,0.037,0.0025,0.51,5120,0.08,0.037,0.031
+SRS,All CNVs,+ height PGS,height PGS,471,0.114,0.036,0.0016,0.43,5120,0.08,0.037,0.031
+SRS,All CNVs,+ autism PGS (2026),autism PGS (2026),471,0.107,0.035,0.0026,0.0085,5120,0.079,0.037,0.033
+SRS,All CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),471,0.105,0.036,0.0039,,5120,0.079,0.037,0.033
+SRS,All CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),471,0.16,0.055,0.0038,,5120,0.08,0.037,0.031
+SCQ,16p11.2 del,unadjusted (same individuals),"",65,0.033,0.07,0.64,,1068,0.024,0.083,0.78
+SCQ,16p11.2 del,+ sex,sex (male),65,0.117,0.101,0.25,0.24,1068,0.023,0.083,0.78
+SCQ,16p11.2 del,+ childhood obesity PGS,childhood obesity PGS,65,0.01,0.072,0.89,0.32,1068,0.017,0.083,0.84
+SCQ,16p11.2 del,+ adult BMI PGS,adult BMI PGS,65,0.046,0.074,0.54,0.67,1068,0.023,0.084,0.78
+SCQ,16p11.2 del,+ height PGS,height PGS,65,0.006,0.07,0.93,0.11,1068,0.015,0.084,0.85
+SCQ,16p11.2 del,+ autism PGS (2026),autism PGS (2026),65,0.033,0.072,0.65,0.98,1068,0.024,0.084,0.77
+SCQ,16p11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),65,-0.014,0.076,0.86,,1068,0.007,0.084,0.93
+SCQ,16p11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),65,0.035,0.108,0.75,,1068,0.006,0.084,0.95
+SCQ,22q11.2 del,unadjusted (same individuals),"",250,0.101,0.033,0.0027,,1068,0.099,0.054,0.069
+SCQ,22q11.2 del,+ sex,sex (male),250,0.147,0.052,0.0049,0.22,1068,0.098,0.054,0.073
+SCQ,22q11.2 del,+ childhood obesity PGS,childhood obesity PGS,250,0.106,0.034,0.002,0.99,1068,0.099,0.054,0.069
+SCQ,22q11.2 del,+ adult BMI PGS,adult BMI PGS,250,0.102,0.035,0.004,0.52,1068,0.098,0.054,0.071
+SCQ,22q11.2 del,+ height PGS,height PGS,250,0.096,0.033,0.0045,0.44,1068,0.095,0.054,0.081
+SCQ,22q11.2 del,+ autism PGS (2026),autism PGS (2026),250,0.099,0.035,0.0046,0.73,1068,0.099,0.054,0.069
+SCQ,22q11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),250,0.102,0.037,0.006,,1068,0.094,0.054,0.085
+SCQ,22q11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),250,0.147,0.055,0.0077,,1068,0.092,0.054,0.09
+SCQ,22q11.2 dup,unadjusted (same individuals),"",50,0.141,0.107,0.2,,1068,0.117,0.105,0.26
+SCQ,22q11.2 dup,+ sex,sex (male),50,0.038,0.19,0.84,0.53,1068,0.116,0.105,0.27
+SCQ,22q11.2 dup,+ childhood obesity PGS,childhood obesity PGS,50,0.166,0.111,0.14,0.36,1068,0.11,0.105,0.3
+SCQ,22q11.2 dup,+ adult BMI PGS,adult BMI PGS,50,0.178,0.112,0.12,0.25,1068,0.116,0.106,0.27
+SCQ,22q11.2 dup,+ height PGS,height PGS,50,0.088,0.107,0.42,0.36,1068,0.115,0.105,0.27
+SCQ,22q11.2 dup,+ autism PGS (2026),autism PGS (2026),50,0.109,0.121,0.37,0.8,1068,0.111,0.105,0.29
+SCQ,22q11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),50,0.109,0.13,0.41,,1068,0.103,0.106,0.33
+SCQ,22q11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),50,0.077,0.232,0.74,,1068,0.101,0.106,0.34
+SCQ,Overgrowth CNVs,unadjusted (same individuals),"",115,0.078,0.061,0.2,,1068,0.069,0.068,0.32
+SCQ,Overgrowth CNVs,+ sex,sex (male),115,0.102,0.091,0.27,0.7,1068,0.067,0.068,0.33
+SCQ,Overgrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,115,0.068,0.062,0.28,0.57,1068,0.063,0.068,0.36
+SCQ,Overgrowth CNVs,+ adult BMI PGS,adult BMI PGS,115,0.079,0.062,0.2,0.97,1068,0.067,0.068,0.33
+SCQ,Overgrowth CNVs,+ height PGS,height PGS,115,0.077,0.061,0.21,0.45,1068,0.065,0.068,0.34
+SCQ,Overgrowth CNVs,+ autism PGS (2026),autism PGS (2026),115,0.063,0.063,0.32,0.77,1068,0.066,0.068,0.33
+SCQ,Overgrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),115,0.052,0.067,0.44,,1068,0.055,0.069,0.42
+SCQ,Overgrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),115,0.092,0.099,0.36,,1068,0.053,0.069,0.44
+SCQ,Undergrowth CNVs,unadjusted (same individuals),"",267,0.097,0.033,0.0037,,1068,0.091,0.053,0.088
+SCQ,Undergrowth CNVs,+ sex,sex (male),267,0.151,0.051,0.0035,0.15,1068,0.091,0.053,0.09
+SCQ,Undergrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,267,0.101,0.034,0.0029,0.93,1068,0.092,0.053,0.087
+SCQ,Undergrowth CNVs,+ adult BMI PGS,adult BMI PGS,267,0.102,0.035,0.0037,0.56,1068,0.09,0.054,0.091
+SCQ,Undergrowth CNVs,+ height PGS,height PGS,267,0.093,0.033,0.0054,0.46,1068,0.088,0.053,0.098
+SCQ,Undergrowth CNVs,+ autism PGS (2026),autism PGS (2026),267,0.096,0.034,0.0048,0.74,1068,0.092,0.054,0.084
+SCQ,Undergrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),267,0.105,0.036,0.0036,,1068,0.088,0.054,0.1
+SCQ,Undergrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),267,0.156,0.054,0.004,,1068,0.087,0.054,0.1
+SCQ,All CNVs,unadjusted (same individuals),"",382,0.085,0.03,0.0049,,1068,0.09,0.046,0.048
+SCQ,All CNVs,+ sex,sex (male),382,0.126,0.045,0.0054,0.18,1068,0.089,0.046,0.053
+SCQ,All CNVs,+ childhood obesity PGS,childhood obesity PGS,382,0.085,0.031,0.0057,0.62,1068,0.088,0.046,0.053
+SCQ,All CNVs,+ adult BMI PGS,adult BMI PGS,382,0.085,0.031,0.0063,0.79,1068,0.09,0.046,0.051
+SCQ,All CNVs,+ height PGS,height PGS,382,0.085,0.03,0.0053,0.9,1068,0.087,0.046,0.057
+SCQ,All CNVs,+ autism PGS (2026),autism PGS (2026),382,0.083,0.03,0.0065,0.72,1068,0.091,0.046,0.048
+SCQ,All CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),382,0.084,0.032,0.0083,,1068,0.085,0.046,0.066
+SCQ,All CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),382,0.123,0.046,0.008,,1068,0.082,0.046,0.073
+CNB accuracy,16p11.2 del,unadjusted (same individuals),"",117,0.012,0.042,0.78,,<5,,,
+CNB accuracy,16p11.2 del,+ sex,sex (male),117,0.073,0.061,0.24,0.17,<5,,,
+CNB accuracy,16p11.2 del,+ childhood obesity PGS,childhood obesity PGS,117,0.008,0.043,0.86,0.43,<5,,,
+CNB accuracy,16p11.2 del,+ adult BMI PGS,adult BMI PGS,117,0.011,0.043,0.8,0.36,<5,,,
+CNB accuracy,16p11.2 del,+ height PGS,height PGS,117,0.01,0.044,0.82,0.3,<5,,,
+CNB accuracy,16p11.2 del,+ autism PGS (2026),autism PGS (2026),117,0.008,0.043,0.85,0.39,<5,,,
+CNB accuracy,16p11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),117,-0.009,0.046,0.85,,<5,,,
+CNB accuracy,16p11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),117,0.079,0.066,0.24,,<5,,,
+CNB accuracy,16p11.2 dup,unadjusted (same individuals),"",43,-0.113,0.087,0.2,,<5,,,
+CNB accuracy,16p11.2 dup,+ sex,sex (male),43,-0.254,0.126,0.05,0.093,<5,,,
+CNB accuracy,16p11.2 dup,+ childhood obesity PGS,childhood obesity PGS,43,-0.086,0.09,0.35,0.74,<5,,,
+CNB accuracy,16p11.2 dup,+ adult BMI PGS,adult BMI PGS,43,-0.118,0.092,0.21,0.37,<5,,,
+CNB accuracy,16p11.2 dup,+ height PGS,height PGS,43,-0.097,0.087,0.27,0.95,<5,,,
+CNB accuracy,16p11.2 dup,+ autism PGS (2026),autism PGS (2026),43,-0.044,0.088,0.62,0.11,<5,,,
+CNB accuracy,16p11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),43,0.053,0.104,0.62,,<5,,,
+CNB accuracy,16p11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),43,-0.14,0.139,0.32,,<5,,,
+CNB accuracy,22q11.2 del,unadjusted (same individuals),"",432,-0.049,0.025,0.053,,<5,,,
+CNB accuracy,22q11.2 del,+ sex,sex (male),432,-0.031,0.039,0.42,0.55,<5,,,
+CNB accuracy,22q11.2 del,+ childhood obesity PGS,childhood obesity PGS,432,-0.032,0.026,0.22,0.21,<5,,,
+CNB accuracy,22q11.2 del,+ adult BMI PGS,adult BMI PGS,432,-0.051,0.027,0.061,0.93,<5,,,
+CNB accuracy,22q11.2 del,+ height PGS,height PGS,432,-0.052,0.026,0.04,0.16,<5,,,
+CNB accuracy,22q11.2 del,+ autism PGS (2026),autism PGS (2026),432,-0.049,0.025,0.056,0.89,<5,,,
+CNB accuracy,22q11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),432,-0.045,0.028,0.11,,<5,,,
+CNB accuracy,22q11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),432,-0.03,0.04,0.46,,<5,,,
+CNB accuracy,22q11.2 dup,unadjusted (same individuals),"",127,0.075,0.05,0.13,,<5,,,
+CNB accuracy,22q11.2 dup,+ sex,sex (male),127,0.272,0.091,0.0034,0.012,<5,,,
+CNB accuracy,22q11.2 dup,+ childhood obesity PGS,childhood obesity PGS,127,0.09,0.051,0.078,0.41,<5,,,
+CNB accuracy,22q11.2 dup,+ adult BMI PGS,adult BMI PGS,127,0.073,0.051,0.15,0.88,<5,,,
+CNB accuracy,22q11.2 dup,+ height PGS,height PGS,127,0.084,0.051,0.1,0.42,<5,,,
+CNB accuracy,22q11.2 dup,+ autism PGS (2026),autism PGS (2026),127,0.043,0.054,0.42,0.97,<5,,,
+CNB accuracy,22q11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),127,0.067,0.057,0.24,,<5,,,
+CNB accuracy,22q11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),127,0.236,0.099,0.019,,<5,,,
+CNB accuracy,Overgrowth CNVs,unadjusted (same individuals),"",244,0.049,0.033,0.14,,<5,,,
+CNB accuracy,Overgrowth CNVs,+ sex,sex (male),244,0.16,0.052,0.0024,0.007,<5,,,
+CNB accuracy,Overgrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,244,0.052,0.033,0.12,0.36,<5,,,
+CNB accuracy,Overgrowth CNVs,+ adult BMI PGS,adult BMI PGS,244,0.049,0.034,0.15,0.93,<5,,,
+CNB accuracy,Overgrowth CNVs,+ height PGS,height PGS,244,0.046,0.033,0.17,0.73,<5,,,
+CNB accuracy,Overgrowth CNVs,+ autism PGS (2026),autism PGS (2026),244,0.024,0.034,0.49,0.23,<5,,,
+CNB accuracy,Overgrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),244,0.018,0.035,0.61,,<5,,,
+CNB accuracy,Overgrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),244,0.134,0.054,0.015,,<5,,,
+CNB accuracy,Undergrowth CNVs,unadjusted (same individuals),"",475,-0.052,0.024,0.032,,<5,,,
+CNB accuracy,Undergrowth CNVs,+ sex,sex (male),475,-0.045,0.037,0.23,0.8,<5,,,
+CNB accuracy,Undergrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,475,-0.042,0.025,0.088,0.3,<5,,,
+CNB accuracy,Undergrowth CNVs,+ adult BMI PGS,adult BMI PGS,475,-0.055,0.026,0.034,0.85,<5,,,
+CNB accuracy,Undergrowth CNVs,+ height PGS,height PGS,475,-0.056,0.025,0.022,0.14,<5,,,
+CNB accuracy,Undergrowth CNVs,+ autism PGS (2026),autism PGS (2026),475,-0.052,0.024,0.034,0.72,<5,,,
+CNB accuracy,Undergrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),475,-0.054,0.026,0.041,,<5,,,
+CNB accuracy,Undergrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),475,-0.049,0.039,0.21,,<5,,,
+CNB accuracy,All CNVs,unadjusted (same individuals),"",719,-0.019,0.02,0.32,,<5,,,
+CNB accuracy,All CNVs,+ sex,sex (male),719,0.004,0.03,0.89,0.29,<5,,,
+CNB accuracy,All CNVs,+ childhood obesity PGS,childhood obesity PGS,719,-0.012,0.02,0.56,0.65,<5,,,
+CNB accuracy,All CNVs,+ adult BMI PGS,adult BMI PGS,719,-0.019,0.021,0.35,0.94,<5,,,
+CNB accuracy,All CNVs,+ height PGS,height PGS,719,-0.019,0.02,0.34,0.53,<5,,,
+CNB accuracy,All CNVs,+ autism PGS (2026),autism PGS (2026),719,-0.021,0.02,0.28,0.76,<5,,,
+CNB accuracy,All CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),719,-0.015,0.021,0.46,,<5,,,
+CNB accuracy,All CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),719,0.011,0.03,0.72,,<5,,,
+CNB speed,16p11.2 del,unadjusted (same individuals),"",119,-0.001,0.055,0.98,,<5,,,
+CNB speed,16p11.2 del,+ sex,sex (male),119,-0.051,0.08,0.52,0.4,<5,,,
+CNB speed,16p11.2 del,+ childhood obesity PGS,childhood obesity PGS,119,-0.016,0.056,0.77,0.17,<5,,,
+CNB speed,16p11.2 del,+ adult BMI PGS,adult BMI PGS,119,-0.017,0.056,0.76,0.48,<5,,,
+CNB speed,16p11.2 del,+ height PGS,height PGS,119,0.014,0.057,0.8,0.89,<5,,,
+CNB speed,16p11.2 del,+ autism PGS (2026),autism PGS (2026),119,-0.005,0.056,0.93,0.95,<5,,,
+CNB speed,16p11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),119,-0.024,0.06,0.69,,<5,,,
+CNB speed,16p11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),119,-0.022,0.088,0.8,,<5,,,
+CNB speed,16p11.2 dup,unadjusted (same individuals),"",43,0.159,0.105,0.14,,<5,,,
+CNB speed,16p11.2 dup,+ sex,sex (male),43,0.144,0.166,0.39,0.91,<5,,,
+CNB speed,16p11.2 dup,+ childhood obesity PGS,childhood obesity PGS,43,0.038,0.096,0.69,0.0073,<5,,,
+CNB speed,16p11.2 dup,+ adult BMI PGS,adult BMI PGS,43,0.214,0.11,0.06,0.42,<5,,,
+CNB speed,16p11.2 dup,+ height PGS,height PGS,43,0.149,0.102,0.15,0.13,<5,,,
+CNB speed,16p11.2 dup,+ autism PGS (2026),autism PGS (2026),43,0.049,0.104,0.64,0.012,<5,,,
+CNB speed,16p11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),43,-0.065,0.12,0.59,,<5,,,
+CNB speed,16p11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),43,-0.03,0.168,0.86,,<5,,,
+CNB speed,22q11.2 del,unadjusted (same individuals),"",437,0.001,0.03,0.96,,<5,,,
+CNB speed,22q11.2 del,+ sex,sex (male),437,-0.064,0.046,0.17,0.063,<5,,,
+CNB speed,22q11.2 del,+ childhood obesity PGS,childhood obesity PGS,437,0.002,0.031,0.95,0.55,<5,,,
+CNB speed,22q11.2 del,+ adult BMI PGS,adult BMI PGS,437,-0.007,0.032,0.82,0.2,<5,,,
+CNB speed,22q11.2 del,+ height PGS,height PGS,437,-0.006,0.03,0.84,0.1,<5,,,
+CNB speed,22q11.2 del,+ autism PGS (2026),autism PGS (2026),437,-0.002,0.03,0.95,0.1,<5,,,
+CNB speed,22q11.2 del,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),437,-0.016,0.033,0.63,,<5,,,
+CNB speed,22q11.2 del,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),437,-0.079,0.048,0.1,,<5,,,
+CNB speed,22q11.2 dup,unadjusted (same individuals),"",127,0.037,0.079,0.64,,<5,,,
+CNB speed,22q11.2 dup,+ sex,sex (male),127,-0.092,0.148,0.54,0.31,<5,,,
+CNB speed,22q11.2 dup,+ childhood obesity PGS,childhood obesity PGS,127,0.049,0.081,0.55,0.78,<5,,,
+CNB speed,22q11.2 dup,+ adult BMI PGS,adult BMI PGS,127,0.047,0.081,0.56,0.44,<5,,,
+CNB speed,22q11.2 dup,+ height PGS,height PGS,127,0.036,0.082,0.66,0.9,<5,,,
+CNB speed,22q11.2 dup,+ autism PGS (2026),autism PGS (2026),127,0.017,0.088,0.84,0.93,<5,,,
+CNB speed,22q11.2 dup,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),127,0.024,0.094,0.8,,<5,,,
+CNB speed,22q11.2 dup,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),127,-0.196,0.164,0.23,,<5,,,
+CNB speed,Overgrowth CNVs,unadjusted (same individuals),"",246,0.024,0.049,0.62,,<5,,,
+CNB speed,Overgrowth CNVs,+ sex,sex (male),246,-0.041,0.079,0.6,0.3,<5,,,
+CNB speed,Overgrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,246,0.021,0.05,0.67,0.38,<5,,,
+CNB speed,Overgrowth CNVs,+ adult BMI PGS,adult BMI PGS,246,0.021,0.05,0.68,0.17,<5,,,
+CNB speed,Overgrowth CNVs,+ height PGS,height PGS,246,0.027,0.05,0.59,0.93,<5,,,
+CNB speed,Overgrowth CNVs,+ autism PGS (2026),autism PGS (2026),246,0.011,0.052,0.82,0.83,<5,,,
+CNB speed,Overgrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),246,-0.002,0.054,0.98,,<5,,,
+CNB speed,Overgrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),246,-0.079,0.084,0.35,,<5,,,
+CNB speed,Undergrowth CNVs,unadjusted (same individuals),"",480,0.012,0.029,0.68,,<5,,,
+CNB speed,Undergrowth CNVs,+ sex,sex (male),480,-0.051,0.044,0.24,0.057,<5,,,
+CNB speed,Undergrowth CNVs,+ childhood obesity PGS,childhood obesity PGS,480,0.017,0.029,0.55,0.87,<5,,,
+CNB speed,Undergrowth CNVs,+ adult BMI PGS,adult BMI PGS,480,0.008,0.031,0.78,0.34,<5,,,
+CNB speed,Undergrowth CNVs,+ height PGS,height PGS,480,0.007,0.029,0.81,0.21,<5,,,
+CNB speed,Undergrowth CNVs,+ autism PGS (2026),autism PGS (2026),480,0.011,0.029,0.71,0.58,<5,,,
+CNB speed,Undergrowth CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),480,0.006,0.031,0.84,,<5,,,
+CNB speed,Undergrowth CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),480,-0.058,0.046,0.21,,<5,,,
+CNB speed,All CNVs,unadjusted (same individuals),"",726,0.01,0.025,0.68,,<5,,,
+CNB speed,All CNVs,+ sex,sex (male),726,-0.056,0.038,0.14,0.019,<5,,,
+CNB speed,All CNVs,+ childhood obesity PGS,childhood obesity PGS,726,0.012,0.026,0.64,0.65,<5,,,
+CNB speed,All CNVs,+ adult BMI PGS,adult BMI PGS,726,0.008,0.026,0.75,0.8,<5,,,
+CNB speed,All CNVs,+ height PGS,height PGS,726,0.009,0.025,0.73,0.26,<5,,,
+CNB speed,All CNVs,+ autism PGS (2026),autism PGS (2026),726,0.01,0.025,0.7,0.79,<5,,,
+CNB speed,All CNVs,+ all four PGS,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026),726,0.008,0.027,0.77,,<5,,,
+CNB speed,All CNVs,+ all four PGS + sex,childhood obesity PGS + adult BMI PGS + height PGS + autism PGS (2026) + sex (male),726,-0.058,0.039,0.13,,<5,,,

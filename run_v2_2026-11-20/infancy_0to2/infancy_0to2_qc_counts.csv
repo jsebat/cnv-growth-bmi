@@ -1,0 +1,13 @@
+cohort,quantity,n
+CHOP,workbook visits under 2 y with a length under 60 cm,1133
+CHOP,... of these with a BMI,1048
+CHOP,... of these with a BMI and a head circumference,602
+CHOP,visits under 2 y with height and BMI: analysis table,2559
+CHOP,visits under 2 y with height and BMI: workbook (v2),3524
+CHOP,visits under 2 y with head circumference and BMI: analysis table,1136
+CHOP,visits under 2 y with head circumference and BMI: workbook (v2),1718
+CHOP,carriers with head circumference and BMI under 2 y: analysis table,215
+CHOP,carriers with head circumference and BMI under 2 y: workbook (v2),237
+CHOP,carriers with height and BMI under 2 y: analysis table,247
+CHOP,carriers with height and BMI under 2 y: workbook (v2),260
+"G2MH, Cardiff, Simons VIP, Searchlight, SSC",carrier visits under 2 y with a length under 60 cm in the pre-QC table,0

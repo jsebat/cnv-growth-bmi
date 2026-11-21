@@ -1,0 +1,201 @@
+Trait,Group,Score bin type,Bin,Mean score in bin (SD),n,BMI slope,SE
+SRS,CNV carriers,fifth of the autism score,1,-1.389,117,0.296,0.059
+SRS,CNV carriers,fifth of the autism score,2,-0.522,116,0.167,0.081
+SRS,CNV carriers,fifth of the autism score,3,0.013,117,0.047,0.074
+SRS,CNV carriers,fifth of the autism score,4,0.534,116,-0.043,0.076
+SRS,CNV carriers,fifth of the autism score,5,1.394,117,0.006,0.073
+SRS,SSC unaffected relatives,fifth of the autism score,1,-1.471,1024,0.046,0.028
+SRS,SSC unaffected relatives,fifth of the autism score,2,-0.583,1024,-0.016,0.03
+SRS,SSC unaffected relatives,fifth of the autism score,3,-0.072,1024,0.035,0.027
+SRS,SSC unaffected relatives,fifth of the autism score,4,0.462,1024,0.034,0.028
+SRS,SSC unaffected relatives,fifth of the autism score,5,1.305,1024,0.022,0.03
+SCQ,CNV carriers,fifth of the autism score,1,-1.448,94,0.096,0.066
+SCQ,CNV carriers,fifth of the autism score,2,-0.606,93,0.064,0.055
+SCQ,CNV carriers,fifth of the autism score,3,-0.011,94,0.063,0.057
+SCQ,CNV carriers,fifth of the autism score,4,0.556,93,-0.024,0.059
+SCQ,CNV carriers,fifth of the autism score,5,1.419,94,0.052,0.109
+SCQ,SSC unaffected relatives,fifth of the autism score,1,-1.529,214,-0.08,0.054
+SCQ,SSC unaffected relatives,fifth of the autism score,2,-0.615,213,0.122,0.051
+SCQ,SSC unaffected relatives,fifth of the autism score,3,-0.121,214,-0.003,0.051
+SCQ,SSC unaffected relatives,fifth of the autism score,4,0.405,213,-0.014,0.052
+SCQ,SSC unaffected relatives,fifth of the autism score,5,1.251,214,0.017,0.054
+SRS,CNV carriers,continuous model,,-2.2,,0.286,0.066
+SRS,CNV carriers,continuous model,,-2.1,,0.278,0.063
+SRS,CNV carriers,continuous model,,-2,,0.269,0.061
+SRS,CNV carriers,continuous model,,-1.9,,0.261,0.059
+SRS,CNV carriers,continuous model,,-1.8,,0.252,0.056
+SRS,CNV carriers,continuous model,,-1.7,,0.244,0.054
+SRS,CNV carriers,continuous model,,-1.6,,0.235,0.052
+SRS,CNV carriers,continuous model,,-1.5,,0.227,0.05
+SRS,CNV carriers,continuous model,,-1.4,,0.218,0.048
+SRS,CNV carriers,continuous model,,-1.3,,0.21,0.045
+SRS,CNV carriers,continuous model,,-1.2,,0.201,0.043
+SRS,CNV carriers,continuous model,,-1.1,,0.193,0.042
+SRS,CNV carriers,continuous model,,-1,,0.184,0.04
+SRS,CNV carriers,continuous model,,-0.9,,0.176,0.038
+SRS,CNV carriers,continuous model,,-0.8,,0.167,0.036
+SRS,CNV carriers,continuous model,,-0.7,,0.159,0.035
+SRS,CNV carriers,continuous model,,-0.6,,0.15,0.034
+SRS,CNV carriers,continuous model,,-0.5,,0.142,0.033
+SRS,CNV carriers,continuous model,,-0.4,,0.133,0.032
+SRS,CNV carriers,continuous model,,-0.3,,0.125,0.031
+SRS,CNV carriers,continuous model,,-0.2,,0.116,0.031
+SRS,CNV carriers,continuous model,,-0.1,,0.107,0.03
+SRS,CNV carriers,continuous model,,0,,0.099,0.031
+SRS,CNV carriers,continuous model,,0.1,,0.09,0.031
+SRS,CNV carriers,continuous model,,0.2,,0.082,0.031
+SRS,CNV carriers,continuous model,,0.3,,0.073,0.032
+SRS,CNV carriers,continuous model,,0.4,,0.065,0.033
+SRS,CNV carriers,continuous model,,0.5,,0.056,0.034
+SRS,CNV carriers,continuous model,,0.6,,0.048,0.036
+SRS,CNV carriers,continuous model,,0.7,,0.039,0.037
+SRS,CNV carriers,continuous model,,0.8,,0.031,0.039
+SRS,CNV carriers,continuous model,,0.9,,0.022,0.04
+SRS,CNV carriers,continuous model,,1,,0.014,0.042
+SRS,CNV carriers,continuous model,,1.1,,0.005,0.044
+SRS,CNV carriers,continuous model,,1.2,,-0.003,0.046
+SRS,CNV carriers,continuous model,,1.3,,-0.012,0.048
+SRS,CNV carriers,continuous model,,1.4,,-0.02,0.051
+SRS,CNV carriers,continuous model,,1.5,,-0.029,0.053
+SRS,CNV carriers,continuous model,,1.6,,-0.037,0.055
+SRS,CNV carriers,continuous model,,1.7,,-0.046,0.057
+SRS,CNV carriers,continuous model,,1.8,,-0.054,0.06
+SRS,CNV carriers,continuous model,,1.9,,-0.063,0.062
+SRS,CNV carriers,continuous model,,2,,-0.071,0.064
+SRS,CNV carriers,continuous model,,2.1,,-0.08,0.067
+SRS,CNV carriers,continuous model,,2.2,,-0.088,0.069
+SRS,SSC unaffected relatives,continuous model,,-2.2,,0.045,0.03
+SRS,SSC unaffected relatives,continuous model,,-2.1,,0.044,0.029
+SRS,SSC unaffected relatives,continuous model,,-2,,0.043,0.028
+SRS,SSC unaffected relatives,continuous model,,-1.9,,0.042,0.027
+SRS,SSC unaffected relatives,continuous model,,-1.8,,0.041,0.026
+SRS,SSC unaffected relatives,continuous model,,-1.7,,0.04,0.025
+SRS,SSC unaffected relatives,continuous model,,-1.6,,0.04,0.024
+SRS,SSC unaffected relatives,continuous model,,-1.5,,0.039,0.022
+SRS,SSC unaffected relatives,continuous model,,-1.4,,0.038,0.021
+SRS,SSC unaffected relatives,continuous model,,-1.3,,0.037,0.02
+SRS,SSC unaffected relatives,continuous model,,-1.2,,0.036,0.019
+SRS,SSC unaffected relatives,continuous model,,-1.1,,0.035,0.018
+SRS,SSC unaffected relatives,continuous model,,-1,,0.034,0.018
+SRS,SSC unaffected relatives,continuous model,,-0.9,,0.033,0.017
+SRS,SSC unaffected relatives,continuous model,,-0.8,,0.032,0.016
+SRS,SSC unaffected relatives,continuous model,,-0.7,,0.031,0.015
+SRS,SSC unaffected relatives,continuous model,,-0.6,,0.03,0.015
+SRS,SSC unaffected relatives,continuous model,,-0.5,,0.029,0.014
+SRS,SSC unaffected relatives,continuous model,,-0.4,,0.028,0.014
+SRS,SSC unaffected relatives,continuous model,,-0.3,,0.027,0.013
+SRS,SSC unaffected relatives,continuous model,,-0.2,,0.026,0.013
+SRS,SSC unaffected relatives,continuous model,,-0.1,,0.025,0.013
+SRS,SSC unaffected relatives,continuous model,,0,,0.024,0.013
+SRS,SSC unaffected relatives,continuous model,,0.1,,0.023,0.013
+SRS,SSC unaffected relatives,continuous model,,0.2,,0.022,0.013
+SRS,SSC unaffected relatives,continuous model,,0.3,,0.021,0.014
+SRS,SSC unaffected relatives,continuous model,,0.4,,0.02,0.014
+SRS,SSC unaffected relatives,continuous model,,0.5,,0.019,0.015
+SRS,SSC unaffected relatives,continuous model,,0.6,,0.018,0.015
+SRS,SSC unaffected relatives,continuous model,,0.7,,0.017,0.016
+SRS,SSC unaffected relatives,continuous model,,0.8,,0.016,0.017
+SRS,SSC unaffected relatives,continuous model,,0.9,,0.015,0.018
+SRS,SSC unaffected relatives,continuous model,,1,,0.014,0.019
+SRS,SSC unaffected relatives,continuous model,,1.1,,0.013,0.02
+SRS,SSC unaffected relatives,continuous model,,1.2,,0.012,0.021
+SRS,SSC unaffected relatives,continuous model,,1.3,,0.011,0.022
+SRS,SSC unaffected relatives,continuous model,,1.4,,0.01,0.023
+SRS,SSC unaffected relatives,continuous model,,1.5,,0.009,0.024
+SRS,SSC unaffected relatives,continuous model,,1.6,,0.009,0.025
+SRS,SSC unaffected relatives,continuous model,,1.7,,0.008,0.026
+SRS,SSC unaffected relatives,continuous model,,1.8,,0.007,0.027
+SRS,SSC unaffected relatives,continuous model,,1.9,,0.006,0.028
+SRS,SSC unaffected relatives,continuous model,,2,,0.005,0.029
+SRS,SSC unaffected relatives,continuous model,,2.1,,0.004,0.031
+SRS,SSC unaffected relatives,continuous model,,2.2,,0.003,0.032
+SCQ,CNV carriers,continuous model,,-2.2,,0.112,0.065
+SCQ,CNV carriers,continuous model,,-2.1,,0.11,0.063
+SCQ,CNV carriers,continuous model,,-2,,0.107,0.06
+SCQ,CNV carriers,continuous model,,-1.9,,0.105,0.058
+SCQ,CNV carriers,continuous model,,-1.8,,0.102,0.055
+SCQ,CNV carriers,continuous model,,-1.7,,0.099,0.052
+SCQ,CNV carriers,continuous model,,-1.6,,0.097,0.05
+SCQ,CNV carriers,continuous model,,-1.5,,0.094,0.048
+SCQ,CNV carriers,continuous model,,-1.4,,0.092,0.045
+SCQ,CNV carriers,continuous model,,-1.3,,0.089,0.043
+SCQ,CNV carriers,continuous model,,-1.2,,0.086,0.041
+SCQ,CNV carriers,continuous model,,-1.1,,0.084,0.039
+SCQ,CNV carriers,continuous model,,-1,,0.081,0.037
+SCQ,CNV carriers,continuous model,,-0.9,,0.079,0.035
+SCQ,CNV carriers,continuous model,,-0.8,,0.076,0.033
+SCQ,CNV carriers,continuous model,,-0.7,,0.074,0.032
+SCQ,CNV carriers,continuous model,,-0.6,,0.071,0.03
+SCQ,CNV carriers,continuous model,,-0.5,,0.068,0.029
+SCQ,CNV carriers,continuous model,,-0.4,,0.066,0.028
+SCQ,CNV carriers,continuous model,,-0.3,,0.063,0.028
+SCQ,CNV carriers,continuous model,,-0.2,,0.061,0.028
+SCQ,CNV carriers,continuous model,,-0.1,,0.058,0.028
+SCQ,CNV carriers,continuous model,,0,,0.055,0.028
+SCQ,CNV carriers,continuous model,,0.1,,0.053,0.029
+SCQ,CNV carriers,continuous model,,0.2,,0.05,0.03
+SCQ,CNV carriers,continuous model,,0.3,,0.048,0.031
+SCQ,CNV carriers,continuous model,,0.4,,0.045,0.032
+SCQ,CNV carriers,continuous model,,0.5,,0.043,0.034
+SCQ,CNV carriers,continuous model,,0.6,,0.04,0.036
+SCQ,CNV carriers,continuous model,,0.7,,0.037,0.037
+SCQ,CNV carriers,continuous model,,0.8,,0.035,0.04
+SCQ,CNV carriers,continuous model,,0.9,,0.032,0.042
+SCQ,CNV carriers,continuous model,,1,,0.03,0.044
+SCQ,CNV carriers,continuous model,,1.1,,0.027,0.046
+SCQ,CNV carriers,continuous model,,1.2,,0.024,0.049
+SCQ,CNV carriers,continuous model,,1.3,,0.022,0.051
+SCQ,CNV carriers,continuous model,,1.4,,0.019,0.053
+SCQ,CNV carriers,continuous model,,1.5,,0.017,0.056
+SCQ,CNV carriers,continuous model,,1.6,,0.014,0.058
+SCQ,CNV carriers,continuous model,,1.7,,0.011,0.061
+SCQ,CNV carriers,continuous model,,1.8,,0.009,0.064
+SCQ,CNV carriers,continuous model,,1.9,,0.006,0.066
+SCQ,CNV carriers,continuous model,,2,,0.004,0.069
+SCQ,CNV carriers,continuous model,,2.1,,0.001,0.072
+SCQ,CNV carriers,continuous model,,2.2,,-0.001,0.074
+SCQ,SSC unaffected relatives,continuous model,,-2.2,,0.006,0.055
+SCQ,SSC unaffected relatives,continuous model,,-2.1,,0.006,0.053
+SCQ,SSC unaffected relatives,continuous model,,-2,,0.006,0.05
+SCQ,SSC unaffected relatives,continuous model,,-1.9,,0.006,0.048
+SCQ,SSC unaffected relatives,continuous model,,-1.8,,0.006,0.046
+SCQ,SSC unaffected relatives,continuous model,,-1.7,,0.006,0.044
+SCQ,SSC unaffected relatives,continuous model,,-1.6,,0.006,0.042
+SCQ,SSC unaffected relatives,continuous model,,-1.5,,0.006,0.04
+SCQ,SSC unaffected relatives,continuous model,,-1.4,,0.006,0.039
+SCQ,SSC unaffected relatives,continuous model,,-1.3,,0.007,0.037
+SCQ,SSC unaffected relatives,continuous model,,-1.2,,0.007,0.035
+SCQ,SSC unaffected relatives,continuous model,,-1.1,,0.007,0.033
+SCQ,SSC unaffected relatives,continuous model,,-1,,0.007,0.032
+SCQ,SSC unaffected relatives,continuous model,,-0.9,,0.007,0.03
+SCQ,SSC unaffected relatives,continuous model,,-0.8,,0.007,0.029
+SCQ,SSC unaffected relatives,continuous model,,-0.7,,0.007,0.027
+SCQ,SSC unaffected relatives,continuous model,,-0.6,,0.007,0.026
+SCQ,SSC unaffected relatives,continuous model,,-0.5,,0.007,0.025
+SCQ,SSC unaffected relatives,continuous model,,-0.4,,0.007,0.025
+SCQ,SSC unaffected relatives,continuous model,,-0.3,,0.007,0.024
+SCQ,SSC unaffected relatives,continuous model,,-0.2,,0.007,0.024
+SCQ,SSC unaffected relatives,continuous model,,-0.1,,0.007,0.024
+SCQ,SSC unaffected relatives,continuous model,,0,,0.007,0.024
+SCQ,SSC unaffected relatives,continuous model,,0.1,,0.007,0.024
+SCQ,SSC unaffected relatives,continuous model,,0.2,,0.007,0.025
+SCQ,SSC unaffected relatives,continuous model,,0.3,,0.007,0.025
+SCQ,SSC unaffected relatives,continuous model,,0.4,,0.007,0.026
+SCQ,SSC unaffected relatives,continuous model,,0.5,,0.007,0.028
+SCQ,SSC unaffected relatives,continuous model,,0.6,,0.007,0.029
+SCQ,SSC unaffected relatives,continuous model,,0.7,,0.007,0.03
+SCQ,SSC unaffected relatives,continuous model,,0.8,,0.007,0.032
+SCQ,SSC unaffected relatives,continuous model,,0.9,,0.007,0.033
+SCQ,SSC unaffected relatives,continuous model,,1,,0.007,0.035
+SCQ,SSC unaffected relatives,continuous model,,1.1,,0.007,0.037
+SCQ,SSC unaffected relatives,continuous model,,1.2,,0.007,0.039
+SCQ,SSC unaffected relatives,continuous model,,1.3,,0.007,0.041
+SCQ,SSC unaffected relatives,continuous model,,1.4,,0.007,0.043
+SCQ,SSC unaffected relatives,continuous model,,1.5,,0.007,0.045
+SCQ,SSC unaffected relatives,continuous model,,1.6,,0.007,0.047
+SCQ,SSC unaffected relatives,continuous model,,1.7,,0.007,0.049
+SCQ,SSC unaffected relatives,continuous model,,1.8,,0.007,0.051
+SCQ,SSC unaffected relatives,continuous model,,1.9,,0.007,0.053
+SCQ,SSC unaffected relatives,continuous model,,2,,0.007,0.055
+SCQ,SSC unaffected relatives,continuous model,,2.1,,0.007,0.057
+SCQ,SSC unaffected relatives,continuous model,,2.2,,0.007,0.059

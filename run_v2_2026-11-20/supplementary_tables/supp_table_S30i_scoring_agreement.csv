@@ -1,0 +1,21 @@
+Cohort,Measure,Visits (n),Scored by 00_scoring.R only (n),Scored by childsds only (n),Correlation,"Mean difference, childsds minus 00_scoring.R",SD of the difference,Largest absolute difference,Visits differing by more than 0.1 SD (n)
+CHOP,"Head-circumference Z (UK90), cleaned HC visits",2455,11,0,1,0,0,0,0
+Cardiff,"Head-circumference Z (UK90), cleaned HC visits",257,0,0,1,0,0,0,0
+SVIP,"Head-circumference Z (UK90), cleaned HC visits",680,0,0,1,0,0,0,0
+CHOP,BMI Z (WHO/WHO 2007) at HC visits,2288,11,0,1,0,0,0.002,0
+Cardiff,BMI Z (WHO/WHO 2007) at HC visits,247,0,0,1,0,0,0,0
+SVIP,BMI Z (WHO/WHO 2007) at HC visits,621,16,0,1,0,0,0.001,0
+CHOP,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",6731,56,0,1,0,0,0,0
+CHUSJ,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",30,0,0,1,0,0,0,0
+Cardiff,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",319,0,0,1,0,0,0,0
+G2MH,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",248,0,0,1,0,0,0,0
+SSC,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",15,0,0,1,0,0,0,0
+SVIP,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",449,17,0,1,0,0,0,0
+Searchlight,"Height Z (WHO/WHO 2007), cleaned height visits 2-18 y",99,1,0,1,0,0,0,0
+CHOP,BMI Z (WHO/WHO 2007) at height visits,6731,56,0,1,0,0,0.003,0
+CHUSJ,BMI Z (WHO/WHO 2007) at height visits,30,0,0,1,0,0,0,0
+Cardiff,BMI Z (WHO/WHO 2007) at height visits,319,0,0,1,0,0,0.001,0
+G2MH,BMI Z (WHO/WHO 2007) at height visits,248,0,0,1,0,0,0,0
+SSC,BMI Z (WHO/WHO 2007) at height visits,15,0,0,1,0,0,0,0
+SVIP,BMI Z (WHO/WHO 2007) at height visits,449,17,0,1,0,0,0.001,0
+Searchlight,BMI Z (WHO/WHO 2007) at height visits,99,1,0,1,0,0,0,0

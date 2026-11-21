@@ -1,0 +1,16 @@
+Outcome,Genotype,Cohort,Children (n),Visit pairs (n),Median age at first visit of pair (years),"Age at first visit, 25th centile","Age at first visit, 75th centile",Median interval (years)
+Height,16p11.2 del,All cohorts,117,228,8.83,6,12,1.5
+Height,16p11.2 del,Cardiff,29,30,9,7.25,10.75,3
+Height,16p11.2 del,SVIP,71,172,9.08,6,12.1,1.25
+Height,16p11.2 del,Searchlight,17,26,6.29,4.25,7.88,1.21
+Height,16p11.2 dup,All cohorts,48,84,10,8,13.17,1.87
+Height,16p11.2 dup,Cardiff,12,12,8,6.75,8.25,2.5
+Height,16p11.2 dup,SVIP,31,66,11.04,8.23,13.38,1.33
+Height,16p11.2 dup,Searchlight,5,6,9.5,6.44,10.19,1.54
+Height,22q11.2 del,All cohorts,541,2482,8.84,5.62,12.58,0.87
+Height,22q11.2 del,CHOP,468,2380,8.69,5.48,12.6,0.84
+Height,22q11.2 del,Cardiff,73,102,10,9,12,3
+Height,22q11.2 dup,All cohorts,68,313,8.75,5.58,12.11,0.92
+Height,22q11.2 dup,CHOP,57,301,8.75,5.48,12.16,0.86
+Height,22q11.2 dup,Cardiff,11,12,8.5,7,10,3
+Height,All four CNVs,All cohorts,774,3107,8.9,5.66,12.46,0.93

@@ -1,0 +1,207 @@
+Trait,Group,Modifier,Carriers (n),Carrier BMI slope (reference effect),Modifier x BMI interaction,SE (interaction),P (interaction),Smallest interaction detectable with 80% power,Power for an interaction as large as the BMI slope (proportion)
+Height,16p11.2 del,adult BMI PGS,131,0.309,0.113,0.06,0.064,0.169,0.999
+Height,16p11.2 del,autism PGS (2026),131,0.3,0.145,0.086,0.093,0.24,0.938
+Height,16p11.2 del,childhood obesity PGS,131,0.32,-0.032,0.076,0.68,0.212,0.988
+Height,16p11.2 del,height PGS,131,0.331,0.109,0.073,0.14,0.204,0.995
+Height,16p11.2 del,sex (male vs female),393,0.09,0.019,0.09,0.84,0.253,0.168
+Height,16p11.2 dup,adult BMI PGS,70,-0.003,0.303,0.13,0.023,0.365,0.05
+Height,16p11.2 dup,autism PGS (2026),70,0.036,0.042,0.109,0.7,0.306,0.062
+Height,16p11.2 dup,childhood obesity PGS,70,-0.063,0.264,0.106,0.015,0.297,0.091
+Height,16p11.2 dup,height PGS,70,0.004,0.073,0.108,0.5,0.301,0.05
+Height,16p11.2 dup,sex (male vs female),231,0.068,-0.112,0.128,0.39,0.359,0.083
+Height,22q11.2 del,adult BMI PGS,424,0.049,-0.008,0.039,0.84,0.109,0.239
+Height,22q11.2 del,autism PGS (2026),424,0.022,-0.039,0.042,0.35,0.117,0.081
+Height,22q11.2 del,childhood obesity PGS,424,0.018,0.009,0.038,0.81,0.106,0.077
+Height,22q11.2 del,height PGS,424,0.032,0.055,0.035,0.11,0.097,0.152
+Height,22q11.2 del,sex (male vs female),545,0,0.062,0.069,0.37,0.194,0.05
+Height,22q11.2 dup,adult BMI PGS,110,0.112,0.146,0.075,0.054,0.209,0.325
+Height,22q11.2 dup,autism PGS (2026),110,0.082,-0.105,0.074,0.16,0.208,0.197
+Height,22q11.2 dup,childhood obesity PGS,110,0.101,0.072,0.08,0.37,0.224,0.245
+Height,22q11.2 dup,height PGS,110,0.119,-0.026,0.074,0.73,0.207,0.361
+Height,22q11.2 dup,sex (male vs female),142,0.01,0.196,0.139,0.16,0.39,0.051
+Height,Overgrowth CNVs,adult BMI PGS,241,0.228,0.119,0.046,0.01,0.129,0.999
+Height,Overgrowth CNVs,autism PGS (2026),241,0.246,0.025,0.052,0.63,0.146,0.997
+Height,Overgrowth CNVs,childhood obesity PGS,241,0.238,-0.055,0.051,0.28,0.142,0.997
+Height,Overgrowth CNVs,height PGS,241,0.265,0.031,0.051,0.55,0.144,0.999
+Height,Overgrowth CNVs,sex (male vs female),535,0.078,0.051,0.074,0.5,0.208,0.184
+Height,Undergrowth CNVs,adult BMI PGS,494,0.046,0.016,0.037,0.68,0.105,0.23
+Height,Undergrowth CNVs,autism PGS (2026),494,0.026,-0.028,0.038,0.46,0.108,0.105
+Height,Undergrowth CNVs,childhood obesity PGS,494,0.021,0.041,0.035,0.25,0.099,0.089
+Height,Undergrowth CNVs,height PGS,494,0.029,0.058,0.033,0.078,0.092,0.14
+Height,Undergrowth CNVs,sex (male vs female),776,0.015,0.02,0.062,0.74,0.172,0.057
+Height,All CNVs,adult BMI PGS,735,0.095,0.07,0.03,0.02,0.084,0.883
+Height,All CNVs,autism PGS (2026),735,0.085,-0.02,0.03,0.51,0.084,0.81
+Height,All CNVs,childhood obesity PGS,735,0.084,-0.004,0.029,0.9,0.081,0.824
+Height,All CNVs,height PGS,735,0.099,0.021,0.028,0.45,0.079,0.939
+Height,All CNVs,sex (male vs female),1311,0.012,0.066,0.046,0.15,0.128,0.059
+Head circumference,16p11.2 del,adult BMI PGS,107,0.501,0.087,0.065,0.19,0.183,1
+Head circumference,16p11.2 del,autism PGS (2026),107,0.487,0.07,0.093,0.45,0.26,0.999
+Head circumference,16p11.2 del,childhood obesity PGS,107,0.495,0.087,0.084,0.3,0.234,1
+Head circumference,16p11.2 del,height PGS,107,0.498,0.096,0.081,0.24,0.228,1
+Head circumference,16p11.2 del,sex (male vs female),229,0.561,-0.145,0.112,0.2,0.313,0.999
+Head circumference,16p11.2 dup,adult BMI PGS,56,0.065,0.028,0.146,0.85,0.408,0.073
+Head circumference,16p11.2 dup,autism PGS (2026),56,0.065,0.041,0.114,0.72,0.319,0.088
+Head circumference,16p11.2 dup,childhood obesity PGS,56,0.091,0.075,0.13,0.57,0.363,0.108
+Head circumference,16p11.2 dup,height PGS,56,0.065,-0.139,0.149,0.36,0.418,0.072
+Head circumference,16p11.2 dup,sex (male vs female),143,0.297,0.012,0.157,0.94,0.44,0.472
+Head circumference,22q11.2 del,adult BMI PGS,248,0.283,0.017,0.055,0.76,0.153,0.999
+Head circumference,22q11.2 del,autism PGS (2026),248,0.275,0.023,0.062,0.71,0.172,0.994
+Head circumference,22q11.2 del,childhood obesity PGS,248,0.259,-0.106,0.053,0.045,0.148,0.998
+Head circumference,22q11.2 del,height PGS,248,0.307,-0.112,0.054,0.039,0.151,1
+Head circumference,22q11.2 del,sex (male vs female),339,0.309,-0.009,0.096,0.93,0.269,0.896
+Head circumference,22q11.2 dup,adult BMI PGS,81,0.486,0.139,0.106,0.19,0.296,0.996
+Head circumference,22q11.2 dup,autism PGS (2026),81,0.508,-0.033,0.111,0.77,0.31,0.996
+Head circumference,22q11.2 dup,childhood obesity PGS,81,0.505,-0.003,0.107,0.98,0.301,0.997
+Head circumference,22q11.2 dup,height PGS,81,0.551,0.006,0.121,0.96,0.338,0.995
+Head circumference,22q11.2 dup,sex (male vs female),106,0.48,-0.044,0.185,0.81,0.517,0.739
+Head circumference,Overgrowth CNVs,adult BMI PGS,188,0.491,0.098,0.054,0.073,0.152,1
+Head circumference,Overgrowth CNVs,autism PGS (2026),188,0.499,0.013,0.066,0.84,0.185,1
+Head circumference,Overgrowth CNVs,childhood obesity PGS,188,0.488,0.04,0.061,0.51,0.171,1
+Head circumference,Overgrowth CNVs,height PGS,188,0.52,0.051,0.066,0.44,0.185,1
+Head circumference,Overgrowth CNVs,sex (male vs female),335,0.543,-0.139,0.092,0.13,0.258,1
+Head circumference,Undergrowth CNVs,adult BMI PGS,304,0.224,0.027,0.052,0.6,0.145,0.991
+Head circumference,Undergrowth CNVs,autism PGS (2026),304,0.229,0.018,0.054,0.73,0.15,0.99
+Head circumference,Undergrowth CNVs,childhood obesity PGS,304,0.214,-0.088,0.048,0.071,0.136,0.993
+Head circumference,Undergrowth CNVs,height PGS,304,0.247,-0.1,0.051,0.051,0.143,0.998
+Head circumference,Undergrowth CNVs,sex (male vs female),482,0.293,0.009,0.081,0.91,0.228,0.95
+Head circumference,All CNVs,adult BMI PGS,492,0.326,0.057,0.038,0.13,0.105,1
+Head circumference,All CNVs,autism PGS (2026),492,0.329,-0.004,0.038,0.91,0.107,1
+Head circumference,All CNVs,childhood obesity PGS,492,0.32,-0.039,0.037,0.29,0.104,1
+Head circumference,All CNVs,height PGS,492,0.337,-0.039,0.039,0.32,0.11,1
+Head circumference,All CNVs,sex (male vs female),817,0.39,-0.036,0.058,0.54,0.162,1
+SRS,16p11.2 del,adult BMI PGS,84,0.057,-0.136,0.107,0.21,0.298,0.083
+SRS,16p11.2 del,autism PGS (2026),84,0.049,-0.18,0.102,0.083,0.287,0.077
+SRS,16p11.2 del,childhood obesity PGS,84,0.017,0.065,0.103,0.53,0.288,0.053
+SRS,16p11.2 del,height PGS,84,0.023,0.111,0.097,0.26,0.272,0.056
+SRS,16p11.2 del,sex (male vs female),91,0.066,-0.093,0.169,0.58,0.474,0.067
+SRS,16p11.2 dup,adult BMI PGS,30,0.218,0.227,0.23,0.33,0.645,0.157
+SRS,16p11.2 dup,autism PGS (2026),30,0.225,0.12,0.14,0.4,0.391,0.364
+SRS,16p11.2 dup,childhood obesity PGS,30,0.042,0.256,0.175,0.16,0.489,0.057
+SRS,16p11.2 dup,height PGS,30,0.185,-0.189,0.195,0.34,0.546,0.157
+SRS,16p11.2 dup,sex (male vs female),37,0.309,-0.052,0.243,0.83,0.68,0.247
+SRS,22q11.2 del,adult BMI PGS,289,0.172,-0.011,0.044,0.8,0.123,0.974
+SRS,22q11.2 del,autism PGS (2026),289,0.155,-0.108,0.042,0.012,0.119,0.955
+SRS,22q11.2 del,childhood obesity PGS,289,0.174,0.037,0.042,0.37,0.117,0.986
+SRS,22q11.2 del,height PGS,289,0.167,0.02,0.041,0.64,0.116,0.981
+SRS,22q11.2 del,sex (male vs female),317,0.152,-0.005,0.077,0.95,0.215,0.506
+SRS,22q11.2 dup,adult BMI PGS,68,-0.047,-0.037,0.134,0.78,0.376,0.064
+SRS,22q11.2 dup,autism PGS (2026),68,-0.126,-0.145,0.1,0.15,0.28,0.243
+SRS,22q11.2 dup,childhood obesity PGS,68,-0.067,0.186,0.135,0.17,0.379,0.078
+SRS,22q11.2 dup,height PGS,68,-0.068,-0.008,0.11,0.94,0.309,0.095
+SRS,22q11.2 dup,sex (male vs female),77,-0.022,0.003,0.238,0.99,0.666,0.051
+SRS,Overgrowth CNVs,adult BMI PGS,152,0.02,-0.116,0.081,0.15,0.226,0.057
+SRS,Overgrowth CNVs,autism PGS (2026),152,-0.019,-0.135,0.063,0.034,0.176,0.061
+SRS,Overgrowth CNVs,childhood obesity PGS,152,-0.009,0.162,0.073,0.027,0.203,0.052
+SRS,Overgrowth CNVs,height PGS,152,0.01,0.046,0.066,0.49,0.186,0.053
+SRS,Overgrowth CNVs,sex (male vs female),168,0.114,-0.166,0.129,0.2,0.362,0.143
+SRS,Undergrowth CNVs,adult BMI PGS,319,0.173,0.005,0.044,0.91,0.122,0.977
+SRS,Undergrowth CNVs,autism PGS (2026),319,0.161,-0.084,0.04,0.038,0.113,0.979
+SRS,Undergrowth CNVs,childhood obesity PGS,319,0.174,0.055,0.04,0.18,0.113,0.99
+SRS,Undergrowth CNVs,height PGS,319,0.167,0.005,0.041,0.91,0.114,0.983
+SRS,Undergrowth CNVs,sex (male vs female),354,0.179,-0.033,0.073,0.65,0.205,0.686
+SRS,All CNVs,adult BMI PGS,471,0.111,-0.024,0.037,0.51,0.103,0.858
+SRS,All CNVs,autism PGS (2026),471,0.107,-0.083,0.031,0.0085,0.088,0.925
+SRS,All CNVs,childhood obesity PGS,471,0.112,0.09,0.034,0.0082,0.095,0.909
+SRS,All CNVs,height PGS,471,0.114,0.027,0.034,0.43,0.095,0.917
+SRS,All CNVs,sex (male vs female),522,0.159,-0.083,0.062,0.18,0.173,0.729
+SCQ,16p11.2 del,adult BMI PGS,65,0.046,0.023,0.053,0.67,0.15,0.137
+SCQ,16p11.2 del,autism PGS (2026),65,0.033,0.001,0.077,0.98,0.216,0.071
+SCQ,16p11.2 del,childhood obesity PGS,65,0.01,0.088,0.089,0.32,0.249,0.052
+SCQ,16p11.2 del,height PGS,65,0.006,0.126,0.078,0.11,0.218,0.051
+SCQ,16p11.2 del,sex (male vs female),70,0.126,-0.197,0.13,0.13,0.363,0.163
+SCQ,16p11.2 dup,sex (male vs female),22,0.196,0.082,0.227,0.72,0.635,0.139
+SCQ,22q11.2 del,adult BMI PGS,250,0.102,-0.023,0.035,0.52,0.098,0.831
+SCQ,22q11.2 del,autism PGS (2026),250,0.099,-0.013,0.036,0.73,0.102,0.774
+SCQ,22q11.2 del,childhood obesity PGS,250,0.106,0,0.032,0.99,0.09,0.914
+SCQ,22q11.2 del,height PGS,250,0.096,0.025,0.033,0.44,0.092,0.836
+SCQ,22q11.2 del,sex (male vs female),275,0.129,-0.079,0.061,0.2,0.17,0.565
+SCQ,22q11.2 dup,adult BMI PGS,50,0.178,-0.159,0.135,0.25,0.379,0.261
+SCQ,22q11.2 dup,autism PGS (2026),50,0.109,0.025,0.097,0.8,0.271,0.203
+SCQ,22q11.2 dup,childhood obesity PGS,50,0.166,-0.118,0.129,0.36,0.361,0.251
+SCQ,22q11.2 dup,height PGS,50,0.088,-0.105,0.113,0.36,0.316,0.123
+SCQ,22q11.2 dup,sex (male vs female),56,0.07,0.168,0.218,0.44,0.609,0.062
+SCQ,Overgrowth CNVs,adult BMI PGS,115,0.079,0.002,0.053,0.97,0.148,0.322
+SCQ,Overgrowth CNVs,autism PGS (2026),115,0.063,-0.016,0.054,0.77,0.151,0.217
+SCQ,Overgrowth CNVs,childhood obesity PGS,115,0.068,0.038,0.067,0.57,0.187,0.175
+SCQ,Overgrowth CNVs,height PGS,115,0.077,-0.047,0.062,0.45,0.174,0.234
+SCQ,Overgrowth CNVs,sex (male vs female),126,0.113,-0.033,0.112,0.77,0.313,0.173
+SCQ,Undergrowth CNVs,adult BMI PGS,267,0.102,-0.02,0.035,0.56,0.098,0.829
+SCQ,Undergrowth CNVs,autism PGS (2026),267,0.096,-0.011,0.034,0.74,0.096,0.804
+SCQ,Undergrowth CNVs,childhood obesity PGS,267,0.101,-0.003,0.032,0.93,0.089,0.892
+SCQ,Undergrowth CNVs,height PGS,267,0.093,0.024,0.033,0.46,0.091,0.816
+SCQ,Undergrowth CNVs,sex (male vs female),297,0.137,-0.08,0.059,0.17,0.164,0.646
+SCQ,All CNVs,adult BMI PGS,382,0.085,-0.008,0.029,0.79,0.081,0.839
+SCQ,All CNVs,autism PGS (2026),382,0.083,-0.01,0.027,0.72,0.075,0.878
+SCQ,All CNVs,childhood obesity PGS,382,0.085,0.014,0.028,0.62,0.079,0.853
+SCQ,All CNVs,height PGS,382,0.085,0.004,0.029,0.9,0.081,0.835
+SCQ,All CNVs,sex (male vs female),423,0.125,-0.058,0.051,0.26,0.144,0.683
+CNB accuracy,16p11.2 del,adult BMI PGS,117,0.011,0.042,0.045,0.36,0.127,0.057
+CNB accuracy,16p11.2 del,autism PGS (2026),117,0.008,-0.04,0.046,0.39,0.13,0.054
+CNB accuracy,16p11.2 del,childhood obesity PGS,117,0.008,-0.029,0.036,0.43,0.102,0.055
+CNB accuracy,16p11.2 del,height PGS,117,0.01,-0.048,0.046,0.3,0.129,0.056
+CNB accuracy,16p11.2 del,sex (male vs female),161,0.069,-0.083,0.073,0.25,0.203,0.157
+CNB accuracy,16p11.2 dup,adult BMI PGS,43,-0.118,-0.112,0.123,0.37,0.343,0.161
+CNB accuracy,16p11.2 dup,autism PGS (2026),43,-0.044,-0.115,0.07,0.11,0.195,0.097
+CNB accuracy,16p11.2 dup,childhood obesity PGS,43,-0.086,0.032,0.097,0.74,0.271,0.143
+CNB accuracy,16p11.2 dup,height PGS,43,-0.097,0.006,0.112,0.95,0.312,0.141
+CNB accuracy,16p11.2 dup,sex (male vs female),69,-0.112,0.025,0.154,0.87,0.432,0.113
+CNB accuracy,22q11.2 del,adult BMI PGS,432,-0.051,-0.002,0.027,0.93,0.074,0.482
+CNB accuracy,22q11.2 del,autism PGS (2026),432,-0.049,0.004,0.026,0.89,0.074,0.456
+CNB accuracy,22q11.2 del,childhood obesity PGS,432,-0.032,0.028,0.023,0.21,0.064,0.293
+CNB accuracy,22q11.2 del,height PGS,432,-0.052,0.035,0.025,0.16,0.07,0.557
+CNB accuracy,22q11.2 del,sex (male vs female),535,-0.017,-0.028,0.045,0.54,0.126,0.066
+CNB accuracy,22q11.2 dup,adult BMI PGS,127,0.073,-0.007,0.043,0.88,0.121,0.393
+CNB accuracy,22q11.2 dup,autism PGS (2026),127,0.043,0.002,0.055,0.97,0.153,0.124
+CNB accuracy,22q11.2 dup,childhood obesity PGS,127,0.09,-0.048,0.058,0.41,0.161,0.344
+CNB accuracy,22q11.2 dup,height PGS,127,0.084,0.051,0.063,0.42,0.176,0.265
+CNB accuracy,22q11.2 dup,sex (male vs female),158,0.242,-0.237,0.098,0.017,0.276,0.692
+CNB accuracy,Overgrowth CNVs,adult BMI PGS,244,0.049,-0.002,0.03,0.93,0.083,0.376
+CNB accuracy,Overgrowth CNVs,autism PGS (2026),244,0.024,-0.038,0.032,0.23,0.089,0.114
+CNB accuracy,Overgrowth CNVs,childhood obesity PGS,244,0.052,-0.028,0.031,0.36,0.086,0.395
+CNB accuracy,Overgrowth CNVs,height PGS,244,0.046,-0.013,0.037,0.73,0.102,0.241
+CNB accuracy,Overgrowth CNVs,sex (male vs female),319,0.134,-0.124,0.058,0.032,0.161,0.639
+CNB accuracy,Undergrowth CNVs,adult BMI PGS,475,-0.055,-0.005,0.026,0.85,0.072,0.57
+CNB accuracy,Undergrowth CNVs,autism PGS (2026),475,-0.052,-0.009,0.025,0.72,0.069,0.559
+CNB accuracy,Undergrowth CNVs,childhood obesity PGS,475,-0.042,0.023,0.022,0.3,0.062,0.487
+CNB accuracy,Undergrowth CNVs,height PGS,475,-0.056,0.036,0.024,0.14,0.068,0.635
+CNB accuracy,Undergrowth CNVs,sex (male vs female),604,-0.027,-0.025,0.043,0.57,0.121,0.096
+CNB accuracy,All CNVs,adult BMI PGS,719,-0.019,-0.001,0.019,0.94,0.054,0.169
+CNB accuracy,All CNVs,autism PGS (2026),719,-0.021,-0.006,0.018,0.76,0.051,0.211
+CNB accuracy,All CNVs,childhood obesity PGS,719,-0.012,0.008,0.017,0.65,0.048,0.105
+CNB accuracy,All CNVs,height PGS,719,-0.019,0.012,0.02,0.53,0.055,0.164
+CNB accuracy,All CNVs,sex (male vs female),923,0.013,-0.042,0.033,0.2,0.093,0.068
+CNB speed,16p11.2 del,adult BMI PGS,119,-0.017,0.041,0.058,0.48,0.163,0.06
+CNB speed,16p11.2 del,autism PGS (2026),119,-0.005,-0.004,0.06,0.95,0.167,0.051
+CNB speed,16p11.2 del,childhood obesity PGS,119,-0.016,-0.064,0.047,0.17,0.13,0.064
+CNB speed,16p11.2 del,height PGS,119,0.014,0.008,0.059,0.89,0.164,0.057
+CNB speed,16p11.2 del,sex (male vs female),163,0.012,-0.014,0.09,0.88,0.252,0.052
+CNB speed,16p11.2 dup,adult BMI PGS,43,0.214,0.117,0.145,0.42,0.405,0.316
+CNB speed,16p11.2 dup,autism PGS (2026),43,0.049,0.222,0.083,0.012,0.233,0.09
+CNB speed,16p11.2 dup,childhood obesity PGS,43,0.038,0.297,0.104,0.0073,0.292,0.066
+CNB speed,16p11.2 dup,height PGS,43,0.149,-0.206,0.132,0.13,0.368,0.205
+CNB speed,16p11.2 dup,sex (male vs female),69,0.161,-0.144,0.206,0.49,0.577,0.122
+CNB speed,22q11.2 del,adult BMI PGS,437,-0.007,-0.038,0.03,0.2,0.084,0.057
+CNB speed,22q11.2 del,autism PGS (2026),437,-0.002,-0.051,0.031,0.1,0.087,0.05
+CNB speed,22q11.2 del,childhood obesity PGS,437,0.002,-0.016,0.027,0.55,0.076,0.05
+CNB speed,22q11.2 del,height PGS,437,-0.006,0.048,0.03,0.1,0.083,0.055
+CNB speed,22q11.2 del,sex (male vs female),541,-0.05,0.106,0.053,0.047,0.15,0.153
+CNB speed,22q11.2 dup,adult BMI PGS,127,0.047,0.054,0.069,0.44,0.193,0.104
+CNB speed,22q11.2 dup,autism PGS (2026),127,0.017,0.007,0.088,0.93,0.246,0.054
+CNB speed,22q11.2 dup,childhood obesity PGS,127,0.049,-0.026,0.093,0.78,0.261,0.082
+CNB speed,22q11.2 dup,height PGS,127,0.036,-0.012,0.101,0.9,0.282,0.064
+CNB speed,22q11.2 dup,sex (male vs female),158,-0.042,0.079,0.143,0.58,0.399,0.06
+CNB speed,Overgrowth CNVs,adult BMI PGS,246,0.021,0.061,0.044,0.17,0.124,0.075
+CNB speed,Overgrowth CNVs,autism PGS (2026),246,0.011,-0.011,0.049,0.83,0.136,0.056
+CNB speed,Overgrowth CNVs,childhood obesity PGS,246,0.021,-0.041,0.046,0.38,0.129,0.075
+CNB speed,Overgrowth CNVs,height PGS,246,0.027,0.005,0.054,0.93,0.152,0.079
+CNB speed,Overgrowth CNVs,sex (male vs female),321,-0.003,0.029,0.079,0.71,0.22,0.05
+CNB speed,Undergrowth CNVs,adult BMI PGS,480,0.008,-0.027,0.029,0.34,0.081,0.06
+CNB speed,Undergrowth CNVs,autism PGS (2026),480,0.011,-0.016,0.029,0.58,0.081,0.065
+CNB speed,Undergrowth CNVs,childhood obesity PGS,480,0.017,0.004,0.026,0.87,0.073,0.103
+CNB speed,Undergrowth CNVs,height PGS,480,0.007,0.036,0.029,0.21,0.08,0.057
+CNB speed,Undergrowth CNVs,sex (male vs female),610,-0.029,0.078,0.052,0.14,0.146,0.085
+CNB speed,All CNVs,adult BMI PGS,726,0.008,0.006,0.024,0.8,0.066,0.064
+CNB speed,All CNVs,autism PGS (2026),726,0.01,-0.006,0.024,0.79,0.066,0.07
+CNB speed,All CNVs,childhood obesity PGS,726,0.012,-0.01,0.022,0.65,0.062,0.084
+CNB speed,All CNVs,height PGS,726,0.009,0.028,0.025,0.26,0.069,0.065
+CNB speed,All CNVs,sex (male vs female),931,-0.029,0.066,0.041,0.11,0.116,0.107
