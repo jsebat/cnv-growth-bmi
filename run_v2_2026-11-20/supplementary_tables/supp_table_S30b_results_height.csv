@@ -15,7 +15,7 @@ Height,22q11.2 dup,All ages,Cardiff+CHOP,68,313,8.75,0.92,0.065,0.023,0.021,0.11
 Height,22q11.2 dup,2-8 y,Cardiff+CHOP,48,134,5.21,0.94,0.127,0.036,0.057,0.198,0.00049,,
 Height,22q11.2 dup,8-13 y,Cardiff+CHOP,44,113,10.15,0.94,0.045,0.031,-0.015,0.104,0.14,,
 Height,22q11.2 dup,13-18 y,Cardiff+CHOP,26,66,14.47,0.78,0.011,0.045,-0.077,0.1,0.8,,
-Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,774,3107,8.9,0.93,0.031,0.008,0.016,0.046,5.9e-05,6.8e-11,0.43
-Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,1337,5.23,0.95,0.088,0.012,0.065,0.11,3.7e-14,,0.065
-Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,486,1083,10.25,0.98,0.027,0.011,0.006,0.047,0.012,,0.083
-Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,309,687,14.67,0.81,-0.023,0.013,-0.048,0.002,0.073,,0.15
+Height,All four CNVs,All ages,Cardiff+CHOP+Searchlight+SVIP,774,3107,8.9,0.93,0.033,0.008,0.018,0.048,2e-05,4.5e-11,0.44
+Height,All four CNVs,2-8 y,Cardiff+CHOP+Searchlight+SVIP,497,1337,5.23,0.95,0.089,0.012,0.067,0.112,1.4e-14,,0.062
+Height,All four CNVs,8-13 y,Cardiff+CHOP+Searchlight+SVIP,486,1083,10.25,0.98,0.03,0.011,0.009,0.051,0.0047,,0.056
+Height,All four CNVs,13-18 y,Cardiff+CHOP+Searchlight+SVIP,309,687,14.67,0.81,-0.023,0.013,-0.048,0.002,0.076,,0.024

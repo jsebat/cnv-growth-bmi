@@ -61,8 +61,8 @@ suppressed.
 - At 2-9 years the BMI effect on growth differs by CNV: heavier 16p11.2 duplication carriers are shorter (CNV x BMI
   -0.41 SD per SD); head circumference tracks BMI more strongly in 16p11.2 deletion and 22q11.2 duplication carriers.
   The 22q11.2 duplication result rests on one hospital's records, so an independent estimate from you is valuable.
-- Higher BMI precedes faster height gain before age 8, not after (pooled +0.088 SD per SD).
-  The pooled longitudinal model is adjusted for CNV and not for cohort (cohort enters only in the models of one CNV).
+- Higher BMI precedes faster height gain before age 8, not after (pooled +0.089 SD per SD).
+  Models of one CNV carry a cohort term; every model that pools CNVs carries one intercept per cohort within CNV.
 - No pooled all-CNV effect; the CNVs differ in direction.
 - Sex differences are not robust in our data.
 

@@ -1,5 +1,5 @@
-# 91_cohort_adjustment_check_v2.R (JS / Claude 2026-11-21; BMI modifier paper v2): pooled longitudinal BMI slope under three adjustments: genotype only (current primary),
-# additive cohort + genotype (primary until 2026-11-20), cohort within genotype (one intercept per cohort x genotype cell).
+# 91_cohort_adjustment_check_v2.R (JS / Claude 2026-11-21; BMI modifier paper v2): pooled longitudinal BMI slope under three adjustments: genotype only,
+# additive cohort + genotype (primary until 2026-11-20), cohort within genotype (one intercept per cohort x genotype cell; primary).
 # Input: DATA/longitudinal_v2_panels.rds (80_longitudinal_v2.R). Output: CSV given as argument 1 (run_v2_2026-11-20/longitudinal/cohort_adjustment_check.csv). Model: dZ ~ Z0 + dt + sex + ns(age0, 3) [+ adjustment] + B0 (or win + win:B0) + (1 | id).
 # null model: none; Wald (Satterthwaite) test of the BMI coefficients.
 suppressMessages({library(data.table); library(lmerTest); library(splines)})

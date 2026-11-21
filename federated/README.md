@@ -51,7 +51,7 @@ One row per visit. Tab- or comma-separated text, or `.rds`. Column names are fre
 | autism diagnosis | no | yes / no per person |
 | SRS total, SCQ total | no | raw totals, on any one row of the person; controls need the same questionnaire |
 | age at questionnaire | no | if missing, the age of the row that holds the score is used |
-| cohort / clinic | no | added as a covariate where the paper adds cohort (longitudinal models: within one genotype only; pooled models are adjusted for genotype, not cohort) |
+| cohort / clinic | no | added as a covariate where the paper adds cohort (models of one genotype: a cohort term; pooled models: one intercept per cohort within genotype) |
 
 Repeated visits are welcome: they feed the longitudinal models. Controls should not carry any of the four CNVs.
 
@@ -113,7 +113,7 @@ with a genotype term, then a heterogeneity test.
 - **Sex.** `CNV x BMI` within each sex, and the `CNV x BMI x sex` term, per band and for all ages.
 - **Longitudinal** (`80_longitudinal_v2.R`). Children under 18. All cleaned visits.
   `change in Z to the next visit ~ Z at the visit + interval + sex (+ cohort | + genotype) + ns(age, 3) + BMI Z + (1 | child)`:
-  cohort in the models of one genotype, genotype (and not cohort) in the pooled model (changed 2026-11-21, because cohort and genotype are confounded).
+  cohort in the models of one genotype, one intercept per cohort within genotype in the pooled model (2026-11-21, because cohort and genotype are confounded).
   Height pairs are at least 0.5 y apart, windows 2-8, 8-13, 13-18 y. Head-circumference pairs are at least 0.1 y apart,
   windows under 2, 2-5, 5-18 y. Controls with repeated visits get the same model (new; the paper has none).
 - **Autism diagnosis** (`85_v2_asd_by_cnv.R`), if given. Height, head circumference and BMI Z in carriers with and without

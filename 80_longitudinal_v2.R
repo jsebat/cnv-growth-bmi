@@ -5,9 +5,9 @@
 #   22q11.2 A-D deletions and duplications). It replaces the grant-figure code (COMET_ASD_ARPAH/analysis A1, A4, A7, A8), whose
 #   numbers are compared with the ones produced here (compare_with_grant_version.csv).
 #
-# Model (per genotype, adjusted for cohort; then all four CNVs adjusted for genotype and not for cohort, because cohort and
-#   genotype are largely confounded (JS 2026-11-21); then heterogeneity across genotypes):
-#   change in Z to the next visit ~ Z at the visit + interval + sex (+ cohort | + genotype) + ns(age at the visit, 3)
+# Model (per genotype, adjusted for cohort; then all four CNVs with one intercept per cohort within genotype, because cohort and
+#   genotype are partly confounded (JS 2026-11-21); then heterogeneity across genotypes):
+#   change in Z to the next visit ~ Z at the visit + interval + sex (+ cohort | + cohort within genotype) + ns(age at the visit, 3)
 #                                   + BMI Z at the visit + (1 | child)                      [lmerTest, REML, Satterthwaite P]
 #   by age window : the same model with  window + window:BMI  in place of BMI (window = age at the first visit of the pair);
 #                   head circumference < 2, 2-5, 5-18 y; height 2-8, 8-13, 13-18 y (windows of 05_age_varying.R / 07_hc_trajectories.R)
@@ -126,15 +126,18 @@ fwrite(rbind(cbind(outcome = "Height", LOG_H), cbind(outcome = "Head circumferen
 
 # ---------------------------------------------------------------- models
 adj <- function(x, v) if (uniqueN(x[[v]]) > 1) paste("+", v) else ""
-# Cohort adjustment (JS 2026-11-21): cohort and genotype are largely confounded (CHOP has only 22q11.2 carriers, Simons VIP and
-# Searchlight only 16p11.2), so a model that pools genotypes is adjusted for genotype and NOT for cohort. Cohort enters only
-# within one genotype (per-genotype models). COH_POOLED = TRUE restores the earlier pooled adjustment (sensitivity row).
-COH_POOLED <- FALSE
-adjc <- function(x) if (COH_POOLED || uniqueN(x$locus) == 1) adj(x, "cohort") else ""
-with_cohort <- function(expr) { COH_POOLED <<- TRUE; on.exit(COH_POOLED <<- FALSE); force(expr) }
-core <- function(x) paste("dZ ~ Z0 + dt", adj(x, "sex"), adjc(x), adj(x, "locus"), "+ ns(age0, 3)")
+# Cohort adjustment (JS 2026-11-21, final rule of the paper): cohort and genotype are partly confounded (CHOP has only 22q11.2
+# carriers, Simons VIP and Searchlight only 16p11.2). A model of one genotype carries a cohort term. A model that pools genotypes
+# carries one intercept per cohort within genotype (cg = cohort x genotype cell), which removes cohort differences inside a genotype
+# without using cohort to explain differences between genotypes. COH_MODE: "cg" (primary), "additive" (cohort + genotype, primary
+# until 2026-11-20) or "genotype" (genotype only, tried on 2026-11-21); the last two are sensitivity rows. The three agree within 0.003.
+COH_MODE <- "cg"
+adjc <- function(x) if (uniqueN(x$locus) == 1) adj(x, "cohort") else switch(COH_MODE,
+  cg = if (uniqueN(paste(x$cohort, x$locus)) > 1) "+ cg" else "", additive = paste(adj(x, "cohort"), "+ locus"), genotype = "+ locus")
+with_mode <- function(mode, expr) { old <- COH_MODE; COH_MODE <<- mode; on.exit(COH_MODE <<- old); force(expr) }
+core <- function(x) paste("dZ ~ Z0 + dt", adj(x, "sex"), adjc(x), "+ ns(age0, 3)")
 fitm <- function(f, x, REML = TRUE) suppressMessages(suppressWarnings(
-  if (anyDuplicated(x$id)) lmer(as.formula(paste(f, "+ (1 | id)")), x, REML = REML) else lm(as.formula(f), x)))
+  { x <- as.data.frame(x); x$cg <- factor(paste(x$cohort, x$locus)); if (anyDuplicated(x$id)) lmer(as.formula(paste(f, "+ (1 | id)")), x, REML = REML) else lm(as.formula(f), x) }))
 crow <- function(m, pat) { co <- coef(summary(m)); r <- grep(pat, rownames(co)); data.table(term = rownames(co)[r], beta = co[r, 1], se = co[r, 2], p = co[r, ncol(co)]) }
 lrt <- function(m0, m1) tryCatch({ a <- suppressMessages(anova(m0, m1)); p <- a[[grep("^Pr", names(a))]]; p[2] }, error = function(e) NA_real_)
 NAROW <- data.table(beta = NA_real_, se = NA_real_, p = NA_real_)
@@ -173,7 +176,7 @@ fwrite(RC, file.path(OUT, "results_head_circumference.csv")); fwrite(RH, file.pa
 
 # stratified-by-window fits (the form used in the grant code A8: a separate model per window, no age spline), for comparison
 strat_win <- function(I, outcome) rbindlist(lapply(c(LOCI, ALL), function(g) rbindlist(lapply(levels(I$win), function(w) { x <- sub_g(I, g)[win == w]
-  r <- if (uniqueN(x$id) < MINKIDS) NAROW else tryCatch(crow(fitm(paste("dZ ~ B0 + Z0 + dt", adj(x, "sex"), adjc(x), adj(x, "locus")), x), "^B0$")[, .(beta, se, p)], error = function(e) NAROW)
+  r <- if (uniqueN(x$id) < MINKIDS) NAROW else tryCatch(crow(fitm(paste("dZ ~ B0 + Z0 + dt", adj(x, "sex"), adjc(x)), x), "^B0$")[, .(beta, se, p)], error = function(e) NAROW)
   cbind(data.table(outcome = outcome, genotype = g, scope = w, children = uniqueN(x$id), pairs = nrow(x)), r) }))))
 SW <- rbind(strat_win(IH, "Height"), strat_win(IC, "Head circumference"))
 fwrite(SW, file.path(OUT, "results_by_window_separate_models.csv"))
@@ -265,7 +268,8 @@ sens_one <- function(I, outcome, wins, label) { if (!nrow(I)) return(NULL)
 Hc <- build_height("cs_chop"); Cc <- build_hc("cs_chop"); Ha <- build_height("cs_all"); Ca <- build_hc("cs_all"); Ct <- build_hc(chop_source = "table")
 sens_all <- function(I, Ics, Ica, outcome, wins, Itab = NULL) rbindlist(list(
   sens_one(I, outcome, wins, "PRIMARY"),
-  with_cohort(sens_one(I, outcome, wins, "Pooled models also adjusted for cohort (primary until 2026-11-21; per-genotype rows identical to PRIMARY)")),
+  with_mode("additive", sens_one(I, outcome, wins, "Pooled models with separate cohort and genotype terms (primary until 2026-11-20; per-genotype rows identical to PRIMARY)")),
+  with_mode("genotype", sens_one(I, outcome, wins, "Pooled models with a genotype term and no cohort term (per-genotype rows identical to PRIMARY)")),
   sens_one(first_iv(I), outcome, wins, "One interval per child (the first)"),
   sens_one(I[dt >= 0.5 & dt <= 3], outcome, wins, "Intervals of 0.5-3 y only"),
   sens_one(I[cohort != "CHOP"], outcome, wins, "CHOP excluded"),

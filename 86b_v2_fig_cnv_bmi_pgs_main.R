@@ -27,7 +27,7 @@ f3 <- X3[, { f <- lm(ya ~ BMI); g <- seq(quantile(BMI, 0.02), quantile(BMI, 0.98
 rel <- RELf(XG[pheno == "SRS"]); mr0 <- lm(y ~ poly(age, 2) + male + BMI, rel); rl <- data.table(BMI = c(-2.8, 3.8))[, fit := mean(rel$y) + coef(mr0)[["BMI"]] * (BMI - mean(rel$BMI))]
 HC2 <- setNames(c(C_LOW, C_HIGH), lab)
 # tests printed on panel a (JS 2026-11-21): continuous score, from 86_v2_cnv_bmi_pgs_stats.R (RB = threeway_pgs_robustness.csv)
-ra2 <- RB[trait == "SRS" & analysis == "within carriers BMI x autism score (cohort x BMI and cohort x score terms)" & subset == "all carriers"]
+ra2 <- RB[trait == "SRS" & analysis == "within carriers BMI x autism score (no cohort interaction terms)" & subset == "all carriers"]   # cohort-within-CNV intercepts only, as every pooled model of the paper
 ra3 <- RB[trait == "SRS" & analysis == A3 & subset == "all carriers"]; stopifnot(nrow(ra2) == 1, nrow(ra3) == 1)
 pa <- ggplot(X3, aes(BMI, ya, colour = hl)) + geom_point(size = 1.5, alpha = 0.45) +
   geom_line(data = rl, aes(BMI, fit), inherit.aes = FALSE, colour = C_NON, linewidth = 0.9) +

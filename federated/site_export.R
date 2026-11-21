@@ -380,16 +380,16 @@ run_site_export <- function(cfg = list(), data = NULL, write = TRUE, keep_data =
         list(I = iv, log = data.table(outcome = "Head circumference", visits_before_cleaning = n0, visits_kept = nrow(d), as.data.table(as.list(table(factor(cl$why, c("duplicate_visit", "carried_forward", "impossible_change", "jump_gt_2.5SD")))))))
       }
       adj <- function(x, v) if (uniqueN(x[[v]]) > 1) paste("+", v) else ""
-      # cohort enters only within one genotype; a model that pools genotypes is adjusted for genotype and not for cohort,
-      # because cohort and genotype can be confounded (JS 2026-11-21; same rule as 80_longitudinal_v2.R)
-      adjc <- function(x) if (uniqueN(x$locus) == 1) adj(x, "cohort") else ""
-      core <- function(x) paste("dZ ~ Z0 + dt", adj(x, "sex"), adjc(x), adj(x, "locus"), "+ ns(age0, 3)")
+      # a model of one genotype carries a cohort term; a model that pools genotypes carries one intercept per cohort within genotype
+      # (cg), because cohort and genotype can be confounded (JS 2026-11-21; same rule as 80_longitudinal_v2.R)
+      adjc <- function(x) if (uniqueN(x$locus) == 1) adj(x, "cohort") else if (uniqueN(paste(x$cohort, x$locus)) > 1) "+ cg" else ""
+      core <- function(x) paste("dZ ~ Z0 + dt", adj(x, "sex"), adjc(x), "+ ns(age0, 3)")
       fitm <- function(f, x, REML = TRUE) suppressMessages(suppressWarnings(
-        if (anyDuplicated(x$id)) lmerTest::lmer(as.formula(paste(f, "+ (1 | id)")), x, REML = REML) else lm(as.formula(f), x)))
+        { x <- as.data.frame(x); x$cg <- factor(paste(x$cohort, x$locus)); if (anyDuplicated(x$id)) lmerTest::lmer(as.formula(paste(f, "+ (1 | id)")), x, REML = REML) else lm(as.formula(f), x) }))
       crow <- function(m, pat) { co <- coef(summary(m)); r <- grep(pat, rownames(co)); data.table(term = rownames(co)[r], beta = co[r, 1], se = co[r, 2], p = co[r, ncol(co)]) }
       lrt <- function(m0, m1) tryCatch({ a <- suppressMessages(anova(m0, m1)); p <- a[[grep("^Pr", names(a))]]; p[2] }, error = function(e) NA_real_)
       LMM <- "linear mixed model, REML, child random intercept, Satterthwaite t (lmerTest); lm when every child has one interval"
-      MODL <- "change in Z to the next visit ~ Z at the visit + interval + sex (+ cohort within one genotype | + genotype when pooled) + ns(age at the visit, 3) + BMI Z at the visit + (1 | child)"
+      MODL <- "change in Z to the next visit ~ Z at the visit + interval + sex (+ cohort within one genotype | + cohort-within-genotype intercepts when pooled) + ns(age at the visit, 3) + BMI Z at the visit + (1 | child)"
       nkid <- function(n) if (n > 0 && n < minc) paste0("<", minc) else as.character(n)
       run_set <- function(I, o, wins, groups, paper) { hid <- FALSE
         for (g in groups) { x <- if (g == POOL) I[locus %in% LOCI] else I[locus == g]; if (!nrow(x)) next
