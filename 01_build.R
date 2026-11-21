@@ -23,11 +23,17 @@ g <- fread(file.path(DB, "G2MH/NetworkPaper/AnalysisByMolly/Clinical/genomatrix/
 g <- g[!(cohort == "G2MH" & Cardiff_mask == TRUE)]
 g[, CNV := trimws(CNV)]
 source(file.path(HERE, "00_add_chusj.R")); g <- add_chusj(g)   # JS 2026-11-02: CHU Sainte-Justine archival carriers (ARPA-H Montreal)
+source(file.path(HERE, "00_add_chop.R")); g <- add_chop(g)   # JS 2026-11-19: CHOP 22q11.2 A-D growth records; overlap rule in 00_add_chop.R
+# JS 2026-11-20: control set corrected (00_control_set.R; CONTROL_SET = "unaffected" by default, "paper_2026-11-19" = the old set in
+# which the SSC autistic probands were the child controls). Flagged non-controls keep their rows under their own locus labels.
+source(file.path(HERE, "00_control_set.R")); g <- apply_control_set(g, DB)
 lab <- c("16p11.2 proximal DEL" = "16p11.2 del", "16p11.2 proximal DUP" = "16p11.2 dup",
          "22q11.2 A-D DEL" = "22q11.2 del", "22q11.2 A-D DUP" = "22q11.2 dup", "No CNV" = "No CNV")
+lab <- c(lab, setNames(CONTROL_FLAGS, CONTROL_FLAGS))   # flagged non-carriers that are not controls (empty levels under CONTROL_SET = paper_2026-11-19)
 g <- g[CNV %in% names(lab)]
 g[, locus := factor(lab[CNV], levels = lab)]
 g[, id := paste(cohort, MSassigned_ID, sep = ":")]
+g[is.na(family), family := id]   # family id for clustered standard errors (SSC / SVIP family; own id otherwise)
 g[, sex := factor(ifelse(sex_numeric == 1, "male", ifelse(sex_numeric == 2, "female", NA)))]
 # JS 2026-10-24: (1) SSC parent ages in the genomatrix are a 2012-09 snapshot, ~3 y older than the visit; replace by visit age
 # (proband age at evaluation + birth-month difference; see README_ages_and_line_endings.md in the SSC folder). (2) Plausibility
@@ -59,8 +65,13 @@ setorder(g, id, age)
 
 keep <- c("id", "cohort", "locus", "sex", "age", "visit", "n_visits", "latest", "HEIGHT", "BMI", "HEADCIRCUM",
           "HEIGHT_raw", "BMI_raw", "HEADCIRCUM_raw", "stimulant", "antipsychotic")
+keep <- c(keep, "family", "control_role")   # JS 2026-11-20 (00_control_set.R)
+keep <- c(keep, "asd")   # JS 2026-11-19: ASD diagnosis where the source supplies it (CHOP); NA elsewhere (other cohorts take ASD from their releases)
 tab <- g[, ..keep]
-saveRDS(tab, file.path(DATA, "analysis_table.rds"))
+# JS 2026-11-19: the CHOP build is written to its own file (ANALYSIS_TABLE_OUT); analysis_table.rds keeps the pre-CHOP build
+# JS 2026-11-20: the default output name follows the control set, so a default run can never overwrite the 2026-11-19 table
+DEFAULT_OUT <- if (Sys.getenv("CONTROL_SET", "unaffected") == "unaffected") "analysis_table_chop_unaffctl_2026-11-20.rds" else "analysis_table_chop_oldctl_rebuild.rds"
+saveRDS(tab, file.path(DATA, Sys.getenv("ANALYSIS_TABLE_OUT", DEFAULT_OUT)))
 
 cat("rows", nrow(tab), " persons", uniqueN(tab$id), "\n")
 print(dcast(tab[latest == TRUE], locus ~ cohort, fun.aggregate = length, value.var = "id"))

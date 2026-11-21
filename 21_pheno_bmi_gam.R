@@ -29,6 +29,7 @@
 suppressPackageStartupMessages({ library(data.table); library(mgcv); library(ggplot2); library(patchwork) })
 DB   <- "C:/Users/Jonathan Sebat/sebatlab Dropbox"
 HERE <- file.path(DB, "Manuscripts/PGC_joint_submission/Molly/CNV_ASD_growth_analysis/CNV_growth_trajectories")
+OUTD <- Sys.getenv("OUT_DIR", HERE); dir.create(OUTD, showWarnings = FALSE, recursive = TRUE)   # JS 2026-11-19: outputs of a variant run go to OUT_DIR
 DATA <- file.path(DB, "Jon/Claude/CNV_growth_trajectories_data")
 SSC  <- file.path(DB, "Autism/SSC_Version_15_Phenotype_Data_Set_9")
 source(file.path(HERE, "00_scoring.R"))
@@ -177,7 +178,7 @@ CNB_PH <- c("CNB accuracy", "CNB speed")
 D <- rbind(rbindlist(lapply(setdiff(PHEN, CNB_PH), mk), fill = TRUE), mk_cnb("accuracy", "CNB accuracy"), mk_cnb("speed", "CNB speed"), fill = TRUE)
 D[, tail := fifelse(BMI >= qnorm(.7), "BMI \u2265 70th centile", fifelse(BMI <= qnorm(.3), "BMI \u2264 30th centile", NA_character_))]
 smp <- D[, .(n = .N, n_hi = sum(tail == "BMI \u2265 70th centile", na.rm = TRUE), n_lo = sum(tail == "BMI \u2264 30th centile", na.rm = TRUE), age_med = as.numeric(median(age)), mean_y = mean(y)), by = .(pheno, locus)][order(pheno, locus)]
-fwrite(smp, file.path(HERE, "pheno_bmi_sample.csv")); cat("\n== sample\n"); print(smp)
+fwrite(smp, file.path(OUTD, "pheno_bmi_sample.csv")); cat("\n== sample\n"); print(smp)
 
 # ---------------------------------------------------------------- ASD status (JS 2026-10-24, Jon): covariate in every model + stratified sensitivity
 # SSC: probands = ASD, siblings / parents / other siblings = no ASD. G2MH carriers: the ASD assignment used for panels F/L
@@ -264,7 +265,7 @@ ssc_rows[, asd_adjustment := fifelse(grepl("ASD-adjusted", comparison), "covaria
 res <- rbind(res, ssc_rows, fill = TRUE)
 setcolorder(res, intersect(c("pheno", "group", "comparison", "asd_adjustment", "n_cnv", "n_cnv_asd", "n_cnv_noasd", "n_cnv_hi", "n_cnv_lo", "n_ctl", "n_ctl_unaffected", "cnv_main_z", "cnv_main_p", "cnv_x_bmi", "cnv_x_bmi_se", "cnv_x_bmi_p", "cnv_x_age_x_bmi_p",
                              "carrier_bmi_slope", "carrier_bmi_se", "carrier_bmi_p", "within_age_x_bmi_p", "unaff_cnv_x_bmi", "unaff_cnv_x_bmi_p", "unaff_cnv_x_age_x_bmi_p", "note"), names(res)))
-fwrite(res, file.path(HERE, "pheno_bmi_gam_tests.csv"))
+fwrite(res, file.path(OUTD, "pheno_bmi_gam_tests.csv"))
 cat("\n== tests\n")
 print(res[, .(pheno, group = substr(group, 1, 18), comparison = substr(comparison, 1, 36), n_cnv, n_ctl, grp_bmi = round(carrier_bmi_slope, 3), p_grp_bmi = signif(carrier_bmi_p, 2), p_within = signif(within_age_x_bmi_p, 2),
               cnv_x_bmi = round(cnv_x_bmi, 3), p_cnv_x_bmi = signif(cnv_x_bmi_p, 2), p_3way = signif(cnv_x_age_x_bmi_p, 2), p_unaff_cxb = signif(unaff_cnv_x_bmi_p, 2))], nrows = 300)
@@ -307,7 +308,7 @@ panel <- function(ph, G, show_title) {
 # JS 2026-10-24 (Jon): no control row for the CNB (controls have no BMI; CNB tests are within carriers)
 pl <- list(); for (ph in PHEN) for (G in GROUPS) pl[[paste(ph, G)]] <- if (ph %in% CNB_PH && G == "No CNV") ggplot() + theme_void() + labs(title = ph) + theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 13)) else panel(ph, G, G == "No CNV")
 fig <- wrap_plots(pl, ncol = length(PHEN), byrow = FALSE) + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 16, face = "bold"))
-ggsave(file.path(HERE, "fig_supp_pheno_bmi_gam.png"), fig, width = 28, height = 20, dpi = 130)
-tryCatch(ggsave(file.path(HERE, "fig_supp_pheno_bmi_gam.pdf"), fig, width = 28, height = 20, device = cairo_pdf), error = function(e) ggsave(file.path(HERE, "fig_supp_pheno_bmi_gam.pdf"), fig, width = 28, height = 20))
+ggsave(file.path(OUTD, "fig_supp_pheno_bmi_gam.png"), fig, width = 28, height = 20, dpi = 130)
+tryCatch(ggsave(file.path(OUTD, "fig_supp_pheno_bmi_gam.pdf"), fig, width = 28, height = 20, device = cairo_pdf), error = function(e) ggsave(file.path(OUTD, "fig_supp_pheno_bmi_gam.pdf"), fig, width = 28, height = 20))
 cat("done\n")
 }

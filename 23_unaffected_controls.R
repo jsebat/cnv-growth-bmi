@@ -15,6 +15,7 @@
 # Table: unaffected_controls_tests.csv
 Sys.setenv(PHENO_RUN_TESTS = "FALSE", PHENO_DRAW_FIG = "FALSE")
 HERE <- "C:/Users/Jonathan Sebat/sebatlab Dropbox/Manuscripts/PGC_joint_submission/Molly/CNV_ASD_growth_analysis/CNV_growth_trajectories"
+OUTD <- Sys.getenv("OUT_DIR", HERE); dir.create(OUTD, showWarnings = FALSE, recursive = TRUE)   # JS 2026-11-19: outputs of a variant run go to OUT_DIR
 source(file.path(HERE, "21_pheno_bmi_gam.R"))   # D (phenotypes), gm, rd(), bmiZ(), score_*(), pfx, LOCI, lab4, agef, SSC, DB, DATA
 t0 <- Sys.time()
 
@@ -33,6 +34,18 @@ asd_of <- function(cohort, sampleID, GUID) fifelse(cohort %in% c("G2MH", "Cardif
 gmc <- gm[!(cohort == "G2MH" & Cardiff_mask %in% TRUE) & !is.na(BMI_raw) & !is.na(age) & age >= 2 & age <= 65]
 gmc[, id := ifelse(cohort == "SVIP", paste0("SVIP:", sampleID), paste(cohort, ifelse(is.na(MSassigned_ID) | MSassigned_ID == "", sampleID, MSassigned_ID), sep = ":"))]
 gmc[, asd := asd_of(cohort, sampleID, GUID)]
+# JS 2026-11-19: CHOP 22q11.2 A-D records (ADD_CHOP=TRUE), ASD from the CHOP index; G2MH carriers of the CHOP site removed
+# (overlap rule of 00_add_chop.R). One visit per person by 00_select_visit.R (VISIT_RULE; fill_gaps by default when ADD_CHOP).
+if (Sys.getenv("ADD_CHOP", "FALSE") == "TRUE") {
+  source(file.path(HERE, "00_add_chop.R")); source(file.path(HERE, "00_select_visit.R"))
+  drop <- gmc$cohort == "G2MH" & grepl("^203-", gmc$MSassigned_ID) & grepl("^22q11.2", gmc$CNV)
+  cat("CHOP: removed", sum(drop), "G2MH CHOP-site 22q11.2 rows
+"); gmc <- gmc[!drop]
+  ch <- chop_rows()[!is.na(BMI_raw) & age >= 2 & age <= 65]
+  ch[, `:=`(id = paste0("CHOP:", MSassigned_ID), sex = ifelse(sex_numeric == 1, "male", ifelse(sex_numeric == 2, "female", NA)))]
+  gmc <- rbind(gmc, ch, fill = TRUE); cat("CHOP: added", nrow(ch), "encounters,", uniqueN(ch$id), "carriers
+")
+}
 # SSC siblings (not in the genomatrix with measurements): height, weight, head circumference from the SSC sibling table
 cu <- rd("Designated Unaffected Sibling Data", "ssc_commonly_used.csv")[, .(sampleID = individual, h = suppressWarnings(as.numeric(height)), w = suppressWarnings(as.numeric(weight)), hc = suppressWarnings(as.numeric(head_circumference)))]
 sibage <- sibage[, .(sampleID = id, sex, age)]   # sibling age at the proband evaluation visit (see 21_pheno_bmi_gam.R)
@@ -44,7 +57,7 @@ ctl_g[, locus := "Unaffected controls"]
 car_g <- gmc[CNV %in% names(lab4), .(id, cohort, sampleID, GUID, CNV, sex, age, HEIGHT_raw, BMI_raw, HEADCIRCUM_raw, asd)][, locus := lab4[CNV]]
 mk_growth <- function(x, raw, ph) {
   x <- x[!is.na(get(raw))][if (ph == "Height") cohort != "Searchlight" | TRUE else cohort != "Searchlight"]   # Searchlight has no HC
-  x <- x[order(id, -age)][, .SD[1], by = id]
+  x <- if (Sys.getenv("ADD_CHOP", "FALSE") == "TRUE") { z <- select_visit(x, raw); z[, c("band", "rule_changed") := NULL]; z } else x[order(id, -age)][, .SD[1], by = id]
   x[, y := if (ph == "Height") score_height(get(raw), age, sex) else score_hc(get(raw), age, sex)][, BMI := bmiZ(BMI_raw, age, sex)]
   x[!is.na(y) & !is.na(BMI), .(id, cohort, locus, sex, age, BMI, raw = get(raw), y, pheno = ph, asd, unaffected = locus == "Unaffected controls", role = ifelse(locus == "Unaffected controls", "unaffected", "carrier"))]
 }
@@ -93,7 +106,7 @@ ctl_rows <- rbindlist(lapply(PHEN_C, function(ph) { x <- A[pheno == ph & locus =
   data.table(pheno = ph, group = "Unaffected controls", comparison = "within unaffected controls: BMI effect and age x BMI", n_ctl = nrow(x), carrier_bmi_slope = b[1], carrier_bmi_se = b[2], carrier_bmi_p = b[3], within_age_x_bmi_p = within_p(copy(x))) }))
 res <- rbind(res, ctl_rows, fill = TRUE)
 setcolorder(res, intersect(c("pheno", "group", "comparison", "n_cnv", "n_cnv_asd", "n_cnv_noasd", "n_cnv_hi", "n_cnv_lo", "n_ctl", "cnv_main_z", "cnv_main_p", "cnv_x_bmi", "cnv_x_bmi_se", "cnv_x_bmi_p", "cnv_x_age_x_bmi_p", "carrier_bmi_slope", "carrier_bmi_se", "carrier_bmi_p", "within_age_x_bmi_p"), names(res)))
-fwrite(res, file.path(HERE, "unaffected_controls_tests.csv"))
+fwrite(res, file.path(OUTD, "unaffected_controls_tests.csv"))
 cat("\n== tests\n"); print(res[, .(pheno, group = substr(group, 1, 16), comparison = substr(comparison, 1, 40), n_cnv, n_ctl, bmi = round(carrier_bmi_slope, 3), p_bmi = signif(carrier_bmi_p, 2), p_age_bmi = signif(within_age_x_bmi_p, 2), cxb = round(cnv_x_bmi, 3), p_cxb = signif(cnv_x_bmi_p, 2), p_3way = signif(cnv_x_age_x_bmi_p, 2))], nrows = 300)
 
 # ---------------------------------------------------------------- figures
@@ -119,11 +132,11 @@ if (toupper(Sys.getenv("UNAFF_DRAW_FIG", "TRUE")) != "FALSE") {   # 25_main_figu
 GR1 <- c("Unaffected controls", LOCI)
 p1 <- list(); for (ph in PHEN_C) for (Gn in GR1) p1[[paste(ph, Gn)]] <- panel(ph, Gn, Gn == GR1[1], "controls")
 f1 <- wrap_plots(p1, ncol = length(PHEN_C), byrow = FALSE) + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 16, face = "bold"))
-ggsave(file.path(HERE, "fig_unaffected_controls.png"), f1, width = 20, height = 20, dpi = 140)
-tryCatch(ggsave(file.path(HERE, "fig_unaffected_controls.pdf"), f1, width = 20, height = 20, device = cairo_pdf), error = function(e) ggsave(file.path(HERE, "fig_unaffected_controls.pdf"), f1, width = 20, height = 20))
+ggsave(file.path(OUTD, "fig_unaffected_controls.png"), f1, width = 20, height = 20, dpi = 140)
+tryCatch(ggsave(file.path(OUTD, "fig_unaffected_controls.pdf"), f1, width = 20, height = 20, device = cairo_pdf), error = function(e) ggsave(file.path(OUTD, "fig_unaffected_controls.pdf"), f1, width = 20, height = 20))
 p2 <- list(); for (ph in PHEN_O) for (Gn in LOCI) p2[[paste(ph, Gn)]] <- panel(ph, Gn, Gn == LOCI[1], "carriers")
 f2 <- wrap_plots(p2, ncol = length(PHEN_O), byrow = FALSE) + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 16, face = "bold"))
-ggsave(file.path(HERE, "fig_carriers_only_trajectories.png"), f2, width = 28, height = 16, dpi = 130)
-tryCatch(ggsave(file.path(HERE, "fig_carriers_only_trajectories.pdf"), f2, width = 28, height = 16, device = cairo_pdf), error = function(e) ggsave(file.path(HERE, "fig_carriers_only_trajectories.pdf"), f2, width = 28, height = 16))
+ggsave(file.path(OUTD, "fig_carriers_only_trajectories.png"), f2, width = 28, height = 16, dpi = 130)
+tryCatch(ggsave(file.path(OUTD, "fig_carriers_only_trajectories.pdf"), f2, width = 28, height = 16, device = cairo_pdf), error = function(e) ggsave(file.path(OUTD, "fig_carriers_only_trajectories.pdf"), f2, width = 28, height = 16))
 }
 cat("done in", format(round(difftime(Sys.time(), t0, units = "mins"), 1)), "min\n")

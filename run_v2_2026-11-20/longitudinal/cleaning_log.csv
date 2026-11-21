@@ -1,0 +1,11 @@
+outcome,cohort,visits_before,children_before,visits_kept,a_duplicate_visit,b_carried_forward,c_impossible_change,d_jump_gt_2.5SD,kept_with_bmi,carried_forward,duplicate_visit,impossible_change,jump_gt_2.5SD
+Height,CHOP,17819,653,6787,10807,93,130,2,,,,,
+Height,CHUSJ,30,30,30,,,,,,,,,
+Height,Cardiff,323,163,319,0,1,1,2,,,,,
+Height,G2MH,248,248,248,,,,,,,,,
+Height,SSC,15,15,15,,,,,,,,,
+Height,SVIP,699,228,466,192,18,14,9,,,,,
+Height,Searchlight,104,67,100,0,2,2,0,,,,,
+Head circumference,CHOP,3451,496,2466,,,,,2295,40,905,26,14
+Head circumference,Cardiff,257,159,257,,,,,247,,,,
+Head circumference,SVIP,680,179,680,,,,,632,,,,

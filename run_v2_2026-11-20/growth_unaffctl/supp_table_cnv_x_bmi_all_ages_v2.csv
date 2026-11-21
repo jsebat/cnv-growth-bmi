@@ -1,0 +1,27 @@
+Quantity,Outcome,Group,Model,Carriers (n),Controls (n),Estimate,SE,Chi-square,F,df,P
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Height,16p11.2 del,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",510,55852,-0.028,0.0341,,,,0.412
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Head circumference,16p11.2 del,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",229,5827,0.1287,0.048,,,,0.00736
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Height,16p11.2 dup,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",380,55852,-0.1067,0.0438,,,,0.0147
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Head circumference,16p11.2 dup,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",143,5827,-0.0667,0.0672,,,,0.322
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Height,22q11.2 del,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",970,55852,0.023,0.0305,,,,0.451
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Head circumference,22q11.2 del,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",611,5827,-0.0671,0.0354,,,,0.0582
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Height,22q11.2 dup,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",450,55852,0.0463,0.0392,,,,0.237
+"CNV x BMI, all ages, age-adjusted (est_main of 17)",Head circumference,22q11.2 dup,"y ~ is_cnv + s(age, by = is_cnv) + s(age, by = BMI) + CNV x BMI",131,5827,0.2503,0.0686,,,,0.000265
+"CNV x BMI, all ages, pooled carriers (new)",Height,All four CNVs,"est_main form, no locus term",2310,55852,-0.0524,0.02,,,,0.00896
+"CNV x BMI, all ages, pooled carriers (new)",Height,All four CNVs,est_main form + locus (primary),2310,55852,-0.034,0.0208,,,,0.102
+"CNV x BMI, all ages, pooled carriers (new)",Height,All four CNVs,"locus-specific age curves (omnibus model of 38, one CNV x BMI term)",2310,55852,-4e-04,0.021,,,,0.986
+"CNV x BMI, all ages, pooled carriers (new)",Head circumference,All four CNVs,"est_main form, no locus term",1114,5827,0.0959,0.0281,,,,0.00065
+"CNV x BMI, all ages, pooled carriers (new)",Head circumference,All four CNVs,est_main form + locus (primary),1114,5827,6e-04,0.0284,,,,0.984
+"CNV x BMI, all ages, pooled carriers (new)",Head circumference,All four CNVs,"locus-specific age curves (omnibus model of 38, one CNV x BMI term)",1114,5827,0.0108,0.0286,,,,0.705
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Height,16p11.2 del,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,-0.0452,0.0336,,,,0.178
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Height,16p11.2 dup,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,-0.109,0.0437,,,,0.0125
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Height,22q11.2 del,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,0.0385,0.0297,,,,0.196
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Height,22q11.2 dup,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,0.0697,0.0397,,,,0.079
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Head circumference,16p11.2 del,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,0.1215,0.0489,,,,0.0129
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Head circumference,16p11.2 dup,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,-0.0709,0.069,,,,0.304
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Head circumference,22q11.2 del,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,-0.0718,0.0356,,,,0.0441
+"CNV_k x BMI in the five-group model (38, omnibus_contrast)",Head circumference,22q11.2 dup,"y ~ group + s(age, by = group) + s(age, by = BMI) + sum CNV_k x BMI",,,0.2507,0.0702,,,,0.000354
+five-group omnibus: BMI effect differs by genotype (38),Height,Controls + four CNVs,joint Wald test of the four CNV_k x BMI terms,,,,,14.6,,4,0.00561
+five-group omnibus: BMI effect differs by genotype (38),Head circumference,Controls + four CNVs,joint Wald test of the four CNV_k x BMI terms,,,,,27.17,,4,1.84e-05
+"heterogeneity across the four CNVs, carriers only (38)",Height,four CNVs,"y ~ s(age, by = locus) + locus + BMI + locus:BMI, Wald F of locus:BMI",,,,,,3.77,3,0.0102
+"heterogeneity across the four CNVs, carriers only (38)",Head circumference,four CNVs,"y ~ s(age, by = locus) + locus + BMI + locus:BMI, Wald F of locus:BMI",,,,,,7.02,3,0.000112

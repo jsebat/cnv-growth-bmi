@@ -1,0 +1,17 @@
+pheno,grp,sex,G2MH,SSC,SVIP,Searchlight
+SCQ,16p11.2 del,female,35,0,40,40
+SCQ,16p11.2 del,male,35,3,47,59
+SCQ,16p11.2 dup,female,14,1,16,12
+SCQ,16p11.2 dup,male,8,5,22,20
+SCQ,22q11.2 del,female,149,0,0,0
+SCQ,22q11.2 del,male,126,0,0,0
+SCQ,22q11.2 dup,female,30,0,0,0
+SCQ,22q11.2 dup,male,26,1,0,0
+SRS,16p11.2 del,female,46,3,43,34
+SRS,16p11.2 del,male,45,5,51,52
+SRS,16p11.2 dup,female,19,3,28,14
+SRS,16p11.2 dup,male,18,5,37,16
+SRS,22q11.2 del,female,168,0,0,0
+SRS,22q11.2 del,male,149,0,0,0
+SRS,22q11.2 dup,female,39,0,0,0
+SRS,22q11.2 dup,male,38,1,0,0

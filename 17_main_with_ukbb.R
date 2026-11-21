@@ -36,8 +36,13 @@ tail_of <- function(z) factor(ifelse(z >= qnorm(.7), names(COLS)[1], ifelse(z <=
 # pooled cross-cohort adult BMI centile scale of 2026-10-13 is replaced. Non-carrier adults therefore have mean 0 in
 # every cohort by construction; the panels read carrier minus same-cohort non-carrier at each age.
 source(file.path(WD, "00_scoring.R"))
-cl <- readRDS(file.path(WD, "analysis_table.rds"))[!is.na(sex) & age >= 2 & age <= 73]
-latest <- function(raw) cl[!is.na(cl[[raw]]) & !is.na(BMI_raw)][order(id, -age)][, .SD[1], by = id]
+# JS 2026-11-19: input table and output folder configurable (ANALYSIS_TABLE, OUT_DIR); one visit per person chosen by
+# 00_select_visit.R (VISIT_RULE = "fill_gaps" fills the youngest and 19-40 y bands; "latest" = the previous rule).
+cl <- readRDS(Sys.getenv("ANALYSIS_TABLE", file.path(WD, "analysis_table.rds")))[!is.na(sex) & age >= 2 & age <= 73]
+OUTD <- Sys.getenv("OUT_DIR", WD); dir.create(OUTD, showWarnings = FALSE, recursive = TRUE)
+source(file.path(WD, "00_select_visit.R"))
+latest <- function(raw) { s <- select_visit(cl, raw); s[, c("band", "rule_changed") := NULL]; s }
+for (rw in c("HEIGHT_raw", "HEADCIRCUM_raw")) fwrite(visit_selection_table(cl, rw), file.path(OUTD, paste0("visit_selection_", sub("_raw", "", rw), ".csv")))
 
 UKF <- "/expanse/projects/sebat1/msacks/UKBB/2024/genomatrix_UKBB_2025.csv"   # JS 2026-10-27: optional, so the script also runs locally (clinical only) for checks
 if (file.exists(UKF)) {
@@ -101,7 +106,7 @@ ht <- rbindlist(lapply(GROUPS, function(G) {
   if (G != "No CNV") { v <- offset_vs_ctl(x, Hctl_test); r[, `:=`(offset_vs_ctl = v[["diff"]], offset_vs_ctl_p = v[["p"]])] } else r[, `:=`(offset_vs_ctl = NA_real_, offset_vs_ctl_p = NA_real_)]
   cat(G, "done\n"); r
 }))
-fwrite(ht, file.path(WD, "main_with_ukbb_height_tests.csv")); print(ht)
+fwrite(ht, file.path(OUTD, "main_with_ukbb_height_tests.csv")); print(ht)
 
 # ---------------------------------------------------------------- panels
 base_theme <- theme_classic(base_size = 15) + theme(legend.text = element_text(size = 8), legend.position = "inside", legend.background = element_blank(),
@@ -145,7 +150,7 @@ hcw <- rbindlist(lapply(GROUPS, function(G) {
              offset_vs_ctl = if (G == "No CNV") NA_real_ else offset_vs_ctl(dh[locus == G], dh[locus == "No CNV"])[["diff"]],
              offset_vs_ctl_p = if (G == "No CNV") NA_real_ else offset_vs_ctl(dh[locus == G], dh[locus == "No CNV"])[["p"]])
 }))
-fwrite(hcw, file.path(WD, "main_with_ukbb_hc_tests.csv")); print(hcw)
+fwrite(hcw, file.path(OUTD, "main_with_ukbb_hc_tests.csv")); print(hcw)
 for (G in GROUPS) {
   x <- dh[locus == G]; w <- hcw[group == G]; o <- offset(x)
   # JS 2026-10-13: HC shows a constant BMI offset; age-interaction statistics dropped from the panel (kept in the CSV)
@@ -174,8 +179,8 @@ asd_bar <- function(prefix, ylab) {
 plots[["ASD HEIGHT"]] <- asd_bar("B.", "Height Z"); plots[["ASD HC"]] <- asd_bar("C.", "Head circumference Z")
 ord <- c(paste("HEIGHT", GROUPS), "ASD HEIGHT", paste("HC", GROUPS), "ASD HC")
 fig <- wrap_plots(plots[ord], ncol = 2, byrow = FALSE) + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 22, face = "bold"))
-ggsave(file.path(WD, "fig_main_growth_ukbb.png"), fig, width = 12, height = 20.5, dpi = 200)
-ggsave(file.path(WD, "fig_main_growth_ukbb.pdf"), fig, width = 12, height = 20.5)
+ggsave(file.path(OUTD, "fig_main_growth_ukbb.png"), fig, width = 12, height = 20.5, dpi = 200)
+ggsave(file.path(OUTD, "fig_main_growth_ukbb.pdf"), fig, width = 12, height = 20.5)
 
 # ---------------------------------------------------------------- life-course height effect (carriers vs controls by period)
 P <- rbind(H, Hctl_test)[, period := factor(fcase(age < 13, "child", age < 18, "adolescent", default = "adult"), c("child", "adolescent", "adult"))]
@@ -189,7 +194,7 @@ lc <- rbindlist(lapply(LOCI, function(L) {
                n_child = xs[CNV == 1 & period == "child", .N], n_adult = xs[CNV == 1 & period == "adult", .N])
   }))
 }))
-fwrite(lc, file.path(WD, "main_with_ukbb_lifecourse.csv")); print(lc, digits = 3)
+fwrite(lc, file.path(OUTD, "main_with_ukbb_lifecourse.csv")); print(lc, digits = 3)
 
 
 # ---------------------------------------------------------------- JS 2026-10-23: figure version 2 — BMI effect by age
@@ -264,13 +269,13 @@ bea <- rbindlist(lapply(GROUPS, function(G) {
   rbind(cbind(outcome = "Height", group = G, bmi_effect_by_age(if (G == "No CNV") NULL else H[locus == G], Hctl_test)),
         cbind(outcome = "Head circumference", group = G, bmi_effect_by_age(if (G == "No CNV") NULL else dh[locus == G], dh[locus == "No CNV"])))
 }))
-fwrite(bea, file.path(WD, "main_with_ukbb_bmi_effect_by_age.csv"))
+fwrite(bea, file.path(OUTD, "main_with_ukbb_bmi_effect_by_age.csv"))
 print(bea[age %in% c(5, 10, 15, 20, 30, 50), .(outcome, group, who, age, slope = round(slope, 2), se = round(se, 2), p = signif(p, 2))], nrows = 200)
 cat("age-constant CNV x BMI (continuous BMI):\n"); print(unique(bea[, .(outcome, group, est_main = round(est_main, 3), se_main = round(se_main, 3), p_main = signif(p_main, 3), p_threeway = signif(p, 3))]))
 # JS 2026-10-23: control-row BMI tests, reported in a table rather than in panels A, A', G, G'
 ctl_tab <- unique(bea[group == "No CNV", .(outcome, n_controls = ifelse(outcome == "Height", nrow(Hctl_test), dh[locus == "No CNV", .N]),
                                             bmi_effect_sd_per_sd = est_main, se = se_main, p_bmi = p_main, p_age_x_bmi = p)])
-fwrite(ctl_tab, file.path(WD, "main_with_ukbb_control_bmi_tests.csv")); print(ctl_tab)
+fwrite(ctl_tab, file.path(OUTD, "main_with_ukbb_control_bmi_tests.csv")); print(ctl_tab)
 
 BEACOLS <- c("Non-carriers" = "#8C9A9A", "Carriers" = "#4B6EA9")
 eff_panel <- function(r, carriers, ylab, ctl_only, xmax = 60, ylim = c(-1, 1.2)) {
@@ -295,15 +300,23 @@ eff_panel <- function(r, carriers, ylab, ctl_only, xmax = 60, ylim = c(-1, 1.2))
 traj2 <- function(x, G, ylab, title, lab, xmax, lpos, bold = FALSE) {
   x <- copy(x)[, grp := tail_of(BMI)][!is.na(grp)]
   ctl <- G == "No CNV"
+  # JS 2026-11-19 (Jon: 22q11.2 del height points too dense): carrier panels with > 500 people show a random 400 points (seed 1);
+  # the curves and every statistic use the full sample
+  thin <- !ctl && nrow(x) > 500; xp <- if (thin) { set.seed(1); x[sample(.N, 400)] } else x
   ggplot(x, aes(age, y, colour = grp, fill = grp)) + geom_hline(yintercept = 0, linetype = 2, colour = "grey40") +
-    geom_point(aes(shape = source), size = if (ctl) 0.6 else 1.4, alpha = if (ctl) 0.25 else 0.7, stroke = 0.6) +
+    geom_point(data = xp, aes(shape = source), size = if (ctl) 0.6 else 1.4, alpha = if (ctl) 0.25 else 0.7, stroke = 0.6) +
     scale_shape_manual(values = c(Clinical = 16, `UK Biobank` = 1), guide = "none") +
-    geom_smooth(method = "gam", formula = y ~ s(log(x), k = 8), method.args = list(method = "REML"), linewidth = 1, alpha = 0.2) +
+    # JS 2026-11-19 (Jon: the 22q11.2 dup HC curve was wonky): panels with < 150 people use a stiffer smooth (k = 5) for the
+    # descriptive BMI-tail curves; tests are unaffected (they come from the models above, not from these curves)
+    # JS 2026-11-19 (Jon, second pass: 16p11.2 del low-BMI and 22q11.2 dup high-BMI HC curves curled at the left edge): panels with
+    # < 250 people use k = 5 and gamma = 1.5 (extra smoothing penalty); larger panels unchanged (k = 8, gamma = 1)
+    geom_smooth(method = "gam", formula = if (nrow(x) < 250) y ~ s(log(x), k = 5) else y ~ s(log(x), k = 8),
+                method.args = list(method = "REML", gamma = if (nrow(x) < 250) 1.5 else 1), linewidth = 1, alpha = 0.2) +
     annotate("text", x = xmax, y = -3.6, label = lab, hjust = 1, vjust = 0, size = 3.5, fontface = if (bold) "bold" else "plain") +
     scale_colour_manual(values = COLS, breaks = names(COLS)) + scale_fill_manual(values = COLS, breaks = names(COLS)) +
     coord_cartesian(xlim = c(2, xmax), ylim = c(-3.6, 3.6)) +
     labs(x = "Age (years)", y = ylab, colour = NULL, fill = NULL, title = title,
-         subtitle = sprintf("%s (n = %d)", if (ctl) "Non-carrier controls" else G, nrow(x))) +
+         subtitle = if (thin) sprintf("%s (n = %d; 400 shown)", G, nrow(x)) else sprintf("%s (n = %d)", if (ctl) "Non-carrier controls" else G, nrow(x))) +
     base_theme + theme(legend.position.inside = lpos)
 }
 
@@ -331,12 +344,26 @@ band_slopes <- function(xc, ctl) rbindlist(lapply(seq_along(BLAB), function(b) {
 bsl <- rbindlist(lapply(GROUPS, function(G) rbind(
   cbind(outcome = "Height", group = G, band_slopes(if (G == "No CNV") NULL else H[locus == G], Hctl_test)),
   cbind(outcome = "Head circumference", group = G, band_slopes(if (G == "No CNV") NULL else dh[locus == G], dh[locus == "No CNV"])))))
-fwrite(bsl, file.path(WD, "main_with_ukbb_bmi_slope_by_band.csv"))
+fwrite(bsl, file.path(OUTD, "main_with_ukbb_bmi_slope_by_band.csv"))
+# JS 2026-11-19 (Jon): does the BMI effect differ by genotype within each age band? Controls + the four CNVs in one model per
+# outcome and band, y ~ group * BMI + sex + age; F test of the group x BMI terms (as 38_fig6_numbers.R omnibus_5group_band;
+# CNVs with < 15 carriers in the band are left out). Printed above the bars of the control panels (a', f').
+bgt <- rbindlist(lapply(c("Height", "Head circumference"), function(o) rbindlist(lapply(seq_along(BLAB), function(b) {
+  X <- if (o == "Height") rbind(H[locus != "No CNV"], Hctl_test) else dh
+  X <- X[age >= BANDS[b] & age < BANDS[b + 1]][, grp := ifelse(locus == "No CNV", "Controls", locus)]
+  keep <- X[, .N, by = grp][grp == "Controls" | N >= 15, grp]; X <- X[grp %in% keep][, grp := relevel(factor(grp), "Controls")]
+  if (nlevels(X$grp) < 2) return(NULL)
+  a <- anova(lm(y ~ grp + BMI + sex + age, data = X), lm(y ~ grp * BMI + sex + age, data = X))
+  data.table(outcome = o, age_bin = BLAB[b], F = a$F[2], df = a$Df[2], p = a$`Pr(>F)`[2], groups = paste(setdiff(levels(X$grp), "Controls"), collapse = "; "))
+}))))
+fwrite(bgt, file.path(OUTD, "main_with_ukbb_bmi_genotype_by_band.csv")); cat("
+== BMI effect differs by genotype within band
+"); print(bgt)
 cat("
 == BMI slope by age band, pooled model (control, carrier = control + CNV x BMI)
 ")
 print(bsl[, .(outcome = substr(outcome, 1, 6), group, age_bin, n_c = n_carriers, ctl = round(slope_controls, 2), car = round(slope_carriers, 2), diff = round(diff, 2), p = signif(p_diff, 2))], nrows = 60)
-band_panel <- function(b, ylab, ctl_only, ylim, levels_x) {
+band_panel <- function(b, ylab, ctl_only, ylim, levels_x, gt = NULL) {
   long <- rbind(b[, .(age_bin, who = "Non-carriers", slope = slope_controls, se = se_controls)],
                 if (!ctl_only) b[, .(age_bin, who = "Carriers", slope = slope_carriers, se = se_carriers)])
   long[, `:=`(who = factor(who, names(BEACOLS)), age_bin = factor(age_bin, levels_x))]
@@ -359,6 +386,13 @@ n = %s", levels_x, sapply(levels_x, function(l) { v <- if (ctl_only) b[age_bin =
                 lab = gsub("= < ", "< ", sprintf("p = %s", sapply(p_diff, pfx)), fixed = TRUE), face = ifelse(p_diff < 0.05, "bold", "plain"))]
     g <- g + geom_text(data = pl, aes(age_bin, y, label = lab, fontface = face, vjust = ifelse(neg, 1, 0)), inherit.aes = FALSE, size = 2.7)
   }
+  if (ctl_only && !is.null(gt) && nrow(gt)) {   # JS 2026-11-19: genotype x BMI test within each band, above the control bars
+    pg <- merge(gt[, .(age_bin, p)], b[, .(age_bin, top = slope_controls + 1.96 * se_controls)], by = "age_bin")
+    pg[, `:=`(age_bin = factor(age_bin, levels_x), y = ylim[2] - 0.03 * diff(ylim), lab = gsub("= < ", "< ", sprintf("p = %s", sapply(p, pfx)), fixed = TRUE), face = ifelse(p < 0.05, "bold", "plain"))]
+    g <- g + geom_text(data = pg, aes(age_bin, y, label = lab, fontface = face), inherit.aes = FALSE, vjust = 1, size = 2.6) +
+      labs(subtitle = "BMI effect by age band (95% CI)
+p: BMI effect differs by genotype")
+  }
   g
 }
 yl_band <- function(b) { v <- b[, c(slope_controls - 1.96 * se_controls, slope_controls + 1.96 * se_controls, slope_carriers - 1.96 * se_carriers, slope_carriers + 1.96 * se_carriers)]
@@ -378,9 +412,9 @@ for (i in seq_along(GROUPS)) {
   labh <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmh)), fixed = TRUE)   # JS 2026-10-23: no p in the control trajectory panels (A, G): a within-control BMI effect is not the carrier-vs-control test shown in B-E
   labc <- if (ctl) "" else gsub("= < ", "< ", sprintf("CNV × BMI p = %s", pfx(pmc)), fixed = TRUE)
   v2[[paste("HEIGHT", G)]] <- traj2(if (ctl) Hctl_plot else H[locus == G], G, "Height (SD)", NULL, labh, 60, c(0.75, 0.93), bold = isTRUE(pmh < 0.05)) + labs(tag = L1[i])
-  v2[[paste("EFF HEIGHT", G)]] <- band_panel(bsl[outcome == "Height" & group == G], "Height per +1 SD BMI (SD)", ctl, YLH, LVH) + labs(tag = paste0(L1[i], "'"))
+  v2[[paste("EFF HEIGHT", G)]] <- band_panel(bsl[outcome == "Height" & group == G], "Height per +1 SD BMI (SD)", ctl, YLH, LVH, gt = bgt[outcome == "Height"]) + labs(tag = paste0(L1[i], "'"))
   v2[[paste("HC", G)]] <- traj2(dh[locus == G], G, "Head circumference (SD)", NULL, labc, HCMAX, c(0.75, 0.93), bold = isTRUE(pmc < 0.05)) + labs(tag = L2[i])
-  v2[[paste("EFF HC", G)]] <- band_panel(bsl[outcome == "Head circumference" & group == G], "Head circ. per +1 SD BMI (SD)", ctl, YLC, LVC) + labs(tag = paste0(L2[i], "'"))
+  v2[[paste("EFF HC", G)]] <- band_panel(bsl[outcome == "Head circumference" & group == G], "Head circ. per +1 SD BMI (SD)", ctl, YLC, LVC, gt = bgt[outcome == "Head circumference"]) + labs(tag = paste0(L2[i], "'"))
 }
 v2[["ASD HEIGHT"]] <- plots[["ASD HEIGHT"]] + labs(tag = L1[6]); v2[["ASD HC"]] <- plots[["ASD HC"]] + labs(tag = L2[6])
 # JS 2026-10-23: column headers above the panel letters, each spanning the trajectory + effect columns
@@ -389,7 +423,7 @@ hdr_row <- hdr("Height") | hdr("Head circumference")   # stacked above the body 
 des <- "ABCD\nEFGH\nIJKL\nMNOP\nQRST\nUUVV"   # rows 1-5: traj H | effect H | traj HC | effect HC; row 6: ASD bars span two columns
 body <- wrap_plots(v2, design = des, widths = c(2, 1.35, 2, 1.35)) & theme(plot.tag = element_text(size = 22, face = "bold"))
 fig2 <- hdr_row / body + plot_layout(heights = c(0.05, 1))
-ggsave(file.path(WD, "fig_main_growth_ukbb_v2.png"), fig2, width = 20, height = 20.5, dpi = 200)
-tryCatch(ggsave(file.path(WD, "fig_main_growth_ukbb_v2.pdf"), fig2, width = 20, height = 20.5, device = cairo_pdf),
-         error = function(e) ggsave(file.path(WD, "fig_main_growth_ukbb_v2.pdf"), fig2, width = 20, height = 20.5))
+ggsave(file.path(OUTD, "fig_main_growth_ukbb_v2.png"), fig2, width = 20, height = 20.5, dpi = 200)
+tryCatch(ggsave(file.path(OUTD, "fig_main_growth_ukbb_v2.pdf"), fig2, width = 20, height = 20.5, device = cairo_pdf),
+         error = function(e) ggsave(file.path(OUTD, "fig_main_growth_ukbb_v2.pdf"), fig2, width = 20, height = 20.5))
 cat("figure v2 written\n")

@@ -10,7 +10,7 @@ https://github.com/jsebat/cnv-dosage-architecture. The two were split on 2026-11
 `fig1_main_effects/`, `fig3_mirror_asymmetric/`, `fig4_pathway_analysis/` and `recurrentCNVgenotyping/` moved there, as did the
 `cnv-gwas` branch. The biobank association tests are in Molly Sacks's repository, https://github.com/mollysacks/Sacks2026.
 
-**Start here:** `HANDOFF_2026-11-14.md` (current state: Box-Cox scaling of SRS/SCQ and adult BMI, combined cohorts, SVIP
+**Start here:** `HANDOFF_2026-11-20_v2.md` (v2 draft: paper restructured around CNV x BMI effects on height, head growth, autistic traits, polygenic score and sex; the control set was corrected on 2026-11-20, see that file; all v2 results are in `run_v2_2026-11-20/`, scripts `80`-`89`). Earlier state: `HANDOFF_2026-11-14.md` (current state: Box-Cox scaling of SRS/SCQ and adult BMI, combined cohorts, SVIP
 replication, three-way and PGS analyses, data hub), then `HANDOFF_2026-10-26.md` (pipeline, run order, caveats, Expanse
 resources) and `manuscript_materials_2026-10-24/Analysis_report_2026-10-26.docx` (methods, results, legends, table index).
 

@@ -6,6 +6,7 @@
 # outcome and BMI, as in the main figure. Outputs: supp_asd_by_cnv_tests.csv, fig_supp_asd_by_cnv.{png,pdf}, fig_supp_asd_by_cnv_legend.txt
 Sys.setenv(UNAFF_DRAW_FIG = "FALSE")
 HERE <- "C:/Users/Jonathan Sebat/sebatlab Dropbox/Manuscripts/PGC_joint_submission/Molly/CNV_ASD_growth_analysis/CNV_growth_trajectories"
+OUTD <- Sys.getenv("OUT_DIR", HERE); dir.create(OUTD, showWarnings = FALSE, recursive = TRUE)   # JS 2026-11-19: outputs of a variant run go to OUT_DIR
 source(file.path(HERE, "23_unaffected_controls.R"))   # A (growth rows with asd), gmc, ctl_g, mk_growth, LOCI, POOLS
 suppressPackageStartupMessages({ library(mgcv); library(ggplot2); library(patchwork) })
 # non-carrier comparison: SSC probands (ASD) vs SSC designated siblings (no ASD), same build as the carriers
@@ -40,7 +41,7 @@ int_tab <- function(D, covs = character(0)) rbindlist(lapply(PH, function(ph) rb
   cbind(data.table(pheno = ph, group = g), fit_int(x, covs)) }))))
 res <- merge(res, int_tab(X), by = c("pheno", "group"), all.x = TRUE, sort = FALSE)
 cat("== ASD x CNV interaction vs SSC non-carriers (difference in ASD effect, SD)\n"); print(res[!is.na(int_delta), .(pheno, group, int_delta = round(int_delta, 2), int_se = round(int_se, 2), int_p = signif(int_p, 2))], nrows = 60)
-fwrite(res, file.path(HERE, "supp_asd_by_cnv_tests.csv"))
+fwrite(res, file.path(OUTD, "supp_asd_by_cnv_tests.csv"))
 cat("== ASD vs no ASD, age- and sex-adjusted (SD)\n"); print(res[, .(pheno, group, n_noasd, n_asd, delta = round(delta, 2), se = round(se, 2), p = signif(p, 2))], nrows = 60)
 # ---------------------------------------------------------------- figure
 COLS <- c("No ASD" = "#8C9A9A", "ASD" = "#4B6EA9")
@@ -59,8 +60,8 @@ pan <- function(ph, tag) {
     theme(axis.text.x = element_text(angle = 30, hjust = 1), legend.title = element_blank(), plot.title = element_text(face = "bold", hjust = 0.5), plot.tag = element_text(size = 16, face = "bold"))
 }
 fig <- (pan("Height", "A") | pan("Head circumference", "B") | pan("BMI", "C")) + plot_layout(guides = "collect") & theme(legend.position = "bottom") & plot_annotation(title = "Height, head circumference and BMI by autism diagnosis within CNV group", theme = theme(plot.title = element_text(face = "bold", size = 14)))
-ggsave(file.path(HERE, "fig_supp_asd_by_cnv.png"), fig, width = 15, height = 5.2, dpi = 150)
-tryCatch(ggsave(file.path(HERE, "fig_supp_asd_by_cnv.pdf"), fig, width = 15, height = 5.2, device = cairo_pdf), error = function(e) ggsave(file.path(HERE, "fig_supp_asd_by_cnv.pdf"), fig, width = 15, height = 5.2))
+ggsave(file.path(OUTD, "fig_supp_asd_by_cnv.png"), fig, width = 15, height = 5.2, dpi = 150)
+tryCatch(ggsave(file.path(OUTD, "fig_supp_asd_by_cnv.pdf"), fig, width = 15, height = 5.2, device = cairo_pdf), error = function(e) ggsave(file.path(OUTD, "fig_supp_asd_by_cnv.pdf"), fig, width = 15, height = 5.2))
 # ---------------------------------------------------------------- sensitivity: ASD effects with sex and polygenic scores as covariates
 # Same PGS as Tables S4-S6 (G2MH WGS carriers: Anjali's scores + autism 2026 full weights; SSC: scored on Expanse, autism lo-SSC),
 # residualised on 10 PCs and z-scored within cohort. Models add each PGS, then all four, to y ~ asd + s(age) + sex [+ cohort/locus];
@@ -90,7 +91,7 @@ sens <- rbindlist(lapply(PH, function(ph) rbindlist(lapply(names(GROUPS), functi
 ints_s <- rbindlist(lapply(names(MODELS), function(mn) int_tab(XS, MODELS[[mn]])[, model := mn]))
 sens <- merge(sens, ints_s, by = c("pheno", "group", "model"), all.x = TRUE, sort = FALSE)
 cat("\n== interaction vs non-carriers, PGS-complete subset, age + sex vs all four PGS\n"); print(sens[!is.na(int_delta) & model %in% c("age + sex (same individuals)", "+ all four PGS"), .(pheno, group, model, int_delta = round(int_delta, 2), int_se = round(int_se, 2), int_p = signif(int_p, 2))], nrows = 60)
-fwrite(sens, file.path(HERE, "supp_asd_by_cnv_sensitivity.csv"))
+fwrite(sens, file.path(OUTD, "supp_asd_by_cnv_sensitivity.csv"))
 cat("\n== sensitivity: ASD effect with PGS covariates (PGS-complete subset)\n"); print(sens[group %in% c("Overgrowth CNVs", "Undergrowth CNVs", "Non-carriers (SSC)", "16p11.2 del") & model %in% c("age + sex (same individuals)", "+ all four PGS"), .(pheno, group, model, n_noasd, n_asd, delta = round(delta, 2), se = round(se, 2), p = signif(p, 2))], nrows = 60)
 sn <- function(ph, g, mn, col) sens[pheno == ph & group == g & model == mn][[col]]
 sens_txt <- sprintf("Sensitivity (supp_asd_by_cnv_sensitivity.csv; G2MH carriers and SSC non-carriers with polygenic scores, same individuals in every row): adding childhood obesity, adult BMI, height and autism PGS (each, then all four) to the age- and sex-adjusted model leaves the ASD effects unchanged. Head circumference, overgrowth CNVs: Delta %+.2f (p = %s) with age and sex, %+.2f (p = %s) with all four PGS (n = %d / %d); BMI, overgrowth: %+.2f (p = %s) vs %+.2f (p = %s); BMI, undergrowth: %+.2f (p = %s) vs %+.2f (p = %s); BMI, non-carriers: %+.2f (p = %s) vs %+.2f (p = %s). Sex is a covariate in every model.",
@@ -110,9 +111,9 @@ int_txt <- sprintf("Interaction with carrier status (Table S7, columns int_*): t
   ni("BMI", "Overgrowth CNVs", "int_delta"), pfx(ni("BMI", "Overgrowth CNVs", "int_p")), ni("BMI", "Undergrowth CNVs", "int_delta"), pfx(ni("BMI", "Undergrowth CNVs", "int_p")),
   ni("Height", "Overgrowth CNVs", "int_delta"), pfx(ni("Height", "Overgrowth CNVs", "int_p")), ni("Height", "Undergrowth CNVs", "int_delta"), pfx(ni("Height", "Undergrowth CNVs", "int_p")))
 leg <- c(leg, int_txt, sens_txt)
-writeLines(leg, file.path(HERE, "fig_supp_asd_by_cnv_legend.txt"))
+writeLines(leg, file.path(OUTD, "fig_supp_asd_by_cnv_legend.txt"))
 # ---------------------------------------------------------------- Tables S7 / S8: CSV copies, workbook sheets, markdown section
-fwrite(res, file.path(HERE, "supp_table_S7_asd_by_cnv.csv")); fwrite(sens, file.path(HERE, "supp_table_S8_asd_by_cnv_pgs_adjusted.csv"))
+fwrite(res, file.path(OUTD, "supp_table_S7_asd_by_cnv.csv")); fwrite(sens, file.path(OUTD, "supp_table_S8_asd_by_cnv_pgs_adjusted.csv"))
 suppressPackageStartupMessages(library(openxlsx))
 XL <- file.path(HERE, "supp_tables_bmi_effects.xlsx")
 if (file.exists(XL)) { wb <- loadWorkbook(XL)
@@ -133,7 +134,7 @@ mdtxt <- c("", "## Table S7. Height, head circumference and BMI by autism diagno
  "ASD effect = coefficient of ASD in GAM y ~ ASD + s(age, k = 8) + sex (+ cohort; + locus in pooled groups); y = height Z (WHO), head-circumference Z (UK90), BMI Z (WHO child / adult centile mapped to Z). Latest visit with the outcome and BMI, ages 2-65, plausibility QC applied. Non-carriers (SSC) = SSC probands (ASD) vs designated siblings. Means are unadjusted group means (SE). Last column: ASD x carrier interaction, i.e. the difference between the ASD effect in that carrier group and in SSC non-carriers (carrier group pooled with non-carriers; y ~ ASD + locus + ASD x carrier + s(age, by carrier) + sex + cohort). Source: 32_supp_asd_by_cnv.R, supp_table_S7_asd_by_cnv.csv (sheet 'S7 ASD by CNV').", "", md(a), "",
  "## Table S8. Table S7 contrasts with polygenic scores as covariates (sensitivity)", "",
  "Individuals with all four polygenic scores (G2MH WGS carriers; SSC non-carriers; childhood obesity, adult BMI, height and autism-2026 PGS, residualised on 10 PCs, z-scored within cohort). Model = covariates added to the age + sex model of Table S7 (and to the interaction model); the same individuals are used in every row of a group, so the first row of each group is the age + sex estimate on that subset. Groups with fewer than 5 scored individuals in either ASD class are omitted. Source: 32_supp_asd_by_cnv.R, supp_table_S8_asd_by_cnv_pgs_adjusted.csv (sheet 'S8 ASD by CNV PGS adj').", "", md(b), "")
-writeLines(mdtxt, file.path(HERE, "supp_tables_S7_S8_asd_by_cnv.md"))
-MD <- file.path(HERE, "supp_tables_bmi_effects.md")
+writeLines(mdtxt, file.path(OUTD, "supp_tables_S7_S8_asd_by_cnv.md"))
+MD <- file.path(OUTD, "supp_tables_bmi_effects.md")   # JS 2026-11-19: only edited in place when OUT_DIR is unset
 if (file.exists(MD)) { L <- readLines(MD); i <- grep("^## Table S7\\.", L); if (length(i)) L <- L[seq_len(i[1] - 1)]; while (length(L) && L[length(L)] == "") L <- L[-length(L)]; writeLines(c(L, mdtxt), MD) }
 cat("done\n")

@@ -1,0 +1,9 @@
+file,status,n_numbers,max_abs_diff,max_rel_diff,nonnumeric_identical
+ukbb_bodysize10_vs_adult_trends.csv,compared,94,0,0,TRUE
+ukbb_bodysize10_vs_adult_counts.csv,compared,28,0,0,TRUE
+ukbb_mr_childhood_obesity.csv,compared,360,0,0,TRUE
+ukbb_mr_puberty_pathway_A.csv,compared,57,0,0,TRUE
+ukbb_mr_puberty_pathway_B.csv,compared,120,0,0,TRUE
+ukbb_mr_puberty_pathway_C.csv,compared,114,0,0,TRUE
+mr_menarche_height_ukbb.csv,compared,51,0,0,TRUE
+fig_supp5_combined_tables.csv,compared,198,0,0,TRUE

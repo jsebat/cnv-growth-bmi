@@ -1,0 +1,11 @@
+grp,rule,2-7,7-13,13-19,19-40,40-73
+16p11.2 del,fill gaps,41,101,52,24,11
+16p11.2 del,latest visit,38,104,52,24,11
+16p11.2 dup,fill gaps,25,46,23,30,19
+16p11.2 dup,latest visit,25,46,20,33,19
+22q11.2 del,fill gaps,174,175,159,92,11
+22q11.2 del,latest visit,150,199,159,92,11
+22q11.2 dup,fill gaps,31,36,30,23,11
+22q11.2 dup,latest visit,21,46,30,23,11
+No CNV,fill gaps,724,1029,361,1723,2410
+No CNV,latest visit,724,1029,361,1723,2410

@@ -1,0 +1,201 @@
+trait,group,kind,bin,score,n,slope,se
+SRS,CNV carriers,fifth of the autism score,1,-1.38914100474409,117,0.29586835157531,0.0585937465814373
+SRS,CNV carriers,fifth of the autism score,2,-0.52182067113665,116,0.167353979337622,0.081288578121384
+SRS,CNV carriers,fifth of the autism score,3,0.0132905697383253,117,0.0467765905331003,0.0735146601847933
+SRS,CNV carriers,fifth of the autism score,4,0.534379943438295,116,-0.0428236594851062,0.0761824302582112
+SRS,CNV carriers,fifth of the autism score,5,1.39385616095242,117,0.00609427491038517,0.0727342749564067
+SRS,SSC unaffected relatives,fifth of the autism score,1,-1.47149084224872,1024,0.0460210470696728,0.0283384124399173
+SRS,SSC unaffected relatives,fifth of the autism score,2,-0.582535604698625,1024,-0.0161410848546564,0.0299899394606985
+SRS,SSC unaffected relatives,fifth of the autism score,3,-0.0715786930432414,1024,0.0348135181279751,0.0270381824917538
+SRS,SSC unaffected relatives,fifth of the autism score,4,0.461814910752816,1024,0.0343710523015033,0.0283663797172115
+SRS,SSC unaffected relatives,fifth of the autism score,5,1.30515950593668,1024,0.021835232913332,0.0297274922391428
+SCQ,CNV carriers,fifth of the autism score,1,-1.4477096868637,94,0.0960373945564971,0.065881526376715
+SCQ,CNV carriers,fifth of the autism score,2,-0.606244075050368,93,0.0643251456627455,0.0546569780416988
+SCQ,CNV carriers,fifth of the autism score,3,-0.0105197577791841,94,0.0629606550617266,0.0568973114244209
+SCQ,CNV carriers,fifth of the autism score,4,0.555767305300024,93,-0.0243399925663501,0.0585897956128759
+SCQ,CNV carriers,fifth of the autism score,5,1.41886536009515,94,0.0522830818162231,0.109352086322387
+SCQ,SSC unaffected relatives,fifth of the autism score,1,-1.52881239420986,214,-0.0800561414133101,0.0540685158265996
+SCQ,SSC unaffected relatives,fifth of the autism score,2,-0.615035510547859,213,0.12158405367877,0.0511686085718542
+SCQ,SSC unaffected relatives,fifth of the autism score,3,-0.121125640869811,214,-0.00282355027284435,0.0505132772723675
+SCQ,SSC unaffected relatives,fifth of the autism score,4,0.404910649596444,213,-0.0138495108919336,0.0523453379609653
+SCQ,SSC unaffected relatives,fifth of the autism score,5,1.2513653875122,214,0.0168153389338918,0.0541196661804191
+SRS,CNV carriers,continuous model,,-2.2,,0.286299475124118,0.0659023899350092
+SRS,CNV carriers,continuous model,,-2.1,,0.277783816330104,0.0634825211033462
+SRS,CNV carriers,continuous model,,-2,,0.269268157536091,0.0610900363861517
+SRS,CNV carriers,continuous model,,-1.9,,0.260752498742078,0.0587282826176591
+SRS,CNV carriers,continuous model,,-1.8,,0.252236839948065,0.0564011204348965
+SRS,CNV carriers,continuous model,,-1.7,,0.243721181154051,0.0541130129168346
+SRS,CNV carriers,continuous model,,-1.6,,0.235205522360038,0.0518691287867559
+SRS,CNV carriers,continuous model,,-1.5,,0.226689863566024,0.0496754612337962
+SRS,CNV carriers,continuous model,,-1.4,,0.218174204772011,0.0475389624415327
+SRS,CNV carriers,continuous model,,-1.3,,0.209658545977998,0.045467692098657
+SRS,CNV carriers,continuous model,,-1.2,,0.201142887183984,0.0434709750646665
+SRS,CNV carriers,continuous model,,-1.1,,0.192627228389971,0.0415595584059936
+SRS,CNV carriers,continuous model,,-1,,0.184111569595958,0.0397457505937839
+SRS,CNV carriers,continuous model,,-0.9,,0.175595910801944,0.0380435153365079
+SRS,CNV carriers,continuous model,,-0.8,,0.167080252007931,0.0364684795623386
+SRS,CNV carriers,continuous model,,-0.7,,0.158564593213918,0.0350378012659478
+SRS,CNV carriers,continuous model,,-0.6,,0.150048934419905,0.0337698327956944
+SRS,CNV carriers,continuous model,,-0.5,,0.141533275625891,0.0326835167948618
+SRS,CNV carriers,continuous model,,-0.4,,0.133017616831878,0.0317974764194365
+SRS,CNV carriers,continuous model,,-0.3,,0.124501958037864,0.0311288181070689
+SRS,CNV carriers,continuous model,,-0.2,,0.115986299243851,0.0306917529700586
+SRS,CNV carriers,continuous model,,-0.1,,0.107470640449838,0.0304962400557998
+SRS,CNV carriers,continuous model,,0,,0.0989549816558245,0.0305469178189976
+SRS,CNV carriers,continuous model,,0.1,,0.0904393228618112,0.0308425727278704
+SRS,CNV carriers,continuous model,,0.2,,0.0819236640677978,0.0313762803761234
+SRS,CNV carriers,continuous model,,0.3,,0.0734080052737845,0.0321361824357218
+SRS,CNV carriers,continuous model,,0.4,,0.0648923464797712,0.0331067069696856
+SRS,CNV carriers,continuous model,,0.5,,0.0563766876857578,0.034269964177761
+SRS,CNV carriers,continuous model,,0.6,,0.0478610288917445,0.0356070697565409
+SRS,CNV carriers,continuous model,,0.7,,0.0393453700977311,0.0370992312869563
+SRS,CNV carriers,continuous model,,0.8,,0.0308297113037178,0.0387285305821526
+SRS,CNV carriers,continuous model,,0.9,,0.0223140525097045,0.0404784112034568
+SRS,CNV carriers,continuous model,,1,,0.0137983937156912,0.0423339230357086
+SRS,CNV carriers,continuous model,,1.1,,0.00528273492167783,0.0442817894756323
+SRS,CNV carriers,continuous model,,1.2,,-0.00323292387233551,0.0463103583690397
+SRS,CNV carriers,continuous model,,1.3,,-0.0117485826663488,0.0484094854228726
+SRS,CNV carriers,continuous model,,1.4,,-0.0202642414603622,0.0505703850003092
+SRS,CNV carriers,continuous model,,1.5,,-0.0287799002543755,0.0527854712282217
+SRS,CNV carriers,continuous model,,1.6,,-0.0372955590483888,0.0550482032406609
+SRS,CNV carriers,continuous model,,1.7,,-0.0458112178424022,0.0573529420413509
+SRS,CNV carriers,continuous model,,1.8,,-0.0543268766364155,0.0596948223475516
+SRS,CNV carriers,continuous model,,1.9,,-0.0628425354304289,0.0620696402675792
+SRS,CNV carriers,continuous model,,2,,-0.0713581942244422,0.0644737562448582
+SRS,CNV carriers,continuous model,,2.1,,-0.0798738530184555,0.0669040119815684
+SRS,CNV carriers,continuous model,,2.2,,-0.0883895118124688,0.0693576597620772
+SRS,SSC unaffected relatives,continuous model,,-2.2,,0.045339406106472,0.030276015611073
+SRS,SSC unaffected relatives,continuous model,,-2.1,,0.0443704585457245,0.0291176113106948
+SRS,SSC unaffected relatives,continuous model,,-2,,0.0434015109849771,0.0279701266936919
+SRS,SSC unaffected relatives,continuous model,,-1.9,,0.0424325634242297,0.0268349625999991
+SRS,SSC unaffected relatives,continuous model,,-1.8,,0.0414636158634823,0.0257137507938308
+SRS,SSC unaffected relatives,continuous model,,-1.7,,0.0404946683027348,0.0246083984381922
+SRS,SSC unaffected relatives,continuous model,,-1.6,,0.0395257207419874,0.0235211415360758
+SRS,SSC unaffected relatives,continuous model,,-1.5,,0.03855677318124,0.0224546087983983
+SRS,SSC unaffected relatives,continuous model,,-1.4,,0.0375878256204926,0.021411897278845
+SRS,SSC unaffected relatives,continuous model,,-1.3,,0.0366188780597452,0.0203966606465916
+SRS,SSC unaffected relatives,continuous model,,-1.2,,0.0356499304989977,0.0194132098748849
+SRS,SSC unaffected relatives,continuous model,,-1.1,,0.0346809829382503,0.0184666239855081
+SRS,SSC unaffected relatives,continuous model,,-1,,0.0337120353775029,0.017562864711079
+SRS,SSC unaffected relatives,continuous model,,-0.9,,0.0327430878167555,0.0167088827860779
+SRS,SSC unaffected relatives,continuous model,,-0.8,,0.031774140256008,0.0159126943890663
+SRS,SSC unaffected relatives,continuous model,,-0.7,,0.0308051926952606,0.0151833939928613
+SRS,SSC unaffected relatives,continuous model,,-0.6,,0.0298362451345132,0.0145310562323184
+SRS,SSC unaffected relatives,continuous model,,-0.5,,0.0288672975737658,0.0139664694526872
+SRS,SSC unaffected relatives,continuous model,,-0.4,,0.0278983500130183,0.0135006471837684
+SRS,SSC unaffected relatives,continuous model,,-0.3,,0.0269294024522709,0.0131440941662045
+SRS,SSC unaffected relatives,continuous model,,-0.2,,0.0259604548915235,0.0129058699893192
+SRS,SSC unaffected relatives,continuous model,,-0.1,,0.0249915073307761,0.0127925869383044
+SRS,SSC unaffected relatives,continuous model,,0,,0.0240225597700286,0.0128075607602949
+SRS,SSC unaffected relatives,continuous model,,0.1,,0.0230536122092812,0.0129503465723864
+SRS,SSC unaffected relatives,continuous model,,0.2,,0.0220846646485338,0.0132168026285823
+SRS,SSC unaffected relatives,continuous model,,0.3,,0.0211157170877864,0.0135996617150054
+SRS,SSC unaffected relatives,continuous model,,0.4,,0.020146769527039,0.0140894377980093
+SRS,SSC unaffected relatives,continuous model,,0.5,,0.0191778219662915,0.0146754300729849
+SRS,SSC unaffected relatives,continuous model,,0.6,,0.0182088744055441,0.0153466207958582
+SRS,SSC unaffected relatives,continuous model,,0.7,,0.0172399268447967,0.016092352952206
+SRS,SSC unaffected relatives,continuous model,,0.8,,0.0162709792840493,0.0169027633506058
+SRS,SSC unaffected relatives,continuous model,,0.9,,0.0153020317233018,0.0177690046400043
+SRS,SSC unaffected relatives,continuous model,,1,,0.0143330841625544,0.0186833127300304
+SRS,SSC unaffected relatives,continuous model,,1.1,,0.013364136601807,0.019638975403555
+SRS,SSC unaffected relatives,continuous model,,1.2,,0.0123951890410596,0.0206302464090099
+SRS,SSC unaffected relatives,continuous model,,1.3,,0.0114262414803121,0.0216522356941079
+SRS,SSC unaffected relatives,continuous model,,1.4,,0.0104572939195647,0.0227007948290724
+SRS,SSC unaffected relatives,continuous model,,1.5,,0.0094883463588173,0.0237724082257516
+SRS,SSC unaffected relatives,continuous model,,1.6,,0.00851939879806988,0.0248640952277301
+SRS,SSC unaffected relatives,continuous model,,1.7,,0.00755045123732245,0.0259733248121449
+SRS,SSC unaffected relatives,continuous model,,1.8,,0.00658150367657503,0.027097942795763
+SRS,SSC unaffected relatives,continuous model,,1.9,,0.0056125561158276,0.0282361105216247
+SRS,SSC unaffected relatives,continuous model,,2,,0.00464360855508018,0.0293862536346175
+SRS,SSC unaffected relatives,continuous model,,2.1,,0.00367466099433277,0.0305470194884615
+SRS,SSC unaffected relatives,continuous model,,2.2,,0.00270571343358534,0.0317172418132555
+SCQ,CNV carriers,continuous model,,-2.2,,0.112309050962411,0.0653102955063632
+SCQ,CNV carriers,continuous model,,-2.1,,0.109723590263649,0.0626811986467859
+SCQ,CNV carriers,continuous model,,-2,,0.107138129564888,0.0600784451309543
+SCQ,CNV carriers,continuous model,,-1.9,,0.104552668866126,0.0575056120373848
+SCQ,CNV carriers,continuous model,,-1.8,,0.101967208167364,0.0549669009779635
+SCQ,CNV carriers,continuous model,,-1.7,,0.0993817474686027,0.0524672653311964
+SCQ,CNV carriers,continuous model,,-1.6,,0.0967962867698411,0.0500125644256818
+SCQ,CNV carriers,continuous model,,-1.5,,0.0942108260710795,0.0476097491110557
+SCQ,CNV carriers,continuous model,,-1.4,,0.0916253653723179,0.0452670825356379
+SCQ,CNV carriers,continuous model,,-1.3,,0.0890399046735563,0.0429943979262965
+SCQ,CNV carriers,continuous model,,-1.2,,0.0864544439747947,0.0408033906150837
+SCQ,CNV carriers,continuous model,,-1.1,,0.0838689832760331,0.03870793276856
+SCQ,CNV carriers,continuous model,,-1,,0.0812835225772715,0.0367243839108229
+SCQ,CNV carriers,continuous model,,-0.9,,0.0786980618785099,0.0348718457918354
+SCQ,CNV carriers,continuous model,,-0.8,,0.0761126011797483,0.0331722749463385
+SCQ,CNV carriers,continuous model,,-0.7,,0.0735271404809867,0.0316503232556525
+SCQ,CNV carriers,continuous model,,-0.6,,0.0709416797822251,0.0303327387511416
+SCQ,CNV carriers,continuous model,,-0.5,,0.0683562190834635,0.0292471547161191
+SCQ,CNV carriers,continuous model,,-0.4,,0.0657707583847019,0.0284201692239525
+SCQ,CNV carriers,continuous model,,-0.3,,0.0631852976859403,0.0278748079694458
+SCQ,CNV carriers,continuous model,,-0.2,,0.0605998369871787,0.0276277534525475
+SCQ,CNV carriers,continuous model,,-0.1,,0.0580143762884171,0.0276869923108653
+SCQ,CNV carriers,continuous model,,0,,0.0554289155896555,0.0280505840669132
+SCQ,CNV carriers,continuous model,,0.1,,0.0528434548908939,0.0287069665874663
+SCQ,CNV carriers,continuous model,,0.2,,0.0502579941921323,0.029636692387963
+SCQ,CNV carriers,continuous model,,0.3,,0.0476725334933707,0.0308150301254025
+SCQ,CNV carriers,continuous model,,0.4,,0.0450870727946092,0.032214710435546
+SCQ,CNV carriers,continuous model,,0.5,,0.0425016120958475,0.0338082533732309
+SCQ,CNV carriers,continuous model,,0.6,,0.0399161513970859,0.0355696129404999
+SCQ,CNV carriers,continuous model,,0.7,,0.0373306906983243,0.0374751340786295
+SCQ,CNV carriers,continuous model,,0.8,,0.0347452299995628,0.0395039608719358
+SCQ,CNV carriers,continuous model,,0.9,,0.0321597693008012,0.0416380729119096
+SCQ,CNV carriers,continuous model,,1,,0.0295743086020396,0.0438621049192746
+SCQ,CNV carriers,continuous model,,1.1,,0.026988847903278,0.0461630623005808
+SCQ,CNV carriers,continuous model,,1.2,,0.0244033872045164,0.048530004480435
+SCQ,CNV carriers,continuous model,,1.3,,0.0218179265057548,0.0509537367585603
+SCQ,CNV carriers,continuous model,,1.4,,0.0192324658069932,0.0534265307252509
+SCQ,CNV carriers,continuous model,,1.5,,0.0166470051082316,0.0559418807504502
+SCQ,CNV carriers,continuous model,,1.6,,0.01406154440947,0.0584942971523283
+SCQ,CNV carriers,continuous model,,1.7,,0.0114760837107084,0.0610791332426883
+SCQ,CNV carriers,continuous model,,1.8,,0.00889062301194678,0.0636924420704462
+SCQ,CNV carriers,continuous model,,1.9,,0.00630516231318516,0.0663308584069445
+SCQ,CNV carriers,continuous model,,2,,0.00371970161442357,0.0689915017809656
+SCQ,CNV carriers,continuous model,,2.1,,0.00113424091566199,0.0716718968625062
+SCQ,CNV carriers,continuous model,,2.2,,-0.00145121978309963,0.0743699080450713
+SCQ,SSC unaffected relatives,continuous model,,-2.2,,0.00637964621719056,0.0546930732883343
+SCQ,SSC unaffected relatives,continuous model,,-2.1,,0.00639401378115656,0.0525728999611434
+SCQ,SSC unaffected relatives,continuous model,,-2,,0.00640838134512255,0.0504739667472914
+SCQ,SSC unaffected relatives,continuous model,,-1.9,,0.00642274890908854,0.0483990371016815
+SCQ,SSC unaffected relatives,continuous model,,-1.8,,0.00643711647305453,0.0463513347144847
+SCQ,SSC unaffected relatives,continuous model,,-1.7,,0.00645148403702052,0.0443346324168752
+SCQ,SSC unaffected relatives,continuous model,,-1.6,,0.00646585160098651,0.0423533587516466
+SCQ,SSC unaffected relatives,continuous model,,-1.5,,0.0064802191649525,0.04041272482564
+SCQ,SSC unaffected relatives,continuous model,,-1.4,,0.00649458672891849,0.0385188735868679
+SCQ,SSC unaffected relatives,continuous model,,-1.3,,0.00650895429288448,0.0366790523494038
+SCQ,SSC unaffected relatives,continuous model,,-1.2,,0.00652332185685047,0.0349018066062559
+SCQ,SSC unaffected relatives,continuous model,,-1.1,,0.00653768942081646,0.0331971880103069
+SCQ,SSC unaffected relatives,continuous model,,-1,,0.00655205698478246,0.0315769606435425
+SCQ,SSC unaffected relatives,continuous model,,-0.9,,0.00656642454874845,0.0300547759841424
+SCQ,SSC unaffected relatives,continuous model,,-0.8,,0.00658079211271444,0.0286462674656075
+SCQ,SSC unaffected relatives,continuous model,,-0.7,,0.00659515967668043,0.0273689912902586
+SCQ,SSC unaffected relatives,continuous model,,-0.6,,0.00660952724064642,0.0262421167793753
+SCQ,SSC unaffected relatives,continuous model,,-0.5,,0.00662389480461241,0.025285760145969
+SCQ,SSC unaffected relatives,continuous model,,-0.4,,0.0066382623685784,0.0245198818010521
+SCQ,SSC unaffected relatives,continuous model,,-0.3,,0.00665262993254439,0.023962752454521
+SCQ,SSC unaffected relatives,continuous model,,-0.2,,0.00666699749651038,0.0236291424122146
+SCQ,SSC unaffected relatives,continuous model,,-0.1,,0.00668136506047637,0.0235285613958393
+SCQ,SSC unaffected relatives,continuous model,,0,,0.00669573262444236,0.0236639809808035
+SCQ,SSC unaffected relatives,continuous model,,0.1,,0.00671010018840835,0.0240314118320764
+SCQ,SSC unaffected relatives,continuous model,,0.2,,0.00672446775237435,0.0246204686735831
+SCQ,SSC unaffected relatives,continuous model,,0.3,,0.00673883531634034,0.0254157463996614
+SCQ,SSC unaffected relatives,continuous model,,0.4,,0.00675320288030633,0.0263986139158461
+SCQ,SSC unaffected relatives,continuous model,,0.5,,0.00676757044427232,0.0275490005732493
+SCQ,SSC unaffected relatives,continuous model,,0.6,,0.00678193800823831,0.0288468718022053
+SCQ,SSC unaffected relatives,continuous model,,0.7,,0.0067963055722043,0.0302732647271786
+SCQ,SSC unaffected relatives,continuous model,,0.8,,0.00681067313617029,0.0318108953975174
+SCQ,SSC unaffected relatives,continuous model,,0.9,,0.00682504070013628,0.0334444246328552
+SCQ,SSC unaffected relatives,continuous model,,1,,0.00683940826410227,0.0351604888523278
+SCQ,SSC unaffected relatives,continuous model,,1.1,,0.00685377582806826,0.0369475896091692
+SCQ,SSC unaffected relatives,continuous model,,1.2,,0.00686814339203425,0.0387959114315091
+SCQ,SSC unaffected relatives,continuous model,,1.3,,0.00688251095600025,0.0406971138283342
+SCQ,SSC unaffected relatives,continuous model,,1.4,,0.00689687851996624,0.0426441246643928
+SCQ,SSC unaffected relatives,continuous model,,1.5,,0.00691124608393223,0.0446309492069029
+SCQ,SSC unaffected relatives,continuous model,,1.6,,0.00692561364789822,0.0466525010059162
+SCQ,SSC unaffected relatives,continuous model,,1.7,,0.00693998121186421,0.0487044560321318
+SCQ,SSC unaffected relatives,continuous model,,1.8,,0.0069543487758302,0.0507831289794721
+SCQ,SSC unaffected relatives,continuous model,,1.9,,0.00696871633979619,0.0528853694776403
+SCQ,SSC unaffected relatives,continuous model,,2,,0.00698308390376218,0.0550084755733909
+SCQ,SSC unaffected relatives,continuous model,,2.1,,0.00699745146772817,0.0571501218661093
+SCQ,SSC unaffected relatives,continuous model,,2.2,,0.00701181903169416,0.059308299908149

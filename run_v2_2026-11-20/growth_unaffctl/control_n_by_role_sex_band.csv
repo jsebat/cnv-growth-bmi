@@ -1,0 +1,84 @@
+control_set,outcome,role,band,n,n_male,n_female,median_age,n_families,pct_male
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,ALL CLINICAL CONTROLS,all ages,5827,2826,3001,38,2498,48
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,ALL CLINICAL CONTROLS,2-9,918,426,492,6.8,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,ALL CLINICAL CONTROLS,10-18,720,329,391,12.8,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,ALL CLINICAL CONTROLS,19-39,1779,749,1030,36.2,,42
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,ALL CLINICAL CONTROLS,40-73,2410,1322,1088,44.8,,55
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC designated sibling,all ages,1642,758,884,9.3,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC designated sibling,2-9,894,415,479,6.8,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC designated sibling,10-18,691,317,374,12.8,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC designated sibling,19-39,57,26,31,20.7,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC father,all ages,1974,1974,0,42.2,,100
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC father,19-39,688,688,0,36.7,,100
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC father,40-73,1286,1286,0,45.3,,100
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC mother,all ages,1997,0,1997,40.4,,0
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC mother,19-39,938,0,938,36.3,,0
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SSC mother,40-73,1059,0,1059,44.1,,0
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SVIP family member,all ages,214,94,120,34.9,,44
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SVIP family member,2-9,24,11,13,6.2,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SVIP family member,10-18,29,12,17,13.2,,41
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SVIP family member,19-39,96,35,61,34,,36
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Head circumference,SVIP family member,40-73,65,36,29,44.1,,55
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,ALL CLINICAL CONTROLS,all ages,6247,3867,2380,37.2,2575,62
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,ALL CLINICAL CONTROLS,2-9,1334,1163,171,6.7,,87
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,ALL CLINICAL CONTROLS,10-18,780,658,122,12.6,,84
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,ALL CLINICAL CONTROLS,19-39,1723,724,999,36.4,,42
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,ALL CLINICAL CONTROLS,40-73,2410,1322,1088,44.8,,55
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,G2MH non-carrier,all ages,1,1,0,21,,100
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,G2MH non-carrier,19-39,1,1,0,21,,100
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC father,all ages,1974,1974,0,42.2,,100
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC father,19-39,688,688,0,36.7,,100
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC father,40-73,1286,1286,0,45.3,,100
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC mother,all ages,1997,0,1997,40.4,,0
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC mother,19-39,938,0,938,36.3,,0
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC mother,40-73,1059,0,1059,44.1,,0
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC proband,all ages,2060,1797,263,8.5,,87
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC proband,2-9,1310,1152,158,6.7,,88
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SSC proband,10-18,750,645,105,12.6,,86
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SVIP family member,all ages,215,95,120,34.8,,44
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SVIP family member,2-9,24,11,13,6.2,,46
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SVIP family member,10-18,30,13,17,13.1,,43
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SVIP family member,19-39,96,35,61,34,,36
+old (paper run 2026-11-19: SSC probands as child controls),Head circumference,SVIP family member,40-73,65,36,29,44.1,,55
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,ALL CLINICAL CONTROLS,all ages,5852,2843,3009,38,2504,49
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,ALL CLINICAL CONTROLS,2-9,923,430,493,6.8,,47
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,ALL CLINICAL CONTROLS,10-18,721,330,391,12.8,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,ALL CLINICAL CONTROLS,19-39,1786,752,1034,36.2,,42
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,ALL CLINICAL CONTROLS,40-73,2422,1331,1091,44.8,,55
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC designated sibling,all ages,1646,761,885,9.3,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC designated sibling,2-9,899,419,480,6.8,,47
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC designated sibling,10-18,692,318,374,12.8,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC designated sibling,19-39,55,24,31,20.7,,44
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC father,all ages,1988,1988,0,42.2,,100
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC father,19-39,693,693,0,36.7,,100
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC father,40-73,1295,1295,0,45.3,,100
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC mother,all ages,2003,0,2003,40.4,,0
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC mother,19-39,942,0,942,36.3,,0
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SSC mother,40-73,1061,0,1061,44.1,,0
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SVIP family member,all ages,215,94,121,34.9,,44
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SVIP family member,2-9,24,11,13,6.2,,46
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SVIP family member,10-18,29,12,17,13.2,,41
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SVIP family member,19-39,96,35,61,34,,36
+"corrected (unaffected: SSC designated siblings + parents, SVIP without autism)",Height,SVIP family member,40-73,66,36,30,43.9,,55
+old (paper run 2026-11-19: SSC probands as child controls),Height,ALL CLINICAL CONTROLS,all ages,6283,3891,2392,37.2,2581,62
+old (paper run 2026-11-19: SSC probands as child controls),Height,ALL CLINICAL CONTROLS,2-9,1342,1168,174,6.7,,87
+old (paper run 2026-11-19: SSC probands as child controls),Height,ALL CLINICAL CONTROLS,10-18,787,663,124,12.6,,84
+old (paper run 2026-11-19: SSC probands as child controls),Height,ALL CLINICAL CONTROLS,19-39,1732,729,1003,36.4,,42
+old (paper run 2026-11-19: SSC probands as child controls),Height,ALL CLINICAL CONTROLS,40-73,2422,1331,1091,44.8,,55
+old (paper run 2026-11-19: SSC probands as child controls),Height,G2MH non-carrier,all ages,2,1,1,16,,50
+old (paper run 2026-11-19: SSC probands as child controls),Height,G2MH non-carrier,10-18,1,0,1,11,,0
+old (paper run 2026-11-19: SSC probands as child controls),Height,G2MH non-carrier,19-39,1,1,0,21,,100
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC father,all ages,1988,1988,0,42.2,,100
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC father,19-39,693,693,0,36.7,,100
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC father,40-73,1295,1295,0,45.3,,100
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC mother,all ages,2003,0,2003,40.4,,0
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC mother,19-39,942,0,942,36.3,,0
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC mother,40-73,1061,0,1061,44.1,,0
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC proband,all ages,2074,1807,267,8.5,,87
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC proband,2-9,1318,1157,161,6.7,,88
+old (paper run 2026-11-19: SSC probands as child controls),Height,SSC proband,10-18,756,650,106,12.6,,86
+old (paper run 2026-11-19: SSC probands as child controls),Height,SVIP family member,all ages,216,95,121,34.9,,44
+old (paper run 2026-11-19: SSC probands as child controls),Height,SVIP family member,2-9,24,11,13,6.2,,46
+old (paper run 2026-11-19: SSC probands as child controls),Height,SVIP family member,10-18,30,13,17,13.1,,43
+old (paper run 2026-11-19: SSC probands as child controls),Height,SVIP family member,19-39,96,35,61,34,,36
+old (paper run 2026-11-19: SSC probands as child controls),Height,SVIP family member,40-73,66,36,30,43.9,,55

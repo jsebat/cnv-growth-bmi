@@ -1,0 +1,9 @@
+file,rows_v9e,rows_v10,same_shape,labels_identical,missing_pattern_identical,max_abs_diff,md5_identical
+main_with_ukbb_bmi_slope_by_band.csv,37,37,TRUE,TRUE,TRUE,0,TRUE
+main_with_ukbb_bmi_effect_by_age.csv,1744,1744,TRUE,TRUE,TRUE,0,TRUE
+main_with_ukbb_bmi_genotype_by_band.csv,8,8,TRUE,TRUE,TRUE,0,TRUE
+main_with_ukbb_height_tests.csv,5,5,TRUE,TRUE,TRUE,0,TRUE
+main_with_ukbb_hc_tests.csv,5,5,TRUE,TRUE,TRUE,0,TRUE
+main_with_ukbb_control_bmi_tests.csv,2,2,TRUE,TRUE,TRUE,0,TRUE
+main_with_ukbb_lifecourse.csv,12,12,TRUE,TRUE,TRUE,0,TRUE
+fig6_numbers.csv,46,46,TRUE,TRUE,TRUE,0,TRUE
