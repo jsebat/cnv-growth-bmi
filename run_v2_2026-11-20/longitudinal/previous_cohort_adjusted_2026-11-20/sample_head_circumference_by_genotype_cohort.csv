@@ -1,0 +1,14 @@
+outcome,genotype,cohort,children,pairs,median_age0,q25_age0,q75_age0,median_interval
+Head circumference,16p11.2 del,All cohorts,94,296,1.08,0.5,2.17,0.5
+Head circumference,16p11.2 del,Cardiff,22,22,9,7.25,10,3
+Head circumference,16p11.2 del,SVIP,72,274,1,0.5,2,0.42
+Head circumference,16p11.2 dup,All cohorts,47,164,1.17,0.5,2.08,0.42
+Head circumference,16p11.2 dup,Cardiff,6,6,7.5,6.25,8.75,3
+Head circumference,16p11.2 dup,SVIP,41,158,1.08,0.5,2,0.42
+Head circumference,22q11.2 del,All cohorts,331,1411,2.2,0.99,7,0.54
+Head circumference,22q11.2 del,CHOP,281,1355,2.04,0.94,6.23,0.52
+Head circumference,22q11.2 del,Cardiff,50,56,10,9,12,3
+Head circumference,22q11.2 dup,All cohorts,46,232,1.97,0.8,5.94,0.48
+Head circumference,22q11.2 dup,CHOP,40,225,1.86,0.8,5.72,0.47
+Head circumference,22q11.2 dup,Cardiff,6,7,7,7,9.5,4
+Head circumference,All four CNVs,All cohorts,518,2103,1.83,0.79,5.72,0.5

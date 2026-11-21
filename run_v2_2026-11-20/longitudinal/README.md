@@ -1,5 +1,24 @@
 # Longitudinal ("next visit") analyses, BMI modifier paper v2 (work package A, 2026-11-20)
 
+> **Update 2026-11-21 (JS): cohort adjustment.** Cohort and genotype are largely confounded (CHOP has only 22q11.2 carriers, Simons VIP
+> and Searchlight only 16p11.2), so the pooled (all four CNVs) models are now adjusted for genotype and NOT for cohort. Per-genotype
+> models keep the cohort term and are unchanged. Pooled estimates moved in the third decimal:
+>
+> | Pooled estimate | cohort + genotype (until 2026-11-20) | genotype only (current) |
+> |---|---|---|
+> | Height, 2-8 y | +0.089, P 1.9e-14 | +0.088, P 3.7e-14 |
+> | Height, 8-13 y | +0.029, P 0.0055 | +0.027, P 0.012 |
+> | Height, 13-18 y | -0.022, P 0.092 | -0.023, P 0.073 |
+> | Height, BMI x window | 8.2e-11 | 6.8e-11 |
+> | Head circumference, all ages | +0.030, P 0.0089 | +0.028, P 0.013 |
+> | Head circumference, heterogeneity across genotypes | 0.030 | 0.034 |
+> | Head circumference, one interval per child | +0.037, P 0.17 | +0.031, P 0.24 |
+>
+> The CSV files in this folder are current; the earlier outputs are kept in `previous_cohort_adjusted_2026-11-20/`, and the earlier
+> model is a row of `sensitivity.csv`. In the tables below the main pooled rows are updated; pooled cells of the sensitivity tables
+> still show the cohort-adjusted values of 2026-11-20 (differences of 0.001-0.006; see `sensitivity.csv`).
+
+
 Question: in CNV-carrier children, does BMI Z at a visit predict the change in (1) head-circumference Z and (2) height Z by
 the next visit? Rebuilt inside this code base so the paper no longer depends on the grant-figure code
 (`Jon/Claude/COMET_ASD_ARPAH/analysis` A1, A4, A7, A8).
@@ -41,7 +60,8 @@ nothing participant-level is in this folder).
 
 Per genotype, then all four CNVs adjusted for genotype, then heterogeneity:
 
-`change in Z ~ Z at the visit + interval + sex (+ cohort) (+ genotype) + ns(age at the visit, 3) + BMI Z at the visit + (1 | child)`
+`change in Z ~ Z at the visit + interval + sex (+ cohort | + genotype) + ns(age at the visit, 3) + BMI Z at the visit + (1 | child)`
+(cohort in the models of one genotype; genotype and not cohort in the pooled model)
 
 - lmerTest, REML, Satterthwaite P for the BMI coefficient. Heterogeneity = likelihood-ratio test of BMI x genotype (ML fits).
 - Age windows (those already used in the paper): the same model with `window + window:BMI`; window = age at the first visit of
@@ -85,9 +105,9 @@ Head circumference: change in Z to the next visit per SD of BMI Z (`results_head
 | 16p11.2 dup | +0.052 (0.053) | 0.33 | +0.049 (0.46) | +0.075 (0.43) | NA (10 children) | 0.51 |
 | 22q11.2 del | +0.012 (0.013) | 0.33 | -0.003 (0.88) | +0.016 (0.60) | +0.028 (0.15) | 0.49 |
 | 22q11.2 dup | +0.049 (0.042) | 0.24 | +0.025 (0.63) | -0.005 (0.96) | +0.116 (0.12) | 0.44 |
-| All four CNVs | +0.030 (0.011) | 0.0089 | +0.024 (0.12) | +0.026 (0.33) | +0.041 (0.031) | 0.75 |
+| All four CNVs | +0.028 (0.011) | 0.013 | +0.023 (0.12) | +0.026 (0.34) | +0.036 (0.054) | 0.85 |
 
-Heterogeneity across genotypes (all ages): P = 0.030. No evidence that the BMI effect differs between age windows.
+Heterogeneity across genotypes (all ages): P = 0.034. No evidence that the BMI effect differs between age windows.
 
 Height: change in Z to the next visit per SD of BMI Z (`results_height.csv`)
 
@@ -97,7 +117,7 @@ Height: change in Z to the next visit per SD of BMI Z (`results_height.csv`)
 | 16p11.2 dup | +0.022 (0.064) | 0.73 | +0.153 (0.20) | +0.111 (0.22) | NA (12 children) | 0.015 |
 | 22q11.2 del | +0.012 (0.007) | 0.071 | +0.052 (1.7e-6) | +0.006 (0.56) | -0.022 (0.074) | 1.6e-5 |
 | 22q11.2 dup | +0.065 (0.023) | 0.0041 | +0.127 (4.9e-4) | +0.045 (0.14) | +0.011 (0.80) | 0.065 |
-| All four CNVs | +0.033 (0.008) | 2.1e-5 | +0.089 (1.9e-14) | +0.029 (0.0055) | -0.022 (0.092) | 8.2e-11 |
+| All four CNVs | +0.031 (0.008) | 5.9e-5 | +0.088 (3.7e-14) | +0.027 (0.012) | -0.023 (0.073) | 6.8e-11 |
 
 Heterogeneity across genotypes: all ages P = 0.43; 2-8 y P = 0.083; 8-13 y P = 0.070; 13-18 y P = 0.17.
 The earlier finding holds: BMI predicts faster height gain before about 8 y (16p11.2 del, 22q11.2 del, and also 22q11.2 dup) and

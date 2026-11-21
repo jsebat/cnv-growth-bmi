@@ -3,7 +3,7 @@ Head circumference,All ages,16p11.2 del,94,296,0.0871648381185375,0.022962652705
 Head circumference,All ages,16p11.2 dup,47,164,0.0520488133337928,0.328672518758133,primary,46,159,0.0504,0.3474,Head_growth_by_genotype_numbers.txt (A7)
 Head circumference,All ages,22q11.2 del,331,1411,0.0124229842121893,0.329358552772747,primary,331,1396,0.0121,0.3427,Head_growth_by_genotype_numbers.txt (A7)
 Head circumference,All ages,22q11.2 dup,46,232,0.0492336311688754,0.244604956822806,primary,45,228,0.0478,0.2638,Head_growth_by_genotype_numbers.txt (A7)
-Head circumference,All ages,All four CNVs,518,2103,0.0299198278105658,0.00887649495524622,primary,513,2070,0.0289,0.0124,Head_growth_by_genotype_numbers.txt (A7)
+Head circumference,All ages,All four CNVs,518,2103,0.0282372966104415,0.0134410638786788,primary,513,2070,0.0289,0.0124,Head_growth_by_genotype_numbers.txt (A7)
 Height,2-8 y,16p11.2 del,62,97,0.232942701105994,0.000348584507755886,"primary (one model, window x BMI)",61,93,0.1411,0.032,BMI_by_age_window_numbers.txt (A8; separate model per window)
 Height,8-13 y,16p11.2 del,60,90,0.00760704401936178,0.90468822891656,"primary (one model, window x BMI)",60,90,-0.006,0.93,BMI_by_age_window_numbers.txt (A8; separate model per window)
 Height,13-18 y,16p11.2 del,28,41,-0.0238038644572755,0.77044676163849,"primary (one model, window x BMI)",28,41,0.0207,0.7,BMI_by_age_window_numbers.txt (A8; separate model per window)
@@ -28,4 +28,4 @@ Height,13-18 y,22q11.2 del,243,556,-0.00831553426670018,0.509252708968142,separa
 Height,2-8 y,22q11.2 dup,48,134,0.170032928637197,0.000273997900860909,separate model per window (as A8),48,132,0.1609,0.00039,BMI_by_age_window_numbers.txt (A8; separate model per window)
 Height,8-13 y,22q11.2 dup,44,113,0.00265314520852473,0.940442580592363,separate model per window (as A8),44,113,0.0027,0.94,BMI_by_age_window_numbers.txt (A8; separate model per window)
 Height,13-18 y,22q11.2 dup,26,66,0.0181395897692136,0.743285510923327,separate model per window (as A8),26,66,0.0181,0.74,BMI_by_age_window_numbers.txt (A8; separate model per window)
-Head circumference,All ages,Heterogeneity P (BMI x genotype),,,,0.0303798682870133,primary,,,,0.0601,A7
+Head circumference,All ages,Heterogeneity P (BMI x genotype),,,,0.0339686842147183,primary,,,,0.0601,A7

@@ -39,7 +39,7 @@ pg <- ggplot() + xlim(0, 100) + ylim(0, 100) +
   annotate("text", x = 75.5, y = 89, label = "Visit 2 (next)", fontface = "bold", size = 4.8, colour = INK) +
   annotate("text", x = 75.5, y = 72, label = "head\ncircumference Z", size = 4.1, colour = INK, lineheight = 0.92) +
   annotate("text", x = 50, y = 28, label = "Outcome = change in\nhead-circumference Z\n(visit 2 minus visit 1)", fontface = "bold", size = 4.3, colour = INK, lineheight = 0.92) +
-  annotate("text", x = 50, y = 6, label = "Predictor: BMI Z at visit 1\nAdjusted for head Z at visit 1, interval,\nage, sex, cohort; child random intercept", size = 3.5, colour = "grey30", lineheight = 0.92) +
+  annotate("text", x = 50, y = 6, label = "Predictor: BMI Z at visit 1\nAdjusted for head Z at visit 1, interval,\nage, sex, cohort (pooled: genotype); child random intercept", size = 3.5, colour = "grey30", lineheight = 0.92) +
   labs(tag = "g", title = "Next-visit design") + theme_void(base_size = 15) +
   theme(plot.tag = element_text(face = "bold", size = 22), plot.tag.position = c(0, 1), plot.title = element_text(size = 15, face = "bold", hjust = 0.5), plot.margin = margin(8, 6, 6, 14))
 
