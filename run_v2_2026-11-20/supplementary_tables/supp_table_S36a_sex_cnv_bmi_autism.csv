@@ -135,9 +135,9 @@ SCQ,(ii) CNV x BMI within sex (vs same-sex SSC relatives) - heterogeneity across
 SCQ,"within carriers: BMI x sex, one model - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.62,SD of trait (Box-Cox) per SD of BMI
 SRS,(iii) CNV x BMI x sex: inverse-variance mean of the four per-CNV estimates,All four CNVs,male - female,814,,-0.056,0.051,0.28,SD of trait (Box-Cox) per SD of BMI
 SCQ,(iii) CNV x BMI x sex: inverse-variance mean of the four per-CNV estimates,All four CNVs,male - female,689,,-0.062,0.055,0.26,SD of trait (Box-Cox) per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),All four CNVs,female,705,,0.151,0.088,0.086,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),All four CNVs,male,766,,0.056,0.056,0.31,log odds ratio per SD of BMI
-Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",All four CNVs,male - female,1482,,-0.156,0.096,0.1,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),All four CNVs,female,700,,0.159,0.089,0.074,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),All four CNVs,male,761,,0.06,0.057,0.29,log odds ratio per SD of BMI
+Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",All four CNVs,male - female,1474,,-0.168,0.096,0.082,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),16p11.2 del,female,120,,0.186,0.163,0.25,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),16p11.2 del,male,123,,-0.088,0.122,0.47,log odds ratio per SD of BMI
 Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",16p11.2 del,male - female,248,,-0.211,0.189,0.26,log odds ratio per SD of BMI
@@ -151,30 +151,30 @@ Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),22q11.2 dup,female,7
 Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic),22q11.2 dup,male,88,,-0.048,0.175,0.79,log odds ratio per SD of BMI
 Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model)",22q11.2 dup,male - female,161,,-0.172,0.384,0.65,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort Cardiff only,All four CNVs,male - female,74,,0.376,0.4,0.35,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out Cardiff,All four CNVs,male - female,1408,,-0.184,0.1,0.065,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out Cardiff,All four CNVs,male - female,1400,,-0.205,0.1,0.04,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort Cardiff only,All four CNVs,female,33,,-0.074,0.399,0.85,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort Cardiff only,All four CNVs,male,41,,0.327,0.23,0.16,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort CHOP only,All four CNVs,male - female,728,,-0.043,0.182,0.81,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out CHOP,All four CNVs,male - female,754,,-0.24,0.114,0.035,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out CHOP,All four CNVs,male - female,746,,-0.225,0.114,0.049,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHOP only,All four CNVs,female,326,,0.221,0.162,0.17,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHOP only,All four CNVs,male,402,,0.164,0.092,0.074,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort CHUSJ only,All four CNVs,male - female,24,,,,,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out CHUSJ,All four CNVs,male - female,1458,,-0.151,0.096,0.12,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHUSJ only,All four CNVs,female,8,,,,,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHUSJ only,All four CNVs,male,16,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort CHUSJ only,All four CNVs,male - female,17,,-124.296,350925.241,1,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out CHUSJ,All four CNVs,male - female,1457,,-0.162,0.097,0.094,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHUSJ only,All four CNVs,female,<5,,21.726,48642.214,1,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort CHUSJ only,All four CNVs,male,11,,19.645,75968.045,1,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort G2MH only,All four CNVs,male - female,444,,-0.273,0.142,0.056,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out G2MH,All four CNVs,male - female,1038,,-0.073,0.133,0.58,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out G2MH,All four CNVs,male - female,1030,,-0.066,0.134,0.62,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort G2MH only,All four CNVs,female,239,,0.1,0.128,0.44,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort G2MH only,All four CNVs,male,205,,-0.025,0.091,0.79,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort SSC only,All four CNVs,male - female,18,,,,,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out SSC,All four CNVs,male - female,1464,,-0.143,0.096,0.14,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SSC only,All four CNVs,female,7,,,,,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort SSC only,All four CNVs,male - female,17,,-2.931,164208.367,1,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out SSC,All four CNVs,male - female,1457,,-0.156,0.097,0.11,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SSC only,All four CNVs,female,7,,-0.039,60604.127,1,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SSC only,All four CNVs,male,<5,,,,,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI x sex; cohort SVIP only,All four CNVs,male - female,194,,-0.233,0.259,0.37,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out SVIP,All four CNVs,male - female,1288,,-0.149,0.104,0.15,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; leave out SVIP,All four CNVs,male - female,1280,,-0.163,0.105,0.12,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SVIP only,All four CNVs,female,92,,0.106,0.247,0.67,log odds ratio per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex; cohort SVIP only,All four CNVs,male,102,,-0.194,0.167,0.25,log odds ratio per SD of BMI
-Autism diagnosis,(iv) diagnosis ~ BMI x sex; age < 18 y,All four CNVs,male - female,1040,,-0.185,0.116,0.11,log odds ratio per SD of BMI
+Autism diagnosis,(iv) diagnosis ~ BMI x sex; age < 18 y,All four CNVs,male - female,1033,,-0.182,0.117,0.12,log odds ratio per SD of BMI
 Autism diagnosis,"(iv) diagnosis ~ BMI x sex (logistic, one model) - heterogeneity across the four CNVs (Cochran Q)",All four CNVs,male - female,,,,,0.91,SD of trait (Box-Cox) per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,female,,,,,0.94,SD of trait (Box-Cox) per SD of BMI
 Autism diagnosis,(iv) diagnosis ~ BMI within sex (logistic) - heterogeneity across the four CNVs (Cochran Q),All four CNVs,male,,,,,0.49,SD of trait (Box-Cox) per SD of BMI
@@ -198,7 +198,7 @@ SCQ,"(v) BMI x autism score within carriers, male - female (separately fitted)",
 SCQ,(v) CNV x BMI x autism score within one sex (vs same-sex relatives),All four CNVs,female,234,560,0.031,0.055,0.57,SD of trait (Box-Cox) per SD of BMI
 SCQ,(v) CNV x BMI x autism score within one sex (vs same-sex relatives),All four CNVs,male,234,508,-0.071,0.05,0.16,SD of trait (Box-Cox) per SD of BMI
 SCQ,"(v) CNV x BMI x autism score, male - female (separately fitted)",All four CNVs,male - female,468,,-0.102,0.075,0.17,SD of trait (Box-Cox) per SD of BMI
-Autism diagnosis,"(v) diagnosis ~ BMI x sex, genotyped carriers (SRS / SCQ sample), without the score",All four CNVs,male - female,586,,-0.29,0.133,0.029,log odds ratio per SD of BMI
-Autism diagnosis,"(v) diagnosis ~ BMI x sex, genotyped carriers, adjusted for BMI x score",All four CNVs,male - female,586,,-0.29,0.133,0.029,log odds ratio per SD of BMI
-Autism diagnosis,(v) diagnosis ~ BMI x autism score within one sex (genotyped carriers),All four CNVs,female,291,,-0.166,0.136,0.22,log odds ratio per SD x SD
-Autism diagnosis,(v) diagnosis ~ BMI x autism score within one sex (genotyped carriers),All four CNVs,male,285,,-0.058,0.069,0.4,log odds ratio per SD x SD
+Autism diagnosis,"(v) diagnosis ~ BMI x sex, genotyped carriers (SRS / SCQ sample), without the score",All four CNVs,male - female,578,,-0.287,0.133,0.031,log odds ratio per SD of BMI
+Autism diagnosis,"(v) diagnosis ~ BMI x sex, genotyped carriers, adjusted for BMI x score",All four CNVs,male - female,578,,-0.287,0.133,0.031,log odds ratio per SD of BMI
+Autism diagnosis,(v) diagnosis ~ BMI x autism score within one sex (genotyped carriers),All four CNVs,female,289,,-0.176,0.137,0.2,log odds ratio per SD x SD
+Autism diagnosis,(v) diagnosis ~ BMI x autism score within one sex (genotyped carriers),All four CNVs,male,285,,-0.05,0.07,0.48,log odds ratio per SD x SD

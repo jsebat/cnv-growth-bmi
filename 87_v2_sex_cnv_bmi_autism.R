@@ -7,7 +7,7 @@
 #         + s(age, by = BMI) + sex:BMI + carrier:BMI + carrier:sex:BMI + cohort x CNV); sensitivity: linear model with robust SE
 #         (y ~ carrier * male * BMI + carrier * male * poly(age, 2) + cohort x CNV); per CNV and pooled, Cochran Q across the four CNVs;
 #         within carriers only: BMI x sex (one model) and the 66 version (slopes fitted separately by sex); leave one cohort out
-#   (iv)  autism diagnosis within carriers (growth table incl. CHOP): logistic diagnosis ~ BMI x sex + ns(age, 3) + cohort + CNV;
+#   (iv)  autism diagnosis within carriers (growth table incl. CHOP): logistic diagnosis ~ BMI x sex + ns(age, 3) + cohort within CNV;
 #         per sex, per CNV, pooled, per cohort, leave one cohort out; proportions by BMI band and sex
 #   (v)   autism polygenic score (genotyped carriers G2MH + Simons VIP + SSC): the sex terms with the score, BMI x score and their
 #         carrier interactions added; BMI x score within female and within male carriers and against same-sex relatives (two strata;
@@ -58,8 +58,8 @@ for (ph in c("SRS", "SCQ")) { r <- R[outcome == ph & test == "(iii) CNV x BMI x 
 R <- rbind(R, rbindlist(out, fill = TRUE), fill = TRUE); out <- list()
 # ================================================================ (iv) autism diagnosis within carriers
 D <- XA[pheno == "BMI" & locus %in% LOC4][, male := as.numeric(sex == "male")]
-dl <- function(d, f, v) tryCatch({ d <- copy(d); keep <- d[, .(v = sum(asd) > 0 & sum(asd) < .N), by = cohort][v == TRUE, cohort]; d <- d[cohort %in% keep]; if (sum(d$asd) < 10 || sum(1 - d$asd) < 10) stop()
-  tm <- c(f, "ns(age, 3)", if (uniqueN(d$cohort) > 1) "cohort", if (uniqueN(d$locus) > 1) "locus"); m <- glm(as.formula(paste("asd ~", paste(tm, collapse = " + "))), data = d, family = binomial); co <- coef(summary(m))[v, ]; c(n = nrow(d), b = co[[1]], se = co[[2]], p = co[[4]]) }, error = function(e) NA4(nrow(d)))
+dl <- function(d, f, v) tryCatch({ d <- copy(d)[, cgd := paste(cohort, locus)]; keep <- d[, .(v = sum(asd) > 0 & sum(asd) < .N), by = cgd][v == TRUE, cgd]; d <- d[cgd %in% keep];   # cohort within CNV (JS 2026-11-21), as 85 if (sum(d$asd) < 10 || sum(1 - d$asd) < 10) stop()
+  tm <- c(f, "ns(age, 3)", if (uniqueN(d$cgd) > 1) "cgd"); m <- glm(as.formula(paste("asd ~", paste(tm, collapse = " + "))), data = d, family = binomial); co <- coef(summary(m))[v, ]; c(n = nrow(d), b = co[[1]], se = co[[2]], p = co[[4]]) }, error = function(e) NA4(nrow(d)))
 DXN <- "Autism diagnosis"; LN <- "log odds ratio per SD of BMI"
 for (g in GR) { d <- if (g == POOL) D else D[locus == g]
   for (s in SX) add(DXN, "(iv) diagnosis ~ BMI within sex (logistic)", g, s, dl(d[sex == s], "BMI", "BMI"), note = LN)
