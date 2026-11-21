@@ -34,7 +34,7 @@ pa <- ggplot(X3, aes(BMI, ya, colour = hl)) + geom_point(size = 1.5, alpha = 0.4
   annotate("label", x = -2.75, y = 5.75, hjust = 0, vjust = 1, size = TS, lineheight = 1.05, colour = "grey10", fill = "white", alpha = 0.85, linewidth = 0, fontface = "bold",
            label = sprintf("BMI \u00d7 autism score in carriers = %+.3f, %s\nCNV \u00d7 BMI \u00d7 autism score (carriers vs relatives) = %+.3f, %s", ra2$b, plab(ra2$p), ra3$b, plab(ra3$p))) +
   scale_colour_manual(values = HC2, name = NULL) + scale_fill_manual(values = HC2, guide = "none") + coord_cartesian(xlim = c(-2.8, 3.8), ylim = c(-1.2, 5.8)) + guides(colour = guide_legend(ncol = 1, override.aes = list(alpha = 1, size = 3))) +
-  labs(x = "BMI (SD)", y = "Social Responsiveness Scale (SD)", tag = "a", title = "BMI and autistic traits in carriers, by autism polygenic score") + th_v2(BS) + theme(legend.position = "bottom", legend.text = element_text(size = 14.5))
+  labs(x = "BMI (SD)", y = "Social Responsiveness Scale (SD)", tag = "a", title = "BMI and autistic traits in carriers,\nby autism polygenic score") + th_v2(BS) + theme(legend.position = "bottom", legend.text = element_text(size = 14.5))
 # ---------------------------------------------------------------- b
 GC <- c("CNV carriers" = C_CAR, "SSC unaffected relatives" = C_NON)
 fq <- FQ[trait == "SRS"]; fl <- FL[trait == "SRS" & abs(score) <= 2]; r3 <- RB[trait == "SRS" & analysis == A3 & subset == "all carriers"]
@@ -77,7 +77,7 @@ pd <- ggplot(M, aes(b, est, colour = estimator == EST[1])) + geom_vline(xinterce
   labs(x = "Effect of BMI on the trait (SD per SD of BMI, 95% CI)", y = NULL, tag = "d", title = "Mendelian randomisation is inconclusive in carriers",
        subtitle = "Adiposity polygenic scores as instruments for BMI.\nThin bracket: weak-instrument-robust (Anderson-Rubin) interval") +
   th_v2(BS) + theme(strip.background = element_blank(), strip.text = element_text(face = "bold", size = 15), panel.spacing.x = unit(1.2, "lines"))
-fig <- wrap_elements(full = pa | pb) / wrap_elements(full = (pc | pd) + plot_layout(widths = c(0.85, 1))) + plot_layout(heights = c(1, 1.2))
+fig <- wrap_elements(full = (pa | pb) + plot_layout(widths = c(0.7, 1.3))) / wrap_elements(full = (pc | pd) + plot_layout(widths = c(0.85, 1))) + plot_layout(heights = c(1, 1.2))
 save_v2(fig, "fig_cnv_bmi_pgs_main", 20, 15)
 fwrite(rbind(sl[, .(panel = "a", series = paste("carriers, autism score", fifelse(half == "lo", "below", "above"), "median"), x = NA_real_, n, estimate = slope, se, p)], data.table(panel = "a", series = "SSC unaffected relatives", x = NA_real_, n = nrow(rel), estimate = coef(mr0)[["BMI"]], se = NA_real_, p = NA_real_),
              fq[, .(panel = "b", series = paste(group, "fifth", bin), x = score_mean, n, estimate = slope, se, p = NA_real_)], F[, .(panel = "c", series = paste(trait, gsub("\n", " ", sec), lab), x = NA_real_, n = n_carriers, estimate = b, se, p)],
