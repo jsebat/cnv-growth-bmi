@@ -1,0 +1,67 @@
+panel,pheno,group,series,value,se,n
+a-c,Height,16p11.2 del,No autism diagnosis,-0.0504527022313126,0.110966822571603,165
+a-c,Height,16p11.2 dup,No autism diagnosis,0.224547775336592,0.121319172680413,120
+a-c,Height,22q11.2 del,No autism diagnosis,-1.05060127707182,0.0442663088108299,737
+a-c,Height,22q11.2 dup,No autism diagnosis,-0.111980100873022,0.0967413479717204,115
+a-c,Height,All four CNVs,No autism diagnosis,-0.675945308381798,0.0396525713819273,1137
+a-c,Height,No CNV (SSC),No autism diagnosis,0.344582223451316,0.0290058566012702,1653
+a-c,Head circumference,16p11.2 del,No autism diagnosis,0.365130328985362,0.123478942926222,138
+a-c,Head circumference,16p11.2 dup,No autism diagnosis,-1.18452675266227,0.13901650728847,89
+a-c,Head circumference,22q11.2 del,No autism diagnosis,-1.18722518965679,0.069699650056372,432
+a-c,Head circumference,22q11.2 dup,No autism diagnosis,-0.308824483490133,0.182297049286821,77
+a-c,Head circumference,All four CNVs,No autism diagnosis,-0.803934324385103,0.0580425624929079,736
+a-c,Head circumference,No CNV (SSC),No autism diagnosis,-0.086640419921042,0.0309142018188045,1647
+a-c,BMI,16p11.2 del,No autism diagnosis,1.22784990115367,0.115744974428955,165
+a-c,BMI,16p11.2 dup,No autism diagnosis,-0.163591311862208,0.123230078056396,120
+a-c,BMI,22q11.2 del,No autism diagnosis,0.16534907155554,0.0512229988348746,737
+a-c,BMI,22q11.2 dup,No autism diagnosis,0.451384844586719,0.116901361444456,115
+a-c,BMI,All four CNVs,No autism diagnosis,0.313751802225855,0.0427938620661068,1137
+a-c,BMI,No CNV (SSC),No autism diagnosis,0.529020048643763,0.0317601871476582,1653
+a-c,Height,16p11.2 del,Autism diagnosis,0.295245038900672,0.147838851121196,87
+a-c,Height,16p11.2 dup,Autism diagnosis,0.212474347379847,0.184149297150715,54
+a-c,Height,22q11.2 del,Autism diagnosis,-0.859929904417688,0.101909966905018,154
+a-c,Height,22q11.2 dup,Autism diagnosis,0.249591317262012,0.198738412602457,50
+a-c,Height,All four CNVs,Autism diagnosis,-0.239970163114067,0.0773031604658798,345
+a-c,Height,No CNV (SSC),Autism diagnosis,0.349907393396948,0.0252645362315137,2074
+a-c,Head circumference,16p11.2 del,Autism diagnosis,0.859202330390508,0.171085184532393,75
+a-c,Head circumference,16p11.2 dup,Autism diagnosis,-1.50189772853271,0.150434001536613,48
+a-c,Head circumference,22q11.2 del,Autism diagnosis,-0.741572882193505,0.134622420234092,118
+a-c,Head circumference,22q11.2 dup,Autism diagnosis,-0.0981379457521089,0.260972900367718,45
+a-c,Head circumference,All four CNVs,Autism diagnosis,-0.348156377090771,0.0986264859491216,286
+a-c,Head circumference,No CNV (SSC),Autism diagnosis,-0.0399234476612568,0.0274324460172736,2060
+a-c,BMI,16p11.2 del,Autism diagnosis,1.33357350507984,0.185646595231298,87
+a-c,BMI,16p11.2 dup,Autism diagnosis,-0.111859167446387,0.183872473445568,54
+a-c,BMI,22q11.2 del,Autism diagnosis,0.318701807722104,0.115687328375073,154
+a-c,BMI,22q11.2 dup,Autism diagnosis,0.476898105293556,0.23893188835993,50
+a-c,BMI,All four CNVs,Autism diagnosis,0.530160821894849,0.0868540973842031,345
+a-c,BMI,No CNV (SSC),Autism diagnosis,0.677641091751988,0.0297364099908029,2074
+d,BMI,16p11.2 del,≤ 30th,0.352941176470588,,34
+d,BMI,16p11.2 del,30th-70th,0.275,,40
+d,BMI,16p11.2 del,≥ 70th,0.359550561797753,,178
+d,BMI,16p11.2 dup,≤ 30th,0.304347826086957,,69
+d,BMI,16p11.2 dup,30th-70th,0.297872340425532,,47
+d,BMI,16p11.2 dup,≥ 70th,0.327586206896552,,58
+d,BMI,22q11.2 del,≤ 30th,0.162790697674419,,258
+d,BMI,22q11.2 del,30th-70th,0.145985401459854,,274
+d,BMI,22q11.2 del,≥ 70th,0.200557103064067,,359
+d,BMI,22q11.2 dup,≤ 30th,0.3125,,32
+d,BMI,22q11.2 dup,30th-70th,0.24,,50
+d,BMI,22q11.2 dup,≥ 70th,0.337349397590361,,83
+d,BMI,All four CNVs,≤ 30th,0.216284987277354,,393
+d,BMI,All four CNVs,30th-70th,0.187347931873479,,411
+d,BMI,All four CNVs,≥ 70th,0.269911504424779,,678
+e,Head circumference,16p11.2 del,≤ 30th,0.260869565217391,,46
+e,Head circumference,16p11.2 del,30th-70th,0.310344827586207,,58
+e,Head circumference,16p11.2 del,≥ 70th,0.412844036697248,,109
+e,Head circumference,16p11.2 dup,≤ 30th,0.396039603960396,,101
+e,Head circumference,16p11.2 dup,30th-70th,0.275862068965517,,29
+e,Head circumference,16p11.2 dup,≥ 70th,0,,7
+e,Head circumference,22q11.2 del,≤ 30th,0.17877094972067,,358
+e,Head circumference,22q11.2 del,30th-70th,0.298387096774194,,124
+e,Head circumference,22q11.2 del,≥ 70th,0.25,,68
+e,Head circumference,22q11.2 dup,≤ 30th,0.369565217391304,,46
+e,Head circumference,22q11.2 dup,30th-70th,0.358974358974359,,39
+e,Head circumference,22q11.2 dup,≥ 70th,0.378378378378378,,37
+e,Head circumference,All four CNVs,≤ 30th,0.241379310344828,,551
+e,Head circumference,All four CNVs,30th-70th,0.308,,250
+e,Head circumference,All four CNVs,≥ 70th,0.343891402714932,,221

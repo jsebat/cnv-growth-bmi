@@ -4,11 +4,13 @@
 #      removed; fitted lines with 95% bands), SSC unaffected relatives as a thin grey reference line
 #      Printed tests (2026-11-21): BMI x score within carriers (cohort-adjusted model) and the three-way term vs relatives
 #   b  BMI slope on SRS by fifth of the autism score (95% CI) with the continuous interaction line, carriers and relatives
-#   c  forest of the three-way term for SRS: pooled, per CNV, per cohort, leave-one-cohort-out, leave-one-CNV-out, and SCQ pooled
+#   c  bar plot of the three-way term for SRS: each CNV, then the four CNVs pooled (estimate +/- 1 s.e.) (JS 2026-11-21). The full forest
+#      (pooled, per CNV, per cohort, leave-one-cohort-out, leave-one-CNV-out, SCQ) is written as a supplementary figure.
 #   d  effect of BMI on SRS / SCQ: observational estimate next to Mendelian-randomisation estimates (2SLS with three adiposity
 #      scores, Wald ratio per score), all genotyped carriers and SSC unaffected relatives
 # Inputs : 86_v2_cnv_bmi_pgs_stats.R outputs (cache pgs_stats_2026-11-20.RData) and v2_base() objects. No new statistics here.
-# Outputs: autism/fig_cnv_bmi_pgs_main.{png,pdf}, autism/fig_cnv_bmi_pgs_main_plotted.csv.
+# Outputs: autism/fig_cnv_bmi_pgs_main.{png,pdf}, autism/fig_cnv_bmi_pgs_main_plotted.csv; autism/fig_supp_threeway_forest.{png,pdf}
+#          and fig_supp_threeway_forest_plotted.csv (supplementary figure).
 # null model: none here (tests and the permutation null are in 86_v2_cnv_bmi_pgs_stats.R).
 base::source("C:/Users/Jonathan Sebat/sebatlab Dropbox/Manuscripts/PGC_joint_submission/Molly/CNV_ASD_growth_analysis/CNV_growth_trajectories/83_v2_autism_common.R")
 v2_base(); load(file.path("C:/Users/Jonathan Sebat/sebatlab Dropbox/Jon/Claude/CNV_growth_trajectories_data", "v2_autism_cache", "pgs_stats_2026-11-20.RData"))
@@ -54,13 +56,27 @@ F[, lab := sprintf("%s  (n = %d)", lab, n_carriers)][, sec := factor(sec, c("Poo
 F[, lab := factor(lab, rev(unique(lab)))][, ptxt := ifelse(!is.na(perm_p), sprintf("%s (permutation %s)", plab(p), pfmt(perm_p)), plab(p))]
 xr <- c(min(F$b - 1.96 * F$se), max(F$b + 1.96 * F$se)); xt <- xr[2] + 0.04 * diff(xr)
 hq <- RB[trait == "SRS" & analysis == A3 & grepl("^heterogeneity", subset), p]
-pc <- ggplot(F, aes(b, lab, colour = sec == "SCQ")) + geom_vline(xintercept = 0, colour = "grey50", linetype = 2) + geom_errorbar(aes(xmin = b - 1.96 * se, xmax = b + 1.96 * se), width = 0, orientation = "y", linewidth = 0.9) +
+pforest <- ggplot(F, aes(b, lab, colour = sec == "SCQ")) + geom_vline(xintercept = 0, colour = "grey50", linetype = 2) + geom_errorbar(aes(xmin = b - 1.96 * se, xmax = b + 1.96 * se), width = 0, orientation = "y", linewidth = 0.9) +
   geom_point(aes(shape = p < 0.05), size = 3.6) + geom_text(aes(x = xt, label = ptxt, fontface = face(p)), hjust = 0, size = TS - 0.4, colour = "grey15") +
   facet_grid(sec ~ ., scales = "free_y", space = "free_y") + scale_colour_manual(values = c(`FALSE` = C_CAR, `TRUE` = "grey45"), guide = "none") + scale_shape_manual(values = c(`FALSE` = 1, `TRUE` = 16), guide = "none") +
   coord_cartesian(xlim = c(xr[1], xr[2] + 0.66 * diff(xr)), clip = "off") + scale_x_continuous(breaks = c(-0.3, -0.2, -0.1, 0, 0.1, 0.2), labels = c("-0.3", "-0.2", "-0.1", "0", "0.1", "0.2")) +
-  labs(x = "CNV \u00d7 BMI \u00d7 autism score on Social Responsiveness Scale (95% CI)", y = NULL, tag = "c", title = "Three-way interaction, pooled and by subgroup",
+  labs(x = "CNV \u00d7 BMI \u00d7 autism score on Social Responsiveness Scale (95% CI)", y = NULL, title = "Three-way interaction, pooled and by subgroup",
        subtitle = sprintf("Filled: p < 0.05. Heterogeneity across the four CNVs %s.\nGrey: Social Communication Questionnaire (SCQ)", plab(hq))) +
   th_v2(BS) + theme(strip.background = element_blank(), strip.text.y = element_text(angle = 0, face = "bold", hjust = 0, size = 13.5), panel.spacing.y = unit(0.45, "lines"))
+save_v2(pforest, "fig_supp_threeway_forest", 11.5, 8.5)
+fwrite(F[, .(trait, section = gsub("\n", " ", sec), subset = lab, n_carriers, estimate = b, se, p, perm_p)], file.path(V2OUT, "fig_supp_threeway_forest_plotted.csv"))
+# main panel c: each CNV, then pooled
+Bc <- RB[trait == "SRS" & analysis == A3 & (grepl("^CNV: ", subset) | subset == "all carriers")]
+Bc[, g := fifelse(subset == "all carriers", "All four CNVs", sub("^CNV: ", "", subset))][, g := factor(g, c(LOC4, "All four CNVs"))]; setorder(Bc, g); stopifnot(nrow(Bc) == 5, !anyNA(Bc$g))
+Bc[, xl := sprintf("%s\n(n = %d)", ifelse(g == "All four CNVs", "All four\nCNVs", sub(" ", "\n", as.character(g))), n_carriers)][, xl := factor(xl, xl)]
+Bc[, ptxt := ifelse(!is.na(perm_p), sprintf("%s\n(perm. %s)", plab(p), pfmt(perm_p)), plab(p))]
+yr <- c(min(Bc$b - Bc$se), max(Bc$b + Bc$se)); ytop <- yr[2] + 0.12 * diff(yr)
+pc <- ggplot(Bc, aes(xl, b, fill = g == "All four CNVs")) + geom_col(width = 0.66) + geom_hline(yintercept = 0, colour = "grey30") +
+  geom_errorbar(aes(ymin = b - se, ymax = b + se), width = 0.16, linewidth = 0.8) + geom_vline(xintercept = 4.5, colour = "grey80") +
+  geom_text(aes(y = ytop, label = ptxt, fontface = face(p)), size = TS - 0.3, lineheight = 0.95, vjust = 0, colour = "grey15") +
+  scale_fill_manual(values = c(`FALSE` = "#9DB1D3", `TRUE` = C_CAR), guide = "none") + coord_cartesian(ylim = c(yr[1], ytop + 0.14 * diff(yr))) +
+  labs(x = NULL, y = "CNV \u00d7 BMI \u00d7 autism score\non Social Responsiveness Scale (\u00b1 s.e.)", tag = "c", title = "Three-way interaction by CNV and pooled",
+       subtitle = sprintf("Heterogeneity across the four CNVs %s", plab(hq))) + th_v2(BS) + theme(axis.text.x = element_text(size = 13.5))
 # ---------------------------------------------------------------- d
 ST <- c("CNV carriers: G2MH + Simons VIP + SSC", "SSC unaffected relatives")
 EST <- c("Observational (least squares)", "MR, three adiposity scores (2SLS)", "MR, childhood obesity score alone (Wald ratio)", "MR, childhood BMI score alone (Wald ratio)", "MR, adult BMI score alone (Wald ratio)")
@@ -77,9 +93,9 @@ pd <- ggplot(M, aes(b, est, colour = estimator == EST[1])) + geom_vline(xinterce
   labs(x = "Effect of BMI on the trait (SD per SD of BMI, 95% CI)", y = NULL, tag = "d", title = "Mendelian randomisation is inconclusive in carriers",
        subtitle = "Adiposity polygenic scores as instruments for BMI.\nThin bracket: weak-instrument-robust (Anderson-Rubin) interval") +
   th_v2(BS) + theme(strip.background = element_blank(), strip.text = element_text(face = "bold", size = 15), panel.spacing.x = unit(1.2, "lines"))
-fig <- wrap_elements(full = (pa | pb) + plot_layout(widths = c(0.7, 1.3))) / wrap_elements(full = (pc | pd) + plot_layout(widths = c(0.85, 1))) + plot_layout(heights = c(1, 1.2))
+fig <- wrap_elements(full = (pa | pb) + plot_layout(widths = c(0.7, 1.3))) / wrap_elements(full = (pc | pd) + plot_layout(widths = c(0.7, 1.15))) + plot_layout(heights = c(1, 1.2))
 save_v2(fig, "fig_cnv_bmi_pgs_main", 20, 15)
 fwrite(rbind(sl[, .(panel = "a", series = paste("carriers, autism score", fifelse(half == "lo", "below", "above"), "median"), x = NA_real_, n, estimate = slope, se, p)], data.table(panel = "a", series = "SSC unaffected relatives", x = NA_real_, n = nrow(rel), estimate = coef(mr0)[["BMI"]], se = NA_real_, p = NA_real_),
-             fq[, .(panel = "b", series = paste(group, "fifth", bin), x = score_mean, n, estimate = slope, se, p = NA_real_)], F[, .(panel = "c", series = paste(trait, gsub("\n", " ", sec), lab), x = NA_real_, n = n_carriers, estimate = b, se, p)],
+             fq[, .(panel = "b", series = paste(group, "fifth", bin), x = score_mean, n, estimate = slope, se, p = NA_real_)], Bc[, .(panel = "c", series = as.character(g), x = NA_real_, n = n_carriers, estimate = b, se, p)],
              M[, .(panel = "d", series = paste(fac, estimator), x = NA_real_, n, estimate = b, se, p)]), file.path(V2OUT, "fig_cnv_bmi_pgs_main_plotted.csv"))
 cat("86b done\n")

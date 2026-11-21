@@ -155,7 +155,7 @@ if (!has_og) {   # appended from the v3 sheet and labelled, as instructed
   x <- rbind(x, o[, analysis := "earlier grouping (v3 sheet, 2026-11-19)"], fill = TRUE) }
 b17 <- blk("", x); n17 <- b17$sub
 put("T17 ASD within CNV", "Supplementary Table 17. Height, head circumference and BMI by autism diagnosis within CNV group",
-    paste0("Difference = adjusted mean Z of carriers with an autism diagnosis minus carriers without (SD); model: y ~ autism diagnosis + smooth of age + sex (+ cohort) (+ CNV when CNVs are pooled). ",
+    paste0("Difference = adjusted mean Z of carriers with an autism diagnosis minus carriers without (SD); model: y ~ autism diagnosis + smooth of age + sex + cohort; when CNVs are pooled, one intercept per cohort within CNV in place of separate cohort and CNV terms (cohort and CNV are partly confounded; the earlier additive model is a sensitivity row). ",
            "Rows: each CNV, all four CNVs pooled, the earlier overgrowth / undergrowth groupings, SSC non-carriers (probands versus designated siblings; the comparison group of the autism x CNV test, not growth controls), ",
            "heterogeneity across the four CNVs and across cohorts (Cochran Q), single-cohort and leave-one-cohort-out fits, under 18 years only, and with Searchlight diagnoses added. ",
            "Autism diagnosis is a secondary outcome. Data: ", CLIN, " (script 85_v2_asd_by_cnv.R).", DATE), list(list(sub = "", tab = b17$tab)), "supp_table_S17_asd_by_cnv_v2")
@@ -282,7 +282,7 @@ b34a <- const_out(sb2)
 put("T34 Autism diagnosis by BMI", "Supplementary Table 34. Autism diagnosis by BMI and head circumference in CNV carriers (secondary outcome)",
     paste0("A: share of carriers with an autism diagnosis in the low (30th centile or below), middle and high (70th centile or above) bands of BMI Z and of head-circumference Z, by CNV and cohort, with Wilson 95% intervals; ",
            "cells with fewer than 5 people, or with fewer than 5 with or without a diagnosis, are masked together with their proportions. ",
-           "B: logistic regression of diagnosis on the Z score, odds ratio per SD, with age (spline), sex, cohort and CNV terms; per CNV, pooled, heterogeneity, single-cohort and leave-one-cohort-out fits. Carriers only. ",
+           "B: logistic regression of diagnosis on the Z score, odds ratio per SD, with age (spline), sex and cohort-within-CNV terms (the earlier additive cohort + CNV model is a sensitivity row); per CNV, pooled, heterogeneity, single-cohort and leave-one-cohort-out fits. Carriers only. ",
            "Autism diagnosis is secondary to the SRS and SCQ scores; how it was recorded differs by cohort. Data: ", CLIN, " (script 85_v2_asd_by_cnv.R).", DATE),
     list(list(sub = paste0("Share with an autism diagnosis by band [", b34a$extra, "]"), tab = pretty(fmt(b34a$x, mask = FALSE)), file = "asd_by_bmi_stratum"),
          blk("Logistic regression of autism diagnosis on BMI Z and head-circumference Z", rd(A, "asd_by_bmi_logistic.csv"), file = "asd_by_bmi_logistic")), "supp_table_S34")

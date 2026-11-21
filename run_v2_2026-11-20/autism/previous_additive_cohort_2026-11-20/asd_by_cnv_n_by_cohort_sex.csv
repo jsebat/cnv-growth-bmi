@@ -1,0 +1,57 @@
+outcome,locus,cohort,female_autism,female_no_autism,male_autism,male_no_autism
+BMI,16p11.2 del,CHUSJ,0,1,0,3
+BMI,16p11.2 del,Cardiff,4,5,7,5
+BMI,16p11.2 del,G2MH,25,31,21,32
+BMI,16p11.2 del,SSC,2,1,5,0
+BMI,16p11.2 del,SVIP,7,45,16,42
+BMI,16p11.2 dup,CHUSJ,0,3,1,3
+BMI,16p11.2 dup,Cardiff,5,1,8,1
+BMI,16p11.2 dup,G2MH,7,24,14,14
+BMI,16p11.2 dup,SSC,2,2,5,0
+BMI,16p11.2 dup,SVIP,4,36,8,36
+BMI,22q11.2 del,CHOP,26,272,62,299
+BMI,22q11.2 del,CHUSJ,1,2,1,6
+BMI,22q11.2 del,Cardiff,4,10,5,7
+BMI,22q11.2 del,G2MH,18,93,37,48
+BMI,22q11.2 dup,CHOP,7,21,17,24
+BMI,22q11.2 dup,CHUSJ,0,1,0,2
+BMI,22q11.2 dup,Cardiff,2,2,6,2
+BMI,22q11.2 dup,G2MH,3,38,14,25
+BMI,22q11.2 dup,SSC,0,0,1,0
+Head circumference,16p11.2 del,CHUSJ,0,0,0,1
+Head circumference,16p11.2 del,Cardiff,3,5,7,5
+Head circumference,16p11.2 del,G2MH,21,25,16,26
+Head circumference,16p11.2 del,SSC,2,1,5,0
+Head circumference,16p11.2 del,SVIP,7,37,14,38
+Head circumference,16p11.2 dup,CHUSJ,0,0,1,1
+Head circumference,16p11.2 dup,Cardiff,5,1,8,1
+Head circumference,16p11.2 dup,G2MH,6,15,11,13
+Head circumference,16p11.2 dup,SSC,2,2,5,0
+Head circumference,16p11.2 dup,SVIP,4,29,6,27
+Head circumference,22q11.2 del,CHOP,24,150,53,179
+Head circumference,22q11.2 del,CHUSJ,0,1,0,1
+Head circumference,22q11.2 del,Cardiff,4,10,5,7
+Head circumference,22q11.2 del,G2MH,9,52,23,32
+Head circumference,22q11.2 dup,CHOP,6,12,16,14
+Head circumference,22q11.2 dup,Cardiff,2,2,6,2
+Head circumference,22q11.2 dup,G2MH,3,28,11,19
+Head circumference,22q11.2 dup,SSC,0,0,1,0
+Height,16p11.2 del,CHUSJ,0,1,0,3
+Height,16p11.2 del,Cardiff,4,5,7,5
+Height,16p11.2 del,G2MH,25,31,21,32
+Height,16p11.2 del,SSC,2,1,5,0
+Height,16p11.2 del,SVIP,7,45,16,42
+Height,16p11.2 dup,CHUSJ,0,3,1,3
+Height,16p11.2 dup,Cardiff,5,1,8,1
+Height,16p11.2 dup,G2MH,7,24,14,14
+Height,16p11.2 dup,SSC,2,2,5,0
+Height,16p11.2 dup,SVIP,4,36,8,36
+Height,22q11.2 del,CHOP,26,272,62,299
+Height,22q11.2 del,CHUSJ,1,2,1,6
+Height,22q11.2 del,Cardiff,4,10,5,7
+Height,22q11.2 del,G2MH,18,93,37,48
+Height,22q11.2 dup,CHOP,7,21,17,24
+Height,22q11.2 dup,CHUSJ,0,1,0,2
+Height,22q11.2 dup,Cardiff,2,2,6,2
+Height,22q11.2 dup,G2MH,3,38,14,25
+Height,22q11.2 dup,SSC,0,0,1,0

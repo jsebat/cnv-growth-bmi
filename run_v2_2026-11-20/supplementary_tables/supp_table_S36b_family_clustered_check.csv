@@ -8,7 +8,7 @@ Block,Test,n,Carriers (n),Carriers sharing a family (n),Families (n),Estimate,SE
 2 CNV x BMI x autism score,SCQ three-way vs SSC relatives (model SE = HC1 robust),1536,468,40,1512,-0.026,0.037,0.49,0.037,0.49,SD per SD,1.003,FALSE,no
 3 CNV x BMI x sex,"SRS, one model",6423,814,180,3102,-0.137,0.052,0.0088,0.055,0.013,SD per SD,1.054,FALSE,no
 3 CNV x BMI x sex,"SRS, one model with sex-specific cohort x CNV intercepts",6423,814,180,3102,-0.086,0.055,0.12,0.057,0.13,SD per SD,1.031,FALSE,no
-4 autism diagnosis,"Head circumference Z, diagnosis vs none, all four CNVs",1022,1022,167,930,0.21,0.104,0.043,0.107,0.05,SD,1.032,FALSE,no
-4 autism diagnosis,"logistic: diagnosis on Head circumference Z, all four CNVs",1022,1022,167,930,0.126,0.057,0.026,0.06,0.035,log odds ratio per SD,1.06,FALSE,no
-4 autism diagnosis,"BMI Z, diagnosis vs none, all four CNVs",1482,1482,220,1356,0.174,0.091,0.056,0.092,0.058,SD,1.008,FALSE,no
-4 autism diagnosis,"logistic: diagnosis on BMI Z, all four CNVs",1482,1482,220,1356,0.078,0.046,0.094,0.046,0.094,log odds ratio per SD,0.997,FALSE,no
+4 autism diagnosis,"Head circumference Z, diagnosis vs none, all four CNVs",1022,1022,167,930,0.204,0.104,0.05,0.109,0.061,SD,1.046,FALSE,no
+4 autism diagnosis,"logistic: diagnosis on Head circumference Z, all four CNVs",1018,1018,167,926,0.12,0.057,0.036,0.062,0.053,log odds ratio per SD,1.079,TRUE,yes: P crosses 0.05
+4 autism diagnosis,"BMI Z, diagnosis vs none, all four CNVs",1482,1482,220,1356,0.175,0.092,0.057,0.093,0.06,SD,1.01,FALSE,no
+4 autism diagnosis,"logistic: diagnosis on BMI Z, all four CNVs",1474,1474,220,1348,0.078,0.047,0.097,0.047,0.1,log odds ratio per SD,1.009,FALSE,no

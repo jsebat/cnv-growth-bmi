@@ -1,5 +1,16 @@
 # Work package C: autistic traits and autism diagnosis (CNV x BMI, x polygenic score, x sex)
 
+> **Update 2026-11-21 (JS): cohort adjustment and Fig. 4 panels.** (1) Pooled autism-diagnosis models (`85_v2_asd_by_cnv.R`, Fig. 3)
+> now carry one intercept per cohort within CNV instead of additive cohort + CNV terms, because cohort and CNV are partly confounded
+> (CHOP has only 22q11.2 carriers). Per-CNV models are unchanged. Pooled results: head circumference by diagnosis +0.21 (P 0.043) ->
+> +0.20 (P 0.051; family-clustered 0.061); odds ratio per SD of head circumference 1.13 (P 0.026) -> 1.13 (P 0.036; clustered 0.053);
+> BMI by diagnosis +0.17 (P 0.056 -> 0.057); odds ratio per SD of BMI 1.08 (P 0.094 -> 0.097, n 1,482 -> 1,474 because cohort x CNV
+> cells without both outcomes drop out). The earlier model is a sensitivity row in both CSVs and the earlier outputs are in
+> `previous_additive_cohort_2026-11-20/`. Numbers quoted further down in this README for those pooled models are the earlier ones.
+> (2) Fig. 4 (`86b`): panel a prints the BMI x score and three-way tests and is narrower; panel c is a bar plot of the three-way
+> term by CNV and pooled; the full forest is `fig_supp_threeway_forest.png` (Supplementary Fig. 6).
+
+
 BMI modifier paper v2, run of 2026-11-20. Everything here is aggregate; participant-level tables and caches stay in
 `Jon/Claude/CNV_growth_trajectories_data` (cache folder `v2_autism_cache/`).
 

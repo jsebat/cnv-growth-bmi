@@ -45,11 +45,11 @@ car <- C[pheno == "SRS" & is_cnv == 1]; ref <- RELf(C[pheno == "SRS"])
 f3(car, ref, "", "SRS, one model"); f3(copy(car)[, cgm := factor(ifelse(male == 1, cg, "f"))], copy(ref)[, cgm := factor("f")], "+ cgm", "SRS, one model with sex-specific cohort x CNV intercepts")
 # ---------------------------------------------------------------- (4) autism diagnosis (85)
 D <- XA[pheno %in% c("Height", "Head circumference", "BMI") & locus %in% LOC4]; D[, fam := fam_growth(D)]
-for (ph in c("Head circumference", "BMI")) { x <- copy(D[pheno == ph])[, `:=`(sex = factor(sex), cohort = factor(cohort), locus = factor(locus))]
-  m <- gam(y ~ asd + s(age, k = 8) + sex + cohort + locus, data = x, method = "REML"); co <- summary(m)$p.table["asd", ]
+for (ph in c("Head circumference", "BMI")) { x <- copy(D[pheno == ph])[, `:=`(sex = factor(sex), cohort = factor(cohort), locus = factor(locus))][, cg := factor(paste(cohort, locus))]   # cohort within CNV (JS 2026-11-21), as 85
+  m <- gam(y ~ asd + s(age, k = 8) + sex + cg, data = x, method = "REML"); co <- summary(m)$p.table["asd", ]
   add("4 autism diagnosis", paste(ph, "Z, diagnosis vs none, all four CNVs"), nrow(x), nrow(x), share(x$fam, rep(TRUE, nrow(x))), uniqueN(x$fam), co[[1]], co[[2]], co[[4]], clgam(m, "asd", x$fam), "SD")
-  d <- copy(D[pheno == ph])[, z := y]; keep <- d[, .(v = sum(asd) > 0 & sum(asd) < .N), by = cohort][v == TRUE, cohort]; d <- d[cohort %in% keep]
-  g <- glm(asd ~ z + ns(age, 3) + sex + cohort + locus, data = d, family = binomial); cg <- coef(summary(g))["z", ]
+  d <- copy(D[pheno == ph])[, z := y][, cg := paste(cohort, locus)]; keep <- d[, .(v = sum(asd) > 0 & sum(asd) < .N), by = cg][v == TRUE, cg]; d <- d[cg %in% keep]
+  g <- glm(asd ~ z + ns(age, 3) + sex + cg, data = d, family = binomial); cg <- coef(summary(g))["z", ]
   add("4 autism diagnosis", paste("logistic: diagnosis on", ph, "Z, all four CNVs"), nrow(d), nrow(d), share(d$fam, rep(TRUE, nrow(d))), uniqueN(d$fam), cg[[1]], cg[[2]], cg[[4]], sqrt(vcovCL(g, cluster = d$fam, type = "HC1")["z", "z"]), "log odds ratio per SD") }
 R <- rbindlist(out)
 R[, se_ratio := se_family_clustered / se_model][, crosses_0.05 := (p_model < 0.05) != (p_family_clustered < 0.05)][, conclusion_changes := fifelse(crosses_0.05, "yes: P crosses 0.05", "no")]

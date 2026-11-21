@@ -440,14 +440,14 @@ run_site_export <- function(cfg = list(), data = NULL, write = TRUE, keep_data =
                `Head circumference` = if (!is.null(DATA2$`Head circumference`)) DATA2$`Head circumference`$car[, .(id, locus, cohort, sex, age, y, asd)],
                BMI = if (!is.null(DATA2$Height)) DATA2$Height$car[, .(id, locus, cohort, sex, age, y = BMI, asd)])
     PH <- lapply(PH[!vapply(PH, is.null, logical(1))], function(x) x[!is.na(asd)])
-    GAMe <- "GAM, REML (mgcv gam)"; MODD <- "Z ~ autism diagnosis + s(age) + sex (+ cohort) (+ genotype)"
+    GAMe <- "GAM, REML (mgcv gam)"; MODD <- "Z ~ autism diagnosis + s(age) + sex + cohort within genotype (one intercept per cohort x genotype cell)"
     for (ph in names(PH)) { hid <- FALSE; got <- list()
       for (g in c(LOCI, POOL)) { x <- if (g == POOL) PH[[ph]] else PH[[ph]][locus == g]; n1 <- sum(x$asd == 1L); n0 <- sum(x$asd == 0L); if (!nrow(x)) next
         small <- (n1 < minc) || (n0 < minc); if (small && g != POOL) hid <- TRUE
         if (small) { addE(erow("autism diagnosis", ph, g, "all ages", "Z difference, autism diagnosis minus none", MODD, GAMe, status = sprintf("suppressed: fewer than %d with or without a diagnosis", minc))); next }
         msk <- g == POOL && hid
-        addE(tryCatch({ x <- copy(x)[, `:=`(sex = factor(sex), cohort = factor(cohort), locus = factor(locus))]
-          cv <- paste(c(if (nlevels(x$sex) > 1) "+ sex", if (nlevels(x$cohort) > 1) "+ cohort", if (nlevels(x$locus) > 1) "+ locus"), collapse = " ")
+        addE(tryCatch({ x <- copy(x)[, `:=`(sex = factor(sex), cohort = factor(cohort), locus = factor(locus))][, cg := factor(paste(cohort, locus))]   # cohort within genotype (JS 2026-11-21), as 85_v2_asd_by_cnv.R
+          cv <- paste(c(if (nlevels(x$sex) > 1) "+ sex", if (nlevels(x$cg) > 1) "+ cg"), collapse = " ")
           v <- co4(gam(as.formula(paste("y ~ asd + s(age, k = 8)", cv)), data = x, method = "REML"), "asd"); if (g != POOL) got[[g]] <- v
           erow("autism diagnosis", ph, g, "all ages", "Z difference, autism diagnosis minus none", MODD, GAMe, v[1], v[2], v[3], n_carriers = if (msk) paste0(">=", minc) else nrow(x), n_asd = if (msk) paste0(">=", minc) else n1) },
           error = function(e) erow("autism diagnosis", ph, g, "all ages", "Z difference, autism diagnosis minus none", MODD, GAMe, status = paste("model failed:", conditionMessage(e)))))
@@ -457,13 +457,13 @@ run_site_export <- function(cfg = list(), data = NULL, write = TRUE, keep_data =
     }
     # logistic regression of diagnosis on BMI Z and on head-circumference Z; proportions by band
     PR <- list(`BMI Z` = if (!is.null(PH$BMI)) copy(PH$BMI)[, z := y], `Head-circumference Z` = if (!is.null(PH$`Head circumference`)) copy(PH$`Head circumference`)[, z := y])
-    PR <- PR[!vapply(PR, is.null, logical(1))]; MODG <- "autism diagnosis ~ Z + ns(age, 3) + sex + cohort (+ genotype)"; abb <- list()
+    PR <- PR[!vapply(PR, is.null, logical(1))]; MODG <- "autism diagnosis ~ Z + ns(age, 3) + sex + cohort within genotype"; abb <- list()
     for (pr in names(PR)) { hid <- FALSE; got <- list(); cells <- list()
       for (g in c(LOCI, POOL)) { d <- if (g == POOL) PR[[pr]] else PR[[pr]][locus == g]; if (!nrow(d)) next
-        keep <- d[, .(v = sum(asd) > 0 & sum(asd) < .N), by = cohort][v == TRUE, cohort]; d2 <- d[cohort %in% keep]; n1 <- sum(d2$asd); n0 <- sum(1 - d2$asd); thr <- max(8, minc)
+        d <- copy(d)[, cg := paste(cohort, locus)]; keep <- d[, .(v = sum(asd) > 0 & sum(asd) < .N), by = cg][v == TRUE, cg]; d2 <- d[cg %in% keep]; n1 <- sum(d2$asd); n0 <- sum(1 - d2$asd); thr <- max(8, minc)
         if (n1 < thr || n0 < thr) { if (g != POOL && (sum(d$asd) < minc || sum(1 - d$asd) < minc)) hid <- TRUE
           addE(erow("autism diagnosis", pr, g, "all ages", "log odds ratio of autism diagnosis per SD", MODG, "logistic regression (glm)", status = sprintf("not estimated: fewer than %d with or without a diagnosis", thr)))
-        } else addE(tryCatch({ tm <- c("z", "ns(age, 3)", if (uniqueN(d2$sex) > 1) "sex", if (uniqueN(d2$cohort) > 1) "cohort", if (uniqueN(d2$locus) > 1) "locus")
+        } else addE(tryCatch({ tm <- c("z", "ns(age, 3)", if (uniqueN(d2$sex) > 1) "sex", if (uniqueN(d2$cg) > 1) "cg")
           m <- suppressWarnings(glm(as.formula(paste("asd ~", paste(tm, collapse = " + "))), data = d2, family = binomial)); co <- coef(summary(m))["z", ]; if (g != POOL) got[[g]] <- co[1:2]; msk <- g == POOL && hid
           erow("autism diagnosis", pr, g, "all ages", "log odds ratio of autism diagnosis per SD", MODG, "logistic regression (glm)", co[[1]], co[[2]], co[[4]], n_carriers = if (msk) paste0(">=", minc) else nrow(d2), n_asd = if (msk) paste0(">=", minc) else n1) },
           error = function(e) erow("autism diagnosis", pr, g, "all ages", "log odds ratio of autism diagnosis per SD", MODG, "logistic regression (glm)", status = paste("model failed:", conditionMessage(e)))))

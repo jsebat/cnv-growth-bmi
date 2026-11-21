@@ -1,0 +1,25 @@
+outcome,adjustment,scope,beta,se,p
+Height,genotype only,All ages,0.0311,0.0077,5.87e-05
+Height,genotype only,2-8 y,0.0879,0.0115,3.66e-14
+Height,genotype only,8-13 y,0.0265,0.0106,0.0122
+Height,genotype only,13-18 y,-0.023,0.0128,0.0734
+Height,cohort + genotype (additive),All ages,0.0332,0.0077,2.14e-05
+Height,cohort + genotype (additive),2-8 y,0.089,0.0115,1.9e-14
+Height,cohort + genotype (additive),8-13 y,0.0294,0.0106,0.00549
+Height,cohort + genotype (additive),13-18 y,-0.0217,0.0129,0.0923
+Height,cohort within genotype,All ages,0.0332,0.0077,2.04e-05
+Height,cohort within genotype,2-8 y,0.0894,0.0115,1.36e-14
+Height,cohort within genotype,8-13 y,0.0299,0.0106,0.00473
+Height,cohort within genotype,13-18 y,-0.0228,0.0128,0.0762
+Head circumference,genotype only,All ages,0.0282,0.0114,0.0134
+Head circumference,genotype only,<2 y,0.0234,0.0152,0.125
+Head circumference,genotype only,2-5 y,0.0255,0.0266,0.337
+Head circumference,genotype only,5-18 y,0.036,0.0187,0.0545
+Head circumference,cohort + genotype (additive),All ages,0.0299,0.0114,0.00888
+Head circumference,cohort + genotype (additive),<2 y,0.0238,0.0152,0.118
+Head circumference,cohort + genotype (additive),2-5 y,0.0261,0.0265,0.326
+Head circumference,cohort + genotype (additive),5-18 y,0.0406,0.0187,0.0306
+Head circumference,cohort within genotype,All ages,0.0294,0.0114,0.0103
+Head circumference,cohort within genotype,<2 y,0.0237,0.0152,0.12
+Head circumference,cohort within genotype,2-5 y,0.027,0.0265,0.309
+Head circumference,cohort within genotype,5-18 y,0.0389,0.0188,0.0389

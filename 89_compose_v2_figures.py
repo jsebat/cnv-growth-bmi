@@ -31,6 +31,7 @@ figs = {
     "Fig5_sex": ["figures/fig_sex_biobank_v1.png", "autism/block_sex_autism.png"],
     "SuppFig_cnv_bmi_pgs_full": ["autism/fig_supp_cnv_bmi_pgs_full.png"],
     "SuppFig_main_effects_by_band": ["growth_unaffctl/fig_supp_main_effects_by_band.png"],
+    "SuppFig_threeway_forest": ["autism/fig_supp_threeway_forest.png"],
 }
 made = []
 for k, v in figs.items():
