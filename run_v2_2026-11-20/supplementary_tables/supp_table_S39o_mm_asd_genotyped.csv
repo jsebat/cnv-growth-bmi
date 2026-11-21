@@ -1,0 +1,4 @@
+Model,Metric,Mean,Lower 95% CI,Upper 95% CI,n,Autism diagnosis (n)
+benchmark,AUC,0.672,0.657,0.685,557,176
+core,AUC,0.708,0.696,0.718,557,176
+core - benchmark,AUC gain,0.036,0.029,0.043,557,176

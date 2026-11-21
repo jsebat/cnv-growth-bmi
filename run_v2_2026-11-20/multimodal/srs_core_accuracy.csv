@@ -1,0 +1,8 @@
+quantity,est,lo,hi,n,note
+out-of-sample R2 gain (mean of 5 fixed splits),0.0163474017124039,,,797,
+"permutation P of the R2 gain (1,000 permutations within genotype x cohort)",0.000999000999000999,,,797,"P < 0.001 (floor of 1,000 permutations); does not account for choosing the core set from the full-model drop analysis"
+"null R2 gain, mean (95% range)",-0.00688752380005208,-0.012800524255084,0.00202026855361739,797,
+AUC of the core added-factor prediction for autism diagnosis,0.559197749949776,,,766,
+Mann-Whitney P (AUC),0.010494585447024,,,766,
+correlation of the added-factor prediction with SRS beyond the benchmark (out of sample),0.149704486500588,0.0811030856335247,0.216894181079767,797,
+P (correlation),2.19924435653703e-05,,,797,

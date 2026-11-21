@@ -1,0 +1,6 @@
+Factor,Removed terms,Loss r2,Lower 95% CI,Upper 95% CI,Share of gain
+BMI,"BMI, BMI:male, BMI:pgs_s",0.014,0.011,0.017,0.889
+ASD PGS,"pgs_s, pgs_s_m, BMI:pgs_s",0.008,0.004,0.011,0.504
+BMI x ASD PGS,BMI:pgs_s,0.005,0.004,0.007,0.349
+BMI x sex,BMI:male,0.005,0.003,0.008,0.331
+Sex,"male, BMI:male",0.004,0.001,0.007,0.257

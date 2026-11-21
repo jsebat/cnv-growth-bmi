@@ -1,0 +1,11 @@
+Model,Metric,Mean,Lower 95% CI,Upper 95% CI,Range is
+benchmark,AUC,0.685,0.677,0.691,2.5-97.5% of 50 CV repeats (not a confidence interval)
+benchmark,log loss,0.505,0.499,0.518,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core,AUC,0.714,0.706,0.72,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core,log loss,0.496,0.489,0.509,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full,AUC,0.708,0.701,0.714,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full,log loss,0.501,0.494,0.515,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core - benchmark,AUC gain,0.029,0.025,0.033,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core - benchmark,log-loss reduction,0.009,0.007,0.011,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full - benchmark,AUC gain,0.023,0.017,0.028,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full - benchmark,log-loss reduction,0.004,0.002,0.007,2.5-97.5% of 50 CV repeats (not a confidence interval)

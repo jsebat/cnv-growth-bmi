@@ -1,0 +1,10 @@
+factor,removed_terms,loss_r2,lo,hi,share_of_gain,range_is
+BMI,"BMI, BMI:male, BMI:pgs_s, BMI:locus",0.0116750117263185,0.00707317626192225,0.0160518927265894,2.69436884658224,2.5-97.5% of 50 CV repeats (not a confidence interval)
+ASD PGS,"pgs_s, pgs_s_m, BMI:pgs_s",0.00987511625792015,0.00734944177908186,0.01243856498653,2.27898748416144,2.5-97.5% of 50 CV repeats (not a confidence interval)
+BMI x ASD PGS,BMI:pgs_s,0.00619160098107618,0.00460863279002932,0.00823694821545249,1.4289027869902,2.5-97.5% of 50 CV repeats (not a confidence interval)
+BMI x sex (male),BMI:male,0.00437591906178209,0.00285178568083856,0.00627626909896555,1.00987821439636,2.5-97.5% of 50 CV repeats (not a confidence interval)
+Sex,"male, BMI:male",0.00347928955969291,0.000608991292935229,0.0058046732908929,0.802953317532256,2.5-97.5% of 50 CV repeats (not a confidence interval)
+Height,"hgt, hgt_m",-0.00123903704935845,-0.00441153939693201,0.00107052431013302,-0.285945993358355,2.5-97.5% of 50 CV repeats (not a confidence interval)
+BMI x CNV,BMI:locus,-0.00170098450327557,-0.00572319195992203,0.00218058951095845,-0.392554608216232,2.5-97.5% of 50 CV repeats (not a confidence interval)
+Head circumference,"hcz, hcz_m",-0.00465201999927738,-0.00782466459620494,-0.00160237272137397,-1.07359701673576,2.5-97.5% of 50 CV repeats (not a confidence interval)
+Adiposity and height PGS,"pgs_cobes, pgs_bmi, pgs_ht, opgs_m",-0.0062776899258441,-0.00875840231244965,-0.00344533985669692,-1.44877046474978,2.5-97.5% of 50 CV repeats (not a confidence interval)

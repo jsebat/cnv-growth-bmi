@@ -1,0 +1,7 @@
+Panel,Group,Estimate,SE,P,n
+sex,girls,0.141,0.039,0.00034,391
+sex,boys,0.013,0.032,0.69,406
+ASD PGS,low ASD PGS (-1 SD),0.152,0.038,6.3e-05,570
+ASD PGS,high ASD PGS (+1 SD),-0.001,0.039,0.99,570
+sex,interaction,-0.128,0.047,0.0069,797
+ASD PGS,interaction,-0.076,0.028,0.0064,570

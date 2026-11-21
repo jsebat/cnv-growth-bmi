@@ -1,0 +1,4 @@
+model,r2,lo,hi,range_is
+benchmark: genotype x cohort + age + SRS form,0.215954819767269,0.208363391449156,0.223220155349251,2.5-97.5% of 50 CV repeats (not a confidence interval); core set chosen from the full-model drop analysis
+"core: + sex, BMI, ASD PGS, BMI x sex, BMI x ASD PGS",0.23161702769198,0.221367221694353,0.239445960724477,2.5-97.5% of 50 CV repeats (not a confidence interval); core set chosen from the full-model drop analysis
+gain (core - benchmark),0.0156622079247108,0.00996381177237047,0.0198229817891358,2.5-97.5% of 50 CV repeats (not a confidence interval); core set chosen from the full-model drop analysis

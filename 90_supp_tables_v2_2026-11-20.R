@@ -323,6 +323,32 @@ put("T37 Puberty MR", "Supplementary Table 37. UK Biobank: childhood body size, 
          blk("Adult height by recalled body size at age 10 and adult BMI group", rd(E, "panel_j_trends.csv"), file = "body_size_trends"),
          blk("Age at menarche by genotype", rd(E, "panel_k_menarche.csv"), file = "menarche")), "supp_table_S37")
 
+# ================================================================ T39 joint (multimodal) model of autistic traits and autism diagnosis (JS 2026-11-21)
+MMD <- file.path(RUN, "multimodal")
+msk5 <- function(x) { x <- copy(x); for (v in names(x)) if (is.numeric(x[[v]]) && all(x[[v]] == round(x[[v]]), na.rm = TRUE)) set(x, j = v, value = ifelse(x[[v]] > 0 & x[[v]] < 5, "<5", as.character(x[[v]]))); x }   # counts of 1-4 people written "<5"
+put("T39 Joint model autistic traits", "Supplementary Table 39. Joint model of autistic traits (SRS) and autism diagnosis in CNV carriers: growth, sex and genetic background (Fig. 6 and Supplementary Fig. 7)",
+    paste0("Carriers with an SRS (G2MH, Simons VIP, Simons Searchlight; SSC carriers excluded because they were ascertained as autistic probands). SRS is Box-Cox Z against SSC unaffected relatives of the same form. ",
+           "Benchmark: one intercept per cohort within CNV + age (spline) + SRS form. Core model: + sex, BMI, autism polygenic score, BMI x sex, BMI x autism PGS. Full model: + height, head circumference, ",
+           "childhood-obesity, adult-BMI and height polygenic scores, BMI x CNV. Children scored against WHO / UK90, adults Box-Cox. Prediction: 10-fold cross-validation with families kept together, 50 repeats; ",
+           "ranges are the 2.5-97.5% spread over repeats, not confidence intervals. The core set was chosen from the full-model drop analysis, so its gain is optimistic; the full-model gain is the primary record. ",
+           "BMI x sex and BMI x PGS here are within-carrier terms, not the carrier-versus-relative three-way terms of Fig. 4 and 5. Autism diagnosis: logistic model, benchmark without SRS form. ",
+           "Scripts 92_v2_srs_multimodal.R and 93_v2_asd_multimodal.R (ported from the COMET-ASD analysis A10 / A11, identical output).", " Built 2026-11-21."),
+    list(blk("A. Sample", msk5(rd(MMD, "srs_multimodal_sample.csv")), file = "mm_sample"),
+         blk("B. SRS: out-of-sample R2 of the benchmark, core and full models", rbind(rd(MMD, "srs_core_r2.csv")[, .(model, est = r2, lo, hi)], rd(MMD, "srs_multimodal_prediction.csv")[, .(model, est, lo, hi)]), file = "mm_r2"),
+         blk("C. SRS: permutation test and separation (core model)", rbind(rd(MMD, "srs_core_accuracy.csv")[, .(quantity, est, lo, hi)], rd(MMD, "srs_core_separation.csv")[, .(quantity, est, lo, hi)]), file = "mm_accuracy"),
+         blk("D. SRS: loss in out-of-sample R2 when each factor is dropped, core model", rd(MMD, "srs_core_drop_analysis.csv")[, .(factor, removed_terms, loss_r2, lo, hi, share_of_gain)], file = "mm_drop_core"),
+         blk("E. SRS: the same for the full model", rd(MMD, "srs_multimodal_drop_analysis.csv")[, .(factor, removed_terms, loss_r2, lo, hi, share_of_gain)], file = "mm_drop_full"),
+         blk("F. SRS: BMI slope by sex and by autism PGS, core model", rd(MMD, "srs_core_bmi_slopes_by_sex_and_pgs.csv"), file = "mm_slopes"),
+         blk("G. SRS: core model per CNV with heterogeneity", rd(MMD, "srs_core_per_cnv.csv"), file = "mm_per_cnv"),
+         blk("H. SRS: full-model coefficients (each factor alone and together)", rd(MMD, "srs_multimodal_coefficients.csv"), file = "mm_coef_full"),
+         blk("I. SRS: medication sensitivity, G2MH carriers", rd(MMD, "srs_multimodal_medication_sensitivity_g2mh.csv"), file = "mm_medication"),
+         blk("J. Autism diagnosis: sample", msk5(rd(MMD, "asd_multimodal_sample.csv")), file = "mm_asd_sample"),
+         blk("K. Autism diagnosis: out-of-sample AUC and log loss", rd(MMD, "asd_multimodal_performance.csv"), file = "mm_asd_performance"),
+         blk("L. Autism diagnosis: loss in AUC when each factor is dropped", rd(MMD, "asd_multimodal_drop_analysis.csv"), file = "mm_asd_drop"),
+         blk("M. Autism diagnosis: coefficients (odds ratios)", rd(MMD, "asd_multimodal_coefficients.csv"), file = "mm_asd_coef"),
+         blk("N. Autism diagnosis: core model per CNV", rd(MMD, "asd_multimodal_core_per_cnv.csv"), file = "mm_asd_per_cnv"),
+         blk("O. Autism diagnosis: genotyped carriers only", rd(MMD, "asd_multimodal_genotyped_subset_performance.csv"), file = "mm_asd_genotyped")), "supp_table_S39")
+
 # ---------------------------------------------------------------- order and save
 if ("T22 Fig6 growth tests UKBB" %in% names(wb)) removeWorksheet(wb, "T22 Fig6 growth tests UKBB")   # replaced by "T22 Growth vs controls UKBB"
 ord <- names(wb); num <- suppressWarnings(as.numeric(sub("^T(\\d+).*", "\\1", ord))); num[is.na(num)] <- 999; num[grepl("^T19b", ord)] <- 19.5
@@ -336,7 +362,7 @@ cat("written:", wbf4, "\n")
 # ---------------------------------------------------------------- read back and check
 chk <- loadWorkbook(wbf4); sn <- names(chk)[worksheetOrder(chk)]; cat("\nsheets, in order:\n", paste(sn, collapse = " | "), "\n\n")
 NEW <- c(s13, "T14 Sex and PGS strata", "T15 PGS adjusted contrasts", "T16 Modifier x BMI interactions", "T38 Extended CNV models", "T17 ASD within CNV", "T21 BMI slope by age band", "T22 Growth vs controls UKBB", "T30 Longitudinal next-visit", "T31 Control set", "T32 Growth sensitivity", "T33 Sex tests growth",
-         "T34 Autism diagnosis by BMI", "T35 Polygenic score", "T36 Sex tests autism", "T37 Puberty MR")
+         "T34 Autism diagnosis by BMI", "T35 Polygenic score", "T36 Sex tests autism", "T37 Puberty MR", "T39 Joint model autistic traits")
 for (s in sn) { x <- read.xlsx(wbf4, sheet = s, colNames = FALSE, skipEmptyRows = FALSE); if (is.null(x) || !nrow(x)) stop("empty sheet: ", s)
   if (s %in% NEW) { cat("==", s, "| rows", nrow(x), "cols", ncol(x), "\n"); for (i in 1:5) cat("  ", i, ":", substr(paste(na.omit(unlist(x[i, ])), collapse = " | "), 1, 230), "\n")
     stopifnot(grepl("^Supplementary Table [0-9]+\\. ", x[1, 1]), nchar(x[2, 1]) > 50) } }

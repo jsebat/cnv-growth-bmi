@@ -1,0 +1,16 @@
+Term,Without medication.est0,Without medication.p0,With medication.est1,With medication.p1,n,On weight gain,On weight loss,On antipsychotic
+Sex,0.057,0.671,-0.007,0.959,300,36,42,33
+BMI (16p11.2 del),0.048,0.617,0.058,0.541,300,36,42,33
+Height,0.061,0.261,0.042,0.435,300,36,42,33
+Head circumference,0.015,0.808,0.027,0.651,300,36,42,33
+ASD PGS,0.222,0.002,0.197,0.006,300,36,42,33
+Childhood obesity PGS,0.047,0.526,0.056,0.446,300,36,42,33
+Adult BMI PGS,0.025,0.742,0.031,0.677,300,36,42,33
+Height PGS,0.024,0.739,0.041,0.552,300,36,42,33
+BMI x sex (male),-0.159,0.058,-0.153,0.061,300,36,42,33
+BMI x ASD PGS,-0.123,0.004,-0.116,0.005,300,36,42,33
+BMI x CNV: 16p11.2 dup vs del,0.28,0.1,0.287,0.085,300,36,42,33
+BMI x CNV: 22q11.2 del vs 16p11.2 del,0.146,0.173,0.119,0.255,300,36,42,33
+BMI x CNV: 22q11.2 dup vs 16p11.2 del,-0.045,0.733,-0.092,0.475,300,36,42,33
+current weight-gain medication,,,0.733,0,300,36,42,33
+current weight-loss medication,,,0.309,0.108,300,36,42,33

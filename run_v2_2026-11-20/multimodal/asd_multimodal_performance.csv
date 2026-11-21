@@ -1,0 +1,11 @@
+model,metric,mean,lo,hi,range_is
+benchmark,AUC,0.684926622032212,0.677144201554139,0.691094854938023,2.5-97.5% of 50 CV repeats (not a confidence interval)
+benchmark,log loss,0.505178658098669,0.499234404611532,0.517871339272814,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core,AUC,0.713941867656153,0.706101879486973,0.719567637331613,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core,log loss,0.496254469814345,0.489357647163271,0.50912498568506,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full,AUC,0.708167674975129,0.701117609098976,0.71370573525853,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full,log loss,0.501327467540255,0.494208788668313,0.515283972783608,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core - benchmark,AUC gain,0.0290152456239413,0.0246861135758651,0.0327583286278938,2.5-97.5% of 50 CV repeats (not a confidence interval)
+core - benchmark,log-loss reduction,0.00892418828432418,0.00683786239234645,0.0106468439303784,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full - benchmark,AUC gain,0.0232410529429163,0.0172346468231561,0.0277849143610013,2.5-97.5% of 50 CV repeats (not a confidence interval)
+full - benchmark,log-loss reduction,0.00385119055841388,0.00168813258552807,0.00656110882840783,2.5-97.5% of 50 CV repeats (not a confidence interval)

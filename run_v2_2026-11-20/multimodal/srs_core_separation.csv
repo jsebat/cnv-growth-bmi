@@ -1,0 +1,3 @@
+quantity,model,est,lo,hi,range_is
+"SRS beyond benchmark, top minus bottom fifth of the core added-factor prediction (SD)",core added factors,0.516681156792619,0.286076354647445,0.754062268366785,"family bootstrap 95% CI (2,000 draws)"
+"autism diagnosis, same fifths (share)",core added factors,0.118792971734148,0.0287978138943517,0.21394741962739,"family bootstrap 95% CI (2,000 draws)"

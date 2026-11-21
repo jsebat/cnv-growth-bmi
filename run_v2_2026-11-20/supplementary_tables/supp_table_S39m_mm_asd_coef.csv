@@ -1,0 +1,16 @@
+Model,Factor,Log odds ratio per SD,SE,P,Odds ratio per SD,Lower 95% CI,Upper 95% CI
+core,Sex (male),0.887,0.152,5.4e-09,2.428,1.803,3.272
+core,BMI,0.192,0.084,0.023,1.211,1.027,1.428
+core,ASD PGS,0.141,0.107,0.19,1.151,0.933,1.419
+core,BMI x sex (male),-0.161,0.097,0.097,0.851,0.704,1.029
+core,BMI x ASD PGS,-0.105,0.063,0.093,0.9,0.796,1.018
+full,Sex (male),0.896,0.154,5.6e-09,2.451,1.813,3.313
+full,BMI,0.133,0.119,0.26,1.142,0.905,1.441
+full,ASD PGS,0.147,0.109,0.18,1.158,0.935,1.435
+full,BMI x sex (male),-0.16,0.099,0.1,0.852,0.702,1.034
+full,BMI x ASD PGS,-0.105,0.063,0.097,0.9,0.796,1.019
+full,Height,0.028,0.064,0.67,1.028,0.907,1.166
+full,Head circumference,0.104,0.079,0.19,1.109,0.951,1.294
+full,Childhood obesity PGS,-0.053,0.106,0.62,0.948,0.771,1.167
+full,Adult BMI PGS,-0.048,0.11,0.66,0.953,0.768,1.183
+full,Height PGS,0.14,0.109,0.2,1.15,0.929,1.423

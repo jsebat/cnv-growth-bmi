@@ -1,0 +1,10 @@
+Factor,Removed terms,Loss r2,Lower 95% CI,Upper 95% CI,Share of gain
+BMI,"BMI, BMI:male, BMI:pgs_s, BMI:locus",0.012,0.007,0.016,2.694
+ASD PGS,"pgs_s, pgs_s_m, BMI:pgs_s",0.01,0.007,0.012,2.279
+BMI x ASD PGS,BMI:pgs_s,0.006,0.005,0.008,1.429
+BMI x sex (male),BMI:male,0.004,0.003,0.006,1.01
+Sex,"male, BMI:male",0.003,0.001,0.006,0.803
+Height,"hgt, hgt_m",-0.001,-0.004,0.001,-0.286
+BMI x CNV,BMI:locus,-0.002,-0.006,0.002,-0.393
+Head circumference,"hcz, hcz_m",-0.005,-0.008,-0.002,-1.074
+Adiposity and height PGS,"pgs_cobes, pgs_bmi, pgs_ht, opgs_m",-0.006,-0.009,-0.003,-1.449

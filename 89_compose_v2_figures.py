@@ -32,6 +32,8 @@ figs = {
     "SuppFig_cnv_bmi_pgs_full": ["autism/fig_supp_cnv_bmi_pgs_full.png"],
     "SuppFig_main_effects_by_band": ["growth_unaffctl/fig_supp_main_effects_by_band.png"],
     "SuppFig_threeway_forest": ["autism/fig_supp_threeway_forest.png"],
+    "Fig6_multimodal": ["multimodal/fig_multimodal_main.png"],
+    "SuppFig_multimodal": ["multimodal/fig_supp_multimodal.png"],
 }
 made = []
 for k, v in figs.items():

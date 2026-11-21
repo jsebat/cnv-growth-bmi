@@ -1,0 +1,11 @@
+Model,Estimate,Lower 95% CI,Upper 95% CI
+benchmark: genotype x cohort + age + SRS form,0.216,0.208,0.223
+"core: + sex, BMI, ASD PGS, BMI x sex, BMI x ASD PGS",0.232,0.221,0.239
+gain (core - benchmark),0.016,0.01,0.02
+benchmark without SRS form: genotype x cohort + age,0.2,0.195,0.206
+benchmark: genotype x cohort + age + SRS form (+ form x age),0.216,0.21,0.222
+"full: + sex, BMI, height, head circumference, ASD PGS, adiposity and height PGS, BMI x sex, BMI x ASD PGS, BMI x CNV",0.221,0.211,0.229
+gain (full - benchmark),0.004,-0.004,0.012
+form gain (benchmark - benchmark without form),0.016,0.013,0.018
+added factors,0.54,0.309,0.778
+added factors,0.194,0.101,0.292

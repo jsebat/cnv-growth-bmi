@@ -1,0 +1,8 @@
+quantity,model,est,lo,hi,range_is
+out-of-sample R2,benchmark without SRS form: genotype x cohort + age,0.200458530166083,0.195259285823782,0.205994653896239,2.5-97.5% of 50 CV repeats (not a confidence interval)
+out-of-sample R2,benchmark: genotype x cohort + age + SRS form (+ form x age),0.2162458946451,0.209560025668231,0.221521734896067,2.5-97.5% of 50 CV repeats (not a confidence interval)
+out-of-sample R2,"full: + sex, BMI, height, head circumference, ASD PGS, adiposity and height PGS, BMI x sex, BMI x ASD PGS, BMI x CNV",0.220579010261816,0.21095347234621,0.228523810702911,2.5-97.5% of 50 CV repeats (not a confidence interval)
+out-of-sample R2,gain (full - benchmark),0.00433311561671596,-0.00433283529652555,0.0122245682307344,2.5-97.5% of 50 CV repeats (not a confidence interval)
+out-of-sample R2,form gain (benchmark - benchmark without form),0.0157873644790165,0.0128446294823781,0.0183331978734401,2.5-97.5% of 50 CV repeats (not a confidence interval)
+"SRS beyond genotype x cohort + age, top minus bottom fifth of the added-factor prediction (SD)",added factors,0.540210354170304,0.309027972917532,0.778045672870915,"family bootstrap 95% CI (2,000 draws)"
+"autism diagnosis, same fifths (share)",added factors,0.193548387096774,0.100547580718338,0.292214344390549,"family bootstrap 95% CI (2,000 draws)"
